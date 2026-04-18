@@ -7,7 +7,7 @@
 | Ссылка | Назначение |
 |--------|-----------|
 | **https://design.telemore.org/go/** | 🚀 Один клик — открыть `telemore.op` в OpenPencil |
-| https://design.telemore.org/ | OpenPencil веб-редактор |
+| https://design.telemore.org/ | OpenPencil веб-редактор (по умолчанию — русский интерфейс) |
 | https://design.telemore.org/manual/ | Этот гид (HTML) |
 | https://design.telemore.org/files/ | Индекс всех файлов проекта |
 | https://design.telemore.org/files/telemore.op | Прямое скачивание актуального `.op` |
