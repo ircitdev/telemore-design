@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1A0033">
+<title>ТЕЛЕМОРЕ — Руководство команды</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#FF00AA;--cyan:#00F0FF;--gold:#FFD700;--danger:#FF0033;
+  --bg1:#0F0020;--bg2:#1A0033;--bg3:#2D004D;
+  --surface:rgba(255,255,255,0.04);--surface-hover:rgba(255,255,255,0.08);
+  --border:rgba(255,255,255,0.1);--border-strong:rgba(255,255,255,0.2);
+  --text:#fff;--text-dim:rgba(255,255,255,0.75);--text-muted:rgba(255,255,255,0.5);
+  --code-bg:rgba(0,240,255,0.08);--code-border:rgba(0,240,255,0.25);
+  --nav-w:280px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{
+  font-family:'Roboto',-apple-system,sans-serif;font-size:15px;line-height:1.65;
+  color:var(--text);background:var(--bg1);
+  min-height:100vh;overflow-x:hidden;
+}
+body::before{content:"";position:fixed;inset:0;z-index:-1;
+  background:
+    linear-gradient(180deg,var(--bg1) 0%,var(--bg2) 50%,var(--bg1) 100%),
+    radial-gradient(ellipse at 10% 0%,rgba(255,0,170,0.15),transparent 50%),
+    radial-gradient(ellipse at 90% 100%,rgba(0,240,255,0.12),transparent 50%);
+}
+
+/* Header */
+.header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(15,0,32,0.85);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  padding:12px 20px;
+}
+.header-inner{max-width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.logo{
+  font-weight:900;font-size:22px;letter-spacing:2px;
+  background:linear-gradient(90deg,var(--pink),var(--cyan));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 12px rgba(255,0,170,0.5));
+  text-decoration:none;
+}
+.logo-sub{font-weight:500;color:var(--text-dim);font-size:13px;margin-left:12px;letter-spacing:1px;}
+.header-links{display:flex;gap:8px;}
+.btn-link{
+  padding:8px 14px;border:1px solid var(--border-strong);border-radius:8px;
+  color:var(--text-dim);text-decoration:none;font-size:13px;font-weight:600;
+  transition:all .2s;
+}
+.btn-link:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(0,240,255,0.08);}
+.menu-btn{display:none;background:none;border:1px solid var(--border-strong);color:#fff;padding:8px 12px;border-radius:8px;cursor:pointer;}
+
+/* Layout */
+.layout{max-width:1440px;margin:0 auto;padding:24px 20px;display:grid;grid-template-columns:var(--nav-w) 1fr;gap:32px;}
+.sidebar{position:sticky;top:80px;align-self:start;max-height:calc(100vh - 100px);overflow-y:auto;}
+.sidebar-inner{
+  background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;
+}
+.sidebar h3{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--cyan);margin-bottom:12px;text-transform:uppercase;}
+.sidebar nav{display:flex;flex-direction:column;gap:2px;}
+.sidebar a{
+  padding:8px 12px;border-radius:6px;text-decoration:none;color:var(--text-dim);
+  font-size:13px;line-height:1.4;transition:all .15s;display:block;border-left:3px solid transparent;
+}
+.sidebar a:hover{background:var(--surface-hover);color:var(--text);}
+.sidebar a.active{background:linear-gradient(90deg,rgba(255,0,170,0.18),transparent);color:#fff;border-left-color:var(--pink);font-weight:600;}
+
+/* Main */
+.main{min-width:0;max-width:900px;}
+.content{
+  background:var(--surface);border:1px solid var(--border);border-radius:14px;
+  padding:40px 48px;
+}
+
+/* Typography */
+.content h1{display:none;} /* первый заголовок убран, он в header */
+.content h2{
+  font-size:28px;font-weight:900;margin-top:48px;margin-bottom:20px;letter-spacing:-0.5px;
+  padding-top:12px;border-top:1px solid var(--border);
+  color:#fff;
+}
+.content h2:first-of-type{margin-top:0;padding-top:0;border-top:none;}
+.content h3{font-size:20px;font-weight:800;margin-top:32px;margin-bottom:14px;color:var(--gold);}
+.content h4{font-size:16px;font-weight:700;margin-top:24px;margin-bottom:10px;color:var(--cyan);}
+.content p{margin-bottom:16px;color:var(--text-dim);}
+.content strong{color:#fff;font-weight:700;}
+.content em{color:var(--gold);}
+.content a{color:var(--cyan);text-decoration:none;border-bottom:1px dashed rgba(0,240,255,0.4);}
+.content a:hover{color:var(--pink);border-bottom-color:var(--pink);}
+
+/* Lists */
+.content ul,.content ol{margin:0 0 16px 24px;color:var(--text-dim);}
+.content li{margin-bottom:6px;}
+.content li>p{margin-bottom:6px;}
+
+/* Code */
+.content code{
+  font-family:'JetBrains Mono',monospace;font-size:0.9em;
+  background:var(--code-bg);border:1px solid var(--code-border);border-radius:4px;
+  padding:2px 6px;color:var(--cyan);
+}
+.content pre{
+  background:rgba(0,0,0,0.35);border:1px solid var(--border);border-radius:10px;
+  padding:16px 20px;margin:20px 0;overflow-x:auto;
+  box-shadow:inset 0 0 20px rgba(0,240,255,0.04);
+}
+.content pre code{background:none;border:none;padding:0;color:#e8e8f0;font-size:13px;line-height:1.6;}
+
+/* Tables */
+.content table{
+  width:100%;border-collapse:separate;border-spacing:0;
+  margin:20px 0;font-size:13px;
+  border:1px solid var(--border);border-radius:10px;overflow:hidden;
+}
+.content th{
+  background:rgba(255,0,170,0.1);color:#fff;font-weight:700;text-align:left;
+  padding:12px 14px;font-size:12px;letter-spacing:1px;text-transform:uppercase;
+  border-bottom:1px solid var(--border);
+}
+.content td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text-dim);}
+.content tr:last-child td{border-bottom:none;}
+.content tr:hover td{background:var(--surface-hover);}
+
+/* Blockquote / callout */
+.content blockquote{
+  margin:20px 0;padding:14px 20px;
+  background:rgba(255,215,0,0.06);border-left:4px solid var(--gold);border-radius:6px;
+  color:var(--text-dim);
+}
+.content blockquote p{margin:0;}
+
+/* hr */
+.content hr{border:none;height:1px;background:var(--border);margin:32px 0;}
+
+/* Footer */
+.footer{
+  text-align:center;margin-top:48px;padding:24px;color:var(--text-muted);font-size:12px;
+  border-top:1px solid var(--border);
+}
+.footer a{color:var(--cyan);}
+
+/* Responsive */
+@media (max-width:960px){
+  .layout{grid-template-columns:1fr;gap:20px;}
+  .sidebar{position:fixed;top:0;left:0;right:0;bottom:0;z-index:100;
+    background:rgba(15,0,32,0.98);backdrop-filter:blur(20px);
+    max-height:none;padding:80px 20px 20px;
+    transform:translateX(-100%);transition:transform .25s;overflow-y:auto;}
+  .sidebar.open{transform:translateX(0);}
+  .sidebar-inner{background:none;border:none;padding:0;}
+  .menu-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;}
+  .content{padding:28px 22px;}
+  .content h2{font-size:24px;}
+  .content h3{font-size:18px;}
+  .logo{font-size:20px;}
+  .logo-sub{display:none;}
+  .header-links .btn-link.hide-mobile{display:none;}
+}
+@media (max-width:520px){
+  .content{padding:22px 18px;}
+  .content pre{padding:12px 14px;font-size:12px;}
+  .content table{display:block;overflow-x:auto;}
+}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:8px;height:8px;}
+::-webkit-scrollbar-track{background:rgba(255,255,255,0.03);}
+::-webkit-scrollbar-thumb{background:rgba(255,0,170,0.3);border-radius:4px;}
+::-webkit-scrollbar-thumb:hover{background:rgba(255,0,170,0.5);}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div>
+      <a href="#" class="logo">TELEMORE</a>
+      <span class="logo-sub">ГИД КОМАНДЫ</span>
+    </div>
+    <div class="header-links">
+      <a class="btn-link hide-mobile" href="https://design.telemore.org">Design</a>
+      <a class="btn-link hide-mobile" href="https://app.telemore.org">App</a>
+      <a class="btn-link hide-mobile" href="https://github.com/ircitdev/telemore-design">GitHub</a>
+      <button class="menu-btn" id="menuBtn">☰ Меню</button>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-inner">
+      <h3>НАВИГАЦИЯ</h3>
+      <nav>
+        <a href="#содержание" data-anchor="содержание">Содержание</a>
+<a href="#1-что-такое-openpencil" data-anchor="1-что-такое-openpencil">1. Что такое OpenPencil</a>
+<a href="#2-два-способа-работы" data-anchor="2-два-способа-работы">2. Два способа работы</a>
+<a href="#3-установка-desktop" data-anchor="3-установка-desktop">3. Установка Desktop</a>
+<a href="#4-установка-шрифтов" data-anchor="4-установка-шрифтов">4. Установка шрифтов</a>
+<a href="#5-первое-подключение" data-anchor="5-первое-подключение">5. Первое подключение</a>
+<a href="#6-структура-файла" data-anchor="6-структура-файла">6. Структура файла</a>
+<a href="#7-ежедневная-работа" data-anchor="7-ежедневная-работа">7. Ежедневная работа</a>
+<a href="#8-хоткеи" data-anchor="8-хоткеи">8. Хоткеи</a>
+<a href="#9-стилистика-проекта" data-anchor="9-стилистика-проекта">9. Стилистика проекта</a>
+<a href="#10-правила-командной-работы" data-anchor="10-правила-командной-работы">10. Правила командной работы</a>
+<a href="#11-типовые-задачи" data-anchor="11-типовые-задачи">11. Типовые задачи</a>
+<a href="#12-troubleshooting" data-anchor="12-troubleshooting">12. Troubleshooting</a>
+<a href="#контакты" data-anchor="контакты">📞 Контакты</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="main">
+    <article class="content">
+      <h1 id="телеморе-гид-команды-по-openpencil">🎮 ТЕЛЕМОРЕ — Гид команды по OpenPencil</h1>
+<p>Привет! Это инструкция, как нашей команде работать с дизайн-файлом <code>telemore.op</code> в OpenPencil. Читай по порядку — займёт 15 минут.</p>
+<hr>
+<h2 id="содержание">Содержание</h2>
+<ol>
+<li><a href="#1-%D1%87%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-openpencil">Что такое OpenPencil и зачем он</a></li>
+<li><a href="#2-%D0%B4%D0%B2%D0%B0-%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B0-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B">Два способа работы: браузер vs desktop</a></li>
+<li><a href="#3-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-desktop">Установка desktop-приложения</a></li>
+<li><a href="#4-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D1%88%D1%80%D0%B8%D1%84%D1%82%D0%BE%D0%B2">Установка шрифтов</a></li>
+<li><a href="#5-%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%B5-%D0%BF%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5">Первое подключение к проекту</a></li>
+<li><a href="#6-%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0">Структура файла telemore.op</a></li>
+<li><a href="#7-%D0%B5%D0%B6%D0%B5%D0%B4%D0%BD%D0%B5%D0%B2%D0%BD%D0%B0%D1%8F-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0">Ежедневная работа: основной воркфлоу</a></li>
+<li><a href="#8-%D1%85%D0%BE%D1%82%D0%BA%D0%B5%D0%B8">Хоткеи, которые сэкономят часы</a></li>
+<li><a href="#9-%D1%81%D1%82%D0%B8%D0%BB%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0">Стилистика проекта (палитра, шрифты, размеры)</a></li>
+<li><a href="#10-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BD%D0%BE%D0%B9-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B">Правила: что можно, что нельзя</a></li>
+<li><a href="#11-%D1%82%D0%B8%D0%BF%D0%BE%D0%B2%D1%8B%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8">Типовые задачи</a></li>
+<li><a href="#12-troubleshooting">Если что-то сломалось</a></li>
+</ol>
+<hr>
+<h2 id="1-что-такое-openpencil">1. Что такое OpenPencil</h2>
+<p><strong>OpenPencil</strong> — open-source векторный дизайн-инструмент (альтернатива Figma / Sketch / Pencil.dev).</p>
+<p>Главные особенности для нас:</p>
+<ul>
+<li>📄 <strong>Файлы <code>.op</code> — это JSON-текст</strong>, отлично работают с Git (видно дифф изменений)</li>
+<li>🌐 Есть <strong>веб-версия</strong> — можно работать прямо в браузере без установки</li>
+<li>🤖 Есть <strong>AI-ассистент</strong> для генерации UI из промптов</li>
+<li>🔧 Есть <strong>CLI <code>op</code></strong> для автоматизации (нам уже пригодился — мы сгенерили wireframes скриптом)</li>
+</ul>
+<hr>
+<h2 id="2-два-способа-работы">2. Два способа работы</h2>
+<h3 id="способ-a-браузер-быстрый-старт">🌐 Способ A: Браузер (быстрый старт)</h3>
+<ul>
+<li>Открой <strong><a href="https://design.telemore.org">https://design.telemore.org</a></strong></li>
+<li>Файл <code>telemore.op</code> уже там, в <code>/opt/telemore/designs/</code></li>
+<li>✅ Плюс: ничего ставить не надо</li>
+<li>⚠️ Минус: <strong>только один человек редактирует за раз</strong> (последний сохранивший перезапишет чужие правки)</li>
+<li>👉 Подходит для: быстрых правок, демо клиенту, просмотра</li>
+</ul>
+<h3 id="способ-b-desktop-git-рекомендуем-для-дизайнеров">💻 Способ B: Desktop + Git (рекомендуем для дизайнеров)</h3>
+<ul>
+<li>Ставишь приложение на свой Windows/Mac/Linux</li>
+<li>Клонируешь Git-репо проекта</li>
+<li>Работаешь в своей <strong>Git-ветке</strong> (никто никому не мешает)</li>
+<li>Делаешь pull / merge через визуальный three-way merge внутри OpenPencil</li>
+<li>✅ Плюс: параллельная работа, история, откаты, безопасно</li>
+<li>👉 Подходит для: основной работы над проектом</li>
+</ul>
+<p><strong>Договорённость команды:</strong> правки больше 5 минут — только через desktop + git. Браузер — только для просмотра и крошечных фиксов.</p>
+<hr>
+<h2 id="3-установка-desktop">3. Установка Desktop</h2>
+<h3 id="windows">Windows</h3>
+<ol>
+<li>Скачай <code>OpenPencil-0.7.4-x64-win.exe</code> со страницы <a href="https://github.com/ZSeven-W/openpencil/releases">Releases</a></li>
+<li>Положи куда удобно (например, <code>D:\Apps\OpenPencil\</code>)</li>
+<li>Двойной клик — запустится без установки</li>
+</ol>
+<blockquote>
+<p>Альтернатива через Scoop:</p>
+<pre><code class="language-powershell">scoop bucket add openpencil https://github.com/zseven-w/scoop-openpencil
+scoop install openpencil
+</code></pre>
+</blockquote>
+<h3 id="macos">macOS</h3>
+<pre><code class="language-bash">brew tap zseven-w/openpencil
+brew install --cask openpencil
+</code></pre>
+<h3 id="linux">Linux</h3>
+<ul>
+<li>Скачай <code>.deb</code> или <code>.AppImage</code> из Releases</li>
+<li>Для AppImage: <code>chmod +x OpenPencil-*.AppImage &amp;&amp; ./OpenPencil-*.AppImage</code></li>
+</ul>
+<h3 id="cli-op-опционально-нужен-для-скриптов">CLI <code>op</code> (опционально, нужен для скриптов)</h3>
+<pre><code class="language-bash">npm install -g @zseven-w/openpencil
+</code></pre>
+<p>Проверка: <code>op --version</code> → <code>0.7.4</code></p>
+<hr>
+<h2 id="4-установка-шрифтов">4. Установка шрифтов</h2>
+<p>В проекте используются <strong>2 шрифта</strong>, оба надо поставить «для всех пользователей»:</p>
+<h3 id="41-pricedown-rus-с-кириллицей">4.1. Pricedown RUS (с кириллицей)</h3>
+<ul>
+<li>Это шрифт логотипа GTA Vice City — наша главная фишка визуала</li>
+<li>Используется на: логотип TELEMORE, баланс «150», заголовки экранов, текст на кнопках</li>
+<li>Скачать: ищи в Google «Pricedown Rus cyrillic ttf» (есть на rus-fonts.ru, fonts-online.ru и др.)</li>
+<li>⚠️ <strong>Обычная Pricedown БЕЗ Cyrillic не подойдёт</strong> — кириллица будет квадратами</li>
+</ul>
+<h3 id="42-roboto">4.2. Roboto</h3>
+<ul>
+<li>Используется для основного текста (UI-элементы, формы, лейблы, описания)</li>
+<li>Скачать: <a href="https://fonts.google.com/specimen/Roboto">https://fonts.google.com/specimen/Roboto</a> → Download family</li>
+<li>Распакуй ZIP, выдели все <code>.ttf</code> → правый клик → <strong>«Установить для всех пользователей»</strong></li>
+</ul>
+<h3 id="проверка">Проверка</h3>
+<p>После установки <strong>перезапусти OpenPencil</strong> и открой <code>telemore.op</code> — кириллица должна отображаться.</p>
+<hr>
+<h2 id="5-первое-подключение">5. Первое подключение</h2>
+<h3 id="через-браузер">Через браузер</h3>
+<p>Просто открой <a href="https://design.telemore.org">https://design.telemore.org</a></p>
+<h3 id="через-desktop-git">Через desktop + Git</h3>
+<pre><code class="language-bash"># 1. Клонируй репозиторий (URL получишь у тимлида)
+git clone &lt;repo-url&gt; telemore-design
+cd telemore-design
+
+# 2. Открой telemore.op
+# - Двойной клик по файлу (если ассоциация настроена)
+# - Или: запусти OpenPencil → Cmd+O / Ctrl+O → выбери telemore.op
+</code></pre>
+<p>В OpenPencil:</p>
+<ul>
+<li>Меню → <strong>Git</strong> → <strong>Connect to Repository</strong> → выбери папку с клоном</li>
+<li>Появится Git-панель сбоку с историей коммитов</li>
+</ul>
+<hr>
+<h2 id="6-структура-файла">6. Структура файла</h2>
+<p><code>telemore.op</code> содержит <strong>17 страниц</strong> (Pages). Слева в панели Pages:</p>
+<h3 id="мобильные-экраны-375812">Мобильные экраны (375×812)</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Страница</th>
+<th>Что внутри</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Регистрация</td>
+<td>Форма анкеты + выбор отряда</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Главный экран</td>
+<td>Баланс, навигация</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Мой QR</td>
+<td>QR-код участника + кнопка PDF</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Ачивки</td>
+<td>6 карточек достижений</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Рейтинг</td>
+<td>Личный + командный лидерборд</td>
+</tr>
+<tr>
+<td>6</td>
+<td>План дня</td>
+<td>Timeline расписания</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Сканер продюсера</td>
+<td>Камера + быстрые действия</td>
+</tr>
+</tbody></table>
+<h3 id="wireframes-админки-1280800">Wireframes админки (1280×800)</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Страница</th>
+<th>Что внутри</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A1</td>
+<td>Producer: Dashboard</td>
+<td>KPI + графики</td>
+</tr>
+<tr>
+<td>A2</td>
+<td>Producer: Сканер QR</td>
+<td>Камера + панель действий</td>
+</tr>
+<tr>
+<td>A3</td>
+<td>Producer: Участники</td>
+<td>Таблица + фильтры</td>
+</tr>
+<tr>
+<td>A4</td>
+<td>Producer: Карточка участника</td>
+<td>Профиль + история</td>
+</tr>
+<tr>
+<td>A5</td>
+<td>Producer: События</td>
+<td>Таблица событий</td>
+</tr>
+<tr>
+<td>A6</td>
+<td>Producer: Редактор события</td>
+<td>Форма создания</td>
+</tr>
+<tr>
+<td>A7</td>
+<td>Producer: Уведомления</td>
+<td>Компоновщик + лог</td>
+</tr>
+<tr>
+<td>A8</td>
+<td>Producer: План дня</td>
+<td>Timeline editor</td>
+</tr>
+<tr>
+<td>A9</td>
+<td>Superadmin: Сменами</td>
+<td>Управление турами</td>
+</tr>
+<tr>
+<td>A10</td>
+<td>Superadmin: Роли и Ачивки</td>
+<td>Настройки</td>
+</tr>
+</tbody></table>
+<h3 id="слои-layers-panel">Слои (Layers panel)</h3>
+<p>Внутри каждой страницы — иерархия фреймов. Открывается слева, вторая панель.</p>
+<hr>
+<h2 id="7-ежедневная-работа">7. Ежедневная работа</h2>
+<h3 id="утро-получить-свежие-изменения">Утро: получить свежие изменения</h3>
+<pre><code class="language-bash">cd telemore-design
+git checkout main
+git pull
+</code></pre>
+<p>Или в OpenPencil: <strong>Git → Pull</strong></p>
+<h3 id="перед-началом-задачи-сделать-ветку">Перед началом задачи: сделать ветку</h3>
+<p><strong>В OpenPencil:</strong> Git → New Branch → имя ветки</p>
+<p><strong>Правила именования:</strong></p>
+<ul>
+<li><code>feat/screen-rating-tabs</code> — новая фича/экран</li>
+<li><code>fix/qr-pdf-export</code> — починка</li>
+<li><code>tweak/colors-vice-city</code> — мелкие правки стиля</li>
+<li><code>wireframe/admin-A11-stats</code> — новый wireframe админки</li>
+</ul>
+<h3 id="работа-правки-в-файле">Работа: правки в файле</h3>
+<ol>
+<li>Перейди на нужную <strong>Page</strong> слева</li>
+<li>Меняй элементы (двойной клик по тексту → редактирование)</li>
+<li><strong>Cmd+S / Ctrl+S</strong> — сохранить (часто! каждые 5-10 минут)</li>
+<li>Если правка большая — делай промежуточные коммиты</li>
+</ol>
+<h3 id="после-каждой-логической-части-коммит">После каждой «логической части» — коммит</h3>
+<p><strong>В OpenPencil:</strong> Git панель → Commit
+<strong>Стандарт сообщения:</strong></p>
+<pre><code>&lt;scope&gt;: &lt;что сделано&gt;
+
+screen-qr: увеличить QR до 240px и добавить рамку
+admin-A3: добавить колонку «Дата регистрации»
+fix: поправить fontFamily на кнопке ШТРАФ
+wireframe/A6: добавить опцию «Повтор еженедельно»
+</code></pre>
+<h3 id="завершил-задачу-push-pr">Завершил задачу — push + PR</h3>
+<ol>
+<li><code>git push</code> (или Git → Push в OpenPencil)</li>
+<li>Открой репо в GitHub/GitLab → создай <strong>Pull Request</strong> в <code>main</code></li>
+<li>Получи аппрув от тимлида → merge</li>
+</ol>
+<hr>
+<h2 id="8-хоткеи">8. Хоткеи</h2>
+<table>
+<thead>
+<tr>
+<th>Действие</th>
+<th>Windows/Linux</th>
+<th>macOS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Сохранить</td>
+<td><code>Ctrl+S</code></td>
+<td><code>Cmd+S</code></td>
+</tr>
+<tr>
+<td>Отменить / повторить</td>
+<td><code>Ctrl+Z</code> / <code>Ctrl+Shift+Z</code></td>
+<td><code>Cmd+Z</code> / <code>Cmd+Shift+Z</code></td>
+</tr>
+<tr>
+<td>Копировать / Вставить</td>
+<td><code>Ctrl+C</code> / <code>Ctrl+V</code></td>
+<td><code>Cmd+C</code> / <code>Cmd+V</code></td>
+</tr>
+<tr>
+<td>Дублировать</td>
+<td><code>Ctrl+D</code></td>
+<td><code>Cmd+D</code></td>
+</tr>
+<tr>
+<td>Группировать / разгруппировать</td>
+<td><code>Ctrl+G</code> / <code>Ctrl+Shift+G</code></td>
+<td><code>Cmd+G</code> / <code>Cmd+Shift+G</code></td>
+</tr>
+<tr>
+<td>Экспорт (PNG/JPG/PDF)</td>
+<td><code>Ctrl+Shift+P</code></td>
+<td><code>Cmd+Shift+P</code></td>
+</tr>
+<tr>
+<td>Открыть AI-чат</td>
+<td><code>Ctrl+J</code></td>
+<td><code>Cmd+J</code></td>
+</tr>
+<tr>
+<td>Панель кода</td>
+<td><code>Ctrl+Shift+C</code></td>
+<td><code>Cmd+Shift+C</code></td>
+</tr>
+<tr>
+<td>Инструменты</td>
+<td><code>V</code> (выделение), <code>R</code> (прямоугольник), <code>T</code> (текст), <code>F</code> (фрейм), <code>H</code> (рука/панорама)</td>
+<td></td>
+</tr>
+<tr>
+<td>Перемещение на 1px</td>
+<td>стрелки клавиатуры</td>
+<td>стрелки клавиатуры</td>
+</tr>
+</tbody></table>
+<p>Полный список — в README OpenPencil или в меню <strong>Help → Keyboard Shortcuts</strong>.</p>
+<hr>
+<h2 id="9-стилистика-проекта">9. Стилистика проекта</h2>
+<h3 id="палитра-мобильные-экраны-gta-vice-city-neon">Палитра — мобильные экраны (GTA Vice City Neon)</h3>
+<table>
+<thead>
+<tr>
+<th>Цвет</th>
+<th>HEX</th>
+<th>Использование</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🟣 BG Top</td>
+<td><code>#1A0033</code></td>
+<td>Фон, верх градиента</td>
+</tr>
+<tr>
+<td>🟣 BG Bottom</td>
+<td><code>#2D004D</code></td>
+<td>Фон, низ градиента</td>
+</tr>
+<tr>
+<td>🌸 Neon Pink</td>
+<td><code>#FF00AA</code></td>
+<td>Primary акценты, кнопки, кобры</td>
+</tr>
+<tr>
+<td>🩵 Neon Cyan</td>
+<td><code>#00F0FF</code></td>
+<td>Secondary, акулы, рамки</td>
+</tr>
+<tr>
+<td>🟡 Gold</td>
+<td><code>#FFD700</code></td>
+<td>Баланс, цифры, золотые ачивки</td>
+</tr>
+<tr>
+<td>🔴 Danger</td>
+<td><code>#FF0033</code></td>
+<td>Штрафы, ошибки</td>
+</tr>
+<tr>
+<td>⚪ Text</td>
+<td><code>#FFFFFF</code></td>
+<td>Основной текст</td>
+</tr>
+<tr>
+<td>⚪ Text Sec</td>
+<td><code>rgba(255,255,255,0.6-0.7)</code></td>
+<td>Подсказки, описания</td>
+</tr>
+</tbody></table>
+<h3 id="палитра-wireframes-админки-light">Палитра — wireframes админки (light)</h3>
+<table>
+<thead>
+<tr>
+<th>Цвет</th>
+<th>HEX</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Background</td>
+<td><code>#F5F5F7</code></td>
+</tr>
+<tr>
+<td>Surface</td>
+<td><code>#FFFFFF</code></td>
+</tr>
+<tr>
+<td>Border</td>
+<td><code>#D0D0D5</code></td>
+</tr>
+<tr>
+<td>Border (dashed)</td>
+<td><code>#B0B0B5</code></td>
+</tr>
+<tr>
+<td>Text Primary</td>
+<td><code>#2C2C2E</code></td>
+</tr>
+<tr>
+<td>Text Secondary</td>
+<td><code>#6C6C72</code></td>
+</tr>
+<tr>
+<td>Placeholder</td>
+<td><code>#B0B0B5</code></td>
+</tr>
+<tr>
+<td>Accent</td>
+<td><code>#2C2C2E</code></td>
+</tr>
+<tr>
+<td>Danger</td>
+<td><code>#B0362C</code></td>
+</tr>
+</tbody></table>
+<h3 id="шрифты">Шрифты</h3>
+<table>
+<thead>
+<tr>
+<th>Где</th>
+<th>Шрифт</th>
+<th>Размер</th>
+<th>Вес</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Логотип TELEMORE</td>
+<td><strong>Pricedown</strong></td>
+<td>48-56px</td>
+<td>700</td>
+</tr>
+<tr>
+<td>Баланс «150»</td>
+<td><strong>Pricedown</strong></td>
+<td>96px</td>
+<td>700</td>
+</tr>
+<tr>
+<td>Заголовки экранов</td>
+<td><strong>Pricedown</strong></td>
+<td>38-42px</td>
+<td>700</td>
+</tr>
+<tr>
+<td>Текст на кнопках</td>
+<td><strong>Pricedown</strong> Regular</td>
+<td>25px</td>
+<td>400 (по центру)</td>
+</tr>
+<tr>
+<td>Цифры мест в рейтинге</td>
+<td><strong>Pricedown</strong></td>
+<td>22-28px</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Названия (отряд, ачивка)</td>
+<td><strong>Roboto</strong></td>
+<td>14-16px</td>
+<td>700</td>
+</tr>
+<tr>
+<td>Body / описания</td>
+<td><strong>Roboto</strong></td>
+<td>11-13px</td>
+<td>400</td>
+</tr>
+<tr>
+<td>Caption / подсказки</td>
+<td><strong>Roboto</strong></td>
+<td>10-11px</td>
+<td>400</td>
+</tr>
+</tbody></table>
+<h3 id="glow-эффекты">Glow-эффекты</h3>
+<p>Все значимые элементы имеют <strong>outer shadow без offset</strong> (свечение):</p>
+<pre><code>shadow: 0 0 16-30px {color, opacity 0.5-0.8}
+</code></pre>
+<h3 id="размеры">Размеры</h3>
+<table>
+<thead>
+<tr>
+<th>Тип экрана</th>
+<th>Размер</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Мобильный (TWA)</td>
+<td><strong>375 × 812</strong></td>
+</tr>
+<tr>
+<td>Админка / wireframes</td>
+<td><strong>1280 × 800</strong></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="10-правила-командной-работы">10. Правила командной работы</h2>
+<h3 id="делай">✅ Делай</h3>
+<ul>
+<li>🌿 Всегда работай в <strong>отдельной ветке</strong> (никогда напрямую в <code>main</code>)</li>
+<li>💾 <strong>Сохраняй часто</strong> (<code>Ctrl+S</code> каждые 5-10 минут)</li>
+<li>📝 Делай <strong>частые коммиты</strong> с понятными сообщениями</li>
+<li>🔄 Перед началом дня — <code>git pull</code></li>
+<li>👀 Смотри <strong>what changed</strong> перед коммитом (Git → Diff)</li>
+<li>🎨 Соблюдай палитру и шрифты — это узнаваемость бренда</li>
+<li>💬 В сложных правках — пиши в командный чат, что меняешь и зачем</li>
+</ul>
+<h3 id="не-делай">❌ Не делай</h3>
+<ul>
+<li>🚫 Не переименовывай <strong>ID нод</strong> в коде (если знаешь, как залезать в код .op) — это сломает другие правки в merge</li>
+<li>🚫 Не редактируй <strong>через браузер</strong>, если знаешь, что коллега сейчас работает в desktop — потеряете работу</li>
+<li>🚫 Не коммить «WIP» куски, которые ломают экран — коммитим только рабочее</li>
+<li>🚫 Не используй <strong>Pricedown</strong> для русского текста, если шрифт <strong>БЕЗ Cyrillic-версии</strong> — будет квадратами</li>
+<li>🚫 Не добавляй экраны <strong>без согласования</strong> — лучше создай ветку и обсуди</li>
+<li>🚫 Не удаляй чужие страницы (Pages) — даже если кажется, что они «лишние»</li>
+</ul>
+<hr>
+<h2 id="11-типовые-задачи">11. Типовые задачи</h2>
+<h3 id="задача-исправить-опечатку-в-тексте">Задача: исправить опечатку в тексте</h3>
+<ol>
+<li>Открой нужную Page</li>
+<li>Двойной клик по тексту → правь</li>
+<li><code>Ctrl+S</code> → Git → Commit <code>&quot;fix: опечатка в названии ачивки&quot;</code> → Push</li>
+</ol>
+<h3 id="задача-поменять-цвет-кнопки">Задача: поменять цвет кнопки</h3>
+<ol>
+<li>Выдели кнопку (фрейм)</li>
+<li>Справа в панели <strong>Properties</strong> → <strong>Fill</strong> → измени HEX</li>
+<li>Если есть <code>stroke</code> (рамка) — поменяй и там</li>
+<li>Сохрани, закоммить</li>
+</ol>
+<h3 id="задача-добавить-новый-экран-мобилки">Задача: добавить новый экран мобилки</h3>
+<ol>
+<li>Слева в <strong>Pages</strong> → правый клик → <strong>New Page</strong> → имя «8. Новый экран»</li>
+<li>На canvas: создай root frame <strong>375 × 812</strong> с фоном-градиентом из палитры</li>
+<li>Внутри собери UI из существующих компонентов (можно скопировать <code>Ctrl+C</code> из соседнего экрана)</li>
+<li>Соблюдай отступы / шрифты / glow-стиль</li>
+<li>Коммит <code>feat: добавить экран Настройки</code></li>
+</ol>
+<h3 id="задача-экспортировать-макет-для-презентации-клиенту">Задача: экспортировать макет для презентации клиенту</h3>
+<ol>
+<li>Выдели нужный root frame на canvas</li>
+<li><code>Ctrl+Shift+P</code> → выбери формат (PNG / JPG / PDF) → размер 1x / 2x / 3x</li>
+<li>Save</li>
+</ol>
+<h3 id="задача-дать-ссылку-клиенту-на-просмотр">Задача: дать ссылку клиенту на просмотр</h3>
+<ul>
+<li>Отправь <a href="https://design.telemore.org">https://design.telemore.org</a> — клиент откроет в браузере, увидит все макеты</li>
+</ul>
+<h3 id="задача-разрешить-merge-конфликт">Задача: разрешить merge-конфликт</h3>
+<ol>
+<li>После <code>git pull</code> если есть конфликт — OpenPencil откроет <strong>Conflict Resolution Panel</strong></li>
+<li>По каждой ноде: выбери <strong>Mine / Theirs / Both</strong></li>
+<li>Иногда нужен ручной правка — кликни по узлу, отредактируй</li>
+<li>Когда все конфликты решены → <code>Mark Resolved</code> → Commit</li>
+<li>Push</li>
+</ol>
+<hr>
+<h2 id="12-troubleshooting">12. Troubleshooting</h2>
+<h3 id="кириллица-отображается-квадратами">Кириллица отображается квадратами 🟦🟦🟦</h3>
+<p><strong>Причина:</strong> не установлен Pricedown с кириллицей или Roboto.
+<strong>Решение:</strong> см. раздел <a href="#4-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D1%88%D1%80%D0%B8%D1%84%D1%82%D0%BE%D0%B2">4. Установка шрифтов</a>. После установки — перезапусти OpenPencil.</p>
+<h3 id="файл-telemoreop-повреждён-не-открывается">Файл <code>telemore.op</code> повреждён / не открывается</h3>
+<p><strong>Решение:</strong></p>
+<pre><code class="language-bash">cd telemore-design
+git checkout main
+git pull
+git reset --hard origin/main   # ⚠️ удалит локальные несохранённые правки
+</code></pre>
+<p>Затем открой <code>telemore.op</code> заново.</p>
+<h3 id="openpencil-не-видит-op-файл-при-открытии">OpenPencil не видит .op файл при открытии</h3>
+<p><strong>Решение:</strong> перезапусти приложение → File → Open Recent / Open File → выбери <code>telemore.op</code> вручную.</p>
+<h3 id="браузерная-версия-пишет-не-удалось-загрузить">Браузерная версия пишет «не удалось загрузить»</h3>
+<p><strong>Решение:</strong> обнови страницу (Cmd+Shift+R / Ctrl+Shift+R), очисти кэш. Если всё равно — пиши в чат, перезапустим контейнер на сервере.</p>
+<h3 id="конфликт-в-git-не-понимаю-как-решить">Конфликт в Git, не понимаю как решить</h3>
+<p><strong>Решение:</strong> не паникуй, не делай <code>git reset --hard</code>. Пиши в командный чат, тимлид поможет.
+В крайнем случае — сохрани свою ветку под другим именем:</p>
+<pre><code class="language-bash">git stash                 # отложить незакоммиченные правки
+git checkout -b backup-myname-$(date +%F)
+git push -u origin backup-myname-$(date +%F)
+</code></pre>
+<p>Потом разберёмся вместе.</p>
+<h3 id="случайно-удалил-страницу-экран">Случайно удалил страницу / экран</h3>
+<p><strong>Решение:</strong></p>
+<ol>
+<li>Если ещё не сохранил → <code>Ctrl+Z</code> (undo)</li>
+<li>Если сохранил, но ещё не закоммитил → <code>git restore telemore.op</code></li>
+<li>Если закоммитил → откатить через <code>git revert &lt;hash коммита&gt;</code></li>
+</ol>
+<h3 id="что-то-странное-не-работает-фича-openpencil">Что-то странное — не работает фича OpenPencil</h3>
+<ul>
+<li>Проверь, последняя ли у тебя версия (Help → Check for Updates)</li>
+<li>Перезапусти приложение</li>
+<li>Проверь логи: <code>Help → Show Logs</code></li>
+<li>Если баг — кидай скриншот в чат и issue в репозитории OpenPencil</li>
+</ul>
+<hr>
+<h2 id="контакты">📞 Контакты</h2>
+<ul>
+<li><strong>Тимлид / тех.вопросы</strong> — пиши в основной чат проекта</li>
+<li><strong>Документация OpenPencil</strong> — <a href="https://github.com/ZSeven-W/openpencil">https://github.com/ZSeven-W/openpencil</a></li>
+<li><strong>Изменения в этом гайде</strong> — открывай PR, обсудим вместе</li>
+</ul>
+<hr>
+<p><em>Последнее обновление: апрель 2026 • Версия 1.0</em></p>
+
+    </article>
+    <div class="footer">
+      <p>ТЕЛЕМОРЕ Design Team • <a href="https://github.com/ircitdev/telemore-design">GitHub</a> • <a href="mailto:design@telemore.org">design@telemore.org</a></p>
+    </div>
+  </main>
+</div>
+
+<script>
+(function(){
+  const btn = document.getElementById('menuBtn');
+  const sb = document.getElementById('sidebar');
+  btn.addEventListener('click', () => sb.classList.toggle('open'));
+  // Закрыть меню при клике по ссылке в мобильной версии
+  sb.querySelectorAll('a').forEach(a => a.addEventListener('click', () => sb.classList.remove('open')));
+
+  // Active section tracking
+  const links = Array.from(document.querySelectorAll('.sidebar a[data-anchor]'));
+  const targets = links.map(a => document.getElementById(a.dataset.anchor)).filter(Boolean);
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.toggle('active', l.dataset.anchor === e.target.id));
+      }
+    });
+  }, { rootMargin: '-80px 0px -60% 0px' });
+  targets.forEach(t => observer.observe(t));
+})();
+</script>
+
+</body>
+</html>
