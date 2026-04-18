@@ -2,6 +2,18 @@
 
 Привет! Это инструкция, как нашей команде работать с дизайн-файлом `telemore.op` в OpenPencil. Читай по порядку — займёт 15 минут.
 
+## 🔗 Быстрый доступ
+
+| Ссылка | Назначение |
+|--------|-----------|
+| **https://design.telemore.org/go/** | 🚀 Один клик — открыть `telemore.op` в OpenPencil |
+| https://design.telemore.org/ | OpenPencil веб-редактор |
+| https://design.telemore.org/manual/ | Этот гид (HTML) |
+| https://design.telemore.org/files/ | Индекс всех файлов проекта |
+| https://design.telemore.org/files/telemore.op | Прямое скачивание актуального `.op` |
+| https://github.com/ircitdev/telemore-design | Репозиторий (приватный) |
+| https://app.telemore.org/ | Mini App (coming soon) |
+
 ---
 
 ## Содержание
@@ -17,7 +29,8 @@
 9. [Стилистика проекта (палитра, шрифты, размеры)](#9-стилистика-проекта)
 10. [Правила: что можно, что нельзя](#10-правила-командной-работы)
 11. [Типовые задачи](#11-типовые-задачи)
-12. [Если что-то сломалось](#12-troubleshooting)
+12. [Как работает автосинхронизация](#12-автосинхронизация)
+13. [Если что-то сломалось](#13-troubleshooting)
 
 ---
 
@@ -362,7 +375,60 @@ shadow: 0 0 16-30px {color, opacity 0.5-0.8}
 
 ---
 
-## 12. Troubleshooting
+## 12. Автосинхронизация
+
+Тебе **не нужно** вручную деплоить ничего на сервер. Всё происходит само:
+
+```
+Кто-то делает git push в main
+        ↓
+GitHub Actions (~9 секунд)
+        ↓
+SSH в VPS → git pull --hard origin/main
+        ↓
+Cron на VPS (каждые 2 мин) — fallback
+        ↓
+Обновляется:
+ • https://design.telemore.org/files/* (все файлы репо)
+ • https://design.telemore.org/manual/ (этот гид)
+ • https://design.telemore.org/go/ (launcher)
+ • https://app.telemore.org/ (coming-soon)
+```
+
+### Что это означает для тебя
+
+| Действие | Что обновится | Когда |
+|----------|---------------|-------|
+| Push коммита с `telemore.op` | Файл на `/files/telemore.op` | Через ~9 сек |
+| Push изменения в `TEAM_GUIDE.md` + пересборка `manual/index.html` | Этот HTML-гид | Через ~9 сек |
+| Push изменения `deployed-app/index.html` | https://app.telemore.org/ | Через ~9 сек |
+
+### Если push сделан, но веб не обновился
+
+1. Проверь GitHub Actions: https://github.com/ircitdev/telemore-design/actions — последний run должен быть зелёный
+2. Если красный — открой run, читай логи, попроси тимлида
+3. Жди до 2 минут — сработает cron-fallback на VPS
+4. Если всё равно не обновилось — пиши тимлиду
+
+### Ручной триггер деплоя
+
+```bash
+gh workflow run deploy.yml --repo ircitdev/telemore-design
+```
+
+### Проверка статуса с командной строки
+
+```bash
+# Логи деплоя на VPS
+ssh root@2.27.4.90 'tail -20 /var/log/telemore-sync.log'
+
+# Состояние контейнеров
+ssh root@2.27.4.90 'docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
+```
+
+---
+
+## 13. Troubleshooting
 
 ### Кириллица отображается квадратами 🟦🟦🟦
 **Причина:** не установлен Pricedown с кириллицей или Roboto.
@@ -405,6 +471,17 @@ git push -u origin backup-myname-$(date +%F)
 - Перезапусти приложение
 - Проверь логи: `Help → Show Logs`
 - Если баг — кидай скриншот в чат и issue в репозитории OpenPencil
+
+### Я открыл `/go/`, но OpenPencil не открылся в новой вкладке
+Браузер заблокировал popup. На `/go/` появится кнопка «Открыть OpenPencil →» — нажми её. Файл уже в `Downloads`.
+
+### Я залил коммит, но на `https://design.telemore.org/files/telemore.op` старая версия
+- Проверь GitHub Actions: https://github.com/ircitdev/telemore-design/actions
+- Если зелёный — обнови вкладку с `Ctrl+Shift+R` (hard reload, чистит кэш)
+- Cloudflare иногда кэширует на 5-30 секунд
+
+### Браузерная версия пишет «Не получается прочитать файл .op»
+Скорее всего ты выбрал устаревший / битый файл из `Downloads`. Скачай свежую копию через https://design.telemore.org/go/ или https://design.telemore.org/files/telemore.op
 
 ---
 
