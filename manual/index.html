@@ -313,8 +313,17 @@ brew install --cask openpencil
 <p>После установки <strong>перезапусти OpenPencil</strong> и открой <code>telemore.op</code> — кириллица должна отображаться.</p>
 <hr>
 <h2 id="5-первое-подключение">5. Первое подключение</h2>
-<h3 id="через-браузер">Через браузер</h3>
-<p>Просто открой <a href="https://design.telemore.org">https://design.telemore.org</a></p>
+<h3 id="через-браузер-для-быстрого-просмотра">Через браузер (для быстрого просмотра)</h3>
+<p>OpenPencil в браузере <strong>не умеет открывать файлы с Git</strong> — он работает только с локальными файлами. Поэтому сценарий такой:</p>
+<ol>
+<li><strong>Скачай актуальный файл:</strong> <a href="https://design.telemore.org/files/telemore.op">https://design.telemore.org/files/telemore.op</a> (всегда последняя версия из main)</li>
+<li>Открой <a href="https://design.telemore.org">https://design.telemore.org</a></li>
+<li>Нажми «Открыть» (иконка папки в левой панели) → выбери скачанный <code>telemore.op</code></li>
+<li>⚠️ <strong>Твои правки НЕ сохранятся на сервер</strong> — браузер только читает локально. Для коммита правок — используй desktop-версию (см. ниже).</li>
+</ol>
+<blockquote>
+<p><strong>Список всех файлов проекта:</strong> <a href="https://design.telemore.org/files/">https://design.telemore.org/files/</a> — полный индекс с README, TEAM_GUIDE, JSON-исходниками, <code>.op</code> файлом, всегда актуальная версия.</p>
+</blockquote>
 <h3 id="через-desktop-git">Через desktop + Git</h3>
 <pre><code class="language-bash"># 1. Клонируй репозиторий (URL получишь у тимлида)
 git clone &lt;repo-url&gt; telemore-design
