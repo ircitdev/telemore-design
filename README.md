@@ -101,20 +101,56 @@ fix: поправить кириллицу на кнопке ЧЕК-ИН
 
 ## Онлайн-доступ через браузер
 
-URL (после деплоя): **https://design.telemore.org**
+🌐 **URL: https://design.telemore.org** — работает, открывай в любом браузере.
 
-```bash
-# Настройка сервера (для admin):
-docker run -d --name openpencil \
-  -p 3000:3000 \
-  -v /opt/telemore/designs:/workspace \
-  --restart unless-stopped \
-  ghcr.io/zseven-w/openpencil:latest
+### Архитектура
 
-# + Cloudflare Tunnel / reverse proxy nginx на design.telemore.org
+```
+Browser → Cloudflare (SSL) → Cloudflare Tunnel → VPS (2.27.4.90)
+                                                      ↓
+                                           Docker: openpencil:latest
+                                           Port 127.0.0.1:3000
+                                           Workspace: /opt/telemore/designs
 ```
 
-⚠️ **Веб-версия — single-user в моменте.** Два человека одновременно = последний сохранивший перезатирает. Для параллельной работы используйте Git-ветки.
+### Что развёрнуто на VPS (ubuntu 24.04)
+
+| Компонент | Где | Команда проверки |
+|-----------|-----|------------------|
+| Docker Engine 29.4 | systemd | `systemctl status docker` |
+| Container `openpencil` | 127.0.0.1:3000 | `docker ps` |
+| cloudflared tunnel | systemd | `systemctl status cloudflared` |
+| Workspace | `/opt/telemore/designs` | (с git репозиторием) |
+
+### Управление с VPS
+
+```bash
+ssh root@2.27.4.90
+
+# Перезапустить OpenPencil
+docker restart openpencil
+
+# Логи
+docker logs --tail 50 openpencil
+journalctl -u cloudflared -n 50
+
+# Обновить образ OpenPencil
+docker pull ghcr.io/zseven-w/openpencil:latest
+docker stop openpencil && docker rm openpencil
+docker run -d --name openpencil --restart unless-stopped \
+  -p 127.0.0.1:3000:3000 \
+  -v /opt/telemore/designs:/workspace \
+  ghcr.io/zseven-w/openpencil:latest
+```
+
+### Cloudflare Tunnel
+
+- Name: `telemore-design`
+- ID: `b342cf7b-b3eb-47e3-bed0-e4f32dde305a`
+- Ingress: `design.telemore.org → http://localhost:3000`
+- DNS: CNAME `design.telemore.org → <tunnel-id>.cfargotunnel.com` (proxied)
+
+⚠️ **Веб-версия — single-user в моменте.** Два человека одновременно = последний сохранивший перезатирает. Для параллельной работы используйте Git-ветки (desktop-версия OpenPencil + git pull/push).
 
 ## Регенерация wireframes (если меняется шаблон)
 
