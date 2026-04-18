@@ -153,11 +153,22 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;
   padding:2px 6px;color:var(--cyan);
 }
 .content pre{
+  position:relative;
   background:rgba(0,0,0,0.35);border:1px solid var(--border);border-radius:10px;
   padding:16px 20px;margin:20px 0;overflow-x:auto;
   box-shadow:inset 0 0 20px rgba(0,240,255,0.04);
 }
 .content pre code{background:none;border:none;padding:0;color:#e8e8f0;font-size:13px;line-height:1.6;}
+.copy-btn{
+  position:absolute;top:8px;right:8px;
+  background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text-dim);
+  padding:4px 10px;border-radius:6px;font-size:11px;font-weight:600;
+  cursor:pointer;font-family:inherit;letter-spacing:0.5px;
+  opacity:0;transition:all .15s;
+}
+.content pre:hover .copy-btn{opacity:1;}
+.copy-btn:hover{background:rgba(0,240,255,0.15);border-color:var(--cyan);color:var(--cyan);}
+.copy-btn.copied{background:rgba(255,0,170,0.2);border-color:var(--pink);color:var(--pink);}
 
 /* Tables */
 .content table{
@@ -278,6 +289,26 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;
     });
   }, { rootMargin: '-80px 0px -60% 0px' });
   targets.forEach(t => observer.observe(t));
+
+  // Copy code buttons
+  document.querySelectorAll('pre').forEach(pre => {
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.type = 'button';
+    btn.textContent = 'COPY';
+    btn.addEventListener('click', async () => {
+      const code = pre.querySelector('code') || pre;
+      try {
+        await navigator.clipboard.writeText(code.textContent);
+        btn.textContent = 'COPIED ✓';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'COPY'; btn.classList.remove('copied'); }, 1500);
+      } catch(e) {
+        btn.textContent = 'ERR';
+      }
+    });
+    pre.appendChild(btn);
+  });
 })();
 </script>
 
