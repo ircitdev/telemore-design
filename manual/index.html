@@ -314,15 +314,25 @@ brew install --cask openpencil
 <hr>
 <h2 id="5-первое-подключение">5. Первое подключение</h2>
 <h3 id="через-браузер-для-быстрого-просмотра">Через браузер (для быстрого просмотра)</h3>
-<p>OpenPencil в браузере <strong>не умеет открывать файлы с Git</strong> — он работает только с локальными файлами. Поэтому сценарий такой:</p>
+<h4 id="самый-быстрый-способ-одна-ссылка">🚀 Самый быстрый способ — одна ссылка:</h4>
+<p><strong><a href="https://design.telemore.org/go/">https://design.telemore.org/go/</a></strong> — клик, и ты в OpenPencil с нашим файлом.</p>
+<p>Что происходит по этому URL:</p>
 <ol>
-<li><strong>Скачай актуальный файл:</strong> <a href="https://design.telemore.org/files/telemore.op">https://design.telemore.org/files/telemore.op</a> (всегда последняя версия из main)</li>
-<li>Открой <a href="https://design.telemore.org">https://design.telemore.org</a></li>
-<li>Нажми «Открыть» (иконка папки в левой панели) → выбери скачанный <code>telemore.op</code></li>
-<li>⚠️ <strong>Твои правки НЕ сохранятся на сервер</strong> — браузер только читает локально. Для коммита правок — используй desktop-версию (см. ниже).</li>
+<li>✅ Скачивается актуальный <code>telemore.op</code> на твой диск (в <code>Downloads</code>)</li>
+<li>✅ Открывается новая вкладка с OpenPencil</li>
+<li>✅ Показывается подсказка: где найти файл в OpenPencil</li>
 </ol>
+<p>После этого: в OpenPencil нажми <strong>File → Open</strong> (иконка папки в левой панели) → выбери свежескачанный <code>telemore.op</code> из <code>Downloads</code> и работай.</p>
+<h4 id="альтернативный-ручной-способ">🔧 Альтернативный ручной способ</h4>
+<p>Если автомагия не сработала:</p>
+<ol>
+<li><strong>Скачай:</strong> <a href="https://design.telemore.org/files/telemore.op">https://design.telemore.org/files/telemore.op</a></li>
+<li>Открой <a href="https://design.telemore.org">https://design.telemore.org</a></li>
+<li><strong>File → Open</strong> → выбери <code>telemore.op</code></li>
+</ol>
+<p>⚠️ <strong>Ограничение браузерной версии:</strong> правки <strong>не попадают в Git</strong> — ты редактируешь локальную копию. Для постоянных изменений → desktop-версия (см. ниже).</p>
 <blockquote>
-<p><strong>Список всех файлов проекта:</strong> <a href="https://design.telemore.org/files/">https://design.telemore.org/files/</a> — полный индекс с README, TEAM_GUIDE, JSON-исходниками, <code>.op</code> файлом, всегда актуальная версия.</p>
+<p><strong>Полный список файлов проекта:</strong> <a href="https://design.telemore.org/files/">https://design.telemore.org/files/</a> — индекс со всеми JSON-исходниками, README, TEAM_GUIDE, <code>.op</code> файлом. Всегда актуальная версия (auto-sync из GitHub).</p>
 </blockquote>
 <h3 id="через-desktop-git">Через desktop + Git</h3>
 <pre><code class="language-bash"># 1. Клонируй репозиторий (URL получишь у тимлида)
