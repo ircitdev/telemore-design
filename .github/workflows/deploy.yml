@@ -1,0 +1,53 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-vps
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          echo "${{ secrets.DEPLOY_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Deploy (git pull on VPS)
+        run: |
+          ssh -i ~/.ssh/id_ed25519 ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} <<'EOF'
+            set -e
+            cd /opt/telemore/designs
+            echo "Before: $(git rev-parse --short HEAD)"
+            git fetch origin main --quiet
+            git reset --hard origin/main --quiet
+            chown -R 1000:1000 /opt/telemore/designs
+            echo "After:  $(git rev-parse --short HEAD)"
+
+            # Если manual обновился — кладём в nginx-дир
+            if [ -f /opt/telemore/designs/manual/index.html ]; then
+              cp /opt/telemore/designs/manual/index.html /opt/telemore/manual/index.html
+              echo "Manual updated"
+            fi
+
+            # Если app-page обновилась — кладём в nginx-дир
+            if [ -f /opt/telemore/designs/deployed-app/index.html ]; then
+              cp /opt/telemore/designs/deployed-app/index.html /opt/telemore/app/index.html
+              echo "App page updated"
+            fi
+
+            echo "✅ Deploy complete"
+          EOF
+
+      - name: Notify on failure
+        if: failure()
+        run: echo "::error::Deploy to VPS failed. Check SSH secrets and VPS status."
