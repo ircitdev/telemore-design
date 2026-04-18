@@ -1,0 +1,602 @@
+{
+  "id": "screen-6-root",
+  "type": "frame",
+  "name": "План дня",
+  "width": 375,
+  "height": 812,
+  "layout": "vertical",
+  "padding": [
+    40,
+    20
+  ],
+  "gap": 16,
+  "alignItems": "center",
+  "fill": [
+    {
+      "type": "linear_gradient",
+      "angle": 180,
+      "stops": [
+        {
+          "offset": 0,
+          "color": "#1A0033"
+        },
+        {
+          "offset": 1,
+          "color": "#2D004D"
+        }
+      ]
+    }
+  ],
+  "clipContent": true,
+  "children": [
+    {
+      "id": "plan-title",
+      "type": "text",
+      "role": "heading",
+      "content": "ПЛАН ДНЯ",
+      "fontFamily": "Pricedown",
+      "fontSize": 38,
+      "fontWeight": 700,
+      "fill": [
+        {
+          "type": "linear_gradient",
+          "angle": 180,
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#FF00AA"
+            },
+            {
+              "offset": 1,
+              "color": "#00F0FF"
+            }
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "type": "shadow",
+          "offsetX": 0,
+          "offsetY": 0,
+          "blur": 20,
+          "spread": 0,
+          "color": "rgba(255,0,170,0.6)"
+        }
+      ],
+      "letterSpacing": 3
+    },
+    {
+      "id": "plan-date",
+      "type": "text",
+      "role": "subheading",
+      "content": "14 ИЮНЯ 2026",
+      "fontSize": 13,
+      "fontWeight": 700,
+      "fill": [
+        {
+          "type": "solid",
+          "color": "#FFD700"
+        }
+      ],
+      "letterSpacing": 2
+    },
+    {
+      "id": "timeline",
+      "type": "frame",
+      "name": "Timeline",
+      "width": "fill_container",
+      "height": "fit_content",
+      "layout": "vertical",
+      "gap": 12,
+      "children": [
+        {
+          "id": "evt-1",
+          "type": "frame",
+          "width": "fill_container",
+          "height": "fit_content",
+          "layout": "horizontal",
+          "gap": 12,
+          "alignItems": "center",
+          "padding": 14,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,215,0,0.1)"
+            }
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#FFD700"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "children": [
+            {
+              "id": "evt-1-time",
+              "type": "text",
+              "role": "label",
+              "content": "08:00",
+              "fontFamily": "Pricedown",
+              "fontSize": 22,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FFD700"
+                }
+              ],
+              "width": 70
+            },
+            {
+              "id": "evt-1-info",
+              "type": "frame",
+              "width": "fill_container",
+              "height": "fit_content",
+              "layout": "vertical",
+              "gap": 2,
+              "children": [
+                {
+                  "id": "evt-1-name",
+                  "type": "text",
+                  "role": "label",
+                  "content": "ЗАВТРАК",
+                  "fontSize": 14,
+                  "fontWeight": 700,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "#FFFFFF"
+                    }
+                  ],
+                  "letterSpacing": 1
+                },
+                {
+                  "id": "evt-1-desc",
+                  "type": "text",
+                  "role": "caption",
+                  "content": "Столовая, корпус А",
+                  "fontSize": 11,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "rgba(255,255,255,0.6)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "evt-2",
+          "type": "frame",
+          "width": "fill_container",
+          "height": "fit_content",
+          "layout": "horizontal",
+          "gap": 12,
+          "alignItems": "center",
+          "padding": 14,
+          "fill": [
+            {
+              "type": "linear_gradient",
+              "angle": 90,
+              "stops": [
+                {
+                  "offset": 0,
+                  "color": "rgba(255,0,170,0.25)"
+                },
+                {
+                  "offset": 1,
+                  "color": "rgba(255,0,170,0.1)"
+                }
+              ]
+            }
+          ],
+          "stroke": {
+            "thickness": 2,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#FF00AA"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "effects": [
+            {
+              "type": "shadow",
+              "offsetX": 0,
+              "offsetY": 0,
+              "blur": 20,
+              "spread": 0,
+              "color": "rgba(255,0,170,0.6)"
+            }
+          ],
+          "children": [
+            {
+              "id": "evt-2-time",
+              "type": "text",
+              "role": "label",
+              "content": "10:00",
+              "fontFamily": "Pricedown",
+              "fontSize": 22,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FF00AA"
+                }
+              ],
+              "width": 70
+            },
+            {
+              "id": "evt-2-info",
+              "type": "frame",
+              "width": "fill_container",
+              "height": "fit_content",
+              "layout": "vertical",
+              "gap": 2,
+              "children": [
+                {
+                  "id": "evt-2-name",
+                  "type": "text",
+                  "role": "label",
+                  "content": "МАСТЕР-КЛАСС: МОНТАЖ",
+                  "fontSize": 14,
+                  "fontWeight": 700,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "#FFFFFF"
+                    }
+                  ],
+                  "letterSpacing": 1
+                },
+                {
+                  "id": "evt-2-desc",
+                  "type": "text",
+                  "role": "caption",
+                  "content": "СЕЙЧАС • Аудитория 3",
+                  "fontSize": 11,
+                  "fontWeight": 700,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "#FF00AA"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "evt-3",
+          "type": "frame",
+          "width": "fill_container",
+          "height": "fit_content",
+          "layout": "horizontal",
+          "gap": 12,
+          "alignItems": "center",
+          "padding": 14,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,215,0,0.1)"
+            }
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#FFD700"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "children": [
+            {
+              "id": "evt-3-time",
+              "type": "text",
+              "role": "label",
+              "content": "13:00",
+              "fontFamily": "Pricedown",
+              "fontSize": 22,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FFD700"
+                }
+              ],
+              "width": 70
+            },
+            {
+              "id": "evt-3-info",
+              "type": "frame",
+              "width": "fill_container",
+              "height": "fit_content",
+              "layout": "vertical",
+              "gap": 2,
+              "children": [
+                {
+                  "id": "evt-3-name",
+                  "type": "text",
+                  "role": "label",
+                  "content": "ОБЕД",
+                  "fontSize": 14,
+                  "fontWeight": 700,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "#FFFFFF"
+                    }
+                  ],
+                  "letterSpacing": 1
+                },
+                {
+                  "id": "evt-3-desc",
+                  "type": "text",
+                  "role": "caption",
+                  "content": "Столовая, корпус А",
+                  "fontSize": 11,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "rgba(255,255,255,0.6)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "evt-4",
+          "type": "frame",
+          "width": "fill_container",
+          "height": "fit_content",
+          "layout": "horizontal",
+          "gap": 12,
+          "alignItems": "center",
+          "padding": 14,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(0,240,255,0.1)"
+            }
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#00F0FF"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "children": [
+            {
+              "id": "evt-4-time",
+              "type": "text",
+              "role": "label",
+              "content": "15:00",
+              "fontFamily": "Pricedown",
+              "fontSize": 22,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#00F0FF"
+                }
+              ],
+              "width": 70
+            },
+            {
+              "id": "evt-4-info",
+              "type": "frame",
+              "width": "fill_container",
+              "height": "fit_content",
+              "layout": "vertical",
+              "gap": 2,
+              "children": [
+                {
+                  "id": "evt-4-name",
+                  "type": "text",
+                  "role": "label",
+                  "content": "СЪЁМКА: ЭКСКУРСИЯ",
+                  "fontSize": 14,
+                  "fontWeight": 700,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "#FFFFFF"
+                    }
+                  ],
+                  "letterSpacing": 1
+                },
+                {
+                  "id": "evt-4-desc",
+                  "type": "text",
+                  "role": "caption",
+                  "content": "Набережная • +20 XP",
+                  "fontSize": 11,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "#FFD700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "evt-5",
+          "type": "frame",
+          "width": "fill_container",
+          "height": "fit_content",
+          "layout": "horizontal",
+          "gap": 12,
+          "alignItems": "center",
+          "padding": 14,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,215,0,0.1)"
+            }
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#FFD700"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "children": [
+            {
+              "id": "evt-5-time",
+              "type": "text",
+              "role": "label",
+              "content": "19:00",
+              "fontFamily": "Pricedown",
+              "fontSize": 22,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FFD700"
+                }
+              ],
+              "width": 70
+            },
+            {
+              "id": "evt-5-info",
+              "type": "frame",
+              "width": "fill_container",
+              "height": "fit_content",
+              "layout": "vertical",
+              "gap": 2,
+              "children": [
+                {
+                  "id": "evt-5-name",
+                  "type": "text",
+                  "role": "label",
+                  "content": "УЖИН",
+                  "fontSize": 14,
+                  "fontWeight": 700,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "#FFFFFF"
+                    }
+                  ],
+                  "letterSpacing": 1
+                },
+                {
+                  "id": "evt-5-desc",
+                  "type": "text",
+                  "role": "caption",
+                  "content": "Столовая, корпус А",
+                  "fontSize": 11,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "rgba(255,255,255,0.6)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "evt-6",
+          "type": "frame",
+          "width": "fill_container",
+          "height": "fit_content",
+          "layout": "horizontal",
+          "gap": 12,
+          "alignItems": "center",
+          "padding": 14,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(0,240,255,0.1)"
+            }
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#00F0FF"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "children": [
+            {
+              "id": "evt-6-time",
+              "type": "text",
+              "role": "label",
+              "content": "21:00",
+              "fontFamily": "Pricedown",
+              "fontSize": 22,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#00F0FF"
+                }
+              ],
+              "width": 70
+            },
+            {
+              "id": "evt-6-info",
+              "type": "frame",
+              "width": "fill_container",
+              "height": "fit_content",
+              "layout": "vertical",
+              "gap": 2,
+              "children": [
+                {
+                  "id": "evt-6-name",
+                  "type": "text",
+                  "role": "label",
+                  "content": "ВЕЧЕРНИЙ ПОКАЗ",
+                  "fontSize": 14,
+                  "fontWeight": 700,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "#FFFFFF"
+                    }
+                  ],
+                  "letterSpacing": 1
+                },
+                {
+                  "id": "evt-6-desc",
+                  "type": "text",
+                  "role": "caption",
+                  "content": "Кинозал • +15 XP",
+                  "fontSize": 11,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "#FFD700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

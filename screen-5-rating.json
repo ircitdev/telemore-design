@@ -1,0 +1,790 @@
+{
+  "id": "screen-5-root",
+  "type": "frame",
+  "name": "Рейтинг",
+  "width": 375,
+  "height": 812,
+  "layout": "vertical",
+  "padding": [
+    40,
+    20
+  ],
+  "gap": 18,
+  "alignItems": "center",
+  "fill": [
+    {
+      "type": "linear_gradient",
+      "angle": 180,
+      "stops": [
+        {
+          "offset": 0,
+          "color": "#1A0033"
+        },
+        {
+          "offset": 1,
+          "color": "#2D004D"
+        }
+      ]
+    }
+  ],
+  "clipContent": true,
+  "children": [
+    {
+      "id": "rate-title",
+      "type": "text",
+      "role": "heading",
+      "content": "РЕЙТИНГ",
+      "fontFamily": "Pricedown",
+      "fontSize": 42,
+      "fontWeight": 700,
+      "fill": [
+        {
+          "type": "solid",
+          "color": "#00F0FF"
+        }
+      ],
+      "effects": [
+        {
+          "type": "shadow",
+          "offsetX": 0,
+          "offsetY": 0,
+          "blur": 20,
+          "spread": 0,
+          "color": "rgba(0,240,255,0.6)"
+        }
+      ],
+      "letterSpacing": 3
+    },
+    {
+      "id": "rate-tabs",
+      "type": "frame",
+      "width": "fill_container",
+      "height": 44,
+      "layout": "horizontal",
+      "gap": 0,
+      "fill": [
+        {
+          "type": "solid",
+          "color": "rgba(255,255,255,0.05)"
+        }
+      ],
+      "cornerRadius": 22,
+      "padding": 4,
+      "children": [
+        {
+          "id": "tab-personal",
+          "type": "frame",
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": [
+            {
+              "type": "linear_gradient",
+              "angle": 90,
+              "stops": [
+                {
+                  "offset": 0,
+                  "color": "#FF00AA"
+                },
+                {
+                  "offset": 1,
+                  "color": "#00F0FF"
+                }
+              ]
+            }
+          ],
+          "cornerRadius": 18,
+          "layout": "horizontal",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "effects": [
+            {
+              "type": "shadow",
+              "offsetX": 0,
+              "offsetY": 0,
+              "blur": 12,
+              "spread": 0,
+              "color": "rgba(255,0,170,0.6)"
+            }
+          ],
+          "children": [
+            {
+              "id": "tab-personal-text",
+              "type": "text",
+              "role": "label",
+              "content": "ЛИЧНЫЙ",
+              "fontSize": 13,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FFFFFF"
+                }
+              ],
+              "letterSpacing": 1.5
+            }
+          ]
+        },
+        {
+          "id": "tab-team",
+          "type": "frame",
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(0,0,0,0)"
+            }
+          ],
+          "cornerRadius": 18,
+          "layout": "horizontal",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "children": [
+            {
+              "id": "tab-team-text",
+              "type": "text",
+              "role": "label",
+              "content": "КОМАНДНЫЙ",
+              "fontSize": 13,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.5)"
+                }
+              ],
+              "letterSpacing": 1.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rate-list",
+      "type": "frame",
+      "width": "fill_container",
+      "height": "fit_content",
+      "layout": "vertical",
+      "gap": 10,
+      "children": [
+        {
+          "id": "rate-row-1",
+          "type": "frame",
+          "width": "fill_container",
+          "height": 60,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,215,0,0.15)"
+            }
+          ],
+          "stroke": {
+            "thickness": 2,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#FFD700"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "horizontal",
+          "padding": [
+            10,
+            14
+          ],
+          "alignItems": "center",
+          "gap": 12,
+          "effects": [
+            {
+              "type": "shadow",
+              "offsetX": 0,
+              "offsetY": 0,
+              "blur": 12,
+              "spread": 0,
+              "color": "rgba(255,215,0,0.5)"
+            }
+          ],
+          "children": [
+            {
+              "id": "place-1",
+              "type": "text",
+              "role": "label",
+              "content": "1",
+              "fontFamily": "Pricedown",
+              "fontSize": 28,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FFD700"
+                }
+              ],
+              "width": 30
+            },
+            {
+              "id": "name-1",
+              "type": "text",
+              "role": "label",
+              "content": "АННА К.",
+              "fontSize": 14,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FFFFFF"
+                }
+              ],
+              "width": "fill_container"
+            },
+            {
+              "id": "score-1",
+              "type": "text",
+              "role": "label",
+              "content": "320",
+              "fontFamily": "Pricedown",
+              "fontSize": 22,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FFD700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rate-row-2",
+          "type": "frame",
+          "width": "fill_container",
+          "height": 60,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(0,240,255,0.1)"
+            }
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#00F0FF"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "horizontal",
+          "padding": [
+            10,
+            14
+          ],
+          "alignItems": "center",
+          "gap": 12,
+          "children": [
+            {
+              "id": "place-2",
+              "type": "text",
+              "role": "label",
+              "content": "2",
+              "fontFamily": "Pricedown",
+              "fontSize": 28,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#00F0FF"
+                }
+              ],
+              "width": 30
+            },
+            {
+              "id": "name-2",
+              "type": "text",
+              "role": "label",
+              "content": "СЕРГЕЙ В.",
+              "fontSize": 14,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FFFFFF"
+                }
+              ],
+              "width": "fill_container"
+            },
+            {
+              "id": "score-2",
+              "type": "text",
+              "role": "label",
+              "content": "280",
+              "fontFamily": "Pricedown",
+              "fontSize": 22,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#00F0FF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rate-row-3",
+          "type": "frame",
+          "width": "fill_container",
+          "height": 60,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,0,170,0.15)"
+            }
+          ],
+          "stroke": {
+            "thickness": 2,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#FF00AA"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "horizontal",
+          "padding": [
+            10,
+            14
+          ],
+          "alignItems": "center",
+          "gap": 12,
+          "effects": [
+            {
+              "type": "shadow",
+              "offsetX": 0,
+              "offsetY": 0,
+              "blur": 16,
+              "spread": 0,
+              "color": "rgba(255,0,170,0.6)"
+            }
+          ],
+          "children": [
+            {
+              "id": "place-3",
+              "type": "text",
+              "role": "label",
+              "content": "3",
+              "fontFamily": "Pricedown",
+              "fontSize": 28,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FF00AA"
+                }
+              ],
+              "width": 30
+            },
+            {
+              "id": "name-3",
+              "type": "text",
+              "role": "label",
+              "content": "ВЫ (ИВАН П.)",
+              "fontSize": 14,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FF00AA"
+                }
+              ],
+              "width": "fill_container"
+            },
+            {
+              "id": "score-3",
+              "type": "text",
+              "role": "label",
+              "content": "150",
+              "fontFamily": "Pricedown",
+              "fontSize": 22,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FF00AA"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rate-row-4",
+          "type": "frame",
+          "width": "fill_container",
+          "height": 60,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,255,255,0.05)"
+            }
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "rgba(255,255,255,0.2)"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "horizontal",
+          "padding": [
+            10,
+            14
+          ],
+          "alignItems": "center",
+          "gap": 12,
+          "children": [
+            {
+              "id": "place-4",
+              "type": "text",
+              "role": "label",
+              "content": "4",
+              "fontFamily": "Pricedown",
+              "fontSize": 28,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.5)"
+                }
+              ],
+              "width": 30
+            },
+            {
+              "id": "name-4",
+              "type": "text",
+              "role": "label",
+              "content": "МАРИЯ С.",
+              "fontSize": 14,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FFFFFF"
+                }
+              ],
+              "width": "fill_container"
+            },
+            {
+              "id": "score-4",
+              "type": "text",
+              "role": "label",
+              "content": "120",
+              "fontFamily": "Pricedown",
+              "fontSize": 22,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.7)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rate-row-5",
+          "type": "frame",
+          "width": "fill_container",
+          "height": 60,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,255,255,0.05)"
+            }
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "rgba(255,255,255,0.2)"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "horizontal",
+          "padding": [
+            10,
+            14
+          ],
+          "alignItems": "center",
+          "gap": 12,
+          "children": [
+            {
+              "id": "place-5",
+              "type": "text",
+              "role": "label",
+              "content": "5",
+              "fontFamily": "Pricedown",
+              "fontSize": 28,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.5)"
+                }
+              ],
+              "width": 30
+            },
+            {
+              "id": "name-5",
+              "type": "text",
+              "role": "label",
+              "content": "АЛЕКСЕЙ Б.",
+              "fontSize": 14,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FFFFFF"
+                }
+              ],
+              "width": "fill_container"
+            },
+            {
+              "id": "score-5",
+              "type": "text",
+              "role": "label",
+              "content": "95",
+              "fontFamily": "Pricedown",
+              "fontSize": 22,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.7)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "team-block",
+      "type": "frame",
+      "name": "Битва отрядов",
+      "width": "fill_container",
+      "height": "fit_content",
+      "layout": "vertical",
+      "gap": 12,
+      "padding": [
+        20,
+        16
+      ],
+      "fill": [
+        {
+          "type": "solid",
+          "color": "rgba(255,255,255,0.05)"
+        }
+      ],
+      "stroke": {
+        "thickness": 1,
+        "fill": [
+          {
+            "type": "solid",
+            "color": "rgba(255,255,255,0.1)"
+          }
+        ]
+      },
+      "cornerRadius": 16,
+      "children": [
+        {
+          "id": "team-title",
+          "type": "text",
+          "role": "label",
+          "content": "БИТВА ОТРЯДОВ",
+          "fontSize": 12,
+          "fontWeight": 700,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#FFD700"
+            }
+          ],
+          "letterSpacing": 2
+        },
+        {
+          "id": "team-row-1",
+          "type": "frame",
+          "width": "fill_container",
+          "height": "fit_content",
+          "layout": "vertical",
+          "gap": 4,
+          "children": [
+            {
+              "id": "team-1-row",
+              "type": "frame",
+              "width": "fill_container",
+              "height": "fit_content",
+              "layout": "horizontal",
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "id": "team-1-name",
+                  "type": "text",
+                  "role": "label",
+                  "content": "КОБРЫ",
+                  "fontFamily": "Pricedown",
+                  "fontSize": 18,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "#FF00AA"
+                    }
+                  ],
+                  "fontWeight": 800
+                },
+                {
+                  "id": "team-1-score",
+                  "type": "text",
+                  "role": "label",
+                  "content": "1240",
+                  "fontFamily": "Pricedown",
+                  "fontSize": 18,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "#FF00AA"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "team-1-bar-bg",
+              "type": "frame",
+              "width": "fill_container",
+              "height": 10,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.1)"
+                }
+              ],
+              "cornerRadius": 5,
+              "layout": "horizontal",
+              "children": [
+                {
+                  "id": "team-1-bar-fill",
+                  "type": "rectangle",
+                  "width": 240,
+                  "height": 10,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "#FF00AA"
+                    }
+                  ],
+                  "cornerRadius": 5,
+                  "effects": [
+                    {
+                      "type": "shadow",
+                      "offsetX": 0,
+                      "offsetY": 0,
+                      "blur": 8,
+                      "spread": 0,
+                      "color": "rgba(255,0,170,0.7)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "team-row-2",
+          "type": "frame",
+          "width": "fill_container",
+          "height": "fit_content",
+          "layout": "vertical",
+          "gap": 4,
+          "children": [
+            {
+              "id": "team-2-row",
+              "type": "frame",
+              "width": "fill_container",
+              "height": "fit_content",
+              "layout": "horizontal",
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "id": "team-2-name",
+                  "type": "text",
+                  "role": "label",
+                  "content": "АКУЛЫ",
+                  "fontFamily": "Pricedown",
+                  "fontSize": 18,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "#00F0FF"
+                    }
+                  ],
+                  "fontWeight": 800
+                },
+                {
+                  "id": "team-2-score",
+                  "type": "text",
+                  "role": "label",
+                  "content": "980",
+                  "fontFamily": "Pricedown",
+                  "fontSize": 18,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "#00F0FF"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "team-2-bar-bg",
+              "type": "frame",
+              "width": "fill_container",
+              "height": 10,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.1)"
+                }
+              ],
+              "cornerRadius": 5,
+              "layout": "horizontal",
+              "children": [
+                {
+                  "id": "team-2-bar-fill",
+                  "type": "rectangle",
+                  "width": 190,
+                  "height": 10,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "#00F0FF"
+                    }
+                  ],
+                  "cornerRadius": 5,
+                  "effects": [
+                    {
+                      "type": "shadow",
+                      "offsetX": 0,
+                      "offsetY": 0,
+                      "blur": 8,
+                      "spread": 0,
+                      "color": "rgba(0,240,255,0.7)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

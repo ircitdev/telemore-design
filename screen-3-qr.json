@@ -1,0 +1,249 @@
+{
+  "id": "screen-3-root",
+  "type": "frame",
+  "name": "Мой QR",
+  "width": 375,
+  "height": 812,
+  "layout": "vertical",
+  "padding": [
+    40,
+    20
+  ],
+  "gap": 24,
+  "alignItems": "center",
+  "fill": [
+    {
+      "type": "linear_gradient",
+      "angle": 180,
+      "stops": [
+        {
+          "offset": 0,
+          "color": "#1A0033"
+        },
+        {
+          "offset": 1,
+          "color": "#2D004D"
+        }
+      ]
+    }
+  ],
+  "clipContent": true,
+  "children": [
+    {
+      "id": "qr-title",
+      "type": "text",
+      "role": "heading",
+      "content": "МОЙ QR",
+      "fontFamily": "Pricedown",
+      "fontSize": 42,
+      "fontWeight": 700,
+      "fill": [
+        {
+          "type": "solid",
+          "color": "#00F0FF"
+        }
+      ],
+      "effects": [
+        {
+          "type": "shadow",
+          "offsetX": 0,
+          "offsetY": 0,
+          "blur": 20,
+          "spread": 0,
+          "color": "rgba(0,240,255,0.6)"
+        }
+      ],
+      "letterSpacing": 3
+    },
+    {
+      "id": "qr-subtitle",
+      "type": "text",
+      "role": "label",
+      "content": "ПОКАЖИ ОРГАНИЗАТОРУ ДЛЯ ЧЕК-ИНА",
+      "fontSize": 11,
+      "fontWeight": 600,
+      "fill": [
+        {
+          "type": "solid",
+          "color": "rgba(255,255,255,0.7)"
+        }
+      ],
+      "letterSpacing": 1.5
+    },
+    {
+      "id": "qr-card",
+      "type": "frame",
+      "name": "QR-карточка",
+      "width": 280,
+      "height": 320,
+      "fill": [
+        {
+          "type": "solid",
+          "color": "#FFFFFF"
+        }
+      ],
+      "cornerRadius": 20,
+      "layout": "vertical",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "padding": 20,
+      "gap": 16,
+      "effects": [
+        {
+          "type": "shadow",
+          "offsetX": 0,
+          "offsetY": 0,
+          "blur": 40,
+          "spread": 0,
+          "color": "rgba(255,0,170,0.5)"
+        }
+      ],
+      "children": [
+        {
+          "id": "qr-img",
+          "type": "rectangle",
+          "name": "QR-код",
+          "width": 220,
+          "height": 220,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#1A0033"
+            }
+          ],
+          "cornerRadius": 8
+        },
+        {
+          "id": "qr-id",
+          "type": "text",
+          "role": "label",
+          "content": "ID: TM-001-COBRA",
+          "fontSize": 13,
+          "fontWeight": 700,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#1A0033"
+            }
+          ],
+          "letterSpacing": 1
+        }
+      ]
+    },
+    {
+      "id": "qr-user-info",
+      "type": "frame",
+      "width": "fit_content",
+      "height": "fit_content",
+      "layout": "vertical",
+      "alignItems": "center",
+      "gap": 4,
+      "children": [
+        {
+          "id": "qr-name",
+          "type": "text",
+          "role": "subheading",
+          "content": "ИВАН ПЕТРОВ",
+          "fontFamily": "Pricedown",
+          "fontSize": 24,
+          "fontWeight": 700,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#FFFFFF"
+            }
+          ],
+          "letterSpacing": 2
+        },
+        {
+          "id": "qr-squad",
+          "type": "text",
+          "role": "label",
+          "content": "ОТРЯД КОБРЫ",
+          "fontSize": 12,
+          "fontWeight": 600,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#FF00AA"
+            }
+          ],
+          "letterSpacing": 2
+        }
+      ]
+    },
+    {
+      "id": "qr-download-btn",
+      "type": "frame",
+      "role": "button",
+      "width": "fill_container",
+      "height": 52,
+      "fill": [
+        {
+          "type": "linear_gradient",
+          "angle": 90,
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#FFD700"
+            },
+            {
+              "offset": 1,
+              "color": "#FFA500"
+            }
+          ]
+        }
+      ],
+      "cornerRadius": 12,
+      "layout": "horizontal",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "gap": 10,
+      "effects": [
+        {
+          "type": "shadow",
+          "offsetX": 0,
+          "offsetY": 0,
+          "blur": 20,
+          "spread": 0,
+          "color": "rgba(255,215,0,0.6)"
+        }
+      ],
+      "children": [
+        {
+          "id": "dl-icon",
+          "type": "path",
+          "name": "DownloadIcon",
+          "role": "icon",
+          "d": "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4 M7 10l5 5 5-5 M12 15V3",
+          "width": 18,
+          "height": 18,
+          "stroke": {
+            "thickness": 2.5,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#1A0033"
+              }
+            ]
+          }
+        },
+        {
+          "id": "dl-text",
+          "type": "text",
+          "role": "label",
+          "content": "СКАЧАТЬ PDF БЕЙДЖ",
+          "fontSize": 14,
+          "fontWeight": 700,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#1A0033"
+            }
+          ],
+          "letterSpacing": 1.5
+        }
+      ]
+    }
+  ]
+}

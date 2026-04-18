@@ -1,0 +1,638 @@
+{
+  "id": "screen-4-root",
+  "type": "frame",
+  "name": "Ачивки",
+  "width": 375,
+  "height": 812,
+  "layout": "vertical",
+  "padding": [
+    40,
+    20
+  ],
+  "gap": 20,
+  "alignItems": "center",
+  "fill": [
+    {
+      "type": "linear_gradient",
+      "angle": 180,
+      "stops": [
+        {
+          "offset": 0,
+          "color": "#1A0033"
+        },
+        {
+          "offset": 1,
+          "color": "#2D004D"
+        }
+      ]
+    }
+  ],
+  "clipContent": true,
+  "children": [
+    {
+      "id": "ach-title",
+      "type": "text",
+      "role": "heading",
+      "content": "АЧИВКИ",
+      "fontFamily": "Pricedown",
+      "fontSize": 42,
+      "fontWeight": 700,
+      "fill": [
+        {
+          "type": "linear_gradient",
+          "angle": 180,
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#FFD700"
+            },
+            {
+              "offset": 1,
+              "color": "#FF00AA"
+            }
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "type": "shadow",
+          "offsetX": 0,
+          "offsetY": 0,
+          "blur": 20,
+          "spread": 0,
+          "color": "rgba(255,215,0,0.6)"
+        }
+      ],
+      "letterSpacing": 3
+    },
+    {
+      "id": "ach-counter",
+      "type": "text",
+      "role": "subheading",
+      "content": "ПОЛУЧЕНО 1 ИЗ 6",
+      "fontSize": 14,
+      "fontWeight": 600,
+      "fill": [
+        {
+          "type": "solid",
+          "color": "#00F0FF"
+        }
+      ],
+      "letterSpacing": 2
+    },
+    {
+      "id": "ach-grid-row1",
+      "type": "frame",
+      "width": "fill_container",
+      "height": "fit_content",
+      "layout": "horizontal",
+      "gap": 10,
+      "children": [
+        {
+          "id": "ach-1",
+          "type": "frame",
+          "role": "card",
+          "width": "fill_container",
+          "height": 120,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,215,0,0.2)"
+            }
+          ],
+          "stroke": {
+            "thickness": 2,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#FFD700"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "padding": 8,
+          "gap": 4,
+          "effects": [
+            {
+              "type": "shadow",
+              "offsetX": 0,
+              "offsetY": 0,
+              "blur": 16,
+              "spread": 0,
+              "color": "rgba(255,215,0,0.6)"
+            }
+          ],
+          "children": [
+            {
+              "id": "ach1-emoji",
+              "type": "text",
+              "content": "🌟",
+              "fontSize": 36,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FFD700"
+                }
+              ]
+            },
+            {
+              "id": "ach1-name",
+              "type": "text",
+              "role": "label",
+              "content": "НОВИЧОК",
+              "fontSize": 10,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FFD700"
+                }
+              ],
+              "letterSpacing": 1
+            },
+            {
+              "id": "ach1-pts",
+              "type": "text",
+              "role": "caption",
+              "content": "100 XP",
+              "fontSize": 9,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,215,0,0.7)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ach-2",
+          "type": "frame",
+          "role": "card",
+          "width": "fill_container",
+          "height": 120,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,255,255,0.05)"
+            }
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "rgba(255,255,255,0.2)"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "padding": 8,
+          "gap": 4,
+          "children": [
+            {
+              "id": "ach2-lock",
+              "type": "text",
+              "content": "🔒",
+              "fontSize": 28,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.3)"
+                }
+              ]
+            },
+            {
+              "id": "ach2-name",
+              "type": "text",
+              "role": "label",
+              "content": "АКТИВИСТ",
+              "fontSize": 10,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.4)"
+                }
+              ],
+              "letterSpacing": 1
+            },
+            {
+              "id": "ach2-pts",
+              "type": "text",
+              "role": "caption",
+              "content": "200 XP",
+              "fontSize": 9,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.4)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ach-3",
+          "type": "frame",
+          "role": "card",
+          "width": "fill_container",
+          "height": 120,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,255,255,0.05)"
+            }
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "rgba(255,255,255,0.2)"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "padding": 8,
+          "gap": 4,
+          "children": [
+            {
+              "id": "ach3-lock",
+              "type": "text",
+              "content": "🔒",
+              "fontSize": 28,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.3)"
+                }
+              ]
+            },
+            {
+              "id": "ach3-name",
+              "type": "text",
+              "role": "label",
+              "content": "ПРОФИ",
+              "fontSize": 10,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.4)"
+                }
+              ],
+              "letterSpacing": 1
+            },
+            {
+              "id": "ach3-pts",
+              "type": "text",
+              "role": "caption",
+              "content": "300 XP",
+              "fontSize": 9,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.4)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ach-grid-row2",
+      "type": "frame",
+      "width": "fill_container",
+      "height": "fit_content",
+      "layout": "horizontal",
+      "gap": 10,
+      "children": [
+        {
+          "id": "ach-4",
+          "type": "frame",
+          "role": "card",
+          "width": "fill_container",
+          "height": 120,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,255,255,0.05)"
+            }
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "rgba(255,255,255,0.2)"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "padding": 8,
+          "gap": 4,
+          "children": [
+            {
+              "id": "ach4-lock",
+              "type": "text",
+              "content": "🔒",
+              "fontSize": 28,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.3)"
+                }
+              ]
+            },
+            {
+              "id": "ach4-name",
+              "type": "text",
+              "role": "label",
+              "content": "МАСТЕР",
+              "fontSize": 10,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.4)"
+                }
+              ],
+              "letterSpacing": 1
+            },
+            {
+              "id": "ach4-pts",
+              "type": "text",
+              "role": "caption",
+              "content": "400 XP",
+              "fontSize": 9,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.4)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ach-5",
+          "type": "frame",
+          "role": "card",
+          "width": "fill_container",
+          "height": 120,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,255,255,0.05)"
+            }
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "rgba(255,255,255,0.2)"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "padding": 8,
+          "gap": 4,
+          "children": [
+            {
+              "id": "ach5-lock",
+              "type": "text",
+              "content": "🔒",
+              "fontSize": 28,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.3)"
+                }
+              ]
+            },
+            {
+              "id": "ach5-name",
+              "type": "text",
+              "role": "label",
+              "content": "ЛЕГЕНДА",
+              "fontSize": 10,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.4)"
+                }
+              ],
+              "letterSpacing": 1
+            },
+            {
+              "id": "ach5-pts",
+              "type": "text",
+              "role": "caption",
+              "content": "500 XP",
+              "fontSize": 9,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.4)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ach-6",
+          "type": "frame",
+          "role": "card",
+          "width": "fill_container",
+          "height": 120,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,255,255,0.05)"
+            }
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "rgba(255,255,255,0.2)"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "padding": 8,
+          "gap": 4,
+          "children": [
+            {
+              "id": "ach6-lock",
+              "type": "text",
+              "content": "🔒",
+              "fontSize": 28,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.3)"
+                }
+              ]
+            },
+            {
+              "id": "ach6-name",
+              "type": "text",
+              "role": "label",
+              "content": "БОСС",
+              "fontSize": 10,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.4)"
+                }
+              ],
+              "letterSpacing": 1
+            },
+            {
+              "id": "ach6-pts",
+              "type": "text",
+              "role": "caption",
+              "content": "600 XP",
+              "fontSize": 9,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.4)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ach-progress",
+      "type": "frame",
+      "name": "Прогресс до следующей",
+      "width": "fill_container",
+      "height": "fit_content",
+      "layout": "vertical",
+      "gap": 8,
+      "padding": [
+        20,
+        0
+      ],
+      "children": [
+        {
+          "id": "ach-progress-row",
+          "type": "frame",
+          "width": "fill_container",
+          "height": "fit_content",
+          "layout": "horizontal",
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "id": "ach-prog-label",
+              "type": "text",
+              "role": "label",
+              "content": "ДО АКТИВИСТА",
+              "fontSize": 12,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#00F0FF"
+                }
+              ],
+              "letterSpacing": 1
+            },
+            {
+              "id": "ach-prog-val",
+              "type": "text",
+              "role": "label",
+              "content": "150 / 200",
+              "fontSize": 12,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FFD700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ach-prog-bar-bg",
+          "type": "frame",
+          "width": "fill_container",
+          "height": 12,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,255,255,0.1)"
+            }
+          ],
+          "cornerRadius": 6,
+          "padding": 0,
+          "layout": "horizontal",
+          "children": [
+            {
+              "id": "ach-prog-bar-fill",
+              "type": "rectangle",
+              "width": 165,
+              "height": 12,
+              "fill": [
+                {
+                  "type": "linear_gradient",
+                  "angle": 90,
+                  "stops": [
+                    {
+                      "offset": 0,
+                      "color": "#FF00AA"
+                    },
+                    {
+                      "offset": 1,
+                      "color": "#00F0FF"
+                    }
+                  ]
+                }
+              ],
+              "cornerRadius": 6,
+              "effects": [
+                {
+                  "type": "shadow",
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "blur": 8,
+                  "spread": 0,
+                  "color": "rgba(255,0,170,0.7)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

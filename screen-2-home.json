@@ -1,0 +1,482 @@
+{
+  "id": "screen-2-root",
+  "type": "frame",
+  "name": "Главный экран",
+  "width": 375,
+  "height": 812,
+  "layout": "vertical",
+  "padding": [
+    40,
+    20
+  ],
+  "gap": 16,
+  "alignItems": "center",
+  "fill": [
+    {
+      "type": "linear_gradient",
+      "angle": 180,
+      "stops": [
+        {
+          "offset": 0,
+          "color": "#1A0033"
+        },
+        {
+          "offset": 0.5,
+          "color": "#2D004D"
+        },
+        {
+          "offset": 1,
+          "color": "#1A0033"
+        }
+      ]
+    }
+  ],
+  "clipContent": true,
+  "children": [
+    {
+      "id": "home-logo",
+      "type": "text",
+      "role": "heading",
+      "content": "TELEMORE",
+      "fontFamily": "Pricedown",
+      "fontSize": 56,
+      "fontWeight": 700,
+      "fill": [
+        {
+          "type": "linear_gradient",
+          "angle": 180,
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#FF00AA"
+            },
+            {
+              "offset": 1,
+              "color": "#00F0FF"
+            }
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "type": "shadow",
+          "offsetX": 0,
+          "offsetY": 0,
+          "blur": 25,
+          "spread": 0,
+          "color": "rgba(255,0,170,0.7)"
+        }
+      ],
+      "letterSpacing": 3
+    },
+    {
+      "id": "tour-name",
+      "type": "text",
+      "role": "subheading",
+      "content": "ТЕЛЕМОРЕ ЛЕТО 2026",
+      "fontSize": 16,
+      "fontWeight": 700,
+      "fill": [
+        {
+          "type": "solid",
+          "color": "#00F0FF"
+        }
+      ],
+      "letterSpacing": 2
+    },
+    {
+      "id": "squad-name",
+      "type": "text",
+      "role": "label",
+      "content": "ОТРЯД: КОБРЫ",
+      "fontSize": 14,
+      "fontWeight": 600,
+      "fill": [
+        {
+          "type": "solid",
+          "color": "#FF00AA"
+        }
+      ],
+      "letterSpacing": 1.5
+    },
+    {
+      "id": "username-row",
+      "type": "frame",
+      "width": "fit_content",
+      "height": "fit_content",
+      "layout": "horizontal",
+      "gap": 8,
+      "alignItems": "center",
+      "children": [
+        {
+          "id": "username",
+          "type": "text",
+          "role": "label",
+          "content": "@telemore_user",
+          "fontSize": 14,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "id": "camera-icon",
+          "type": "path",
+          "name": "CameraIcon",
+          "role": "icon",
+          "d": "M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10z",
+          "width": 18,
+          "height": 18,
+          "stroke": {
+            "thickness": 1.5,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#00F0FF"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "achievement-badge",
+      "type": "frame",
+      "role": "badge",
+      "width": "fit_content",
+      "height": 44,
+      "fill": [
+        {
+          "type": "solid",
+          "color": "rgba(255,215,0,0.15)"
+        }
+      ],
+      "stroke": {
+        "thickness": 2,
+        "fill": [
+          {
+            "type": "solid",
+            "color": "#FFD700"
+          }
+        ]
+      },
+      "cornerRadius": 22,
+      "padding": [
+        10,
+        28
+      ],
+      "layout": "horizontal",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "effects": [
+        {
+          "type": "shadow",
+          "offsetX": 0,
+          "offsetY": 0,
+          "blur": 16,
+          "spread": 0,
+          "color": "rgba(255,215,0,0.5)"
+        }
+      ],
+      "children": [
+        {
+          "id": "ach-text",
+          "type": "text",
+          "role": "label",
+          "content": "🌟 НОВИЧОК",
+          "fontSize": 14,
+          "fontWeight": 700,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#FFD700"
+            }
+          ],
+          "letterSpacing": 2
+        }
+      ]
+    },
+    {
+      "id": "balance-block",
+      "type": "frame",
+      "name": "Баланс",
+      "width": "fill_container",
+      "height": "fit_content",
+      "layout": "vertical",
+      "gap": 4,
+      "alignItems": "center",
+      "padding": [
+        20,
+        0
+      ],
+      "children": [
+        {
+          "id": "balance-value",
+          "type": "text",
+          "role": "heading",
+          "content": "150",
+          "fontFamily": "Pricedown",
+          "fontSize": 96,
+          "fontWeight": 700,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#FFD700"
+            }
+          ],
+          "effects": [
+            {
+              "type": "shadow",
+              "offsetX": 0,
+              "offsetY": 0,
+              "blur": 30,
+              "spread": 0,
+              "color": "rgba(255,215,0,0.8)"
+            }
+          ]
+        },
+        {
+          "id": "balance-label",
+          "type": "text",
+          "role": "subheading",
+          "content": "ТЕЛЕКОИНОВ",
+          "fontFamily": "Pricedown",
+          "fontSize": 22,
+          "fontWeight": 700,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#FFFFFF"
+            }
+          ],
+          "letterSpacing": 4
+        }
+      ]
+    },
+    {
+      "id": "plan-button",
+      "type": "frame",
+      "role": "button",
+      "width": "fill_container",
+      "height": 52,
+      "fill": [
+        {
+          "type": "solid",
+          "color": "rgba(255,0,170,0.15)"
+        }
+      ],
+      "stroke": {
+        "thickness": 2,
+        "fill": [
+          {
+            "type": "solid",
+            "color": "#FF00AA"
+          }
+        ]
+      },
+      "cornerRadius": 12,
+      "layout": "horizontal",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "effects": [
+        {
+          "type": "shadow",
+          "offsetX": 0,
+          "offsetY": 0,
+          "blur": 20,
+          "spread": 0,
+          "color": "rgba(255,0,170,0.5)"
+        }
+      ],
+      "children": [
+        {
+          "id": "plan-text",
+          "type": "text",
+          "role": "label",
+          "content": "ПЛАН НА ДЕНЬ",
+          "fontSize": 16,
+          "fontWeight": 700,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#FF00AA"
+            }
+          ],
+          "letterSpacing": 2
+        }
+      ]
+    },
+    {
+      "id": "nav-row",
+      "type": "frame",
+      "name": "Нижняя навигация",
+      "width": "fill_container",
+      "height": "fit_content",
+      "layout": "horizontal",
+      "gap": 10,
+      "children": [
+        {
+          "id": "nav-anketa",
+          "type": "frame",
+          "role": "card",
+          "width": "fill_container",
+          "height": 70,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(0,240,255,0.1)"
+            }
+          ],
+          "stroke": {
+            "thickness": 2,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#00F0FF"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "effects": [
+            {
+              "type": "shadow",
+              "offsetX": 0,
+              "offsetY": 0,
+              "blur": 12,
+              "spread": 0,
+              "color": "rgba(0,240,255,0.4)"
+            }
+          ],
+          "children": [
+            {
+              "id": "nav-anketa-text",
+              "type": "text",
+              "role": "label",
+              "content": "АНКЕТА",
+              "fontSize": 13,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#00F0FF"
+                }
+              ],
+              "letterSpacing": 1
+            }
+          ]
+        },
+        {
+          "id": "nav-rating",
+          "type": "frame",
+          "role": "card",
+          "width": "fill_container",
+          "height": 70,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(0,240,255,0.1)"
+            }
+          ],
+          "stroke": {
+            "thickness": 2,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#00F0FF"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "effects": [
+            {
+              "type": "shadow",
+              "offsetX": 0,
+              "offsetY": 0,
+              "blur": 12,
+              "spread": 0,
+              "color": "rgba(0,240,255,0.4)"
+            }
+          ],
+          "children": [
+            {
+              "id": "nav-rating-text",
+              "type": "text",
+              "role": "label",
+              "content": "РЕЙТИНГ",
+              "fontSize": 13,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#00F0FF"
+                }
+              ],
+              "letterSpacing": 1
+            }
+          ]
+        },
+        {
+          "id": "nav-qr",
+          "type": "frame",
+          "role": "card",
+          "width": "fill_container",
+          "height": 70,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(0,240,255,0.1)"
+            }
+          ],
+          "stroke": {
+            "thickness": 2,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#00F0FF"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "effects": [
+            {
+              "type": "shadow",
+              "offsetX": 0,
+              "offsetY": 0,
+              "blur": 12,
+              "spread": 0,
+              "color": "rgba(0,240,255,0.4)"
+            }
+          ],
+          "children": [
+            {
+              "id": "nav-qr-text",
+              "type": "text",
+              "role": "label",
+              "content": "МОЙ QR",
+              "fontSize": 13,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#00F0FF"
+                }
+              ],
+              "letterSpacing": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

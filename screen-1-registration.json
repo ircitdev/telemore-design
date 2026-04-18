@@ -1,0 +1,417 @@
+{
+  "id": "screen-1-root",
+  "type": "frame",
+  "name": "Регистрация",
+  "width": 375,
+  "height": 812,
+  "layout": "vertical",
+  "padding": [
+    40,
+    20
+  ],
+  "gap": 20,
+  "alignItems": "center",
+  "fill": [
+    {
+      "type": "linear_gradient",
+      "angle": 180,
+      "stops": [
+        {
+          "offset": 0,
+          "color": "#1A0033"
+        },
+        {
+          "offset": 1,
+          "color": "#2D004D"
+        }
+      ]
+    }
+  ],
+  "clipContent": true,
+  "children": [
+    {
+      "id": "reg-logo",
+      "type": "text",
+      "role": "heading",
+      "content": "TELEMORE",
+      "fontFamily": "Pricedown",
+      "fontSize": 48,
+      "fontWeight": 700,
+      "fill": [
+        {
+          "type": "linear_gradient",
+          "angle": 180,
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#FF00AA"
+            },
+            {
+              "offset": 1,
+              "color": "#00F0FF"
+            }
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "type": "shadow",
+          "offsetX": 0,
+          "offsetY": 0,
+          "blur": 20,
+          "spread": 0,
+          "color": "rgba(255,0,170,0.6)"
+        }
+      ],
+      "letterSpacing": 2
+    },
+    {
+      "id": "reg-subtitle",
+      "type": "text",
+      "role": "subheading",
+      "content": "РЕГИСТРАЦИЯ УЧАСТНИКА",
+      "fontSize": 14,
+      "fontWeight": 600,
+      "fill": [
+        {
+          "type": "solid",
+          "color": "#00F0FF"
+        }
+      ],
+      "letterSpacing": 2
+    },
+    {
+      "id": "reg-form",
+      "type": "frame",
+      "name": "Форма",
+      "width": "fill_container",
+      "height": "fit_content",
+      "layout": "vertical",
+      "gap": 14,
+      "children": [
+        {
+          "id": "input-firstname",
+          "type": "frame",
+          "role": "form-input",
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,255,255,0.08)"
+            }
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#FF00AA"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "children": [
+            {
+              "id": "lbl-firstname",
+              "type": "text",
+              "role": "label",
+              "content": "Имя",
+              "fontSize": 16,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.5)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "input-lastname",
+          "type": "frame",
+          "role": "form-input",
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,255,255,0.08)"
+            }
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#FF00AA"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "children": [
+            {
+              "id": "lbl-lastname",
+              "type": "text",
+              "role": "label",
+              "content": "Фамилия",
+              "fontSize": 16,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.5)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "input-phone",
+          "type": "frame",
+          "role": "form-input",
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,255,255,0.08)"
+            }
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#FF00AA"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "children": [
+            {
+              "id": "lbl-phone",
+              "type": "text",
+              "role": "label",
+              "content": "+7 (___) ___-__-__",
+              "fontSize": 16,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.5)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "input-dob",
+          "type": "frame",
+          "role": "form-input",
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,255,255,0.08)"
+            }
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#FF00AA"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "children": [
+            {
+              "id": "lbl-dob",
+              "type": "text",
+              "role": "label",
+              "content": "Дата рождения",
+              "fontSize": 16,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,255,255,0.5)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "squad-label",
+          "type": "text",
+          "role": "label",
+          "content": "ВЫБЕРИ ОТРЯД",
+          "fontSize": 12,
+          "fontWeight": 700,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#FFD700"
+            }
+          ],
+          "letterSpacing": 2
+        },
+        {
+          "id": "squads-row",
+          "type": "frame",
+          "name": "Отряды",
+          "width": "fill_container",
+          "height": "fit_content",
+          "layout": "horizontal",
+          "gap": 12,
+          "children": [
+            {
+              "id": "squad-1",
+              "type": "frame",
+              "role": "card",
+              "width": "fill_container",
+              "height": 80,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(255,0,170,0.2)"
+                }
+              ],
+              "stroke": {
+                "thickness": 2,
+                "fill": [
+                  {
+                    "type": "solid",
+                    "color": "#FF00AA"
+                  }
+                ]
+              },
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "alignItems": "center",
+              "justifyContent": "center",
+              "padding": 12,
+              "effects": [
+                {
+                  "type": "shadow",
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "blur": 16,
+                  "spread": 0,
+                  "color": "rgba(255,0,170,0.5)"
+                }
+              ],
+              "children": [
+                {
+                  "id": "sq1-name",
+                  "type": "text",
+                  "role": "heading",
+                  "content": "КОБРЫ",
+                  "fontSize": 20,
+                  "fontWeight": 700,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "#FF00AA"
+                    }
+                  ],
+                  "fontFamily": "Pricedown"
+                }
+              ]
+            },
+            {
+              "id": "squad-2",
+              "type": "frame",
+              "role": "card",
+              "width": "fill_container",
+              "height": 80,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "rgba(0,240,255,0.1)"
+                }
+              ],
+              "stroke": {
+                "thickness": 2,
+                "fill": [
+                  {
+                    "type": "solid",
+                    "color": "#00F0FF"
+                  }
+                ]
+              },
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "alignItems": "center",
+              "justifyContent": "center",
+              "padding": 12,
+              "children": [
+                {
+                  "id": "sq2-name",
+                  "type": "text",
+                  "role": "heading",
+                  "content": "АКУЛЫ",
+                  "fontSize": 20,
+                  "fontWeight": 700,
+                  "fill": [
+                    {
+                      "type": "solid",
+                      "color": "#00F0FF"
+                    }
+                  ],
+                  "fontFamily": "Pricedown"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reg-submit-btn",
+      "type": "frame",
+      "role": "button",
+      "width": "fill_container",
+      "height": 52,
+      "fill": [
+        {
+          "type": "linear_gradient",
+          "angle": 90,
+          "stops": [
+            {
+              "offset": 0,
+              "color": "#FF00AA"
+            },
+            {
+              "offset": 1,
+              "color": "#00F0FF"
+            }
+          ]
+        }
+      ],
+      "cornerRadius": 12,
+      "layout": "horizontal",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "effects": [
+        {
+          "type": "shadow",
+          "offsetX": 0,
+          "offsetY": 0,
+          "blur": 20,
+          "spread": 0,
+          "color": "rgba(255,0,170,0.6)"
+        }
+      ],
+      "children": [
+        {
+          "id": "btn-text",
+          "type": "text",
+          "role": "label",
+          "content": "НАЧАТЬ МИССИЮ",
+          "fontSize": 16,
+          "fontWeight": 700,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#FFFFFF"
+            }
+          ],
+          "letterSpacing": 2
+        }
+      ]
+    }
+  ]
+}

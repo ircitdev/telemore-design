@@ -1,0 +1,582 @@
+{
+  "id": "screen-7-root",
+  "type": "frame",
+  "name": "Сканер продюсера",
+  "width": 375,
+  "height": 812,
+  "layout": "vertical",
+  "padding": [
+    40,
+    20
+  ],
+  "gap": 18,
+  "alignItems": "center",
+  "fill": [
+    {
+      "type": "linear_gradient",
+      "angle": 180,
+      "stops": [
+        {
+          "offset": 0,
+          "color": "#0A0020"
+        },
+        {
+          "offset": 1,
+          "color": "#1A0033"
+        }
+      ]
+    }
+  ],
+  "clipContent": true,
+  "children": [
+    {
+      "id": "scanner-header",
+      "type": "frame",
+      "width": "fill_container",
+      "height": "fit_content",
+      "layout": "horizontal",
+      "justifyContent": "space_between",
+      "alignItems": "center",
+      "children": [
+        {
+          "id": "scan-title",
+          "type": "text",
+          "role": "heading",
+          "content": "СКАНЕР",
+          "fontFamily": "Pricedown",
+          "fontSize": 32,
+          "fontWeight": 700,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#00F0FF"
+            }
+          ],
+          "effects": [
+            {
+              "type": "shadow",
+              "offsetX": 0,
+              "offsetY": 0,
+              "blur": 16,
+              "spread": 0,
+              "color": "rgba(0,240,255,0.6)"
+            }
+          ],
+          "letterSpacing": 2
+        },
+        {
+          "id": "scan-badge",
+          "type": "frame",
+          "role": "badge",
+          "width": "fit_content",
+          "height": 28,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,0,170,0.2)"
+            }
+          ],
+          "stroke": {
+            "thickness": 1,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#FF00AA"
+              }
+            ]
+          },
+          "cornerRadius": 14,
+          "padding": [
+            4,
+            12
+          ],
+          "layout": "horizontal",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "children": [
+            {
+              "id": "scan-badge-text",
+              "type": "text",
+              "role": "label",
+              "content": "ПРОДЮСЕР",
+              "fontSize": 10,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FF00AA"
+                }
+              ],
+              "letterSpacing": 1.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scan-event-info",
+      "type": "text",
+      "role": "subheading",
+      "content": "СОБЫТИЕ: ОБЕД 14 ИЮНЯ",
+      "fontSize": 12,
+      "fontWeight": 700,
+      "fill": [
+        {
+          "type": "solid",
+          "color": "#FFD700"
+        }
+      ],
+      "letterSpacing": 1.5
+    },
+    {
+      "id": "camera-frame",
+      "type": "frame",
+      "name": "Камера",
+      "width": 320,
+      "height": 320,
+      "fill": [
+        {
+          "type": "solid",
+          "color": "#000000"
+        }
+      ],
+      "stroke": {
+        "thickness": 3,
+        "fill": [
+          {
+            "type": "linear_gradient",
+            "angle": 90,
+            "stops": [
+              {
+                "offset": 0,
+                "color": "#FF00AA"
+              },
+              {
+                "offset": 1,
+                "color": "#00F0FF"
+              }
+            ]
+          }
+        ]
+      },
+      "cornerRadius": 16,
+      "layout": "vertical",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "padding": 0,
+      "effects": [
+        {
+          "type": "shadow",
+          "offsetX": 0,
+          "offsetY": 0,
+          "blur": 30,
+          "spread": 0,
+          "color": "rgba(0,240,255,0.7)"
+        }
+      ],
+      "clipContent": true,
+      "children": [
+        {
+          "id": "scan-target",
+          "type": "frame",
+          "width": 200,
+          "height": 200,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(0,0,0,0)"
+            }
+          ],
+          "stroke": {
+            "thickness": 4,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#00F0FF"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "effects": [
+            {
+              "type": "shadow",
+              "offsetX": 0,
+              "offsetY": 0,
+              "blur": 20,
+              "spread": 0,
+              "color": "rgba(0,240,255,0.8)"
+            }
+          ],
+          "children": [
+            {
+              "id": "scan-target-text",
+              "type": "text",
+              "role": "label",
+              "content": "НАВЕДИ НА QR",
+              "fontSize": 12,
+              "fontWeight": 700,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#00F0FF"
+                }
+              ],
+              "letterSpacing": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "presets-label",
+      "type": "text",
+      "role": "label",
+      "content": "БЫСТРОЕ НАЧИСЛЕНИЕ",
+      "fontSize": 11,
+      "fontWeight": 700,
+      "fill": [
+        {
+          "type": "solid",
+          "color": "rgba(255,255,255,0.6)"
+        }
+      ],
+      "letterSpacing": 1.5
+    },
+    {
+      "id": "presets-row-1",
+      "type": "frame",
+      "width": "fill_container",
+      "height": "fit_content",
+      "layout": "horizontal",
+      "gap": 8,
+      "children": [
+        {
+          "id": "preset-10",
+          "type": "frame",
+          "width": "fill_container",
+          "height": 50,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(0,240,255,0.15)"
+            }
+          ],
+          "stroke": {
+            "thickness": 2,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#00F0FF"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "horizontal",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "effects": [
+            {
+              "type": "shadow",
+              "offsetX": 0,
+              "offsetY": 0,
+              "blur": 10,
+              "spread": 0,
+              "color": "rgba(0,240,255,0.4)"
+            }
+          ],
+          "children": [
+            {
+              "id": "p10-text",
+              "type": "text",
+              "role": "label",
+              "content": "+10",
+              "fontFamily": "Pricedown",
+              "fontSize": 22,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#00F0FF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "preset-15",
+          "type": "frame",
+          "width": "fill_container",
+          "height": 50,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(0,240,255,0.15)"
+            }
+          ],
+          "stroke": {
+            "thickness": 2,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#00F0FF"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "horizontal",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "effects": [
+            {
+              "type": "shadow",
+              "offsetX": 0,
+              "offsetY": 0,
+              "blur": 10,
+              "spread": 0,
+              "color": "rgba(0,240,255,0.4)"
+            }
+          ],
+          "children": [
+            {
+              "id": "p15-text",
+              "type": "text",
+              "role": "label",
+              "content": "+15",
+              "fontFamily": "Pricedown",
+              "fontSize": 22,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#00F0FF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "preset-20",
+          "type": "frame",
+          "width": "fill_container",
+          "height": 50,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(0,240,255,0.15)"
+            }
+          ],
+          "stroke": {
+            "thickness": 2,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#00F0FF"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "horizontal",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "effects": [
+            {
+              "type": "shadow",
+              "offsetX": 0,
+              "offsetY": 0,
+              "blur": 10,
+              "spread": 0,
+              "color": "rgba(0,240,255,0.4)"
+            }
+          ],
+          "children": [
+            {
+              "id": "p20-text",
+              "type": "text",
+              "role": "label",
+              "content": "+20",
+              "fontFamily": "Pricedown",
+              "fontSize": 22,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#00F0FF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "preset-25",
+          "type": "frame",
+          "width": "fill_container",
+          "height": 50,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(0,240,255,0.15)"
+            }
+          ],
+          "stroke": {
+            "thickness": 2,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#00F0FF"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "horizontal",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "effects": [
+            {
+              "type": "shadow",
+              "offsetX": 0,
+              "offsetY": 0,
+              "blur": 10,
+              "spread": 0,
+              "color": "rgba(0,240,255,0.4)"
+            }
+          ],
+          "children": [
+            {
+              "id": "p25-text",
+              "type": "text",
+              "role": "label",
+              "content": "+25",
+              "fontFamily": "Pricedown",
+              "fontSize": 22,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#00F0FF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "actions-row",
+      "type": "frame",
+      "width": "fill_container",
+      "height": "fit_content",
+      "layout": "horizontal",
+      "gap": 10,
+      "children": [
+        {
+          "id": "action-checkin",
+          "type": "frame",
+          "role": "button",
+          "width": "fill_container",
+          "height": 56,
+          "fill": [
+            {
+              "type": "linear_gradient",
+              "angle": 90,
+              "stops": [
+                {
+                  "offset": 0,
+                  "color": "#FF00AA"
+                },
+                {
+                  "offset": 1,
+                  "color": "#FFD700"
+                }
+              ]
+            }
+          ],
+          "cornerRadius": 12,
+          "layout": "horizontal",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "effects": [
+            {
+              "type": "shadow",
+              "offsetX": 0,
+              "offsetY": 0,
+              "blur": 20,
+              "spread": 0,
+              "color": "rgba(255,0,170,0.6)"
+            }
+          ],
+          "children": [
+            {
+              "id": "ci-text",
+              "type": "text",
+              "role": "label",
+              "content": "ЧЕК-ИН",
+              "fontFamily": "Pricedown",
+              "fontSize": 18,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FFFFFF"
+                }
+              ],
+              "letterSpacing": 2,
+              "fontWeight": 800
+            }
+          ]
+        },
+        {
+          "id": "action-penalty",
+          "type": "frame",
+          "role": "button",
+          "width": "fill_container",
+          "height": 56,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "rgba(255,0,0,0.15)"
+            }
+          ],
+          "stroke": {
+            "thickness": 2,
+            "fill": [
+              {
+                "type": "solid",
+                "color": "#FF0033"
+              }
+            ]
+          },
+          "cornerRadius": 12,
+          "layout": "horizontal",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "effects": [
+            {
+              "type": "shadow",
+              "offsetX": 0,
+              "offsetY": 0,
+              "blur": 16,
+              "spread": 0,
+              "color": "rgba(255,0,51,0.5)"
+            }
+          ],
+          "children": [
+            {
+              "id": "pen-text",
+              "type": "text",
+              "role": "label",
+              "content": "-10 ШТРАФ",
+              "fontFamily": "Pricedown",
+              "fontSize": 16,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#FF0033"
+                }
+              ],
+              "letterSpacing": 1.5,
+              "fontWeight": 800
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
