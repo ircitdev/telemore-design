@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1A0033">
+<title>Открываем ТЕЛЕМОРЕ...</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#FF00AA;--cyan:#00F0FF;--gold:#FFD700;--bg1:#1A0033;--bg2:#2D004D;}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:'Roboto',sans-serif;color:#fff;
+  background:linear-gradient(180deg,var(--bg1) 0%,var(--bg2) 50%,var(--bg1) 100%);
+  display:flex;align-items:center;justify-content:center;padding:24px;
+  overflow:hidden;position:relative;
+}
+body::before{content:"";position:fixed;inset:0;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(255,0,170,0.25),transparent 45%),
+    radial-gradient(circle at 80% 70%,rgba(0,240,255,0.25),transparent 45%);
+  pointer-events:none;
+}
+.card{
+  position:relative;z-index:1;text-align:center;max-width:520px;width:100%;
+  padding:40px 32px;
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);
+  border-radius:18px;backdrop-filter:blur(6px);
+}
+.logo{
+  font-family:'Pricedown',Impact,sans-serif;
+  font-size:clamp(52px,12vw,84px);font-weight:900;letter-spacing:3px;
+  background:linear-gradient(180deg,var(--pink),var(--cyan));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 24px rgba(255,0,170,0.7));
+  animation:glow 2.5s ease-in-out infinite alternate;
+  line-height:1;margin-bottom:8px;
+}
+@keyframes glow{
+  from{filter:drop-shadow(0 0 18px rgba(255,0,170,0.5));}
+  to{filter:drop-shadow(0 0 36px rgba(0,240,255,0.8));}
+}
+.tag{
+  font-size:12px;font-weight:700;letter-spacing:3px;
+  color:var(--cyan);margin-bottom:32px;text-transform:uppercase;
+}
+.status{
+  font-size:16px;font-weight:600;color:#fff;margin-bottom:24px;min-height:48px;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--gold);animation:pulse 1s infinite;box-shadow:0 0 12px var(--gold);}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.4;transform:scale(1.3);}}
+.progress{
+  height:6px;background:rgba(255,255,255,0.1);border-radius:3px;overflow:hidden;margin-bottom:24px;
+}
+.bar{
+  height:100%;width:0;background:linear-gradient(90deg,var(--pink),var(--cyan));border-radius:3px;
+  box-shadow:0 0 12px var(--pink);transition:width .25s;
+}
+.steps{text-align:left;margin-top:20px;display:flex;flex-direction:column;gap:8px;}
+.step{
+  padding:10px 14px;border-radius:8px;font-size:13px;display:flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,0.03);border:1px solid transparent;
+  color:rgba(255,255,255,0.5);transition:all .3s;
+}
+.step.active{background:rgba(0,240,255,0.12);border-color:rgba(0,240,255,0.4);color:#fff;}
+.step.done{background:rgba(255,0,170,0.12);border-color:rgba(255,0,170,0.3);color:#fff;}
+.step.done .marker{background:var(--pink);color:#1A0033;}
+.step.active .marker{background:var(--cyan);color:#1A0033;}
+.marker{
+  width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-weight:900;font-size:12px;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.5);flex-shrink:0;
+}
+.hint{
+  margin-top:24px;padding:14px 16px;border-radius:10px;
+  background:rgba(255,215,0,0.08);border:1px solid rgba(255,215,0,0.3);
+  font-size:13px;color:var(--gold);display:none;
+  animation:fadeIn .4s;
+}
+.hint.show{display:block;}
+.hint kbd{
+  padding:2px 8px;background:rgba(255,255,255,0.1);border-radius:4px;
+  font-family:monospace;font-size:12px;color:#fff;border:1px solid rgba(255,255,255,0.2);
+}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.actions{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;justify-content:center;}
+.btn{
+  padding:10px 20px;border-radius:8px;font-weight:700;font-size:13px;text-decoration:none;
+  letter-spacing:1px;text-transform:uppercase;cursor:pointer;border:none;transition:all .2s;
+}
+.btn-primary{background:linear-gradient(90deg,var(--pink),var(--cyan));color:#fff;box-shadow:0 0 16px rgba(255,0,170,0.5);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 24px rgba(0,240,255,0.6);}
+.btn-secondary{background:rgba(255,255,255,0.06);color:#fff;border:1px solid rgba(255,255,255,0.2);}
+.btn-secondary:hover{background:rgba(255,255,255,0.12);}
+.err{display:none;color:#FF4466;margin-top:12px;font-size:13px;}
+.err.show{display:block;}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1 class="logo">TELEMORE</h1>
+  <div class="tag">⚡ OPENING DESIGN FILE ⚡</div>
+  <div class="status"><span class="dot"></span><span id="statusText">Подключаюсь к серверу...</span></div>
+  <div class="progress"><div class="bar" id="bar"></div></div>
+  <div class="steps">
+    <div class="step" id="s1"><div class="marker">1</div><div>Загрузка telemore.op</div></div>
+    <div class="step" id="s2"><div class="marker">2</div><div>Сохранение на диск</div></div>
+    <div class="step" id="s3"><div class="marker">3</div><div>Открытие OpenPencil</div></div>
+  </div>
+  <div class="hint" id="hint">
+    💡 <strong>Файл загружен на диск.</strong><br>
+    В OpenPencil нажми <kbd>File → Open</kbd> (иконка папки слева) → выбери <strong>telemore.op</strong> из <strong>Downloads</strong>.<br>
+    Либо просто перетащи файл из папки прямо в окно OpenPencil.
+  </div>
+  <div class="err" id="err"></div>
+  <div class="actions" id="actions" style="display:none;">
+    <a class="btn btn-primary" id="openBtn" href="/editor" target="_blank">Открыть OpenPencil →</a>
+    <button class="btn btn-secondary" onclick="location.reload()">Повторить</button>
+  </div>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+const SRC = '/files/telemore.op';
+const EDITOR = '/editor';
+let size = 0, downloaded = 0;
+
+async function run(){
+  try{
+    // 1. Download
+    $('s1').classList.add('active');
+    $('statusText').textContent = 'Загружаю telemore.op...';
+    const resp = await fetch(SRC);
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    size = Number(resp.headers.get('content-length') || 0);
+    const reader = resp.body.getReader();
+    const chunks = [];
+    while(true){
+      const { done, value } = await reader.read();
+      if (done) break;
+      chunks.push(value);
+      downloaded += value.length;
+      const pct = size ? Math.min(90, (downloaded/size)*90) : 50;
+      $('bar').style.width = pct + '%';
+    }
+    const blob = new Blob(chunks, { type: 'application/json' });
+    $('s1').classList.remove('active'); $('s1').classList.add('done');
+
+    // 2. Save to disk
+    $('s2').classList.add('active');
+    $('statusText').textContent = 'Сохраняю на диск...';
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'telemore.op';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    $('bar').style.width = '95%';
+    await new Promise(r => setTimeout(r, 800));
+    $('s2').classList.remove('active'); $('s2').classList.add('done');
+
+    // 3. Open editor
+    $('s3').classList.add('active');
+    $('statusText').textContent = 'Открываю OpenPencil...';
+    $('bar').style.width = '100%';
+    await new Promise(r => setTimeout(r, 600));
+    $('s3').classList.remove('active'); $('s3').classList.add('done');
+    $('statusText').innerHTML = '✨ <span style="color:#00F0FF">Готово! Открываю редактор в новой вкладке</span>';
+    $('hint').classList.add('show');
+    $('actions').style.display = 'flex';
+
+    // Open editor in new tab (must be user-initiated in modern browsers — show button)
+    setTimeout(() => {
+      const w = window.open(EDITOR, '_blank');
+      if (!w || w.closed) {
+        $('statusText').innerHTML = '⚠️ <span style="color:#FFD700">Браузер заблокировал popup — нажми кнопку ниже</span>';
+      }
+    }, 400);
+  }catch(e){
+    $('err').textContent = 'Ошибка: ' + e.message;
+    $('err').classList.add('show');
+    $('statusText').textContent = '❌ Что-то пошло не так';
+    $('actions').style.display = 'flex';
+  }
+}
+run();
+</script>
+</body>
+</html>
