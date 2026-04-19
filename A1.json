@@ -1617,7 +1617,7 @@
                     {
                       "id": "t-72",
                       "type": "text",
-                      "content": "Последние транзакции",
+                      "content": "Последние транзакции (все продюсеры)",
                       "fontFamily": "Roboto",
                       "fontSize": 15,
                       "fontWeight": 700,
@@ -1674,7 +1674,7 @@
                         {
                           "id": "t-75",
                           "type": "text",
-                          "content": "14:32 • Мастер-класс",
+                          "content": "14:32 • Иван П.",
                           "fontFamily": "Roboto",
                           "fontSize": 11,
                           "fontWeight": 400,
@@ -1733,7 +1733,7 @@
                         {
                           "id": "t-79",
                           "type": "text",
-                          "content": "14:30 • Мастер-класс",
+                          "content": "14:30 • Мария С.",
                           "fontFamily": "Roboto",
                           "fontSize": 11,
                           "fontWeight": 400,
@@ -1792,7 +1792,7 @@
                         {
                           "id": "t-83",
                           "type": "text",
-                          "content": "13:05 • Опоздание",
+                          "content": "13:05 • Иван П.",
                           "fontFamily": "Roboto",
                           "fontSize": 11,
                           "fontWeight": 400,
@@ -1851,7 +1851,7 @@
                         {
                           "id": "t-87",
                           "type": "text",
-                          "content": "13:02 • Обед",
+                          "content": "13:02 • Алексей Б.",
                           "fontFamily": "Roboto",
                           "fontSize": 11,
                           "fontWeight": 400,

@@ -173,75 +173,15 @@
       ]
     },
     {
-      "id": "qr-download-btn",
-      "type": "frame",
-      "role": "button",
-      "width": "fill_container",
-      "height": 52,
+      "id": "qr-hint",
+      "type": "text",
+      "role": "caption",
+      "content": "QR доступен офлайн. Кешируется автоматически.",
+      "fontSize": 11,
       "fill": [
         {
-          "type": "linear_gradient",
-          "angle": 90,
-          "stops": [
-            {
-              "offset": 0,
-              "color": "#FFD700"
-            },
-            {
-              "offset": 1,
-              "color": "#FFA500"
-            }
-          ]
-        }
-      ],
-      "cornerRadius": 12,
-      "layout": "horizontal",
-      "alignItems": "center",
-      "justifyContent": "center",
-      "gap": 10,
-      "effects": [
-        {
-          "type": "shadow",
-          "offsetX": 0,
-          "offsetY": 0,
-          "blur": 20,
-          "spread": 0,
-          "color": "rgba(255,215,0,0.6)"
-        }
-      ],
-      "children": [
-        {
-          "id": "dl-icon",
-          "type": "path",
-          "name": "DownloadIcon",
-          "role": "icon",
-          "d": "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4 M7 10l5 5 5-5 M12 15V3",
-          "width": 18,
-          "height": 18,
-          "stroke": {
-            "thickness": 2.5,
-            "fill": [
-              {
-                "type": "solid",
-                "color": "#1A0033"
-              }
-            ]
-          }
-        },
-        {
-          "id": "dl-text",
-          "type": "text",
-          "role": "label",
-          "content": "СКАЧАТЬ PDF БЕЙДЖ",
-          "fontSize": 14,
-          "fontWeight": 700,
-          "fill": [
-            {
-              "type": "solid",
-              "color": "#1A0033"
-            }
-          ],
-          "letterSpacing": 1.5
+          "type": "solid",
+          "color": "rgba(255,255,255,0.5)"
         }
       ]
     }

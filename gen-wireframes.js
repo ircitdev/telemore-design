@@ -336,8 +336,8 @@ const A1 = () => screen('A1. Dashboard', 0, [
           ]}))
       ]}),
       box({ w: 'fill_container', padding: 20, children: [
-        hdg('Последние транзакции', 15),
-        ...[['+20', 'Анна К.', '14:32 • Мастер-класс'], ['+15', 'Сергей В.', '14:30 • Мастер-класс'], ['-10', 'Алексей Б.', '13:05 • Опоздание'], ['+10', 'Мария С.', '13:02 • Обед']]
+        hdg('Последние транзакции (все продюсеры)', 15),
+        ...[['+20', 'Анна К.', '14:32 • Иван П.'], ['+15', 'Сергей В.', '14:30 • Мария С.'], ['-10', 'Алексей Б.', '13:05 • Иван П.'], ['+10', 'Мария С.', '13:02 • Алексей Б.']]
           .map(([s, n, m]) => plain({ layout: 'horizontal', gap: 12, padding: [8, 0], alignItems: 'center', children: [
             text(s, { size: 14, weight: 700, width: 40, color: s.startsWith('-') ? COLORS.danger : COLORS.text }),
             text(n, { size: 13, width: 120 }),
@@ -367,6 +367,14 @@ const A2 = () => screen('A2. Сканер QR', 1, [
       ]}),
       box({ w: 'fill_container', padding: 20, children: [
         hdg('Результат сканирования', 15),
+        plain({ layout: 'horizontal', gap: 12, alignItems: 'center', children: [
+          sub('РЕЖИМ:'),
+          btn('● Одиночный', { primary: false }),
+          btn('○ Bulk +15 всем подряд', { primary: false }),
+          plain({ w: 'fill_container' }),
+          sub('Сканировано: 12'),
+          btn('Завершить', { h: 28 })
+        ]}),
         box({ w: 'fill_container', padding: 16, bg: '#FAFAFC', children: [
           plain({ layout: 'horizontal', gap: 12, alignItems: 'center', children: [
             placeholder('AVATAR', 56, 56),
@@ -462,6 +470,9 @@ const A4 = () => screen('A4. Карточка участника', 2, [
         plain({ layout: 'horizontal', gap: 8, children: [
           btn('Редактировать', { w: 'fill_container' }),
           btn('Уведомить', { w: 'fill_container' })
+        ]}),
+        plain({ layout: 'horizontal', gap: 8, children: [
+          btn('Сменить отряд → Акулы', { w: 'fill_container' })
         ]})
       ]}),
       plain({ w: 'fill_container', gap: 20, children: [
@@ -487,12 +498,13 @@ const A4 = () => screen('A4. Карточка участника', 2, [
         ]}),
         box({ padding: 20, children: [
           hdg('История транзакций', 15),
-          ...[['+20', '14 июня 14:32', 'Мастер-класс: Монтаж', 'Продюсер А.'], ['+15', '14 июня 13:00', 'Чек-ин: Обед', 'Продюсер А.'], ['+10', '13 июня 19:05', 'Чек-ин: Ужин', 'Продюсер Б.'], ['-10', '13 июня 13:15', 'Опоздание', 'Продюсер А.'], ['+100', '12 июня 18:00', 'Регистрация', 'Система']]
-            .map(([s, d, r, a]) => plain({ layout: 'horizontal', padding: [8, 0], gap: 12, alignItems: 'center', children: [
+          ...[['+20', '14 июня 14:32', 'Мастер-класс: Монтаж', 'Иван П.', false], ['+15', '14 июня 13:00', 'Чек-ин: Обед', 'Мария С.', false], ['+10', '13 июня 19:05', 'Чек-ин: Ужин', 'Алексей Б.', false], ['-10', '13 июня 13:15', 'Опоздание', 'Иван П.', true], ['+100', '12 июня 18:00', 'Регистрация', 'Система', false]]
+            .map(([s, d, r, a, canRevert]) => plain({ layout: 'horizontal', padding: [8, 0], gap: 12, alignItems: 'center', children: [
               text(s, { size: 13, weight: 700, width: 50, color: s.startsWith('-') ? COLORS.danger : COLORS.text }),
               sub(d, 11), text('', { width: 16 }),
               text(r, { size: 12, width: 'fill_container' }),
-              sub(a, 11)
+              sub(a, 11),
+              canRevert ? btn('↶ Откат', { h: 24 }) : text('', { width: 70 })
             ]}))
         ]})
       ]})
@@ -598,7 +610,8 @@ const A7 = () => screen('A7. Уведомления', 4, [
           sub('АУДИТОРИЯ'),
           plain({ gap: 6, children: [
             plain({ layout: 'horizontal', gap: 8, children: [text('◉', { size: 14 }), text('Всему отряду (Кобры)', { size: 13 })]}),
-            plain({ layout: 'horizontal', gap: 8, children: [text('○', { size: 14 }), text('Всем участникам смены', { size: 13 })]}),
+            plain({ layout: 'horizontal', gap: 8, children: [text('○', { size: 14 }), text('Другому отряду (Акулы)', { size: 13 })]}),
+            plain({ layout: 'horizontal', gap: 8, children: [text('○', { size: 14 }), text('Всем участникам смены (60 чел)', { size: 13 })]}),
             plain({ layout: 'horizontal', gap: 8, children: [text('○', { size: 14 }), text('Конкретному участнику', { size: 13 })]})
           ]})
         ]}),

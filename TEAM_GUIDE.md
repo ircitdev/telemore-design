@@ -6,6 +6,7 @@
 
 | Ссылка | Назначение |
 |--------|-----------|
+| **https://design.telemore.org/files/CLIENT_DECISIONS.md** | 📋 Зафиксированные решения клиента + новые требования |
 | **https://design.telemore.org/go/** | 🚀 Один клик — открыть `telemore.op` в OpenPencil |
 | https://design.telemore.org/ | OpenPencil веб-редактор (по умолчанию — русский интерфейс) |
 | https://design.telemore.org/manual/ | Этот гид (HTML) |

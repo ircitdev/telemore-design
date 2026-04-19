@@ -129,6 +129,24 @@
       "letterSpacing": 1.5
     },
     {
+      "id": "bulk-mode",
+      "type": "frame",
+      "role": "badge",
+      "width": "fit_content",
+      "height": 30,
+      "fill": [{"type":"solid","color":"rgba(255,215,0,0.15)"}],
+      "stroke": {"thickness":1,"fill":[{"type":"solid","color":"#FFD700"}]},
+      "cornerRadius": 15,
+      "padding": [4,14],
+      "layout": "horizontal",
+      "alignItems": "center",
+      "gap": 6,
+      "children": [
+        {"id":"bulk-dot","type":"ellipse","width":8,"height":8,"fill":[{"type":"solid","color":"#FFD700"}]},
+        {"id":"bulk-text","type":"text","role":"label","content":"BULK +15 ВКЛ","fontSize":10,"fontWeight":700,"fill":[{"type":"solid","color":"#FFD700"}],"letterSpacing":1.5}
+      ]
+    },
+    {
       "id": "camera-frame",
       "type": "frame",
       "name": "Камера",

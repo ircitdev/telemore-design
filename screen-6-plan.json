@@ -181,40 +181,20 @@
           "padding": 14,
           "fill": [
             {
-              "type": "linear_gradient",
-              "angle": 90,
-              "stops": [
-                {
-                  "offset": 0,
-                  "color": "rgba(255,0,170,0.25)"
-                },
-                {
-                  "offset": 1,
-                  "color": "rgba(255,0,170,0.1)"
-                }
-              ]
+              "type": "solid",
+              "color": "rgba(255,215,0,0.1)"
             }
           ],
           "stroke": {
-            "thickness": 2,
+            "thickness": 1,
             "fill": [
               {
                 "type": "solid",
-                "color": "#FF00AA"
+                "color": "#FFD700"
               }
             ]
           },
           "cornerRadius": 12,
-          "effects": [
-            {
-              "type": "shadow",
-              "offsetX": 0,
-              "offsetY": 0,
-              "blur": 20,
-              "spread": 0,
-              "color": "rgba(255,0,170,0.6)"
-            }
-          ],
           "children": [
             {
               "id": "evt-2-time",
@@ -226,7 +206,7 @@
               "fill": [
                 {
                   "type": "solid",
-                  "color": "#FF00AA"
+                  "color": "#FFD700"
                 }
               ],
               "width": 70
@@ -258,13 +238,12 @@
                   "id": "evt-2-desc",
                   "type": "text",
                   "role": "caption",
-                  "content": "СЕЙЧАС • Аудитория 3",
+                  "content": "Аудитория 3",
                   "fontSize": 11,
-                  "fontWeight": 700,
                   "fill": [
                     {
                       "type": "solid",
-                      "color": "#FF00AA"
+                      "color": "rgba(255,255,255,0.6)"
                     }
                   ]
                 }
