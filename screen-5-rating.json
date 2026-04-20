@@ -5,28 +5,10 @@
   "width": 375,
   "height": 812,
   "layout": "vertical",
-  "padding": [
-    40,
-    20
-  ],
-  "gap": 18,
+  "padding": [40, 20],
+  "gap": 14,
   "alignItems": "center",
-  "fill": [
-    {
-      "type": "linear_gradient",
-      "angle": 180,
-      "stops": [
-        {
-          "offset": 0,
-          "color": "#1A0033"
-        },
-        {
-          "offset": 1,
-          "color": "#2D004D"
-        }
-      ]
-    }
-  ],
+  "fill": [{"type":"linear_gradient","angle":180,"stops":[{"offset":0,"color":"#1A0033"},{"offset":1,"color":"#2D004D"}]}],
   "clipContent": true,
   "children": [
     {
@@ -37,751 +19,332 @@
       "fontFamily": "Pricedown",
       "fontSize": 42,
       "fontWeight": 700,
-      "fill": [
-        {
-          "type": "solid",
-          "color": "#00F0FF"
-        }
-      ],
-      "effects": [
-        {
-          "type": "shadow",
-          "offsetX": 0,
-          "offsetY": 0,
-          "blur": 20,
-          "spread": 0,
-          "color": "rgba(0,240,255,0.6)"
-        }
-      ],
+      "fill": [{"type":"solid","color":"#00F0FF"}],
+      "effects": [{"type":"shadow","offsetX":0,"offsetY":0,"blur":20,"spread":0,"color":"rgba(0,240,255,0.6)"}],
       "letterSpacing": 3
     },
+
     {
-      "id": "rate-tabs",
+      "id": "rate-period-row",
       "type": "frame",
       "width": "fill_container",
-      "height": 44,
+      "height": "fit_content",
       "layout": "horizontal",
-      "gap": 0,
-      "fill": [
-        {
-          "type": "solid",
-          "color": "rgba(255,255,255,0.05)"
-        }
-      ],
-      "cornerRadius": 22,
-      "padding": 4,
+      "justifyContent": "space_between",
+      "alignItems": "center",
       "children": [
         {
-          "id": "tab-personal",
+          "id": "rate-tabs",
           "type": "frame",
-          "width": "fill_container",
-          "height": "fill_container",
-          "fill": [
-            {
-              "type": "linear_gradient",
-              "angle": 90,
-              "stops": [
-                {
-                  "offset": 0,
-                  "color": "#FF00AA"
-                },
-                {
-                  "offset": 1,
-                  "color": "#00F0FF"
-                }
-              ]
-            }
-          ],
-          "cornerRadius": 18,
+          "width": 180,
+          "height": 36,
           "layout": "horizontal",
-          "alignItems": "center",
-          "justifyContent": "center",
-          "effects": [
-            {
-              "type": "shadow",
-              "offsetX": 0,
-              "offsetY": 0,
-              "blur": 12,
-              "spread": 0,
-              "color": "rgba(255,0,170,0.6)"
-            }
-          ],
+          "gap": 0,
+          "fill": [{"type":"solid","color":"rgba(255,255,255,0.05)"}],
+          "cornerRadius": 18,
+          "padding": 3,
           "children": [
             {
-              "id": "tab-personal-text",
-              "type": "text",
-              "role": "label",
-              "content": "ЛИЧНЫЙ",
-              "fontSize": 13,
-              "fontWeight": 700,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#FFFFFF"
-                }
-              ],
-              "letterSpacing": 1.5
+              "id": "tab-personal",
+              "type": "frame",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": [{"type":"linear_gradient","angle":90,"stops":[{"offset":0,"color":"#FF00AA"},{"offset":1,"color":"#00F0FF"}]}],
+              "cornerRadius": 15,
+              "layout": "horizontal",
+              "alignItems": "center",
+              "justifyContent": "center",
+              "effects": [{"type":"shadow","offsetX":0,"offsetY":0,"blur":10,"spread":0,"color":"rgba(255,0,170,0.5)"}],
+              "children": [{"id":"tab-personal-text","type":"text","role":"label","content":"ЛИЧНЫЙ","fontSize":11,"fontWeight":700,"fill":[{"type":"solid","color":"#FFFFFF"}],"letterSpacing":1.5}]
+            },
+            {
+              "id": "tab-team",
+              "type": "frame",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": [{"type":"solid","color":"rgba(0,0,0,0)"}],
+              "cornerRadius": 15,
+              "layout": "horizontal",
+              "alignItems": "center",
+              "justifyContent": "center",
+              "children": [{"id":"tab-team-text","type":"text","role":"label","content":"КОМАНДА","fontSize":11,"fontWeight":700,"fill":[{"type":"solid","color":"rgba(255,255,255,0.5)"}],"letterSpacing":1.5}]
             }
           ]
         },
         {
-          "id": "tab-team",
+          "id": "rate-scope",
           "type": "frame",
-          "width": "fill_container",
-          "height": "fill_container",
-          "fill": [
-            {
-              "type": "solid",
-              "color": "rgba(0,0,0,0)"
-            }
-          ],
-          "cornerRadius": 18,
+          "width": 130,
+          "height": 36,
           "layout": "horizontal",
-          "alignItems": "center",
-          "justifyContent": "center",
+          "gap": 0,
+          "fill": [{"type":"solid","color":"rgba(255,255,255,0.05)"}],
+          "cornerRadius": 18,
+          "padding": 3,
           "children": [
             {
-              "id": "tab-team-text",
-              "type": "text",
-              "role": "label",
-              "content": "КОМАНДНЫЙ",
-              "fontSize": 13,
-              "fontWeight": 700,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "rgba(255,255,255,0.5)"
-                }
-              ],
-              "letterSpacing": 1.5
+              "id": "scope-day",
+              "type": "frame",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": [{"type":"solid","color":"rgba(0,0,0,0)"}],
+              "cornerRadius": 15,
+              "layout": "horizontal",
+              "alignItems": "center",
+              "justifyContent": "center",
+              "children": [{"id":"scope-day-text","type":"text","role":"label","content":"ДЕНЬ","fontSize":10,"fontWeight":700,"fill":[{"type":"solid","color":"rgba(255,255,255,0.5)"}],"letterSpacing":1.2}]
+            },
+            {
+              "id": "scope-tour",
+              "type": "frame",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": [{"type":"solid","color":"rgba(255,215,0,0.18)"}],
+              "stroke": {"thickness":1,"fill":[{"type":"solid","color":"#FFD700"}]},
+              "cornerRadius": 15,
+              "layout": "horizontal",
+              "alignItems": "center",
+              "justifyContent": "center",
+              "children": [{"id":"scope-tour-text","type":"text","role":"label","content":"ТУР","fontSize":10,"fontWeight":700,"fill":[{"type":"solid","color":"#FFD700"}],"letterSpacing":1.2}]
             }
           ]
         }
       ]
     },
+
     {
       "id": "rate-list",
       "type": "frame",
       "width": "fill_container",
       "height": "fit_content",
       "layout": "vertical",
-      "gap": 10,
+      "gap": 8,
       "children": [
         {
           "id": "rate-row-1",
           "type": "frame",
           "width": "fill_container",
-          "height": 60,
-          "fill": [
-            {
-              "type": "solid",
-              "color": "rgba(255,215,0,0.15)"
-            }
-          ],
-          "stroke": {
-            "thickness": 2,
-            "fill": [
-              {
-                "type": "solid",
-                "color": "#FFD700"
-              }
-            ]
-          },
+          "height": 52,
+          "fill": [{"type":"solid","color":"rgba(255,215,0,0.15)"}],
+          "stroke": {"thickness":2,"fill":[{"type":"solid","color":"#FFD700"}]},
           "cornerRadius": 12,
           "layout": "horizontal",
-          "padding": [
-            10,
-            14
-          ],
+          "padding": [8, 12],
           "alignItems": "center",
-          "gap": 12,
-          "effects": [
-            {
-              "type": "shadow",
-              "offsetX": 0,
-              "offsetY": 0,
-              "blur": 12,
-              "spread": 0,
-              "color": "rgba(255,215,0,0.5)"
-            }
-          ],
+          "gap": 10,
+          "effects": [{"type":"shadow","offsetX":0,"offsetY":0,"blur":12,"spread":0,"color":"rgba(255,215,0,0.4)"}],
           "children": [
-            {
-              "id": "place-1",
-              "type": "text",
-              "role": "label",
-              "content": "1",
-              "fontFamily": "Pricedown",
-              "fontSize": 28,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#FFD700"
-                }
-              ],
-              "width": 30
-            },
-            {
-              "id": "name-1",
-              "type": "text",
-              "role": "label",
-              "content": "АННА К.",
-              "fontSize": 14,
-              "fontWeight": 700,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#FFFFFF"
-                }
-              ],
-              "width": "fill_container"
-            },
-            {
-              "id": "score-1",
-              "type": "text",
-              "role": "label",
-              "content": "320",
-              "fontFamily": "Pricedown",
-              "fontSize": 22,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#FFD700"
-                }
-              ]
-            }
+            {"id":"p1","type":"text","role":"label","content":"1","fontFamily":"Pricedown","fontSize":24,"fill":[{"type":"solid","color":"#FFD700"}],"width":24},
+            {"id":"n1","type":"text","role":"label","content":"АННА К.","fontSize":13,"fontWeight":700,"fill":[{"type":"solid","color":"#FFFFFF"}],"width":"fill_container"},
+            {"id":"s1","type":"text","role":"label","content":"320","fontFamily":"Pricedown","fontSize":20,"fill":[{"type":"solid","color":"#FFD700"}]}
           ]
         },
         {
           "id": "rate-row-2",
           "type": "frame",
           "width": "fill_container",
-          "height": 60,
-          "fill": [
-            {
-              "type": "solid",
-              "color": "rgba(0,240,255,0.1)"
-            }
-          ],
-          "stroke": {
-            "thickness": 1,
-            "fill": [
-              {
-                "type": "solid",
-                "color": "#00F0FF"
-              }
-            ]
-          },
+          "height": 48,
+          "fill": [{"type":"solid","color":"rgba(192,192,192,0.12)"}],
+          "stroke": {"thickness":1,"fill":[{"type":"solid","color":"rgba(192,192,192,0.6)"}]},
           "cornerRadius": 12,
           "layout": "horizontal",
-          "padding": [
-            10,
-            14
-          ],
+          "padding": [8, 12],
           "alignItems": "center",
-          "gap": 12,
+          "gap": 10,
           "children": [
-            {
-              "id": "place-2",
-              "type": "text",
-              "role": "label",
-              "content": "2",
-              "fontFamily": "Pricedown",
-              "fontSize": 28,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#00F0FF"
-                }
-              ],
-              "width": 30
-            },
-            {
-              "id": "name-2",
-              "type": "text",
-              "role": "label",
-              "content": "СЕРГЕЙ В.",
-              "fontSize": 14,
-              "fontWeight": 700,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#FFFFFF"
-                }
-              ],
-              "width": "fill_container"
-            },
-            {
-              "id": "score-2",
-              "type": "text",
-              "role": "label",
-              "content": "280",
-              "fontFamily": "Pricedown",
-              "fontSize": 22,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#00F0FF"
-                }
-              ]
-            }
+            {"id":"p2","type":"text","role":"label","content":"2","fontFamily":"Pricedown","fontSize":22,"fill":[{"type":"solid","color":"rgba(192,192,192,1)"}],"width":24},
+            {"id":"n2","type":"text","role":"label","content":"СЕРГЕЙ В.","fontSize":13,"fontWeight":700,"fill":[{"type":"solid","color":"#FFFFFF"}],"width":"fill_container"},
+            {"id":"s2","type":"text","role":"label","content":"280","fontFamily":"Pricedown","fontSize":20,"fill":[{"type":"solid","color":"rgba(192,192,192,1)"}]}
           ]
         },
         {
           "id": "rate-row-3",
           "type": "frame",
           "width": "fill_container",
-          "height": 60,
-          "fill": [
-            {
-              "type": "solid",
-              "color": "rgba(255,0,170,0.15)"
-            }
-          ],
-          "stroke": {
-            "thickness": 2,
-            "fill": [
-              {
-                "type": "solid",
-                "color": "#FF00AA"
-              }
-            ]
-          },
+          "height": 48,
+          "fill": [{"type":"solid","color":"rgba(205,127,50,0.15)"}],
+          "stroke": {"thickness":1,"fill":[{"type":"solid","color":"#CD7F32"}]},
           "cornerRadius": 12,
           "layout": "horizontal",
-          "padding": [
-            10,
-            14
-          ],
+          "padding": [8, 12],
           "alignItems": "center",
-          "gap": 12,
-          "effects": [
-            {
-              "type": "shadow",
-              "offsetX": 0,
-              "offsetY": 0,
-              "blur": 16,
-              "spread": 0,
-              "color": "rgba(255,0,170,0.6)"
-            }
-          ],
+          "gap": 10,
           "children": [
-            {
-              "id": "place-3",
-              "type": "text",
-              "role": "label",
-              "content": "3",
-              "fontFamily": "Pricedown",
-              "fontSize": 28,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#FF00AA"
-                }
-              ],
-              "width": 30
-            },
-            {
-              "id": "name-3",
-              "type": "text",
-              "role": "label",
-              "content": "ВЫ (ИВАН П.)",
-              "fontSize": 14,
-              "fontWeight": 700,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#FF00AA"
-                }
-              ],
-              "width": "fill_container"
-            },
-            {
-              "id": "score-3",
-              "type": "text",
-              "role": "label",
-              "content": "150",
-              "fontFamily": "Pricedown",
-              "fontSize": 22,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#FF00AA"
-                }
-              ]
-            }
+            {"id":"p3","type":"text","role":"label","content":"3","fontFamily":"Pricedown","fontSize":22,"fill":[{"type":"solid","color":"#CD7F32"}],"width":24},
+            {"id":"n3","type":"text","role":"label","content":"МАРИЯ С.","fontSize":13,"fontWeight":700,"fill":[{"type":"solid","color":"#FFFFFF"}],"width":"fill_container"},
+            {"id":"s3","type":"text","role":"label","content":"240","fontFamily":"Pricedown","fontSize":20,"fill":[{"type":"solid","color":"#CD7F32"}]}
           ]
         },
         {
           "id": "rate-row-4",
           "type": "frame",
           "width": "fill_container",
-          "height": 60,
-          "fill": [
-            {
-              "type": "solid",
-              "color": "rgba(255,255,255,0.05)"
-            }
-          ],
-          "stroke": {
-            "thickness": 1,
-            "fill": [
-              {
-                "type": "solid",
-                "color": "rgba(255,255,255,0.2)"
-              }
-            ]
-          },
-          "cornerRadius": 12,
+          "height": 42,
+          "fill": [{"type":"solid","color":"rgba(255,255,255,0.04)"}],
+          "stroke": {"thickness":1,"fill":[{"type":"solid","color":"rgba(255,255,255,0.15)"}]},
+          "cornerRadius": 10,
           "layout": "horizontal",
-          "padding": [
-            10,
-            14
-          ],
+          "padding": [6, 12],
           "alignItems": "center",
-          "gap": 12,
+          "gap": 10,
           "children": [
-            {
-              "id": "place-4",
-              "type": "text",
-              "role": "label",
-              "content": "4",
-              "fontFamily": "Pricedown",
-              "fontSize": 28,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "rgba(255,255,255,0.5)"
-                }
-              ],
-              "width": 30
-            },
-            {
-              "id": "name-4",
-              "type": "text",
-              "role": "label",
-              "content": "МАРИЯ С.",
-              "fontSize": 14,
-              "fontWeight": 700,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#FFFFFF"
-                }
-              ],
-              "width": "fill_container"
-            },
-            {
-              "id": "score-4",
-              "type": "text",
-              "role": "label",
-              "content": "120",
-              "fontFamily": "Pricedown",
-              "fontSize": 22,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "rgba(255,255,255,0.7)"
-                }
-              ]
-            }
+            {"id":"p4","type":"text","role":"label","content":"4","fontFamily":"Pricedown","fontSize":18,"fill":[{"type":"solid","color":"rgba(255,255,255,0.6)"}],"width":24},
+            {"id":"n4","type":"text","role":"label","content":"АЛЕКСЕЙ Б.","fontSize":12,"fontWeight":600,"fill":[{"type":"solid","color":"#FFFFFF"}],"width":"fill_container"},
+            {"id":"s4","type":"text","role":"label","content":"210","fontFamily":"Pricedown","fontSize":16,"fill":[{"type":"solid","color":"rgba(255,255,255,0.8)"}]}
           ]
         },
         {
           "id": "rate-row-5",
           "type": "frame",
           "width": "fill_container",
-          "height": 60,
-          "fill": [
-            {
-              "type": "solid",
-              "color": "rgba(255,255,255,0.05)"
-            }
-          ],
-          "stroke": {
-            "thickness": 1,
-            "fill": [
-              {
-                "type": "solid",
-                "color": "rgba(255,255,255,0.2)"
-              }
-            ]
-          },
-          "cornerRadius": 12,
+          "height": 42,
+          "fill": [{"type":"solid","color":"rgba(255,255,255,0.04)"}],
+          "stroke": {"thickness":1,"fill":[{"type":"solid","color":"rgba(255,255,255,0.15)"}]},
+          "cornerRadius": 10,
           "layout": "horizontal",
-          "padding": [
-            10,
-            14
-          ],
+          "padding": [6, 12],
+          "alignItems": "center",
+          "gap": 10,
+          "children": [
+            {"id":"p5","type":"text","role":"label","content":"5","fontFamily":"Pricedown","fontSize":18,"fill":[{"type":"solid","color":"rgba(255,255,255,0.6)"}],"width":24},
+            {"id":"n5","type":"text","role":"label","content":"ЕКАТЕРИНА Д.","fontSize":12,"fontWeight":600,"fill":[{"type":"solid","color":"#FFFFFF"}],"width":"fill_container"},
+            {"id":"s5","type":"text","role":"label","content":"200","fontFamily":"Pricedown","fontSize":16,"fill":[{"type":"solid","color":"rgba(255,255,255,0.8)"}]}
+          ]
+        },
+        {
+          "id": "rate-row-6-10",
+          "type": "frame",
+          "width": "fill_container",
+          "height": "fit_content",
+          "layout": "vertical",
+          "gap": 4,
+          "children": [
+            {
+              "id": "rate-row-6",
+              "type": "frame",
+              "width": "fill_container",
+              "height": 36,
+              "fill": [{"type":"solid","color":"rgba(255,255,255,0.03)"}],
+              "cornerRadius": 8,
+              "layout": "horizontal",
+              "padding": [4, 12],
+              "alignItems": "center",
+              "gap": 10,
+              "children": [
+                {"id":"p6","type":"text","role":"label","content":"6","fontFamily":"Pricedown","fontSize":15,"fill":[{"type":"solid","color":"rgba(255,255,255,0.5)"}],"width":24},
+                {"id":"n6","type":"text","role":"label","content":"ДМИТРИЙ К.","fontSize":11,"fontWeight":500,"fill":[{"type":"solid","color":"rgba(255,255,255,0.9)"}],"width":"fill_container"},
+                {"id":"s6","type":"text","role":"label","content":"190","fontFamily":"Pricedown","fontSize":14,"fill":[{"type":"solid","color":"rgba(255,255,255,0.7)"}]}
+              ]
+            },
+            {
+              "id": "rate-row-7",
+              "type": "frame",
+              "width": "fill_container",
+              "height": 36,
+              "fill": [{"type":"solid","color":"rgba(255,255,255,0.03)"}],
+              "cornerRadius": 8,
+              "layout": "horizontal",
+              "padding": [4, 12],
+              "alignItems": "center",
+              "gap": 10,
+              "children": [
+                {"id":"p7","type":"text","role":"label","content":"7","fontFamily":"Pricedown","fontSize":15,"fill":[{"type":"solid","color":"rgba(255,255,255,0.5)"}],"width":24},
+                {"id":"n7","type":"text","role":"label","content":"ОЛЬГА М.","fontSize":11,"fontWeight":500,"fill":[{"type":"solid","color":"rgba(255,255,255,0.9)"}],"width":"fill_container"},
+                {"id":"s7","type":"text","role":"label","content":"175","fontFamily":"Pricedown","fontSize":14,"fill":[{"type":"solid","color":"rgba(255,255,255,0.7)"}]}
+              ]
+            },
+            {
+              "id": "rate-row-8",
+              "type": "frame",
+              "width": "fill_container",
+              "height": 36,
+              "fill": [{"type":"solid","color":"rgba(255,255,255,0.03)"}],
+              "cornerRadius": 8,
+              "layout": "horizontal",
+              "padding": [4, 12],
+              "alignItems": "center",
+              "gap": 10,
+              "children": [
+                {"id":"p8","type":"text","role":"label","content":"8","fontFamily":"Pricedown","fontSize":15,"fill":[{"type":"solid","color":"rgba(255,255,255,0.5)"}],"width":24},
+                {"id":"n8","type":"text","role":"label","content":"ПАВЕЛ О.","fontSize":11,"fontWeight":500,"fill":[{"type":"solid","color":"rgba(255,255,255,0.9)"}],"width":"fill_container"},
+                {"id":"s8","type":"text","role":"label","content":"170","fontFamily":"Pricedown","fontSize":14,"fill":[{"type":"solid","color":"rgba(255,255,255,0.7)"}]}
+              ]
+            },
+            {
+              "id": "rate-row-9",
+              "type": "frame",
+              "width": "fill_container",
+              "height": 36,
+              "fill": [{"type":"solid","color":"rgba(255,255,255,0.03)"}],
+              "cornerRadius": 8,
+              "layout": "horizontal",
+              "padding": [4, 12],
+              "alignItems": "center",
+              "gap": 10,
+              "children": [
+                {"id":"p9","type":"text","role":"label","content":"9","fontFamily":"Pricedown","fontSize":15,"fill":[{"type":"solid","color":"rgba(255,255,255,0.5)"}],"width":24},
+                {"id":"n9","type":"text","role":"label","content":"ТАТЬЯНА Л.","fontSize":11,"fontWeight":500,"fill":[{"type":"solid","color":"rgba(255,255,255,0.9)"}],"width":"fill_container"},
+                {"id":"s9","type":"text","role":"label","content":"165","fontFamily":"Pricedown","fontSize":14,"fill":[{"type":"solid","color":"rgba(255,255,255,0.7)"}]}
+              ]
+            },
+            {
+              "id": "rate-row-10",
+              "type": "frame",
+              "width": "fill_container",
+              "height": 36,
+              "fill": [{"type":"solid","color":"rgba(255,255,255,0.03)"}],
+              "cornerRadius": 8,
+              "layout": "horizontal",
+              "padding": [4, 12],
+              "alignItems": "center",
+              "gap": 10,
+              "children": [
+                {"id":"p10","type":"text","role":"label","content":"10","fontFamily":"Pricedown","fontSize":15,"fill":[{"type":"solid","color":"rgba(255,255,255,0.5)"}],"width":24},
+                {"id":"n10","type":"text","role":"label","content":"НИКИТА Р.","fontSize":11,"fontWeight":500,"fill":[{"type":"solid","color":"rgba(255,255,255,0.9)"}],"width":"fill_container"},
+                {"id":"s10","type":"text","role":"label","content":"160","fontFamily":"Pricedown","fontSize":14,"fill":[{"type":"solid","color":"rgba(255,255,255,0.7)"}]}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rate-divider",
+          "type": "text",
+          "role": "caption",
+          "content": "• • •",
+          "fontSize": 14,
+          "fontWeight": 700,
+          "fill": [{"type":"solid","color":"rgba(255,255,255,0.3)"}],
+          "letterSpacing": 4,
+          "textAlign": "center"
+        },
+        {
+          "id": "rate-row-me",
+          "type": "frame",
+          "width": "fill_container",
+          "height": 58,
+          "fill": [{"type":"linear_gradient","angle":90,"stops":[{"offset":0,"color":"rgba(255,0,170,0.25)"},{"offset":1,"color":"rgba(0,240,255,0.15)"}]}],
+          "stroke": {"thickness":2,"fill":[{"type":"solid","color":"#FF00AA"}]},
+          "cornerRadius": 14,
+          "layout": "horizontal",
+          "padding": [8, 14],
           "alignItems": "center",
           "gap": 12,
+          "effects": [{"type":"shadow","offsetX":0,"offsetY":0,"blur":18,"spread":0,"color":"rgba(255,0,170,0.6)"}],
           "children": [
+            {"id":"pme","type":"text","role":"label","content":"23","fontFamily":"Pricedown","fontSize":28,"fill":[{"type":"solid","color":"#FF00AA"}],"width":40},
             {
-              "id": "place-5",
-              "type": "text",
-              "role": "label",
-              "content": "5",
-              "fontFamily": "Pricedown",
-              "fontSize": 28,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "rgba(255,255,255,0.5)"
-                }
-              ],
-              "width": 30
-            },
-            {
-              "id": "name-5",
-              "type": "text",
-              "role": "label",
-              "content": "АЛЕКСЕЙ Б.",
-              "fontSize": 14,
-              "fontWeight": 700,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#FFFFFF"
-                }
-              ],
-              "width": "fill_container"
-            },
-            {
-              "id": "score-5",
-              "type": "text",
-              "role": "label",
-              "content": "95",
-              "fontFamily": "Pricedown",
-              "fontSize": 22,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "rgba(255,255,255,0.7)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "team-block",
-      "type": "frame",
-      "name": "Битва отрядов",
-      "width": "fill_container",
-      "height": "fit_content",
-      "layout": "vertical",
-      "gap": 12,
-      "padding": [
-        20,
-        16
-      ],
-      "fill": [
-        {
-          "type": "solid",
-          "color": "rgba(255,255,255,0.05)"
-        }
-      ],
-      "stroke": {
-        "thickness": 1,
-        "fill": [
-          {
-            "type": "solid",
-            "color": "rgba(255,255,255,0.1)"
-          }
-        ]
-      },
-      "cornerRadius": 16,
-      "children": [
-        {
-          "id": "team-title",
-          "type": "text",
-          "role": "label",
-          "content": "БИТВА ОТРЯДОВ",
-          "fontSize": 12,
-          "fontWeight": 700,
-          "fill": [
-            {
-              "type": "solid",
-              "color": "#FFD700"
-            }
-          ],
-          "letterSpacing": 2
-        },
-        {
-          "id": "team-row-1",
-          "type": "frame",
-          "width": "fill_container",
-          "height": "fit_content",
-          "layout": "vertical",
-          "gap": 4,
-          "children": [
-            {
-              "id": "team-1-row",
+              "id": "me-info",
               "type": "frame",
               "width": "fill_container",
               "height": "fit_content",
-              "layout": "horizontal",
-              "justifyContent": "space_between",
+              "layout": "vertical",
+              "gap": 2,
               "children": [
-                {
-                  "id": "team-1-name",
-                  "type": "text",
-                  "role": "label",
-                  "content": "КОБРЫ",
-                  "fontFamily": "Pricedown",
-                  "fontSize": 18,
-                  "fill": [
-                    {
-                      "type": "solid",
-                      "color": "#FF00AA"
-                    }
-                  ],
-                  "fontWeight": 800
-                },
-                {
-                  "id": "team-1-score",
-                  "type": "text",
-                  "role": "label",
-                  "content": "1240",
-                  "fontFamily": "Pricedown",
-                  "fontSize": 18,
-                  "fill": [
-                    {
-                      "type": "solid",
-                      "color": "#FF00AA"
-                    }
-                  ]
-                }
+                {"id":"me-name","type":"text","role":"label","content":"ИВАН П. (ВЫ)","fontSize":13,"fontWeight":700,"fill":[{"type":"solid","color":"#FFFFFF"}],"letterSpacing":1},
+                {"id":"me-hint","type":"text","role":"caption","content":"до топ-10 нужно ещё +15 XP","fontSize":10,"fill":[{"type":"solid","color":"#FFD700"}]}
               ]
             },
-            {
-              "id": "team-1-bar-bg",
-              "type": "frame",
-              "width": "fill_container",
-              "height": 10,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "rgba(255,255,255,0.1)"
-                }
-              ],
-              "cornerRadius": 5,
-              "layout": "horizontal",
-              "children": [
-                {
-                  "id": "team-1-bar-fill",
-                  "type": "rectangle",
-                  "width": 240,
-                  "height": 10,
-                  "fill": [
-                    {
-                      "type": "solid",
-                      "color": "#FF00AA"
-                    }
-                  ],
-                  "cornerRadius": 5,
-                  "effects": [
-                    {
-                      "type": "shadow",
-                      "offsetX": 0,
-                      "offsetY": 0,
-                      "blur": 8,
-                      "spread": 0,
-                      "color": "rgba(255,0,170,0.7)"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "team-row-2",
-          "type": "frame",
-          "width": "fill_container",
-          "height": "fit_content",
-          "layout": "vertical",
-          "gap": 4,
-          "children": [
-            {
-              "id": "team-2-row",
-              "type": "frame",
-              "width": "fill_container",
-              "height": "fit_content",
-              "layout": "horizontal",
-              "justifyContent": "space_between",
-              "children": [
-                {
-                  "id": "team-2-name",
-                  "type": "text",
-                  "role": "label",
-                  "content": "АКУЛЫ",
-                  "fontFamily": "Pricedown",
-                  "fontSize": 18,
-                  "fill": [
-                    {
-                      "type": "solid",
-                      "color": "#00F0FF"
-                    }
-                  ],
-                  "fontWeight": 800
-                },
-                {
-                  "id": "team-2-score",
-                  "type": "text",
-                  "role": "label",
-                  "content": "980",
-                  "fontFamily": "Pricedown",
-                  "fontSize": 18,
-                  "fill": [
-                    {
-                      "type": "solid",
-                      "color": "#00F0FF"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "team-2-bar-bg",
-              "type": "frame",
-              "width": "fill_container",
-              "height": 10,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "rgba(255,255,255,0.1)"
-                }
-              ],
-              "cornerRadius": 5,
-              "layout": "horizontal",
-              "children": [
-                {
-                  "id": "team-2-bar-fill",
-                  "type": "rectangle",
-                  "width": 190,
-                  "height": 10,
-                  "fill": [
-                    {
-                      "type": "solid",
-                      "color": "#00F0FF"
-                    }
-                  ],
-                  "cornerRadius": 5,
-                  "effects": [
-                    {
-                      "type": "shadow",
-                      "offsetX": 0,
-                      "offsetY": 0,
-                      "blur": 8,
-                      "spread": 0,
-                      "color": "rgba(0,240,255,0.7)"
-                    }
-                  ]
-                }
-              ]
-            }
+            {"id":"sme","type":"text","role":"label","content":"150","fontFamily":"Pricedown","fontSize":24,"fill":[{"type":"solid","color":"#FF00AA"}]}
           ]
         }
       ]

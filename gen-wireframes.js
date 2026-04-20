@@ -290,6 +290,66 @@ const contentWrap = (kids) => plain({
 
 // ==== Генерация экранов ====
 
+// --- A11 Producer: Генератор бейджей
+const A11 = () => screen('A11. Producer: Генератор бейджей', 2, [
+  header(['Главная', 'Участники', 'Бейджи']),
+  contentWrap([
+    plain({ layout: 'horizontal', justifyContent: 'space_between', alignItems: 'center', children: [
+      hdg('Генератор бейджей 10×15', 22),
+      plain({ layout: 'horizontal', gap: 8, w: 'fit_content', children: [
+        btn('Выбрать всех'),
+        btn('Только без бейджа'),
+        btn('PDF пакет (→ печать)', { primary: true })
+      ]})
+    ]}),
+    sub('Бейджи автоматически содержат: фото + логотип TELEMORE + название смены + имя участника + QR'),
+    plain({ layout: 'horizontal', gap: 20, children: [
+      box({ w: 'fill_container', padding: 20, children: [
+        hdg('Список участников', 15),
+        plain({ layout: 'horizontal', padding: [8, 12], children: [
+          sub('☐', 12), text('', { width: 20 }),
+          sub('ФОТО', 11), text('', { width: 70 }),
+          sub('ИМЯ', 11), text('', { width: 200 }),
+          sub('ОТРЯД', 11), text('', { width: 100 }),
+          sub('СТАТУС БЕЙДЖА', 11), text('', { width: 140 }),
+          sub('', 11)
+        ]}),
+        divider(),
+        ...[
+          ['Анна Козлова', 'Кобры', '✓ Готов', true],
+          ['Сергей Волков', 'Акулы', '✓ Готов', true],
+          ['Иван Петров', 'Кобры', '⚠ Нет фото', false],
+          ['Мария Смирнова', 'Акулы', '✓ Готов', true],
+          ['Алексей Белов', 'Кобры', '⚠ Нет фото', false]
+        ].map(([name, sq, status, hasPhoto]) => plain({ layout: 'horizontal', padding: [10, 12], alignItems: 'center', children: [
+          text('☐', { size: 14, width: 20 }),
+          hasPhoto ? placeholder('PHOTO', 40, 40) : placeholder('NO', 40, 40),
+          text('', { width: 30 }),
+          text(name, { size: 13, width: 200 }),
+          text(sq, { size: 13, width: 100 }),
+          text(status, { size: 12, weight: 600, width: 140, color: hasPhoto ? COLORS.accent : COLORS.danger }),
+          plain({ layout: 'horizontal', gap: 6, w: 'fit_content', children: [
+            btn(hasPhoto ? 'Превью' : 'Загрузить фото', { h: 28, primary: !hasPhoto }),
+            btn('PDF', { h: 28 })
+          ]})
+        ]}))
+      ]}),
+      box({ w: 320, padding: 20, children: [
+        hdg('Превью бейджа', 15),
+        sub('Формат 10×15 см (A6), альбом'),
+        placeholder('[ PREVIEW\n  10×15 см\n\n  Фото 6×6\n  Лого TELEMORE\n  Название смены\n  Имя участника\n  QR-код 4×4 ]', 'fill_container', 400),
+        divider(),
+        hdg('Настройки', 13),
+        plain({ gap: 4, children: [
+          plain({ layout: 'horizontal', gap: 8, children: [text('☑', { size: 14 }), text('Фон смены (Vice City)', { size: 12 })]}),
+          plain({ layout: 'horizontal', gap: 8, children: [text('☑', { size: 14 }), text('Отрезные метки', { size: 12 })]}),
+          plain({ layout: 'horizontal', gap: 8, children: [text('☐', { size: 14 }), text('Обрезные метки (кроп)', { size: 12 })]})
+        ]})
+      ]})
+    ]})
+  ])
+]);
+
 // --- A1 Dashboard
 const statCard = (label, value, delta) => box({
   w: 'fill_container',
@@ -476,6 +536,20 @@ const A4 = () => screen('A4. Карточка участника', 2, [
         ]})
       ]}),
       plain({ w: 'fill_container', gap: 20, children: [
+        box({ padding: 20, children: [
+          hdg('Фото для бейджа', 15),
+          plain({ layout: 'horizontal', gap: 16, alignItems: 'center', children: [
+            placeholder('[ PHOTO 300×300 ]', 120, 120),
+            plain({ w: 'fill_container', gap: 8, children: [
+              sub('Фото лицом крупно. Используется на бейдже 10×15.'),
+              plain({ layout: 'horizontal', gap: 8, children: [
+                btn('Загрузить / Заменить', { primary: true }),
+                btn('Удалить')
+              ]}),
+              sub('Последнее обновление: 13 июня 18:22 • Иван П.')
+            ]})
+          ]})
+        ]}),
         box({ padding: 20, children: [
           plain({ layout: 'horizontal', justifyContent: 'space_between', alignItems: 'center', children: [
             hdg('Баланс', 15),
@@ -776,6 +850,20 @@ const A10 = () => screenSuper('A10. Роли и Ачивки', 1, [
           btn('+ Добавить ачивку', { w: 'fill_container' })
         ]}),
         box({ padding: 20, children: [
+          hdg('Настройки рейтинга', 15),
+          plain({ gap: 6, children: [sub('ВИДНО УЧАСТНИКОВ В ТОПЕ'), input('10')]}),
+          plain({ gap: 4, children: [
+            plain({ layout: 'horizontal', gap: 8, children: [text('○', { size: 14 }), text('10 (по умолчанию)', { size: 12 })]}),
+            plain({ layout: 'horizontal', gap: 8, children: [text('◉', { size: 14 }), text('20', { size: 12 })]}),
+            plain({ layout: 'horizontal', gap: 8, children: [text('○', { size: 14 }), text('Все (без скрытия)', { size: 12 })]})
+          ]}),
+          sub('Ниже топа — только место самого пользователя'),
+          plain({ gap: 4, children: [
+            plain({ layout: 'horizontal', gap: 8, children: [text('☑', { size: 14 }), text('Анонимизировать вне топа («Белочка»/эмодзи)', { size: 12 })]}),
+            plain({ layout: 'horizontal', gap: 8, children: [text('☐', { size: 14 }), text('Показывать полные имена всех', { size: 12 })]})
+          ]})
+        ]}),
+        box({ padding: 20, children: [
           hdg('Экспорт в Google Sheets', 15),
           plain({ gap: 6, children: [sub('ID ТАБЛИЦЫ'), input('1AbC...xyz')]}),
           plain({ gap: 6, children: [sub('ЛИСТ'), input('Участники_2026')]}),
@@ -794,7 +882,7 @@ const A10 = () => screenSuper('A10. Роли и Ачивки', 1, [
 const OUT = {
   'A1.json': A1(), 'A2.json': A2(), 'A3.json': A3(),  'A4.json': A4(),
   'A5.json': A5(), 'A6.json': A6(), 'A7.json': A7(),  'A8.json': A8(),
-  'A9.json': A9(), 'A10.json': A10()
+  'A9.json': A9(), 'A10.json': A10(), 'A11.json': A11()
 };
 
 const dir = __dirname;

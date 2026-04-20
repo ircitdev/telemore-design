@@ -1,5 +1,5 @@
 {
-  "id": "root-877",
+  "id": "root-890",
   "type": "frame",
   "name": "A8. План дня",
   "width": 1280,
@@ -16,7 +16,7 @@
   "clipContent": true,
   "children": [
     {
-      "id": "sb-878",
+      "id": "sb-891",
       "type": "frame",
       "name": "Sidebar",
       "width": 220,
@@ -41,7 +41,7 @@
       },
       "children": [
         {
-          "id": "plain-882",
+          "id": "plain-895",
           "type": "frame",
           "width": "fill_container",
           "height": "fit_content",
@@ -54,7 +54,7 @@
           "alignItems": "center",
           "children": [
             {
-              "id": "ph-879",
+              "id": "ph-892",
               "type": "frame",
               "width": 28,
               "height": 28,
@@ -79,7 +79,7 @@
               "cornerRadius": 6,
               "children": [
                 {
-                  "id": "t-880",
+                  "id": "t-893",
                   "type": "text",
                   "content": "LOGO",
                   "fontFamily": "Roboto",
@@ -95,7 +95,7 @@
               ]
             },
             {
-              "id": "t-881",
+              "id": "t-894",
               "type": "text",
               "content": "ТЕЛЕМОРЕ",
               "fontFamily": "Roboto",
@@ -111,7 +111,7 @@
           ]
         },
         {
-          "id": "div-883",
+          "id": "div-896",
           "type": "rectangle",
           "width": "fill_container",
           "height": 1,
@@ -123,7 +123,7 @@
           ]
         },
         {
-          "id": "t-884",
+          "id": "t-897",
           "type": "text",
           "content": "МЕНЮ",
           "fontFamily": "Roboto",
@@ -137,7 +137,7 @@
           ]
         },
         {
-          "id": "nav-885",
+          "id": "nav-898",
           "type": "frame",
           "width": "fill_container",
           "height": 36,
@@ -156,7 +156,7 @@
           "cornerRadius": 6,
           "children": [
             {
-              "id": "t-886",
+              "id": "t-899",
               "type": "text",
               "content": "Dashboard",
               "fontFamily": "Roboto",
@@ -172,7 +172,7 @@
           ]
         },
         {
-          "id": "nav-887",
+          "id": "nav-900",
           "type": "frame",
           "width": "fill_container",
           "height": 36,
@@ -191,7 +191,7 @@
           "cornerRadius": 6,
           "children": [
             {
-              "id": "t-888",
+              "id": "t-901",
               "type": "text",
               "content": "Сканер QR",
               "fontFamily": "Roboto",
@@ -207,7 +207,7 @@
           ]
         },
         {
-          "id": "nav-889",
+          "id": "nav-902",
           "type": "frame",
           "width": "fill_container",
           "height": 36,
@@ -226,7 +226,7 @@
           "cornerRadius": 6,
           "children": [
             {
-              "id": "t-890",
+              "id": "t-903",
               "type": "text",
               "content": "Участники",
               "fontFamily": "Roboto",
@@ -242,7 +242,7 @@
           ]
         },
         {
-          "id": "nav-891",
+          "id": "nav-904",
           "type": "frame",
           "width": "fill_container",
           "height": 36,
@@ -261,7 +261,7 @@
           "cornerRadius": 6,
           "children": [
             {
-              "id": "t-892",
+              "id": "t-905",
               "type": "text",
               "content": "События",
               "fontFamily": "Roboto",
@@ -277,7 +277,7 @@
           ]
         },
         {
-          "id": "nav-893",
+          "id": "nav-906",
           "type": "frame",
           "width": "fill_container",
           "height": 36,
@@ -296,7 +296,7 @@
           "cornerRadius": 6,
           "children": [
             {
-              "id": "t-894",
+              "id": "t-907",
               "type": "text",
               "content": "Уведомления",
               "fontFamily": "Roboto",
@@ -312,7 +312,7 @@
           ]
         },
         {
-          "id": "nav-895",
+          "id": "nav-908",
           "type": "frame",
           "width": "fill_container",
           "height": 36,
@@ -331,7 +331,7 @@
           "cornerRadius": 6,
           "children": [
             {
-              "id": "t-896",
+              "id": "t-909",
               "type": "text",
               "content": "План дня",
               "fontFamily": "Roboto",
@@ -347,7 +347,7 @@
           ]
         },
         {
-          "id": "div-897",
+          "id": "div-910",
           "type": "rectangle",
           "width": "fill_container",
           "height": 1,
@@ -359,7 +359,7 @@
           ]
         },
         {
-          "id": "t-898",
+          "id": "t-911",
           "type": "text",
           "content": "АККАУНТ",
           "fontFamily": "Roboto",
@@ -373,7 +373,7 @@
           ]
         },
         {
-          "id": "nav-899",
+          "id": "nav-912",
           "type": "frame",
           "width": "fill_container",
           "height": 36,
@@ -392,7 +392,7 @@
           "cornerRadius": 6,
           "children": [
             {
-              "id": "t-900",
+              "id": "t-913",
               "type": "text",
               "content": "Профиль",
               "fontFamily": "Roboto",
@@ -408,7 +408,7 @@
           ]
         },
         {
-          "id": "nav-901",
+          "id": "nav-914",
           "type": "frame",
           "width": "fill_container",
           "height": 36,
@@ -427,7 +427,7 @@
           "cornerRadius": 6,
           "children": [
             {
-              "id": "t-902",
+              "id": "t-915",
               "type": "text",
               "content": "Выход",
               "fontFamily": "Roboto",
@@ -445,7 +445,7 @@
       ]
     },
     {
-      "id": "plain-903",
+      "id": "plain-916",
       "type": "frame",
       "width": "fill_container",
       "height": "fill_container",
@@ -454,7 +454,7 @@
       "padding": 0,
       "children": [
         {
-          "id": "plain-790",
+          "id": "plain-803",
           "type": "frame",
           "width": "fill_container",
           "height": 60,
@@ -468,7 +468,7 @@
           "justifyContent": "space_between",
           "children": [
             {
-              "id": "plain-785",
+              "id": "plain-798",
               "type": "frame",
               "width": "fit_content",
               "height": "fit_content",
@@ -478,7 +478,7 @@
               "alignItems": "center",
               "children": [
                 {
-                  "id": "t-782",
+                  "id": "t-795",
                   "type": "text",
                   "content": "Главная",
                   "fontFamily": "Roboto",
@@ -492,7 +492,7 @@
                   ]
                 },
                 {
-                  "id": "t-783",
+                  "id": "t-796",
                   "type": "text",
                   "content": "›",
                   "fontFamily": "Roboto",
@@ -506,7 +506,7 @@
                   ]
                 },
                 {
-                  "id": "t-784",
+                  "id": "t-797",
                   "type": "text",
                   "content": "План дня",
                   "fontFamily": "Roboto",
@@ -522,7 +522,7 @@
               ]
             },
             {
-              "id": "plain-789",
+              "id": "plain-802",
               "type": "frame",
               "width": "fit_content",
               "height": "fit_content",
@@ -532,7 +532,7 @@
               "alignItems": "center",
               "children": [
                 {
-                  "id": "t-786",
+                  "id": "t-799",
                   "type": "text",
                   "content": "Иван П. • Продюсер",
                   "fontFamily": "Roboto",
@@ -546,7 +546,7 @@
                   ]
                 },
                 {
-                  "id": "ph-787",
+                  "id": "ph-800",
                   "type": "frame",
                   "width": 32,
                   "height": 32,
@@ -571,7 +571,7 @@
                   "cornerRadius": 6,
                   "children": [
                     {
-                      "id": "t-788",
+                      "id": "t-801",
                       "type": "text",
                       "content": "AV",
                       "fontFamily": "Roboto",
@@ -591,7 +591,7 @@
           ]
         },
         {
-          "id": "plain-876",
+          "id": "plain-889",
           "type": "frame",
           "width": "fill_container",
           "height": "fit_content",
@@ -600,7 +600,7 @@
           "padding": 24,
           "children": [
             {
-              "id": "plain-802",
+              "id": "plain-815",
               "type": "frame",
               "width": "fill_container",
               "height": "fit_content",
@@ -611,7 +611,7 @@
               "justifyContent": "space_between",
               "children": [
                 {
-                  "id": "t-791",
+                  "id": "t-804",
                   "type": "text",
                   "content": "План дня",
                   "fontFamily": "Roboto",
@@ -625,7 +625,7 @@
                   ]
                 },
                 {
-                  "id": "plain-801",
+                  "id": "plain-814",
                   "type": "frame",
                   "width": "fit_content",
                   "height": "fit_content",
@@ -634,7 +634,7 @@
                   "padding": 0,
                   "children": [
                     {
-                      "id": "btn-792",
+                      "id": "btn-805",
                       "type": "frame",
                       "role": "button",
                       "width": "fit_content",
@@ -664,7 +664,7 @@
                       "cornerRadius": 6,
                       "children": [
                         {
-                          "id": "t-793",
+                          "id": "t-806",
                           "type": "text",
                           "content": "← 13 июня",
                           "fontFamily": "Roboto",
@@ -680,7 +680,7 @@
                       ]
                     },
                     {
-                      "id": "btn-794",
+                      "id": "btn-807",
                       "type": "frame",
                       "role": "button",
                       "width": "fit_content",
@@ -710,7 +710,7 @@
                       "cornerRadius": 6,
                       "children": [
                         {
-                          "id": "t-795",
+                          "id": "t-808",
                           "type": "text",
                           "content": "14 июня",
                           "fontFamily": "Roboto",
@@ -726,7 +726,7 @@
                       ]
                     },
                     {
-                      "id": "btn-796",
+                      "id": "btn-809",
                       "type": "frame",
                       "role": "button",
                       "width": "fit_content",
@@ -756,7 +756,7 @@
                       "cornerRadius": 6,
                       "children": [
                         {
-                          "id": "t-797",
+                          "id": "t-810",
                           "type": "text",
                           "content": "15 июня →",
                           "fontFamily": "Roboto",
@@ -772,7 +772,7 @@
                       ]
                     },
                     {
-                      "id": "plain-798",
+                      "id": "plain-811",
                       "type": "frame",
                       "width": 20,
                       "height": "fit_content",
@@ -782,7 +782,7 @@
                       "children": []
                     },
                     {
-                      "id": "btn-799",
+                      "id": "btn-812",
                       "type": "frame",
                       "role": "button",
                       "width": "fit_content",
@@ -812,7 +812,7 @@
                       "cornerRadius": 6,
                       "children": [
                         {
-                          "id": "t-800",
+                          "id": "t-813",
                           "type": "text",
                           "content": "Отправить в общий чат",
                           "fontFamily": "Roboto",
@@ -832,7 +832,7 @@
               ]
             },
             {
-              "id": "plain-875",
+              "id": "plain-888",
               "type": "frame",
               "width": "fill_container",
               "height": "fit_content",
@@ -841,7 +841,7 @@
               "padding": 0,
               "children": [
                 {
-                  "id": "box-855",
+                  "id": "box-868",
                   "type": "frame",
                   "width": "fill_container",
                   "height": "fit_content",
@@ -866,7 +866,7 @@
                   "cornerRadius": 6,
                   "children": [
                     {
-                      "id": "t-803",
+                      "id": "t-816",
                       "type": "text",
                       "content": "Timeline — 14 июня",
                       "fontFamily": "Roboto",
@@ -880,7 +880,7 @@
                       ]
                     },
                     {
-                      "id": "plain-811",
+                      "id": "plain-824",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -893,7 +893,7 @@
                       "alignItems": "center",
                       "children": [
                         {
-                          "id": "t-804",
+                          "id": "t-817",
                           "type": "text",
                           "content": "⋮⋮",
                           "fontFamily": "Roboto",
@@ -908,7 +908,7 @@
                           "width": 16
                         },
                         {
-                          "id": "t-805",
+                          "id": "t-818",
                           "type": "text",
                           "content": "08:00–09:00",
                           "fontFamily": "Roboto",
@@ -923,7 +923,7 @@
                           "width": 110
                         },
                         {
-                          "id": "t-806",
+                          "id": "t-819",
                           "type": "text",
                           "content": "Завтрак",
                           "fontFamily": "Roboto",
@@ -938,7 +938,7 @@
                           "width": "fill_container"
                         },
                         {
-                          "id": "btn-807",
+                          "id": "btn-820",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -968,7 +968,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-808",
+                              "id": "t-821",
                               "type": "text",
                               "content": "✎",
                               "fontFamily": "Roboto",
@@ -984,7 +984,7 @@
                           ]
                         },
                         {
-                          "id": "btn-809",
+                          "id": "btn-822",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -1014,7 +1014,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-810",
+                              "id": "t-823",
                               "type": "text",
                               "content": "×",
                               "fontFamily": "Roboto",
@@ -1032,7 +1032,7 @@
                       ]
                     },
                     {
-                      "id": "plain-819",
+                      "id": "plain-832",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -1045,7 +1045,7 @@
                       "alignItems": "center",
                       "children": [
                         {
-                          "id": "t-812",
+                          "id": "t-825",
                           "type": "text",
                           "content": "⋮⋮",
                           "fontFamily": "Roboto",
@@ -1060,7 +1060,7 @@
                           "width": 16
                         },
                         {
-                          "id": "t-813",
+                          "id": "t-826",
                           "type": "text",
                           "content": "10:00–12:00",
                           "fontFamily": "Roboto",
@@ -1075,7 +1075,7 @@
                           "width": 110
                         },
                         {
-                          "id": "t-814",
+                          "id": "t-827",
                           "type": "text",
                           "content": "Мастер-класс: Монтаж",
                           "fontFamily": "Roboto",
@@ -1090,7 +1090,7 @@
                           "width": "fill_container"
                         },
                         {
-                          "id": "btn-815",
+                          "id": "btn-828",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -1120,7 +1120,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-816",
+                              "id": "t-829",
                               "type": "text",
                               "content": "✎",
                               "fontFamily": "Roboto",
@@ -1136,7 +1136,7 @@
                           ]
                         },
                         {
-                          "id": "btn-817",
+                          "id": "btn-830",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -1166,7 +1166,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-818",
+                              "id": "t-831",
                               "type": "text",
                               "content": "×",
                               "fontFamily": "Roboto",
@@ -1184,7 +1184,7 @@
                       ]
                     },
                     {
-                      "id": "plain-827",
+                      "id": "plain-840",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -1197,7 +1197,7 @@
                       "alignItems": "center",
                       "children": [
                         {
-                          "id": "t-820",
+                          "id": "t-833",
                           "type": "text",
                           "content": "⋮⋮",
                           "fontFamily": "Roboto",
@@ -1212,7 +1212,7 @@
                           "width": 16
                         },
                         {
-                          "id": "t-821",
+                          "id": "t-834",
                           "type": "text",
                           "content": "13:00–14:00",
                           "fontFamily": "Roboto",
@@ -1227,7 +1227,7 @@
                           "width": 110
                         },
                         {
-                          "id": "t-822",
+                          "id": "t-835",
                           "type": "text",
                           "content": "Обед",
                           "fontFamily": "Roboto",
@@ -1242,7 +1242,7 @@
                           "width": "fill_container"
                         },
                         {
-                          "id": "btn-823",
+                          "id": "btn-836",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -1272,7 +1272,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-824",
+                              "id": "t-837",
                               "type": "text",
                               "content": "✎",
                               "fontFamily": "Roboto",
@@ -1288,7 +1288,7 @@
                           ]
                         },
                         {
-                          "id": "btn-825",
+                          "id": "btn-838",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -1318,7 +1318,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-826",
+                              "id": "t-839",
                               "type": "text",
                               "content": "×",
                               "fontFamily": "Roboto",
@@ -1336,7 +1336,7 @@
                       ]
                     },
                     {
-                      "id": "plain-835",
+                      "id": "plain-848",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -1349,7 +1349,7 @@
                       "alignItems": "center",
                       "children": [
                         {
-                          "id": "t-828",
+                          "id": "t-841",
                           "type": "text",
                           "content": "⋮⋮",
                           "fontFamily": "Roboto",
@@ -1364,7 +1364,7 @@
                           "width": 16
                         },
                         {
-                          "id": "t-829",
+                          "id": "t-842",
                           "type": "text",
                           "content": "15:00–18:00",
                           "fontFamily": "Roboto",
@@ -1379,7 +1379,7 @@
                           "width": 110
                         },
                         {
-                          "id": "t-830",
+                          "id": "t-843",
                           "type": "text",
                           "content": "Съёмка: Экскурсия",
                           "fontFamily": "Roboto",
@@ -1394,7 +1394,7 @@
                           "width": "fill_container"
                         },
                         {
-                          "id": "btn-831",
+                          "id": "btn-844",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -1424,7 +1424,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-832",
+                              "id": "t-845",
                               "type": "text",
                               "content": "✎",
                               "fontFamily": "Roboto",
@@ -1440,7 +1440,7 @@
                           ]
                         },
                         {
-                          "id": "btn-833",
+                          "id": "btn-846",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -1470,7 +1470,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-834",
+                              "id": "t-847",
                               "type": "text",
                               "content": "×",
                               "fontFamily": "Roboto",
@@ -1488,7 +1488,7 @@
                       ]
                     },
                     {
-                      "id": "plain-843",
+                      "id": "plain-856",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -1501,7 +1501,7 @@
                       "alignItems": "center",
                       "children": [
                         {
-                          "id": "t-836",
+                          "id": "t-849",
                           "type": "text",
                           "content": "⋮⋮",
                           "fontFamily": "Roboto",
@@ -1516,7 +1516,7 @@
                           "width": 16
                         },
                         {
-                          "id": "t-837",
+                          "id": "t-850",
                           "type": "text",
                           "content": "19:00–20:00",
                           "fontFamily": "Roboto",
@@ -1531,7 +1531,7 @@
                           "width": 110
                         },
                         {
-                          "id": "t-838",
+                          "id": "t-851",
                           "type": "text",
                           "content": "Ужин",
                           "fontFamily": "Roboto",
@@ -1546,7 +1546,7 @@
                           "width": "fill_container"
                         },
                         {
-                          "id": "btn-839",
+                          "id": "btn-852",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -1576,7 +1576,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-840",
+                              "id": "t-853",
                               "type": "text",
                               "content": "✎",
                               "fontFamily": "Roboto",
@@ -1592,7 +1592,7 @@
                           ]
                         },
                         {
-                          "id": "btn-841",
+                          "id": "btn-854",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -1622,7 +1622,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-842",
+                              "id": "t-855",
                               "type": "text",
                               "content": "×",
                               "fontFamily": "Roboto",
@@ -1640,7 +1640,7 @@
                       ]
                     },
                     {
-                      "id": "plain-851",
+                      "id": "plain-864",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -1653,7 +1653,7 @@
                       "alignItems": "center",
                       "children": [
                         {
-                          "id": "t-844",
+                          "id": "t-857",
                           "type": "text",
                           "content": "⋮⋮",
                           "fontFamily": "Roboto",
@@ -1668,7 +1668,7 @@
                           "width": 16
                         },
                         {
-                          "id": "t-845",
+                          "id": "t-858",
                           "type": "text",
                           "content": "21:00–22:30",
                           "fontFamily": "Roboto",
@@ -1683,7 +1683,7 @@
                           "width": 110
                         },
                         {
-                          "id": "t-846",
+                          "id": "t-859",
                           "type": "text",
                           "content": "Вечерний показ",
                           "fontFamily": "Roboto",
@@ -1698,7 +1698,7 @@
                           "width": "fill_container"
                         },
                         {
-                          "id": "btn-847",
+                          "id": "btn-860",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -1728,7 +1728,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-848",
+                              "id": "t-861",
                               "type": "text",
                               "content": "✎",
                               "fontFamily": "Roboto",
@@ -1744,7 +1744,7 @@
                           ]
                         },
                         {
-                          "id": "btn-849",
+                          "id": "btn-862",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -1774,7 +1774,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-850",
+                              "id": "t-863",
                               "type": "text",
                               "content": "×",
                               "fontFamily": "Roboto",
@@ -1792,7 +1792,7 @@
                       ]
                     },
                     {
-                      "id": "div-852",
+                      "id": "div-865",
                       "type": "rectangle",
                       "width": "fill_container",
                       "height": 1,
@@ -1804,7 +1804,7 @@
                       ]
                     },
                     {
-                      "id": "btn-853",
+                      "id": "btn-866",
                       "type": "frame",
                       "role": "button",
                       "width": "fill_container",
@@ -1834,7 +1834,7 @@
                       "cornerRadius": 6,
                       "children": [
                         {
-                          "id": "t-854",
+                          "id": "t-867",
                           "type": "text",
                           "content": "+ Добавить активность",
                           "fontFamily": "Roboto",
@@ -1852,7 +1852,7 @@
                   ]
                 },
                 {
-                  "id": "box-874",
+                  "id": "box-887",
                   "type": "frame",
                   "width": 340,
                   "height": "fit_content",
@@ -1877,7 +1877,7 @@
                   "cornerRadius": 6,
                   "children": [
                     {
-                      "id": "t-856",
+                      "id": "t-869",
                       "type": "text",
                       "content": "Настройки рассылки",
                       "fontFamily": "Roboto",
@@ -1891,7 +1891,7 @@
                       ]
                     },
                     {
-                      "id": "plain-860",
+                      "id": "plain-873",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -1900,7 +1900,7 @@
                       "padding": 0,
                       "children": [
                         {
-                          "id": "t-857",
+                          "id": "t-870",
                           "type": "text",
                           "content": "ВРЕМЯ ОТПРАВКИ",
                           "fontFamily": "Roboto",
@@ -1914,7 +1914,7 @@
                           ]
                         },
                         {
-                          "id": "inp-858",
+                          "id": "inp-871",
                           "type": "frame",
                           "role": "form-input",
                           "width": "fill_container",
@@ -1943,7 +1943,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-859",
+                              "id": "t-872",
                               "type": "text",
                               "content": "08:00",
                               "fontFamily": "Roboto",
@@ -1961,7 +1961,7 @@
                       ]
                     },
                     {
-                      "id": "plain-864",
+                      "id": "plain-877",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -1970,7 +1970,7 @@
                       "padding": 0,
                       "children": [
                         {
-                          "id": "t-861",
+                          "id": "t-874",
                           "type": "text",
                           "content": "ПОЛУЧАТЕЛИ",
                           "fontFamily": "Roboto",
@@ -1984,7 +1984,7 @@
                           ]
                         },
                         {
-                          "id": "inp-862",
+                          "id": "inp-875",
                           "type": "frame",
                           "role": "form-input",
                           "width": "fill_container",
@@ -2013,7 +2013,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-863",
+                              "id": "t-876",
                               "type": "text",
                               "content": "Общий чат + ЛС всем",
                               "fontFamily": "Roboto",
@@ -2031,7 +2031,7 @@
                       ]
                     },
                     {
-                      "id": "plain-868",
+                      "id": "plain-881",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -2040,7 +2040,7 @@
                       "padding": 0,
                       "children": [
                         {
-                          "id": "t-865",
+                          "id": "t-878",
                           "type": "text",
                           "content": "ШАБЛОН",
                           "fontFamily": "Roboto",
@@ -2054,7 +2054,7 @@
                           ]
                         },
                         {
-                          "id": "inp-866",
+                          "id": "inp-879",
                           "type": "frame",
                           "role": "form-input",
                           "width": "fill_container",
@@ -2083,7 +2083,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-867",
+                              "id": "t-880",
                               "type": "text",
                               "content": "Стандартный",
                               "fontFamily": "Roboto",
@@ -2101,7 +2101,7 @@
                       ]
                     },
                     {
-                      "id": "div-869",
+                      "id": "div-882",
                       "type": "rectangle",
                       "width": "fill_container",
                       "height": 1,
@@ -2113,7 +2113,7 @@
                       ]
                     },
                     {
-                      "id": "t-870",
+                      "id": "t-883",
                       "type": "text",
                       "content": "Статус",
                       "fontFamily": "Roboto",
@@ -2127,7 +2127,7 @@
                       ]
                     },
                     {
-                      "id": "t-871",
+                      "id": "t-884",
                       "type": "text",
                       "content": "✓ Автоотправка включена",
                       "fontFamily": "Roboto",
@@ -2141,7 +2141,7 @@
                       ]
                     },
                     {
-                      "id": "t-872",
+                      "id": "t-885",
                       "type": "text",
                       "content": "Последняя отправка: 13.06 08:00",
                       "fontFamily": "Roboto",
@@ -2155,7 +2155,7 @@
                       ]
                     },
                     {
-                      "id": "t-873",
+                      "id": "t-886",
                       "type": "text",
                       "content": "Следующая: 14.06 08:00",
                       "fontFamily": "Roboto",
