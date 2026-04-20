@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0F0020">
+<title>ТЕЛЕМОРЕ — Ачивки</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#FF00AA;--cyan:#00F0FF;--gold:#FFD700;
+  --bg1:#0F0020;--bg2:#1A0033;--bg3:#2D004D;
+  --text:#fff;--text-dim:rgba(255,255,255,0.7);--text-muted:rgba(255,255,255,0.4);
+  --border:rgba(255,255,255,0.1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Roboto',-apple-system,sans-serif;color:var(--text);
+  background:linear-gradient(180deg,var(--bg1) 0%,var(--bg2) 50%,var(--bg1) 100%);
+  min-height:100vh;
+}
+body::before{content:"";position:fixed;inset:0;z-index:-1;
+  background:
+    radial-gradient(ellipse at 15% 10%,rgba(255,0,170,0.12),transparent 50%),
+    radial-gradient(ellipse at 85% 90%,rgba(0,240,255,0.1),transparent 50%);
+}
+
+header{padding:50px 24px 30px;text-align:center;}
+.brand{
+  font-size:clamp(40px,8vw,72px);font-weight:900;letter-spacing:3px;line-height:1;
+  background:linear-gradient(180deg,var(--pink),var(--cyan));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 20px rgba(255,0,170,0.6));
+}
+.subtitle{margin-top:8px;font-size:14px;font-weight:700;letter-spacing:3px;color:var(--cyan);text-transform:uppercase;}
+.intro{max-width:720px;margin:24px auto 0;padding:0 20px;font-size:14px;color:var(--text-dim);line-height:1.6;text-align:center;}
+.intro b{color:var(--gold);}
+
+main{max-width:1280px;margin:40px auto;padding:0 24px;}
+
+/* Прогресс-лестница */
+.ladder{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:16px;
+  margin-bottom:48px;position:relative;
+}
+.ladder::before{
+  content:"";position:absolute;left:5%;right:5%;top:70px;height:3px;
+  background:linear-gradient(90deg,var(--pink),var(--gold),var(--cyan));
+  border-radius:2px;z-index:0;
+}
+.step{
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  position:relative;z-index:1;
+}
+.step .tier{
+  width:28px;height:28px;border-radius:50%;
+  background:var(--bg3);border:2px solid var(--pink);
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:900;color:var(--pink);
+}
+.step .xp{
+  font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold);
+}
+.step .name{font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text-dim);text-align:center;text-transform:uppercase;}
+
+/* Карточки ачивок */
+.grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;
+}
+.card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid var(--border);border-radius:22px;
+  padding:28px 24px;
+  display:flex;flex-direction:column;align-items:center;gap:16px;
+  transition:all .3s;
+  position:relative;
+  overflow:hidden;
+}
+.card::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 50% 30%, var(--glow), transparent 50%);
+  opacity:0.15;pointer-events:none;
+}
+.card[data-tier="1"]{--glow:#FF8080;}
+.card[data-tier="2"]{--glow:#FFD700;}
+.card[data-tier="3"]{--glow:#00FF66;}
+.card[data-tier="4"]{--glow:#FF00AA;}
+.card[data-tier="5"]{--glow:#FF00FF;}
+.card[data-tier="6"]{--glow:#FFD700;}
+.card:hover{
+  border-color:var(--pink);transform:translateY(-4px);
+  box-shadow:0 20px 40px rgba(255,0,170,0.2);
+}
+.card:hover::before{opacity:0.3;}
+
+.badge-wrap{
+  width:200px;height:200px;border-radius:50%;position:relative;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;z-index:1;
+}
+.badge-wrap::before{
+  content:"";position:absolute;inset:-6px;border-radius:50%;
+  background:linear-gradient(135deg,var(--pink),var(--gold),var(--cyan));
+  z-index:-1;opacity:0.7;
+  filter:blur(6px);
+  transition:opacity .3s;
+}
+.card:hover .badge-wrap::before{opacity:1;}
+.badge-wrap img{
+  width:190px;height:190px;border-radius:50%;display:block;
+  box-shadow:0 0 30px rgba(0,0,0,0.6), 0 0 0 3px #000;
+}
+
+.xp-pill{
+  padding:6px 18px;border-radius:999px;
+  background:linear-gradient(90deg,var(--pink),var(--cyan));
+  font-size:13px;font-weight:900;letter-spacing:2px;color:#fff;
+  box-shadow:0 0 12px rgba(255,0,170,0.5);
+  z-index:1;
+}
+.card h3{
+  font-size:28px;font-weight:900;letter-spacing:2px;text-transform:uppercase;
+  background:linear-gradient(180deg,#FFF,#FFD700);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 8px rgba(255,215,0,0.4));
+  z-index:1;text-align:center;
+}
+.card .hint{
+  font-size:12px;color:var(--text-muted);text-align:center;line-height:1.5;
+  max-width:240px;z-index:1;
+}
+
+.card .links{
+  display:flex;gap:8px;flex-wrap:wrap;justify-content:center;z-index:1;
+}
+.card .links a{
+  padding:6px 12px;border-radius:8px;
+  background:rgba(255,255,255,0.05);border:1px solid var(--border);
+  color:var(--text-dim);font-size:11px;font-weight:700;letter-spacing:1px;
+  text-transform:uppercase;text-decoration:none;
+}
+.card .links a:hover{background:rgba(0,240,255,0.1);border-color:var(--cyan);color:var(--cyan);}
+
+/* Секция "как это выглядит в приложении" */
+.in-app{
+  margin-top:60px;padding:40px 24px;border-top:1px solid var(--border);
+}
+.in-app h2{
+  font-size:clamp(22px,4vw,30px);font-weight:900;letter-spacing:1px;
+  text-align:center;margin-bottom:8px;
+}
+.in-app p.lead{color:var(--text-dim);text-align:center;font-size:14px;margin-bottom:28px;}
+
+.preview-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;
+  max-width:900px;margin:0 auto;
+}
+.pv-cell{
+  background:rgba(255,255,255,0.04);border:1px solid var(--border);
+  border-radius:14px;padding:20px;text-align:center;
+}
+.pv-cell img{width:80px;height:80px;border-radius:50%;display:block;margin:0 auto;box-shadow:0 0 20px rgba(255,215,0,0.3);}
+.pv-cell.locked img{filter:grayscale(1) brightness(0.4);}
+.pv-cell.locked{opacity:0.5;}
+.pv-cell .pv-name{margin-top:10px;font-size:11px;font-weight:700;letter-spacing:1px;color:var(--gold);text-transform:uppercase;}
+.pv-cell.locked .pv-name{color:var(--text-muted);}
+.pv-cell .pv-xp{font-size:9px;color:var(--text-dim);margin-top:2px;}
+
+/* Модалка */
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:100;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(8px);}
+.modal.open{display:flex;}
+.modal-inner{position:relative;text-align:center;}
+.modal img{max-width:90vw;max-height:80vh;border-radius:50%;box-shadow:0 0 80px rgba(255,0,170,0.4);}
+.modal-close{position:absolute;top:-50px;right:0;background:none;border:none;color:#fff;font-size:36px;cursor:pointer;}
+.modal-title{margin-top:20px;font-size:22px;font-weight:900;letter-spacing:2px;color:#fff;text-transform:uppercase;}
+.modal-sub{margin-top:6px;font-size:14px;color:var(--gold);letter-spacing:1px;}
+
+.footer{padding:40px 24px 60px;text-align:center;color:var(--text-muted);font-size:12px;border-top:1px solid var(--border);margin-top:20px;}
+.footer a{color:var(--cyan);text-decoration:none;}
+.footer code{background:rgba(255,255,255,0.05);padding:2px 6px;border-radius:4px;color:var(--gold);}
+
+@media (max-width:640px){
+  .ladder{grid-template-columns:repeat(3,1fr);gap:12px;}
+  .ladder::before{display:none;}
+  .step .name{display:none;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1 class="brand">АЧИВКИ</h1>
+  <div class="subtitle">⚡ 6 ДОСТИЖЕНИЙ ТЕЛЕМОРЕ ЛЕТО 2026 ⚡</div>
+  <p class="intro">
+    За каждые <b>100 Телекоинов</b> участник открывает новую ачивку. Автовыдача в момент пересечения порога. Иконки в стилистике <b>GTA Vice City</b> — стилизованные фейсы персонажей.
+  </p>
+</header>
+
+<main>
+
+  <!-- Прогресс-лестница -->
+  <div class="ladder">
+    <div class="step"><div class="tier">1</div><div class="xp">100 XP</div><div class="name">Крид</div></div>
+    <div class="step"><div class="tier">2</div><div class="xp">200 XP</div><div class="name">Карнавал</div></div>
+    <div class="step"><div class="tier">3</div><div class="xp">300 XP</div><div class="name">Токсис</div></div>
+    <div class="step"><div class="tier">4</div><div class="xp">400 XP</div><div class="name">Джига</div></div>
+    <div class="step"><div class="tier">5</div><div class="xp">500 XP</div><div class="name">Морген</div></div>
+    <div class="step"><div class="tier">6</div><div class="xp">600 XP</div><div class="name">Мистер Бист</div></div>
+  </div>
+
+  <!-- Карточки -->
+  <div class="grid">
+
+    <div class="card" data-tier="1">
+      <div class="xp-pill">100 XP</div>
+      <div class="badge-wrap" onclick="openModal('1_kreed','Крид','100 XP')"><img src="../achievements/round-512/1_kreed.png" alt="Крид"></div>
+      <h3>Крид</h3>
+      <div class="hint">Первый рубеж. Романтичный поп-рэп герой.</div>
+      <div class="links">
+        <a href="../achievements/round-1024/1_kreed.png" target="_blank">1024 px</a>
+        <a href="../achievements/round-512/1_kreed.png" target="_blank">512 px</a>
+        <a href="../achievements/round-128/1_kreed.png" target="_blank">128 px</a>
+        <a href="../achievements/originals/1_kreed.jpg" target="_blank">Оригинал</a>
+      </div>
+    </div>
+
+    <div class="card" data-tier="2">
+      <div class="xp-pill">200 XP</div>
+      <div class="badge-wrap" onclick="openModal('2_carnaval','Карнавал','200 XP')"><img src="../achievements/round-512/2_carnaval.png" alt="Карнавал"></div>
+      <h3>Карнавал</h3>
+      <div class="hint">Праздник начался. Венецианская маска с неоном.</div>
+      <div class="links">
+        <a href="../achievements/round-1024/2_carnaval.png" target="_blank">1024 px</a>
+        <a href="../achievements/round-512/2_carnaval.png" target="_blank">512 px</a>
+        <a href="../achievements/round-128/2_carnaval.png" target="_blank">128 px</a>
+        <a href="../achievements/originals/2_carnaval.jpg" target="_blank">Оригинал</a>
+      </div>
+    </div>
+
+    <div class="card" data-tier="3">
+      <div class="xp-pill">300 XP</div>
+      <div class="badge-wrap" onclick="openModal('3_toxis','Токсис','300 XP')"><img src="../achievements/round-512/3_toxis.png" alt="Токсис"></div>
+      <h3>Токсис</h3>
+      <div class="hint">Жёсткий андерграунд. Токсичный вайб для серьёзных.</div>
+      <div class="links">
+        <a href="../achievements/round-1024/3_toxis.png" target="_blank">1024 px</a>
+        <a href="../achievements/round-512/3_toxis.png" target="_blank">512 px</a>
+        <a href="../achievements/round-128/3_toxis.png" target="_blank">128 px</a>
+        <a href="../achievements/originals/3_toxis.jpg" target="_blank">Оригинал</a>
+      </div>
+    </div>
+
+    <div class="card" data-tier="4">
+      <div class="xp-pill">400 XP</div>
+      <div class="badge-wrap" onclick="openModal('4_dzhiga','Джига','400 XP')"><img src="../achievements/round-512/4_dzhiga.png" alt="Джига"></div>
+      <h3>Джига</h3>
+      <div class="hint">Виральный танец TikTok. Яркий стиль, много энергии.</div>
+      <div class="links">
+        <a href="../achievements/round-1024/4_dzhiga.png" target="_blank">1024 px</a>
+        <a href="../achievements/round-512/4_dzhiga.png" target="_blank">512 px</a>
+        <a href="../achievements/round-128/4_dzhiga.png" target="_blank">128 px</a>
+        <a href="../achievements/originals/4_dzhiga.jpg" target="_blank">Оригинал</a>
+      </div>
+    </div>
+
+    <div class="card" data-tier="5">
+      <div class="xp-pill">500 XP</div>
+      <div class="badge-wrap" onclick="openModal('5_morgen','Морген','500 XP')"><img src="../achievements/round-512/5_morgen.png" alt="Морген"></div>
+      <h3>Морген</h3>
+      <div class="hint">Шок-рэп провокатор. Неоновые пряди, золотые зубы, хаос.</div>
+      <div class="links">
+        <a href="../achievements/round-1024/5_morgen.png" target="_blank">1024 px</a>
+        <a href="../achievements/round-512/5_morgen.png" target="_blank">512 px</a>
+        <a href="../achievements/round-128/5_morgen.png" target="_blank">128 px</a>
+        <a href="../achievements/originals/5_morgen.jpg" target="_blank">Оригинал</a>
+      </div>
+    </div>
+
+    <div class="card" data-tier="6">
+      <div class="xp-pill">600 XP</div>
+      <div class="badge-wrap" onclick="openModal('6_mrbeast','Мистер Бист','600 XP')"><img src="../achievements/round-512/6_mrbeast.png" alt="Мистер Бист"></div>
+      <h3>Мистер Бист</h3>
+      <div class="hint">Максимум. Энтузиаст-филантроп с короной и щедростью.</div>
+      <div class="links">
+        <a href="../achievements/round-1024/6_mrbeast.png" target="_blank">1024 px</a>
+        <a href="../achievements/round-512/6_mrbeast.png" target="_blank">512 px</a>
+        <a href="../achievements/round-128/6_mrbeast.png" target="_blank">128 px</a>
+        <a href="../achievements/originals/6_mrbeast.jpg" target="_blank">Оригинал</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Превью в приложении -->
+  <section class="in-app">
+    <h2>Как это будет в приложении</h2>
+    <p class="lead">Макет экрана «Ачивки» (screen-4) — пример когда участник получил первые 2 из 6.</p>
+    <div class="preview-grid">
+      <div class="pv-cell"><img src="../achievements/round-512/1_kreed.png"><div class="pv-name">Крид</div><div class="pv-xp">100 XP ✓</div></div>
+      <div class="pv-cell"><img src="../achievements/round-512/2_carnaval.png"><div class="pv-name">Карнавал</div><div class="pv-xp">200 XP ✓</div></div>
+      <div class="pv-cell locked"><img src="../achievements/round-512/3_toxis.png"><div class="pv-name">Токсис</div><div class="pv-xp">300 XP 🔒</div></div>
+      <div class="pv-cell locked"><img src="../achievements/round-512/4_dzhiga.png"><div class="pv-name">Джига</div><div class="pv-xp">400 XP 🔒</div></div>
+      <div class="pv-cell locked"><img src="../achievements/round-512/5_morgen.png"><div class="pv-name">Морген</div><div class="pv-xp">500 XP 🔒</div></div>
+      <div class="pv-cell locked"><img src="../achievements/round-512/6_mrbeast.png"><div class="pv-name">М. Бист</div><div class="pv-xp">600 XP 🔒</div></div>
+    </div>
+  </section>
+
+</main>
+
+<div class="footer">
+  Оригиналы 1024×1024 JPG · Обрезка в круг PNG (прозрачность) в 3 размерах: 1024/512/128<br>
+  Если порядок не соответствует — переименуй вручную: <code>1_kreed.png</code> → <code>X_slug.png</code> в папках <code>round-*</code><br>
+  <a href="https://design.telemore.org/">design.telemore.org</a> · <a href="https://github.com/ircitdev/telemore-design">GitHub</a>
+</div>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
+  <button class="modal-close" onclick="closeModal()">×</button>
+  <div class="modal-inner">
+    <img id="modal-img" src="" alt="">
+    <div class="modal-title" id="modal-title"></div>
+    <div class="modal-sub" id="modal-sub"></div>
+  </div>
+</div>
+
+<script>
+const MODAL = document.getElementById('modal');
+const IMG = document.getElementById('modal-img');
+const TITLE = document.getElementById('modal-title');
+const SUB = document.getElementById('modal-sub');
+
+function openModal(slug, name, xp){
+  IMG.src = '../achievements/round-1024/' + slug + '.png';
+  TITLE.textContent = name;
+  SUB.textContent = xp;
+  MODAL.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(){
+  MODAL.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>
