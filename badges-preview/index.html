@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0F0020">
+<title>ТЕЛЕМОРЕ — Выбор фона бейджа</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#FF00AA;--cyan:#00F0FF;--gold:#FFD700;
+  --bg1:#0F0020;--bg2:#1A0033;--bg3:#2D004D;
+  --text:#fff;--text-dim:rgba(255,255,255,0.7);--text-muted:rgba(255,255,255,0.4);
+  --border:rgba(255,255,255,0.1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Roboto',-apple-system,sans-serif;color:var(--text);
+  background:linear-gradient(180deg,var(--bg1) 0%,var(--bg2) 50%,var(--bg1) 100%);
+  min-height:100vh;
+}
+body::before{content:"";position:fixed;inset:0;z-index:-1;
+  background:
+    radial-gradient(ellipse at 15% 10%,rgba(255,0,170,0.12),transparent 50%),
+    radial-gradient(ellipse at 85% 90%,rgba(0,240,255,0.1),transparent 50%);
+}
+
+header{
+  padding:40px 24px 20px;text-align:center;
+}
+.logo{
+  font-size:clamp(40px,8vw,72px);font-weight:900;letter-spacing:3px;line-height:1;
+  background:linear-gradient(180deg,var(--pink),var(--cyan));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 20px rgba(255,0,170,0.6));
+}
+.subtitle{
+  margin-top:8px;font-size:14px;font-weight:700;letter-spacing:3px;
+  color:var(--cyan);text-transform:uppercase;
+}
+.intro{
+  max-width:720px;margin:28px auto 0;padding:0 20px;
+  font-size:15px;color:var(--text-dim);line-height:1.55;text-align:center;
+}
+.intro b{color:var(--gold);}
+
+.grid{
+  max-width:1400px;margin:40px auto;padding:0 24px;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:32px;
+}
+
+.card{
+  display:flex;flex-direction:column;align-items:center;gap:16px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid var(--border);border-radius:18px;
+  padding:24px 20px;
+  transition:all .25s;
+  position:relative;
+}
+.card:hover{
+  border-color:rgba(255,0,170,0.4);
+  background:rgba(255,0,170,0.04);
+  transform:translateY(-3px);
+}
+.tag{
+  position:absolute;top:14px;left:14px;
+  padding:4px 10px;border-radius:999px;
+  background:rgba(255,215,0,0.15);border:1px solid var(--gold);
+  font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--gold);
+  text-transform:uppercase;
+}
+
+/* Макет бейджа 10×15 → 2:3 */
+.badge-wrap{position:relative;width:100%;max-width:280px;aspect-ratio:2/3;overflow:hidden;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,0.5);}
+.badge-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+.badge-overlay{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;align-items:center;
+  padding:6% 6% 4%;gap:2.5%;
+}
+.ovl-logo{
+  font-size:clamp(20px,5vw,32px);font-weight:900;letter-spacing:2px;line-height:1;
+  background:linear-gradient(180deg,var(--pink),var(--cyan));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 10px rgba(0,0,0,0.5));
+}
+.ovl-tour{
+  font-size:clamp(9px,2.2vw,11px);font-weight:700;letter-spacing:2px;color:#FFF;
+  text-transform:uppercase;text-shadow:0 2px 6px rgba(0,0,0,0.7);
+  text-align:center;
+}
+.ovl-photo{
+  width:60%;aspect-ratio:1;border-radius:8px;
+  background:linear-gradient(135deg,#333,#555);
+  border:2px solid rgba(255,255,255,0.85);
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;color:rgba(255,255,255,0.3);
+  box-shadow:0 4px 12px rgba(0,0,0,0.4);
+  flex-shrink:0;
+  overflow:hidden;
+  position:relative;
+}
+.ovl-photo::after{
+  content:"👤";position:absolute;font-size:40%;
+}
+.ovl-name{
+  font-size:clamp(11px,2.8vw,14px);font-weight:900;letter-spacing:1.5px;color:#FFF;
+  text-align:center;text-shadow:0 2px 6px rgba(0,0,0,0.8);margin-top:auto;
+}
+.ovl-squad{
+  font-size:clamp(8px,2vw,10px);font-weight:700;letter-spacing:2px;
+  color:var(--pink);text-shadow:0 1px 3px rgba(0,0,0,0.8);
+}
+.ovl-qr{
+  width:50%;aspect-ratio:1;margin-top:3%;
+  background:#FFF;padding:6%;border-radius:6px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.4);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.ovl-qr img{width:100%;height:100%;display:block;}
+.ovl-qr-fallback{
+  width:100%;height:100%;
+  background:
+    linear-gradient(45deg,#000 25%,transparent 25%,transparent 75%,#000 75%),
+    linear-gradient(45deg,#000 25%,transparent 25%,transparent 75%,#000 75%),
+    linear-gradient(#000,#000);
+  background-size:12% 12%,12% 12%,100% 100%;
+  background-position:0 0,6% 6%,0 0;
+  background-repeat:repeat,repeat,no-repeat;
+  background-color:#FFF;
+}
+
+/* Для варианта B (print-friendly) текст должен быть тёмным */
+.card.print .ovl-logo{
+  background:linear-gradient(180deg,var(--pink),var(--cyan));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.card.print .ovl-tour{color:#2D004D;text-shadow:none;}
+.card.print .ovl-name{color:#1A0033;text-shadow:none;}
+.card.print .ovl-squad{color:var(--pink);text-shadow:none;}
+
+.name{
+  font-size:18px;font-weight:700;text-align:center;margin-top:4px;
+}
+.desc{
+  font-size:13px;color:var(--text-dim);text-align:center;line-height:1.5;
+  max-width:260px;
+}
+.actions{
+  display:flex;gap:10px;width:100%;margin-top:auto;
+}
+.btn{
+  flex:1;padding:10px 12px;border-radius:10px;font-weight:700;font-size:12px;
+  letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;text-align:center;
+  border:1px solid var(--border);background:rgba(255,255,255,0.04);
+  color:var(--text-dim);cursor:pointer;transition:all .2s;font-family:inherit;
+}
+.btn:hover{background:rgba(255,255,255,0.08);color:#fff;}
+.btn.primary{
+  background:linear-gradient(90deg,var(--pink),var(--cyan));color:#fff;
+  border-color:transparent;box-shadow:0 0 14px rgba(255,0,170,0.4);
+}
+.btn.primary:hover{box-shadow:0 0 22px rgba(0,240,255,0.5);transform:translateY(-1px);}
+
+.footer{
+  padding:40px 24px 60px;text-align:center;color:var(--text-muted);font-size:12px;
+  border-top:1px solid var(--border);margin-top:20px;
+}
+.footer a{color:var(--cyan);text-decoration:none;}
+
+/* Модальное окно полного превью */
+.modal{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);
+  z-index:100;align-items:center;justify-content:center;padding:20px;
+  backdrop-filter:blur(8px);
+}
+.modal.open{display:flex;}
+.modal-content{
+  max-width:90vw;max-height:90vh;
+  position:relative;
+}
+.modal-badge{
+  height:min(85vh,800px);aspect-ratio:2/3;
+  position:relative;overflow:hidden;border-radius:12px;
+  box-shadow:0 20px 60px rgba(255,0,170,0.3);
+}
+.modal-badge .badge-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.modal-badge .badge-overlay{position:absolute;inset:0;}
+.modal-close{
+  position:absolute;top:-40px;right:0;
+  background:none;border:none;color:#fff;font-size:28px;cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1 class="logo">TELEMORE</h1>
+  <div class="subtitle">⚡ ВЫБОР ФОНА БЕЙДЖА 10×15 ⚡</div>
+  <p class="intro">
+    4 сгенерированных варианта фона бейджа — каждый в реальной композиции с фото-плейсхолдером, лого, именем участника и QR-кодом.
+    Кликни <b>«Открыть в полный размер»</b>, чтобы увидеть детали. Под каждым — короткое описание и характеристика для печати.
+  </p>
+</header>
+
+<section class="grid">
+
+  <div class="card" data-variant="a">
+    <div class="tag">ВАРИАНТ A</div>
+    <div class="badge-wrap" onclick="openModal('a')">
+      <img class="badge-bg" src="../badge-backgrounds/a_vice_city.jpg" alt="Vice City">
+      <div class="badge-overlay">
+        <div class="ovl-logo">TELEMORE</div>
+        <div class="ovl-tour">ТЕЛЕМОРЕ ЛЕТО 2026</div>
+        <div class="ovl-photo"></div>
+        <div class="ovl-name">ИВАН ПЕТРОВ</div>
+        <div class="ovl-squad">ОТРЯД КОБРЫ</div>
+        <div class="ovl-qr"><div class="ovl-qr-fallback"></div></div>
+      </div>
+    </div>
+    <div class="name">Vice City Full</div>
+    <div class="desc">Тропический закат, пальмы, неоновый грид. Максимальный GTA-вайб. Яркий, «дорого» выглядит.</div>
+    <div class="desc" style="color:var(--gold)">⚠ Много краски при печати</div>
+    <div class="actions">
+      <button class="btn" onclick="openModal('a')">Полный размер</button>
+      <button class="btn primary" onclick="selectVariant('A · Vice City Full')">Выбрать</button>
+    </div>
+  </div>
+
+  <div class="card print" data-variant="b">
+    <div class="tag">ВАРИАНТ B</div>
+    <div class="badge-wrap" onclick="openModal('b')">
+      <img class="badge-bg" src="../badge-backgrounds/b_print_friendly.jpg" alt="Print friendly">
+      <div class="badge-overlay">
+        <div class="ovl-logo">TELEMORE</div>
+        <div class="ovl-tour">ТЕЛЕМОРЕ ЛЕТО 2026</div>
+        <div class="ovl-photo"></div>
+        <div class="ovl-name">ИВАН ПЕТРОВ</div>
+        <div class="ovl-squad">ОТРЯД КОБРЫ</div>
+        <div class="ovl-qr"><div class="ovl-qr-fallback"></div></div>
+      </div>
+    </div>
+    <div class="name">Белый + неон-рамка</div>
+    <div class="desc">Минимум цвета, элегантная двойная неон-рамка, art-deco углы. Официальный вид.</div>
+    <div class="desc" style="color:var(--cyan)">✓ Экономичная печать, читаемый QR</div>
+    <div class="actions">
+      <button class="btn" onclick="openModal('b')">Полный размер</button>
+      <button class="btn primary" onclick="selectVariant('B · Белый + неон-рамка')">Выбрать</button>
+    </div>
+  </div>
+
+  <div class="card" data-variant="c">
+    <div class="tag">ВАРИАНТ C</div>
+    <div class="badge-wrap" onclick="openModal('c')">
+      <img class="badge-bg" src="../badge-backgrounds/c_chrome_80s.jpg" alt="Chrome 80s">
+      <div class="badge-overlay">
+        <div class="ovl-logo">TELEMORE</div>
+        <div class="ovl-tour">ТЕЛЕМОРЕ ЛЕТО 2026</div>
+        <div class="ovl-photo"></div>
+        <div class="ovl-name">ИВАН ПЕТРОВ</div>
+        <div class="ovl-squad">ОТРЯД КОБРЫ</div>
+        <div class="ovl-qr"><div class="ovl-qr-fallback"></div></div>
+      </div>
+    </div>
+    <div class="name">Chrome 80s</div>
+    <div class="desc">Полированный металл, гравировка из неоновых линий. Премиум, «коллекционный» вид.</div>
+    <div class="desc" style="color:var(--gold)">⚠ Требует качественной печати</div>
+    <div class="actions">
+      <button class="btn" onclick="openModal('c')">Полный размер</button>
+      <button class="btn primary" onclick="selectVariant('C · Chrome 80s')">Выбрать</button>
+    </div>
+  </div>
+
+  <div class="card" data-variant="d">
+    <div class="tag">ВАРИАНТ D</div>
+    <div class="badge-wrap" onclick="openModal('d')">
+      <img class="badge-bg" src="../badge-backgrounds/d_graffiti.jpg" alt="Graffiti">
+      <div class="badge-overlay">
+        <div class="ovl-logo">TELEMORE</div>
+        <div class="ovl-tour">ТЕЛЕМОРЕ ЛЕТО 2026</div>
+        <div class="ovl-photo"></div>
+        <div class="ovl-name">ИВАН ПЕТРОВ</div>
+        <div class="ovl-squad">ОТРЯД КОБРЫ</div>
+        <div class="ovl-qr"><div class="ovl-qr-fallback"></div></div>
+      </div>
+    </div>
+    <div class="name">Graffiti Vice City</div>
+    <div class="desc">Уличные теги, бетонная стена, спрей-дрипы. Дерзкий, молодёжный, креативный.</div>
+    <div class="desc" style="color:var(--cyan)">✓ Неформальный вайб для смены</div>
+    <div class="actions">
+      <button class="btn" onclick="openModal('d')">Полный размер</button>
+      <button class="btn primary" onclick="selectVariant('D · Graffiti Vice City')">Выбрать</button>
+    </div>
+  </div>
+
+</section>
+
+<div class="footer">
+  ТЕЛЕМОРЕ Design · <a href="https://design.telemore.org/">design.telemore.org</a> · <a href="https://github.com/ircitdev/telemore-design">GitHub</a><br>
+  После выбора варианта — пиши в чат, я зафиксирую в ТЗ и применю в генераторе бейджей (A11)
+</div>
+
+<!-- Модалка -->
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div class="modal-badge" id="modal-badge">
+      <img class="badge-bg" id="modal-bg" src="" alt="">
+      <div class="badge-overlay" id="modal-overlay">
+        <div class="ovl-logo">TELEMORE</div>
+        <div class="ovl-tour">ТЕЛЕМОРЕ ЛЕТО 2026</div>
+        <div class="ovl-photo"></div>
+        <div class="ovl-name">ИВАН ПЕТРОВ</div>
+        <div class="ovl-squad">ОТРЯД КОБРЫ</div>
+        <div class="ovl-qr"><div class="ovl-qr-fallback"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const BG = {
+  a: '../badge-backgrounds/a_vice_city.jpg',
+  b: '../badge-backgrounds/b_print_friendly.jpg',
+  c: '../badge-backgrounds/c_chrome_80s.jpg',
+  d: '../badge-backgrounds/d_graffiti.jpg'
+};
+const MODAL = document.getElementById('modal');
+const BG_IMG = document.getElementById('modal-bg');
+const BADGE = document.getElementById('modal-badge');
+
+function openModal(variant){
+  BG_IMG.src = BG[variant];
+  BADGE.className = 'modal-badge' + (variant === 'b' ? ' print-mode' : '');
+  MODAL.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(){
+  MODAL.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+function selectVariant(name){
+  if (confirm('Выбрать вариант: ' + name + '?\n\nЭто откроет чат для отправки финального решения.')) {
+    window.open('https://t.me/share/url?url=' + encodeURIComponent('Выбираю фон бейджа: ' + name) + '&text=' + encodeURIComponent('Финальный вариант для смены ТЕЛЕМОРЕ Лето 2026'), '_blank');
+  }
+}
+</script>
+
+<style>
+.modal-badge.print-mode .ovl-tour{color:#2D004D;text-shadow:none;}
+.modal-badge.print-mode .ovl-name{color:#1A0033;text-shadow:none;}
+.modal-badge.print-mode .ovl-squad{color:var(--pink);text-shadow:none;}
+</style>
+
+</body>
+</html>
