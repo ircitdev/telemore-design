@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0F0020">
+<title>ТЕЛЕМОРЕ — Все экраны проекта</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#FF00AA;--cyan:#00F0FF;--gold:#FFD700;
+  --bg1:#0F0020;--bg2:#1A0033;--bg3:#2D004D;
+  --text:#fff;--text-dim:rgba(255,255,255,0.7);--text-muted:rgba(255,255,255,0.4);
+  --border:rgba(255,255,255,0.1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Roboto',-apple-system,sans-serif;color:var(--text);
+  background:linear-gradient(180deg,var(--bg1) 0%,var(--bg2) 50%,var(--bg1) 100%);
+  min-height:100vh;
+}
+body::before{content:"";position:fixed;inset:0;z-index:-1;
+  background:
+    radial-gradient(ellipse at 15% 10%,rgba(255,0,170,0.1),transparent 50%),
+    radial-gradient(ellipse at 85% 90%,rgba(0,240,255,0.08),transparent 50%);
+}
+
+header{padding:50px 24px 30px;text-align:center;}
+.brand{
+  font-size:clamp(40px,8vw,72px);font-weight:900;letter-spacing:3px;line-height:1;
+  background:linear-gradient(180deg,var(--pink),var(--cyan));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 20px rgba(255,0,170,0.6));
+}
+.subtitle{margin-top:8px;font-size:14px;font-weight:700;letter-spacing:3px;color:var(--cyan);text-transform:uppercase;}
+.intro{max-width:760px;margin:24px auto 0;padding:0 20px;font-size:14px;color:var(--text-dim);line-height:1.6;text-align:center;}
+.intro b{color:var(--gold);}
+
+nav.quick{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:30px auto 0;padding:0 20px;max-width:900px;}
+.quick a{
+  padding:10px 18px;border-radius:999px;background:rgba(255,255,255,0.05);
+  border:1px solid var(--border);color:var(--text-dim);text-decoration:none;
+  font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:all .2s;
+}
+.quick a:hover{background:rgba(255,0,170,0.12);border-color:var(--pink);color:#fff;}
+
+main{max-width:1500px;margin:40px auto;padding:0 24px;}
+
+h2.section{
+  font-size:clamp(24px,4vw,34px);font-weight:900;letter-spacing:1px;
+  margin:60px 0 8px;display:flex;align-items:center;gap:14px;
+}
+h2.section:first-child{margin-top:0;}
+h2.section .num{
+  padding:4px 14px;border-radius:999px;background:rgba(255,0,170,0.15);border:1px solid var(--pink);
+  font-size:12px;font-weight:700;letter-spacing:2px;color:var(--pink);
+}
+.sec-hint{color:var(--text-dim);font-size:14px;margin-bottom:24px;}
+
+.grid{display:grid;gap:22px;}
+.grid.mobile{grid-template-columns:repeat(auto-fill,minmax(260px,1fr));}
+.grid.admin{grid-template-columns:repeat(auto-fill,minmax(340px,1fr));}
+
+.card{
+  display:flex;flex-direction:column;gap:12px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid var(--border);border-radius:18px;
+  padding:16px;
+  transition:all .25s;
+  position:relative;
+}
+.card:hover{
+  border-color:rgba(255,0,170,0.4);
+  background:rgba(255,0,170,0.04);
+  transform:translateY(-3px);
+}
+.card .tag{
+  position:absolute;top:10px;right:10px;z-index:2;
+  padding:4px 10px;border-radius:999px;
+  font-size:10px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+.tag.user{background:rgba(0,240,255,0.15);border:1px solid var(--cyan);color:var(--cyan);}
+.tag.producer{background:rgba(255,215,0,0.12);border:1px solid var(--gold);color:var(--gold);}
+.tag.admin{background:rgba(255,0,170,0.12);border:1px solid var(--pink);color:var(--pink);}
+
+.shot{
+  width:100%;border-radius:10px;overflow:hidden;cursor:pointer;
+  background:#000;box-shadow:0 4px 16px rgba(0,0,0,0.4);
+  transition:transform .2s;
+}
+.shot:hover{transform:scale(1.02);}
+.shot img{width:100%;display:block;}
+.grid.mobile .shot{aspect-ratio:375/812;}
+.grid.admin .shot{aspect-ratio:1280/800;}
+
+.card h3{font-size:16px;font-weight:900;letter-spacing:0.5px;line-height:1.25;}
+.card .desc{font-size:13px;color:var(--text-dim);line-height:1.5;}
+.card .features{
+  display:flex;flex-wrap:wrap;gap:4px;margin-top:4px;
+}
+.card .feat{
+  font-size:10px;padding:3px 8px;border-radius:999px;
+  background:rgba(255,255,255,0.06);color:var(--text-dim);
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.footer{padding:40px 24px 60px;text-align:center;color:var(--text-muted);font-size:12px;border-top:1px solid var(--border);margin-top:40px;}
+.footer a{color:var(--cyan);text-decoration:none;}
+
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.94);z-index:100;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(8px);}
+.modal.open{display:flex;}
+.modal img{max-width:95vw;max-height:90vh;object-fit:contain;border-radius:8px;box-shadow:0 20px 60px rgba(255,0,170,0.3);}
+.modal-close{position:absolute;top:20px;right:30px;background:none;border:none;color:#fff;font-size:36px;cursor:pointer;line-height:1;z-index:1;}
+.modal-title{position:absolute;top:20px;left:30px;font-size:14px;font-weight:700;letter-spacing:1px;color:var(--cyan);text-transform:uppercase;}
+
+@media (max-width:600px){
+  .grid.mobile{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));}
+  .grid.admin{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1 class="brand">TELEMORE</h1>
+  <div class="subtitle">⚡ ВСЕ ЭКРАНЫ ПРОЕКТА ⚡</div>
+  <p class="intro">
+    <b>18 экранов</b> в двух группах: мобильное приложение участника (7 шт. в стилистике GTA Vice City) и админ-панель для продюсеров и суперадмина (11 wireframes в light-стиле). Под каждым — назначение и ключевые возможности. Клик по изображению → полный размер.
+  </p>
+</header>
+
+<nav class="quick">
+  <a href="#mobile">📱 Мобильные (7)</a>
+  <a href="#admin-producer">🎯 Продюсер (8)</a>
+  <a href="#admin-super">👑 Суперадмин (2)</a>
+</nav>
+
+<main>
+
+<!-- ========== МОБИЛЬНЫЕ ========== -->
+<h2 class="section" id="mobile"><span class="num">МОБИЛЬНОЕ</span> Участник (Telegram Mini App)</h2>
+<p class="sec-hint">Что видит участник медиа-тура. Разрешение 375×812 (iPhone), стилистика GTA Vice City Neon.</p>
+
+<div class="grid mobile">
+
+  <div class="card">
+    <span class="tag user">Участник</span>
+    <div class="shot" onclick="openModal('01_1._Регистрация.jpg','1. Регистрация')"><img src="../export/01_1._Регистрация.jpg" alt="1. Регистрация"></div>
+    <h3>1. Регистрация</h3>
+    <div class="desc">Первый вход в приложение. Анкета участника: имя, фамилия, телефон, дата рождения, соцсети. Выбор отряда (Кобры / Акулы).</div>
+    <div class="features">
+      <span class="feat">Telegram initData</span>
+      <span class="feat">Выбор отряда</span>
+      <span class="feat">Первичная анкета</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag user">Участник</span>
+    <div class="shot" onclick="openModal('02_2._Главный_экран.jpg','2. Главный экран')"><img src="../export/02_2._Главный_экран.jpg" alt="2. Главный экран"></div>
+    <h3>2. Главный экран</h3>
+    <div class="desc">Домашний экран. Баланс Телекоинов крупно, название тура и отряда, последняя ачивка, план дня и навигация к остальным разделам.</div>
+    <div class="features">
+      <span class="feat">Баланс XP</span>
+      <span class="feat">Навигация</span>
+      <span class="feat">Ачивка-бейдж</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag user">Участник</span>
+    <div class="shot" onclick="openModal('03_3._Мой_QR.jpg','3. Мой QR')"><img src="../export/03_3._Мой_QR.jpg" alt="3. Мой QR"></div>
+    <h3>3. Мой QR</h3>
+    <div class="desc">QR-код участника, который продюсеры сканируют для чек-ина и начисления Телекоинов. Доступен офлайн (кэширование).</div>
+    <div class="features">
+      <span class="feat">Офлайн-кэш</span>
+      <span class="feat">Уникальный ID</span>
+      <span class="feat">Для чек-инов</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag user">Участник</span>
+    <div class="shot" onclick="openModal('04_4._Ачивки.jpg','4. Ачивки')"><img src="../export/04_4._Ачивки.jpg" alt="4. Ачивки"></div>
+    <h3>4. Ачивки</h3>
+    <div class="desc">Сетка 6 достижений. Полученные — цветные с glow. Неполученные — locked с замком и порогом XP. Прогресс до следующей.</div>
+    <div class="features">
+      <span class="feat">Авто-выдача</span>
+      <span class="feat">Прогресс-бар</span>
+      <span class="feat">Настраиваются в админке</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag user">Участник</span>
+    <div class="shot" onclick="openModal('05_5._Рейтинг.jpg','5. Рейтинг')"><img src="../export/05_5._Рейтинг.jpg" alt="5. Рейтинг"></div>
+    <h3>5. Рейтинг</h3>
+    <div class="desc">Топ-10 участников + твоё место после разделителя (если ты вне топа). Переключатели «Личный/Команда» и «День/Тур». Приоритет по свежести активности.</div>
+    <div class="features">
+      <span class="feat">Топ + Я</span>
+      <span class="feat">Битва отрядов</span>
+      <span class="feat">Анонимизация*</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag user">Участник</span>
+    <div class="shot" onclick="openModal('06_6._План_дня.jpg','6. План дня')"><img src="../export/06_6._План_дня.jpg" alt="6. План дня"></div>
+    <h3>6. План дня</h3>
+    <div class="desc">Timeline расписания на текущий день. События с временем начала, названием и локацией. Бот также рассылает план в общий чат утром.</div>
+    <div class="features">
+      <span class="feat">Timeline</span>
+      <span class="feat">XP за посещение</span>
+      <span class="feat">Авто-рассылка</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag producer">Продюсер</span>
+    <div class="shot" onclick="openModal('07_7._Сканер_продюсера.jpg','7. Сканер продюсера')"><img src="../export/07_7._Сканер_продюсера.jpg" alt="7. Сканер продюсера"></div>
+    <h3>7. Сканер (мобилка продюсера)</h3>
+    <div class="desc">Мобильный сканер для продюсера в поле. Камера QR, быстрые пресеты начисления (+10/+15/+20/+25), штраф −10, bulk-режим для массовых начислений.</div>
+    <div class="features">
+      <span class="feat">Live камера</span>
+      <span class="feat">Bulk-сессия</span>
+      <span class="feat">Защита от дублей</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ========== АДМИНКА ПРОДЮСЕРА ========== -->
+<h2 class="section" id="admin-producer"><span class="num">АДМИН</span> Продюсер (Desktop)</h2>
+<p class="sec-hint">Рабочее место продюсера. Разрешение 1280×800, light-стиль wireframes (готовы для согласования и обрастания финальным визуалом).</p>
+
+<div class="grid admin">
+
+  <div class="card">
+    <span class="tag producer">Продюсер</span>
+    <div class="shot" onclick="openModal('08_A1._Producer__Dashboard.jpg','A1. Dashboard')"><img src="../export/08_A1._Producer__Dashboard.jpg" alt="A1. Dashboard"></div>
+    <h3>A1. Dashboard</h3>
+    <div class="desc">Главный экран продюсера. KPI (участников / средний баланс / чек-инов / активных событий), график активности за 7 дней, топ-5, события сегодня и транзакции от всех продюсеров.</div>
+    <div class="features">
+      <span class="feat">4 KPI</span>
+      <span class="feat">График</span>
+      <span class="feat">Live транзакции</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag producer">Продюсер</span>
+    <div class="shot" onclick="openModal('09_A2._Producer__Сканер_QR.jpg','A2. Сканер QR')"><img src="../export/09_A2._Producer__Сканер_QR.jpg" alt="A2. Сканер"></div>
+    <h3>A2. Сканер QR (web)</h3>
+    <div class="desc">Desktop-версия сканера для работы со стационарной камерой/ноутбука. Переключатель «Одиночный / Bulk +15 всем подряд», карточка участника после скана, быстрые пресеты и причины штрафов.</div>
+    <div class="features">
+      <span class="feat">Bulk-режим</span>
+      <span class="feat">Live-превью</span>
+      <span class="feat">Счётчик сессии</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag producer">Продюсер</span>
+    <div class="shot" onclick="openModal('10_A3._Producer__Участники.jpg','A3. Участники')"><img src="../export/10_A3._Producer__Участники.jpg" alt="A3. Участники"></div>
+    <h3>A3. Участники</h3>
+    <div class="desc">Таблица всех 60 участников с поиском, фильтрами (отряд, сортировка по балансу). Переход в карточку участника, быстрый экспорт CSV.</div>
+    <div class="features">
+      <span class="feat">Поиск</span>
+      <span class="feat">Фильтры</span>
+      <span class="feat">Экспорт</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag producer">Продюсер</span>
+    <div class="shot" onclick="openModal('11_A4._Producer__Карточка_участника.jpg','A4. Карточка участника')"><img src="../export/11_A4._Producer__Карточка_участника.jpg" alt="A4. Карточка"></div>
+    <h3>A4. Карточка участника</h3>
+    <div class="desc">Полный профиль: анкета, псевдоним для бейджа, фото (загружает продюсер), баланс с правкой, ачивки, история транзакций с откатом за 24 часа, смена отряда.</div>
+    <div class="features">
+      <span class="feat">Фото для бейджа</span>
+      <span class="feat">Псевдоним</span>
+      <span class="feat">Откат 24ч</span>
+      <span class="feat">Смена отряда</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag producer">Продюсер</span>
+    <div class="shot" onclick="openModal('12_A5._Producer__События.jpg','A5. События')"><img src="../export/12_A5._Producer__События.jpg" alt="A5. События"></div>
+    <h3>A5. События</h3>
+    <div class="desc">Таблица всех событий смены (завтраки, мастер-классы, экскурсии, ужины). Фильтры по дате / типу / статусу. Быстрое создание нового события.</div>
+    <div class="features">
+      <span class="feat">CRUD событий</span>
+      <span class="feat">Статистика чек-инов</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag producer">Продюсер</span>
+    <div class="shot" onclick="openModal('13_A6._Producer__Редактор_события.jpg','A6. Редактор события')"><img src="../export/13_A6._Producer__Редактор_события.jpg" alt="A6. Редактор"></div>
+    <h3>A6. Редактор события</h3>
+    <div class="desc">Форма создания/редактирования: название, тип, дата/время, описание, XP за чек-ин, лимит чек-инов, чекбоксы (обязательное, только отряд, рассылка, повтор).</div>
+    <div class="features">
+      <span class="feat">Форма</span>
+      <span class="feat">Авто-XP</span>
+      <span class="feat">Геймификация</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag producer">Продюсер</span>
+    <div class="shot" onclick="openModal('14_A7._Producer__Уведомления.jpg','A7. Уведомления')"><img src="../export/14_A7._Producer__Уведомления.jpg" alt="A7. Уведомления"></div>
+    <h3>A7. Уведомления</h3>
+    <div class="desc">Компоновщик push-уведомлений в Telegram. Выбор аудитории: свой отряд / другой отряд / всем 60 участникам / конкретному человеку. Лог всех отправок.</div>
+    <div class="features">
+      <span class="feat">4 аудитории</span>
+      <span class="feat">Лог истории</span>
+      <span class="feat">Предпросмотр</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag producer">Продюсер</span>
+    <div class="shot" onclick="openModal('15_A8._Producer__План_дня.jpg','A8. План дня')"><img src="../export/15_A8._Producer__План_дня.jpg" alt="A8. План дня (редактор)"></div>
+    <h3>A8. План дня (редактор)</h3>
+    <div class="desc">Визуальный timeline-редактор расписания. Drag&drop слотов, добавление / редактирование / удаление активностей. Настройка авто-рассылки в бот.</div>
+    <div class="features">
+      <span class="feat">Drag&Drop</span>
+      <span class="feat">Timeline</span>
+      <span class="feat">Авто-рассылка</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag producer">Продюсер</span>
+    <div class="shot" onclick="openModal('18_A11._Producer__Генератор_бейджей.jpg','A11. Генератор бейджей')"><img src="../export/18_A11._Producer__Генератор_бейджей.jpg" alt="A11. Генератор бейджей"></div>
+    <h3>A11. Генератор бейджей</h3>
+    <div class="desc">Пакетный PDF-генератор бейджей 10×15 см. Таблица участников с чекбоксами, статус бейджа (готов / нужно фото), preview с наложением и финальный PDF-пакет для печати.</div>
+    <div class="features">
+      <span class="feat">A6 10×15</span>
+      <span class="feat">Пакетный PDF</span>
+      <span class="feat">Фото + QR</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ========== СУПЕРАДМИН ========== -->
+<h2 class="section" id="admin-super"><span class="num">SUPER</span> Суперадмин (Владелец системы)</h2>
+<p class="sec-hint">Управление всем проектом: смены, роли, ачивки, White Label настройки, экспорт в Google Sheets.</p>
+
+<div class="grid admin">
+
+  <div class="card">
+    <span class="tag admin">Суперадмин</span>
+    <div class="shot" onclick="openModal('16_A9._Superadmin__Сменами.jpg','A9. Управление сменами')"><img src="../export/16_A9._Superadmin__Сменами.jpg" alt="A9. Сменами"></div>
+    <h3>A9. Управление сменами</h3>
+    <div class="desc">Список всех туров, статистика. Wizard создания новой смены «с нуля» или копированием существующей (White Label — берём настройки, ачивки, шаблоны событий, без участников).</div>
+    <div class="features">
+      <span class="feat">Multi-tenant</span>
+      <span class="feat">Копирование</span>
+      <span class="feat">Архив</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag admin">Суперадмин</span>
+    <div class="shot" onclick="openModal('17_A10._Superadmin__Роли_и_Ачивки.jpg','A10. Роли и Ачивки')"><img src="../export/17_A10._Superadmin__Роли_и_Ачивки.jpg" alt="A10. Роли и Ачивки"></div>
+    <h3>A10. Роли / Ачивки / Лидерборд / Экспорт</h3>
+    <div class="desc">Управление ролями (продюсер / участник / суперадмин), CRUD ачивок (пороги XP + иконки), настройки рейтинга (видимых 10/20/все + анонимизация), экспорт в Google Sheets.</div>
+    <div class="features">
+      <span class="feat">Роли</span>
+      <span class="feat">Ачивки per-tour</span>
+      <span class="feat">Настройки лидерборда</span>
+      <span class="feat">Google Sheets</span>
+    </div>
+  </div>
+
+</div>
+
+</main>
+
+<div class="footer">
+  Всего <b style="color:var(--gold)">18 экранов</b> · <b style="color:var(--cyan)">7</b> мобильных · <b style="color:var(--pink)">11</b> wireframes админки<br>
+  Источники: <a href="https://design.telemore.org/files/">/files/</a> · <a href="https://design.telemore.org/">OpenPencil</a> · <a href="https://github.com/ircitdev/telemore-design">GitHub</a><br>
+  Ресторны (regen) запускаются командой: <code>node export-screens.js</code>
+</div>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-title" id="modal-title"></div>
+  <button class="modal-close" onclick="closeModal()">×</button>
+  <img id="modal-img" src="" alt="">
+</div>
+
+<script>
+const MODAL = document.getElementById('modal');
+const MODAL_IMG = document.getElementById('modal-img');
+const MODAL_TITLE = document.getElementById('modal-title');
+
+function openModal(file, title){
+  MODAL_IMG.src = '../export/' + file;
+  MODAL_TITLE.textContent = title;
+  MODAL.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(){
+  MODAL.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>
