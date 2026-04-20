@@ -249,6 +249,36 @@
       ]
     },
     {
+      "id": "reason-label",
+      "type": "text",
+      "role": "label",
+      "content": "ЗА ЧТО",
+      "fontSize": 11,
+      "fontWeight": 700,
+      "fill": [
+        {"type":"solid","color":"#FFD700"}
+      ],
+      "letterSpacing": 1.5
+    },
+    {
+      "id": "reason-dropdown",
+      "type": "frame",
+      "role": "form-input",
+      "width": "fill_container",
+      "height": 44,
+      "fill": [{"type":"solid","color":"rgba(255,255,255,0.08)"}],
+      "stroke": {"thickness":1,"fill":[{"type":"solid","color":"#FFD700"}]},
+      "cornerRadius": 12,
+      "padding": [10,14],
+      "layout": "horizontal",
+      "alignItems": "center",
+      "justifyContent": "space_between",
+      "children": [
+        {"id":"reason-val","type":"text","role":"label","content":"Участие в мастер-классе","fontSize":14,"fontWeight":500,"fill":[{"type":"solid","color":"#FFFFFF"}]},
+        {"id":"reason-arrow","type":"text","role":"label","content":"▾","fontSize":14,"fill":[{"type":"solid","color":"#FFD700"}]}
+      ]
+    },
+    {
       "id": "presets-label",
       "type": "text",
       "role": "label",

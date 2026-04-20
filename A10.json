@@ -1,5 +1,5 @@
 {
-  "id": "root-1176",
+  "id": "root-1277",
   "type": "frame",
   "name": "A10. Роли и Ачивки",
   "width": 1280,
@@ -16,7 +16,7 @@
   "clipContent": true,
   "children": [
     {
-      "id": "sb-1177",
+      "id": "sb-1278",
       "type": "frame",
       "name": "Sidebar",
       "width": 220,
@@ -41,7 +41,7 @@
       },
       "children": [
         {
-          "id": "plain-1181",
+          "id": "plain-1282",
           "type": "frame",
           "width": "fill_container",
           "height": "fit_content",
@@ -54,7 +54,7 @@
           "alignItems": "center",
           "children": [
             {
-              "id": "ph-1178",
+              "id": "ph-1279",
               "type": "frame",
               "width": 28,
               "height": 28,
@@ -79,7 +79,7 @@
               "cornerRadius": 6,
               "children": [
                 {
-                  "id": "t-1179",
+                  "id": "t-1280",
                   "type": "text",
                   "content": "LOGO",
                   "fontFamily": "Roboto",
@@ -95,7 +95,7 @@
               ]
             },
             {
-              "id": "t-1180",
+              "id": "t-1281",
               "type": "text",
               "content": "SUPERADMIN",
               "fontFamily": "Roboto",
@@ -111,7 +111,7 @@
           ]
         },
         {
-          "id": "div-1182",
+          "id": "div-1283",
           "type": "rectangle",
           "width": "fill_container",
           "height": 1,
@@ -123,7 +123,7 @@
           ]
         },
         {
-          "id": "t-1183",
+          "id": "t-1284",
           "type": "text",
           "content": "УПРАВЛЕНИЕ",
           "fontFamily": "Roboto",
@@ -137,7 +137,7 @@
           ]
         },
         {
-          "id": "nav-1184",
+          "id": "nav-1285",
           "type": "frame",
           "width": "fill_container",
           "height": 36,
@@ -156,7 +156,7 @@
           "cornerRadius": 6,
           "children": [
             {
-              "id": "t-1185",
+              "id": "t-1286",
               "type": "text",
               "content": "Смены",
               "fontFamily": "Roboto",
@@ -172,7 +172,7 @@
           ]
         },
         {
-          "id": "nav-1186",
+          "id": "nav-1287",
           "type": "frame",
           "width": "fill_container",
           "height": 36,
@@ -191,7 +191,7 @@
           "cornerRadius": 6,
           "children": [
             {
-              "id": "t-1187",
+              "id": "t-1288",
               "type": "text",
               "content": "Роли и Ачивки",
               "fontFamily": "Roboto",
@@ -207,7 +207,7 @@
           ]
         },
         {
-          "id": "nav-1188",
+          "id": "nav-1289",
           "type": "frame",
           "width": "fill_container",
           "height": 36,
@@ -226,7 +226,7 @@
           "cornerRadius": 6,
           "children": [
             {
-              "id": "t-1189",
+              "id": "t-1290",
               "type": "text",
               "content": "Экспорт",
               "fontFamily": "Roboto",
@@ -242,7 +242,7 @@
           ]
         },
         {
-          "id": "nav-1190",
+          "id": "nav-1291",
           "type": "frame",
           "width": "fill_container",
           "height": 36,
@@ -261,7 +261,7 @@
           "cornerRadius": 6,
           "children": [
             {
-              "id": "t-1191",
+              "id": "t-1292",
               "type": "text",
               "content": "Статистика",
               "fontFamily": "Roboto",
@@ -277,7 +277,7 @@
           ]
         },
         {
-          "id": "div-1192",
+          "id": "div-1293",
           "type": "rectangle",
           "width": "fill_container",
           "height": 1,
@@ -289,7 +289,7 @@
           ]
         },
         {
-          "id": "t-1193",
+          "id": "t-1294",
           "type": "text",
           "content": "АККАУНТ",
           "fontFamily": "Roboto",
@@ -303,7 +303,7 @@
           ]
         },
         {
-          "id": "nav-1194",
+          "id": "nav-1295",
           "type": "frame",
           "width": "fill_container",
           "height": 36,
@@ -322,7 +322,7 @@
           "cornerRadius": 6,
           "children": [
             {
-              "id": "t-1195",
+              "id": "t-1296",
               "type": "text",
               "content": "Выход",
               "fontFamily": "Roboto",
@@ -340,7 +340,7 @@
       ]
     },
     {
-      "id": "plain-1196",
+      "id": "plain-1297",
       "type": "frame",
       "width": "fill_container",
       "height": "fill_container",
@@ -349,7 +349,7 @@
       "padding": 0,
       "children": [
         {
-          "id": "plain-1055",
+          "id": "plain-1071",
           "type": "frame",
           "width": "fill_container",
           "height": 60,
@@ -363,7 +363,7 @@
           "justifyContent": "space_between",
           "children": [
             {
-              "id": "plain-1050",
+              "id": "plain-1066",
               "type": "frame",
               "width": "fit_content",
               "height": "fit_content",
@@ -373,7 +373,7 @@
               "alignItems": "center",
               "children": [
                 {
-                  "id": "t-1047",
+                  "id": "t-1063",
                   "type": "text",
                   "content": "Superadmin",
                   "fontFamily": "Roboto",
@@ -387,7 +387,7 @@
                   ]
                 },
                 {
-                  "id": "t-1048",
+                  "id": "t-1064",
                   "type": "text",
                   "content": "›",
                   "fontFamily": "Roboto",
@@ -401,7 +401,7 @@
                   ]
                 },
                 {
-                  "id": "t-1049",
+                  "id": "t-1065",
                   "type": "text",
                   "content": "Роли и Ачивки",
                   "fontFamily": "Roboto",
@@ -417,7 +417,7 @@
               ]
             },
             {
-              "id": "plain-1054",
+              "id": "plain-1070",
               "type": "frame",
               "width": "fit_content",
               "height": "fit_content",
@@ -427,7 +427,7 @@
               "alignItems": "center",
               "children": [
                 {
-                  "id": "t-1051",
+                  "id": "t-1067",
                   "type": "text",
                   "content": "Иван П. • Продюсер",
                   "fontFamily": "Roboto",
@@ -441,7 +441,7 @@
                   ]
                 },
                 {
-                  "id": "ph-1052",
+                  "id": "ph-1068",
                   "type": "frame",
                   "width": 32,
                   "height": 32,
@@ -466,7 +466,7 @@
                   "cornerRadius": 6,
                   "children": [
                     {
-                      "id": "t-1053",
+                      "id": "t-1069",
                       "type": "text",
                       "content": "AV",
                       "fontFamily": "Roboto",
@@ -486,7 +486,7 @@
           ]
         },
         {
-          "id": "plain-1175",
+          "id": "plain-1276",
           "type": "frame",
           "width": "fill_container",
           "height": "fit_content",
@@ -495,7 +495,7 @@
           "padding": 24,
           "children": [
             {
-              "id": "t-1056",
+              "id": "t-1072",
               "type": "text",
               "content": "Роли и Ачивки",
               "fontFamily": "Roboto",
@@ -509,7 +509,7 @@
               ]
             },
             {
-              "id": "plain-1174",
+              "id": "plain-1275",
               "type": "frame",
               "width": "fill_container",
               "height": "fit_content",
@@ -518,7 +518,7 @@
               "padding": 0,
               "children": [
                 {
-                  "id": "box-1097",
+                  "id": "box-1113",
                   "type": "frame",
                   "width": "fill_container",
                   "height": "fit_content",
@@ -543,7 +543,7 @@
                   "cornerRadius": 6,
                   "children": [
                     {
-                      "id": "t-1057",
+                      "id": "t-1073",
                       "type": "text",
                       "content": "Управление ролями",
                       "fontFamily": "Roboto",
@@ -557,7 +557,7 @@
                       ]
                     },
                     {
-                      "id": "plain-1062",
+                      "id": "plain-1078",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -566,7 +566,7 @@
                       "padding": 0,
                       "children": [
                         {
-                          "id": "inp-1058",
+                          "id": "inp-1074",
                           "type": "frame",
                           "role": "form-input",
                           "width": "fill_container",
@@ -595,7 +595,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-1059",
+                              "id": "t-1075",
                               "type": "text",
                               "content": "Поиск пользователя",
                               "fontFamily": "Roboto",
@@ -611,7 +611,7 @@
                           ]
                         },
                         {
-                          "id": "btn-1060",
+                          "id": "btn-1076",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -641,7 +641,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-1061",
+                              "id": "t-1077",
                               "type": "text",
                               "content": "+ Назначить роль",
                               "fontFamily": "Roboto",
@@ -659,7 +659,7 @@
                       ]
                     },
                     {
-                      "id": "div-1063",
+                      "id": "div-1079",
                       "type": "rectangle",
                       "width": "fill_container",
                       "height": 1,
@@ -671,7 +671,7 @@
                       ]
                     },
                     {
-                      "id": "plain-1071",
+                      "id": "plain-1087",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -683,7 +683,7 @@
                       ],
                       "children": [
                         {
-                          "id": "t-1064",
+                          "id": "t-1080",
                           "type": "text",
                           "content": "ПОЛЬЗОВАТЕЛЬ",
                           "fontFamily": "Roboto",
@@ -697,7 +697,7 @@
                           ]
                         },
                         {
-                          "id": "t-1065",
+                          "id": "t-1081",
                           "type": "text",
                           "content": "",
                           "fontFamily": "Roboto",
@@ -712,7 +712,7 @@
                           "width": 240
                         },
                         {
-                          "id": "t-1066",
+                          "id": "t-1082",
                           "type": "text",
                           "content": "РОЛЬ",
                           "fontFamily": "Roboto",
@@ -726,7 +726,7 @@
                           ]
                         },
                         {
-                          "id": "t-1067",
+                          "id": "t-1083",
                           "type": "text",
                           "content": "",
                           "fontFamily": "Roboto",
@@ -741,7 +741,7 @@
                           "width": 140
                         },
                         {
-                          "id": "t-1068",
+                          "id": "t-1084",
                           "type": "text",
                           "content": "ОТРЯД",
                           "fontFamily": "Roboto",
@@ -755,7 +755,7 @@
                           ]
                         },
                         {
-                          "id": "t-1069",
+                          "id": "t-1085",
                           "type": "text",
                           "content": "",
                           "fontFamily": "Roboto",
@@ -770,7 +770,7 @@
                           "width": 120
                         },
                         {
-                          "id": "t-1070",
+                          "id": "t-1086",
                           "type": "text",
                           "content": "",
                           "fontFamily": "Roboto",
@@ -786,7 +786,7 @@
                       ]
                     },
                     {
-                      "id": "div-1072",
+                      "id": "div-1088",
                       "type": "rectangle",
                       "width": "fill_container",
                       "height": 1,
@@ -798,7 +798,7 @@
                       ]
                     },
                     {
-                      "id": "plain-1078",
+                      "id": "plain-1094",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -811,7 +811,7 @@
                       "alignItems": "center",
                       "children": [
                         {
-                          "id": "t-1073",
+                          "id": "t-1089",
                           "type": "text",
                           "content": "Иван Петров",
                           "fontFamily": "Roboto",
@@ -826,7 +826,7 @@
                           "width": 240
                         },
                         {
-                          "id": "t-1074",
+                          "id": "t-1090",
                           "type": "text",
                           "content": "Продюсер",
                           "fontFamily": "Roboto",
@@ -841,7 +841,7 @@
                           "width": 140
                         },
                         {
-                          "id": "t-1075",
+                          "id": "t-1091",
                           "type": "text",
                           "content": "Кобры",
                           "fontFamily": "Roboto",
@@ -856,7 +856,7 @@
                           "width": 120
                         },
                         {
-                          "id": "btn-1076",
+                          "id": "btn-1092",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -886,7 +886,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-1077",
+                              "id": "t-1093",
                               "type": "text",
                               "content": "Изменить",
                               "fontFamily": "Roboto",
@@ -904,7 +904,7 @@
                       ]
                     },
                     {
-                      "id": "plain-1084",
+                      "id": "plain-1100",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -917,7 +917,7 @@
                       "alignItems": "center",
                       "children": [
                         {
-                          "id": "t-1079",
+                          "id": "t-1095",
                           "type": "text",
                           "content": "Мария Смирнова",
                           "fontFamily": "Roboto",
@@ -932,7 +932,7 @@
                           "width": 240
                         },
                         {
-                          "id": "t-1080",
+                          "id": "t-1096",
                           "type": "text",
                           "content": "Продюсер",
                           "fontFamily": "Roboto",
@@ -947,7 +947,7 @@
                           "width": 140
                         },
                         {
-                          "id": "t-1081",
+                          "id": "t-1097",
                           "type": "text",
                           "content": "Акулы",
                           "fontFamily": "Roboto",
@@ -962,7 +962,7 @@
                           "width": 120
                         },
                         {
-                          "id": "btn-1082",
+                          "id": "btn-1098",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -992,7 +992,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-1083",
+                              "id": "t-1099",
                               "type": "text",
                               "content": "Изменить",
                               "fontFamily": "Roboto",
@@ -1010,7 +1010,7 @@
                       ]
                     },
                     {
-                      "id": "plain-1090",
+                      "id": "plain-1106",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -1023,7 +1023,7 @@
                       "alignItems": "center",
                       "children": [
                         {
-                          "id": "t-1085",
+                          "id": "t-1101",
                           "type": "text",
                           "content": "Администратор",
                           "fontFamily": "Roboto",
@@ -1038,7 +1038,7 @@
                           "width": 240
                         },
                         {
-                          "id": "t-1086",
+                          "id": "t-1102",
                           "type": "text",
                           "content": "Суперадмин",
                           "fontFamily": "Roboto",
@@ -1053,7 +1053,7 @@
                           "width": 140
                         },
                         {
-                          "id": "t-1087",
+                          "id": "t-1103",
                           "type": "text",
                           "content": "—",
                           "fontFamily": "Roboto",
@@ -1068,7 +1068,7 @@
                           "width": 120
                         },
                         {
-                          "id": "btn-1088",
+                          "id": "btn-1104",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -1098,7 +1098,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-1089",
+                              "id": "t-1105",
                               "type": "text",
                               "content": "Изменить",
                               "fontFamily": "Roboto",
@@ -1116,7 +1116,7 @@
                       ]
                     },
                     {
-                      "id": "plain-1096",
+                      "id": "plain-1112",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -1129,7 +1129,7 @@
                       "alignItems": "center",
                       "children": [
                         {
-                          "id": "t-1091",
+                          "id": "t-1107",
                           "type": "text",
                           "content": "Анна Козлова",
                           "fontFamily": "Roboto",
@@ -1144,7 +1144,7 @@
                           "width": 240
                         },
                         {
-                          "id": "t-1092",
+                          "id": "t-1108",
                           "type": "text",
                           "content": "Участник",
                           "fontFamily": "Roboto",
@@ -1159,7 +1159,7 @@
                           "width": 140
                         },
                         {
-                          "id": "t-1093",
+                          "id": "t-1109",
                           "type": "text",
                           "content": "Кобры",
                           "fontFamily": "Roboto",
@@ -1174,7 +1174,7 @@
                           "width": 120
                         },
                         {
-                          "id": "btn-1094",
+                          "id": "btn-1110",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -1204,7 +1204,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-1095",
+                              "id": "t-1111",
                               "type": "text",
                               "content": "Изменить",
                               "fontFamily": "Roboto",
@@ -1224,7 +1224,7 @@
                   ]
                 },
                 {
-                  "id": "plain-1173",
+                  "id": "plain-1274",
                   "type": "frame",
                   "width": 420,
                   "height": "fit_content",
@@ -1233,7 +1233,7 @@
                   "padding": 0,
                   "children": [
                     {
-                      "id": "box-1132",
+                      "id": "box-1148",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -1258,7 +1258,7 @@
                       "cornerRadius": 6,
                       "children": [
                         {
-                          "id": "t-1098",
+                          "id": "t-1114",
                           "type": "text",
                           "content": "Ачивки (пороги XP)",
                           "fontFamily": "Roboto",
@@ -1272,7 +1272,7 @@
                           ]
                         },
                         {
-                          "id": "plain-1103",
+                          "id": "plain-1119",
                           "type": "frame",
                           "width": "fill_container",
                           "height": "fit_content",
@@ -1285,7 +1285,7 @@
                           "alignItems": "center",
                           "children": [
                             {
-                              "id": "t-1099",
+                              "id": "t-1115",
                               "type": "text",
                               "content": "🌟 Новичок",
                               "fontFamily": "Roboto",
@@ -1300,7 +1300,7 @@
                               "width": "fill_container"
                             },
                             {
-                              "id": "t-1100",
+                              "id": "t-1116",
                               "type": "text",
                               "content": "100 XP",
                               "fontFamily": "Roboto",
@@ -1315,7 +1315,7 @@
                               "width": 70
                             },
                             {
-                              "id": "btn-1101",
+                              "id": "btn-1117",
                               "type": "frame",
                               "role": "button",
                               "width": "fit_content",
@@ -1345,7 +1345,7 @@
                               "cornerRadius": 6,
                               "children": [
                                 {
-                                  "id": "t-1102",
+                                  "id": "t-1118",
                                   "type": "text",
                                   "content": "✎",
                                   "fontFamily": "Roboto",
@@ -1363,7 +1363,7 @@
                           ]
                         },
                         {
-                          "id": "plain-1108",
+                          "id": "plain-1124",
                           "type": "frame",
                           "width": "fill_container",
                           "height": "fit_content",
@@ -1376,7 +1376,7 @@
                           "alignItems": "center",
                           "children": [
                             {
-                              "id": "t-1104",
+                              "id": "t-1120",
                               "type": "text",
                               "content": "🔥 Активист",
                               "fontFamily": "Roboto",
@@ -1391,7 +1391,7 @@
                               "width": "fill_container"
                             },
                             {
-                              "id": "t-1105",
+                              "id": "t-1121",
                               "type": "text",
                               "content": "200 XP",
                               "fontFamily": "Roboto",
@@ -1406,7 +1406,7 @@
                               "width": 70
                             },
                             {
-                              "id": "btn-1106",
+                              "id": "btn-1122",
                               "type": "frame",
                               "role": "button",
                               "width": "fit_content",
@@ -1436,7 +1436,7 @@
                               "cornerRadius": 6,
                               "children": [
                                 {
-                                  "id": "t-1107",
+                                  "id": "t-1123",
                                   "type": "text",
                                   "content": "✎",
                                   "fontFamily": "Roboto",
@@ -1454,7 +1454,7 @@
                           ]
                         },
                         {
-                          "id": "plain-1113",
+                          "id": "plain-1129",
                           "type": "frame",
                           "width": "fill_container",
                           "height": "fit_content",
@@ -1467,7 +1467,7 @@
                           "alignItems": "center",
                           "children": [
                             {
-                              "id": "t-1109",
+                              "id": "t-1125",
                               "type": "text",
                               "content": "💎 Профи",
                               "fontFamily": "Roboto",
@@ -1482,7 +1482,7 @@
                               "width": "fill_container"
                             },
                             {
-                              "id": "t-1110",
+                              "id": "t-1126",
                               "type": "text",
                               "content": "300 XP",
                               "fontFamily": "Roboto",
@@ -1497,7 +1497,7 @@
                               "width": 70
                             },
                             {
-                              "id": "btn-1111",
+                              "id": "btn-1127",
                               "type": "frame",
                               "role": "button",
                               "width": "fit_content",
@@ -1527,7 +1527,7 @@
                               "cornerRadius": 6,
                               "children": [
                                 {
-                                  "id": "t-1112",
+                                  "id": "t-1128",
                                   "type": "text",
                                   "content": "✎",
                                   "fontFamily": "Roboto",
@@ -1545,7 +1545,7 @@
                           ]
                         },
                         {
-                          "id": "plain-1118",
+                          "id": "plain-1134",
                           "type": "frame",
                           "width": "fill_container",
                           "height": "fit_content",
@@ -1558,7 +1558,7 @@
                           "alignItems": "center",
                           "children": [
                             {
-                              "id": "t-1114",
+                              "id": "t-1130",
                               "type": "text",
                               "content": "🏆 Мастер",
                               "fontFamily": "Roboto",
@@ -1573,7 +1573,7 @@
                               "width": "fill_container"
                             },
                             {
-                              "id": "t-1115",
+                              "id": "t-1131",
                               "type": "text",
                               "content": "400 XP",
                               "fontFamily": "Roboto",
@@ -1588,7 +1588,7 @@
                               "width": 70
                             },
                             {
-                              "id": "btn-1116",
+                              "id": "btn-1132",
                               "type": "frame",
                               "role": "button",
                               "width": "fit_content",
@@ -1618,7 +1618,7 @@
                               "cornerRadius": 6,
                               "children": [
                                 {
-                                  "id": "t-1117",
+                                  "id": "t-1133",
                                   "type": "text",
                                   "content": "✎",
                                   "fontFamily": "Roboto",
@@ -1636,7 +1636,7 @@
                           ]
                         },
                         {
-                          "id": "plain-1123",
+                          "id": "plain-1139",
                           "type": "frame",
                           "width": "fill_container",
                           "height": "fit_content",
@@ -1649,7 +1649,7 @@
                           "alignItems": "center",
                           "children": [
                             {
-                              "id": "t-1119",
+                              "id": "t-1135",
                               "type": "text",
                               "content": "👑 Легенда",
                               "fontFamily": "Roboto",
@@ -1664,7 +1664,7 @@
                               "width": "fill_container"
                             },
                             {
-                              "id": "t-1120",
+                              "id": "t-1136",
                               "type": "text",
                               "content": "500 XP",
                               "fontFamily": "Roboto",
@@ -1679,7 +1679,7 @@
                               "width": 70
                             },
                             {
-                              "id": "btn-1121",
+                              "id": "btn-1137",
                               "type": "frame",
                               "role": "button",
                               "width": "fit_content",
@@ -1709,7 +1709,7 @@
                               "cornerRadius": 6,
                               "children": [
                                 {
-                                  "id": "t-1122",
+                                  "id": "t-1138",
                                   "type": "text",
                                   "content": "✎",
                                   "fontFamily": "Roboto",
@@ -1727,7 +1727,7 @@
                           ]
                         },
                         {
-                          "id": "plain-1128",
+                          "id": "plain-1144",
                           "type": "frame",
                           "width": "fill_container",
                           "height": "fit_content",
@@ -1740,7 +1740,7 @@
                           "alignItems": "center",
                           "children": [
                             {
-                              "id": "t-1124",
+                              "id": "t-1140",
                               "type": "text",
                               "content": "😎 Босс",
                               "fontFamily": "Roboto",
@@ -1755,7 +1755,7 @@
                               "width": "fill_container"
                             },
                             {
-                              "id": "t-1125",
+                              "id": "t-1141",
                               "type": "text",
                               "content": "600 XP",
                               "fontFamily": "Roboto",
@@ -1770,7 +1770,7 @@
                               "width": 70
                             },
                             {
-                              "id": "btn-1126",
+                              "id": "btn-1142",
                               "type": "frame",
                               "role": "button",
                               "width": "fit_content",
@@ -1800,7 +1800,7 @@
                               "cornerRadius": 6,
                               "children": [
                                 {
-                                  "id": "t-1127",
+                                  "id": "t-1143",
                                   "type": "text",
                                   "content": "✎",
                                   "fontFamily": "Roboto",
@@ -1818,7 +1818,7 @@
                           ]
                         },
                         {
-                          "id": "div-1129",
+                          "id": "div-1145",
                           "type": "rectangle",
                           "width": "fill_container",
                           "height": 1,
@@ -1830,7 +1830,7 @@
                           ]
                         },
                         {
-                          "id": "btn-1130",
+                          "id": "btn-1146",
                           "type": "frame",
                           "role": "button",
                           "width": "fill_container",
@@ -1860,7 +1860,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-1131",
+                              "id": "t-1147",
                               "type": "text",
                               "content": "+ Добавить ачивку",
                               "fontFamily": "Roboto",
@@ -1878,7 +1878,7 @@
                       ]
                     },
                     {
-                      "id": "box-1156",
+                      "id": "box-1233",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -1903,9 +1903,9 @@
                       "cornerRadius": 6,
                       "children": [
                         {
-                          "id": "t-1133",
+                          "id": "t-1149",
                           "type": "text",
-                          "content": "Настройки рейтинга",
+                          "content": "Причины начислений (каталог)",
                           "fontFamily": "Roboto",
                           "fontSize": 15,
                           "fontWeight": 700,
@@ -1917,207 +1917,9 @@
                           ]
                         },
                         {
-                          "id": "plain-1137",
-                          "type": "frame",
-                          "width": "fill_container",
-                          "height": "fit_content",
-                          "layout": "vertical",
-                          "gap": 6,
-                          "padding": 0,
-                          "children": [
-                            {
-                              "id": "t-1134",
-                              "type": "text",
-                              "content": "ВИДНО УЧАСТНИКОВ В ТОПЕ",
-                              "fontFamily": "Roboto",
-                              "fontSize": 11,
-                              "fontWeight": 400,
-                              "fill": [
-                                {
-                                  "type": "solid",
-                                  "color": "#6C6C72"
-                                }
-                              ]
-                            },
-                            {
-                              "id": "inp-1135",
-                              "type": "frame",
-                              "role": "form-input",
-                              "width": "fill_container",
-                              "height": 36,
-                              "padding": [
-                                8,
-                                12
-                              ],
-                              "layout": "horizontal",
-                              "alignItems": "center",
-                              "fill": [
-                                {
-                                  "type": "solid",
-                                  "color": "#FFFFFF"
-                                }
-                              ],
-                              "stroke": {
-                                "thickness": 1,
-                                "fill": [
-                                  {
-                                    "type": "solid",
-                                    "color": "#D0D0D5"
-                                  }
-                                ]
-                              },
-                              "cornerRadius": 6,
-                              "children": [
-                                {
-                                  "id": "t-1136",
-                                  "type": "text",
-                                  "content": "10",
-                                  "fontFamily": "Roboto",
-                                  "fontSize": 12,
-                                  "fontWeight": 400,
-                                  "fill": [
-                                    {
-                                      "type": "solid",
-                                      "color": "#B0B0B5"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "id": "plain-1147",
-                          "type": "frame",
-                          "width": "fill_container",
-                          "height": "fit_content",
-                          "layout": "vertical",
-                          "gap": 4,
-                          "padding": 0,
-                          "children": [
-                            {
-                              "id": "plain-1140",
-                              "type": "frame",
-                              "width": "fill_container",
-                              "height": "fit_content",
-                              "layout": "horizontal",
-                              "gap": 8,
-                              "padding": 0,
-                              "children": [
-                                {
-                                  "id": "t-1138",
-                                  "type": "text",
-                                  "content": "○",
-                                  "fontFamily": "Roboto",
-                                  "fontSize": 14,
-                                  "fontWeight": 400,
-                                  "fill": [
-                                    {
-                                      "type": "solid",
-                                      "color": "#2C2C2E"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "id": "t-1139",
-                                  "type": "text",
-                                  "content": "10 (по умолчанию)",
-                                  "fontFamily": "Roboto",
-                                  "fontSize": 12,
-                                  "fontWeight": 400,
-                                  "fill": [
-                                    {
-                                      "type": "solid",
-                                      "color": "#2C2C2E"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "id": "plain-1143",
-                              "type": "frame",
-                              "width": "fill_container",
-                              "height": "fit_content",
-                              "layout": "horizontal",
-                              "gap": 8,
-                              "padding": 0,
-                              "children": [
-                                {
-                                  "id": "t-1141",
-                                  "type": "text",
-                                  "content": "◉",
-                                  "fontFamily": "Roboto",
-                                  "fontSize": 14,
-                                  "fontWeight": 400,
-                                  "fill": [
-                                    {
-                                      "type": "solid",
-                                      "color": "#2C2C2E"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "id": "t-1142",
-                                  "type": "text",
-                                  "content": "20",
-                                  "fontFamily": "Roboto",
-                                  "fontSize": 12,
-                                  "fontWeight": 400,
-                                  "fill": [
-                                    {
-                                      "type": "solid",
-                                      "color": "#2C2C2E"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "id": "plain-1146",
-                              "type": "frame",
-                              "width": "fill_container",
-                              "height": "fit_content",
-                              "layout": "horizontal",
-                              "gap": 8,
-                              "padding": 0,
-                              "children": [
-                                {
-                                  "id": "t-1144",
-                                  "type": "text",
-                                  "content": "○",
-                                  "fontFamily": "Roboto",
-                                  "fontSize": 14,
-                                  "fontWeight": 400,
-                                  "fill": [
-                                    {
-                                      "type": "solid",
-                                      "color": "#2C2C2E"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "id": "t-1145",
-                                  "type": "text",
-                                  "content": "Все (без скрытия)",
-                                  "fontFamily": "Roboto",
-                                  "fontSize": 12,
-                                  "fontWeight": 400,
-                                  "fill": [
-                                    {
-                                      "type": "solid",
-                                      "color": "#2C2C2E"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "id": "t-1148",
+                          "id": "t-1150",
                           "type": "text",
-                          "content": "Ниже топа — только место самого пользователя",
+                          "content": "Продюсер выбирает из dropdown при сканировании QR. Начисления не обезличенные.",
                           "fontFamily": "Roboto",
                           "fontSize": 11,
                           "fontWeight": 400,
@@ -2129,148 +1931,21 @@
                           ]
                         },
                         {
-                          "id": "plain-1155",
+                          "id": "plain-1160",
                           "type": "frame",
                           "width": "fill_container",
                           "height": "fit_content",
-                          "layout": "vertical",
-                          "gap": 4,
-                          "padding": 0,
+                          "layout": "horizontal",
+                          "gap": 8,
+                          "padding": [
+                            8,
+                            0
+                          ],
                           "children": [
                             {
-                              "id": "plain-1151",
-                              "type": "frame",
-                              "width": "fill_container",
-                              "height": "fit_content",
-                              "layout": "horizontal",
-                              "gap": 8,
-                              "padding": 0,
-                              "children": [
-                                {
-                                  "id": "t-1149",
-                                  "type": "text",
-                                  "content": "☑",
-                                  "fontFamily": "Roboto",
-                                  "fontSize": 14,
-                                  "fontWeight": 400,
-                                  "fill": [
-                                    {
-                                      "type": "solid",
-                                      "color": "#2C2C2E"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "id": "t-1150",
-                                  "type": "text",
-                                  "content": "Анонимизировать вне топа («Белочка»/эмодзи)",
-                                  "fontFamily": "Roboto",
-                                  "fontSize": 12,
-                                  "fontWeight": 400,
-                                  "fill": [
-                                    {
-                                      "type": "solid",
-                                      "color": "#2C2C2E"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "id": "plain-1154",
-                              "type": "frame",
-                              "width": "fill_container",
-                              "height": "fit_content",
-                              "layout": "horizontal",
-                              "gap": 8,
-                              "padding": 0,
-                              "children": [
-                                {
-                                  "id": "t-1152",
-                                  "type": "text",
-                                  "content": "☐",
-                                  "fontFamily": "Roboto",
-                                  "fontSize": 14,
-                                  "fontWeight": 400,
-                                  "fill": [
-                                    {
-                                      "type": "solid",
-                                      "color": "#2C2C2E"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "id": "t-1153",
-                                  "type": "text",
-                                  "content": "Показывать полные имена всех",
-                                  "fontFamily": "Roboto",
-                                  "fontSize": 12,
-                                  "fontWeight": 400,
-                                  "fill": [
-                                    {
-                                      "type": "solid",
-                                      "color": "#2C2C2E"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "id": "box-1172",
-                      "type": "frame",
-                      "width": "fill_container",
-                      "height": "fit_content",
-                      "layout": "vertical",
-                      "gap": 12,
-                      "padding": 20,
-                      "fill": [
-                        {
-                          "type": "solid",
-                          "color": "#FFFFFF"
-                        }
-                      ],
-                      "stroke": {
-                        "thickness": 1,
-                        "fill": [
-                          {
-                            "type": "solid",
-                            "color": "#D0D0D5"
-                          }
-                        ]
-                      },
-                      "cornerRadius": 6,
-                      "children": [
-                        {
-                          "id": "t-1157",
-                          "type": "text",
-                          "content": "Экспорт в Google Sheets",
-                          "fontFamily": "Roboto",
-                          "fontSize": 15,
-                          "fontWeight": 700,
-                          "fill": [
-                            {
-                              "type": "solid",
-                              "color": "#2C2C2E"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "plain-1161",
-                          "type": "frame",
-                          "width": "fill_container",
-                          "height": "fit_content",
-                          "layout": "vertical",
-                          "gap": 6,
-                          "padding": 0,
-                          "children": [
-                            {
-                              "id": "t-1158",
+                              "id": "t-1151",
                               "type": "text",
-                              "content": "ID ТАБЛИЦЫ",
+                              "content": "НАЗВАНИЕ",
                               "fontFamily": "Roboto",
                               "fontSize": 11,
                               "fontWeight": 400,
@@ -2282,87 +1957,221 @@
                               ]
                             },
                             {
-                              "id": "inp-1159",
-                              "type": "frame",
-                              "role": "form-input",
-                              "width": "fill_container",
-                              "height": 36,
-                              "padding": [
-                                8,
-                                12
-                              ],
-                              "layout": "horizontal",
-                              "alignItems": "center",
+                              "id": "t-1152",
+                              "type": "text",
+                              "content": "",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 400,
                               "fill": [
                                 {
                                   "type": "solid",
-                                  "color": "#FFFFFF"
+                                  "color": "#2C2C2E"
                                 }
                               ],
-                              "stroke": {
-                                "thickness": 1,
-                                "fill": [
-                                  {
-                                    "type": "solid",
-                                    "color": "#D0D0D5"
-                                  }
-                                ]
-                              },
-                              "cornerRadius": 6,
-                              "children": [
+                              "width": 280
+                            },
+                            {
+                              "id": "t-1153",
+                              "type": "text",
+                              "content": "ТИП",
+                              "fontFamily": "Roboto",
+                              "fontSize": 11,
+                              "fontWeight": 400,
+                              "fill": [
                                 {
-                                  "id": "t-1160",
-                                  "type": "text",
-                                  "content": "1AbC...xyz",
-                                  "fontFamily": "Roboto",
-                                  "fontSize": 12,
-                                  "fontWeight": 400,
-                                  "fill": [
-                                    {
-                                      "type": "solid",
-                                      "color": "#B0B0B5"
-                                    }
-                                  ]
+                                  "type": "solid",
+                                  "color": "#6C6C72"
+                                }
+                              ]
+                            },
+                            {
+                              "id": "t-1154",
+                              "type": "text",
+                              "content": "",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 100
+                            },
+                            {
+                              "id": "t-1155",
+                              "type": "text",
+                              "content": "XP ПО УМОЛЧАНИЮ",
+                              "fontFamily": "Roboto",
+                              "fontSize": 11,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#6C6C72"
+                                }
+                              ]
+                            },
+                            {
+                              "id": "t-1156",
+                              "type": "text",
+                              "content": "",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 130
+                            },
+                            {
+                              "id": "t-1157",
+                              "type": "text",
+                              "content": "АКТИВНА",
+                              "fontFamily": "Roboto",
+                              "fontSize": 11,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#6C6C72"
+                                }
+                              ]
+                            },
+                            {
+                              "id": "t-1158",
+                              "type": "text",
+                              "content": "",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 80
+                            },
+                            {
+                              "id": "t-1159",
+                              "type": "text",
+                              "content": "",
+                              "fontFamily": "Roboto",
+                              "fontSize": 11,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#6C6C72"
                                 }
                               ]
                             }
                           ]
                         },
                         {
-                          "id": "plain-1165",
+                          "id": "div-1161",
+                          "type": "rectangle",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": [
+                            {
+                              "type": "solid",
+                              "color": "#D0D0D5"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "plain-1168",
                           "type": "frame",
                           "width": "fill_container",
                           "height": "fit_content",
-                          "layout": "vertical",
-                          "gap": 6,
-                          "padding": 0,
+                          "layout": "horizontal",
+                          "gap": 8,
+                          "padding": [
+                            10,
+                            0
+                          ],
+                          "alignItems": "center",
                           "children": [
                             {
                               "id": "t-1162",
                               "type": "text",
-                              "content": "ЛИСТ",
+                              "content": "Участие в мастер-классе",
                               "fontFamily": "Roboto",
-                              "fontSize": 11,
+                              "fontSize": 13,
                               "fontWeight": 400,
                               "fill": [
                                 {
                                   "type": "solid",
-                                  "color": "#6C6C72"
+                                  "color": "#2C2C2E"
                                 }
-                              ]
+                              ],
+                              "width": 280
                             },
                             {
-                              "id": "inp-1163",
+                              "id": "t-1163",
+                              "type": "text",
+                              "content": "Начисление",
+                              "fontFamily": "Roboto",
+                              "fontSize": 12,
+                              "fontWeight": 600,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 100
+                            },
+                            {
+                              "id": "t-1164",
+                              "type": "text",
+                              "content": "+20",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 700,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 130
+                            },
+                            {
+                              "id": "t-1165",
+                              "type": "text",
+                              "content": "☑",
+                              "fontFamily": "Roboto",
+                              "fontSize": 14,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 80
+                            },
+                            {
+                              "id": "btn-1166",
                               "type": "frame",
-                              "role": "form-input",
-                              "width": "fill_container",
-                              "height": 36,
+                              "role": "button",
+                              "width": "fit_content",
+                              "height": 28,
                               "padding": [
                                 8,
-                                12
+                                16
                               ],
                               "layout": "horizontal",
                               "alignItems": "center",
+                              "justifyContent": "center",
                               "fill": [
                                 {
                                   "type": "solid",
@@ -2381,16 +2190,16 @@
                               "cornerRadius": 6,
                               "children": [
                                 {
-                                  "id": "t-1164",
+                                  "id": "t-1167",
                                   "type": "text",
-                                  "content": "Участники_2026",
+                                  "content": "✎",
                                   "fontFamily": "Roboto",
                                   "fontSize": 12,
-                                  "fontWeight": 400,
+                                  "fontWeight": 600,
                                   "fill": [
                                     {
                                       "type": "solid",
-                                      "color": "#B0B0B5"
+                                      "color": "#2C2C2E"
                                     }
                                   ]
                                 }
@@ -2399,7 +2208,987 @@
                           ]
                         },
                         {
-                          "id": "plain-1170",
+                          "id": "plain-1175",
+                          "type": "frame",
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "layout": "horizontal",
+                          "gap": 8,
+                          "padding": [
+                            10,
+                            0
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "t-1169",
+                              "type": "text",
+                              "content": "Активность на обсуждении",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 280
+                            },
+                            {
+                              "id": "t-1170",
+                              "type": "text",
+                              "content": "Начисление",
+                              "fontFamily": "Roboto",
+                              "fontSize": 12,
+                              "fontWeight": 600,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 100
+                            },
+                            {
+                              "id": "t-1171",
+                              "type": "text",
+                              "content": "+15",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 700,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 130
+                            },
+                            {
+                              "id": "t-1172",
+                              "type": "text",
+                              "content": "☑",
+                              "fontFamily": "Roboto",
+                              "fontSize": 14,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 80
+                            },
+                            {
+                              "id": "btn-1173",
+                              "type": "frame",
+                              "role": "button",
+                              "width": "fit_content",
+                              "height": 28,
+                              "padding": [
+                                8,
+                                16
+                              ],
+                              "layout": "horizontal",
+                              "alignItems": "center",
+                              "justifyContent": "center",
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": [
+                                  {
+                                    "type": "solid",
+                                    "color": "#D0D0D5"
+                                  }
+                                ]
+                              },
+                              "cornerRadius": 6,
+                              "children": [
+                                {
+                                  "id": "t-1174",
+                                  "type": "text",
+                                  "content": "✎",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 600,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "plain-1182",
+                          "type": "frame",
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "layout": "horizontal",
+                          "gap": 8,
+                          "padding": [
+                            10,
+                            0
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "t-1176",
+                              "type": "text",
+                              "content": "Выполнение задания",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 280
+                            },
+                            {
+                              "id": "t-1177",
+                              "type": "text",
+                              "content": "Начисление",
+                              "fontFamily": "Roboto",
+                              "fontSize": 12,
+                              "fontWeight": 600,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 100
+                            },
+                            {
+                              "id": "t-1178",
+                              "type": "text",
+                              "content": "+25",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 700,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 130
+                            },
+                            {
+                              "id": "t-1179",
+                              "type": "text",
+                              "content": "☑",
+                              "fontFamily": "Roboto",
+                              "fontSize": 14,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 80
+                            },
+                            {
+                              "id": "btn-1180",
+                              "type": "frame",
+                              "role": "button",
+                              "width": "fit_content",
+                              "height": 28,
+                              "padding": [
+                                8,
+                                16
+                              ],
+                              "layout": "horizontal",
+                              "alignItems": "center",
+                              "justifyContent": "center",
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": [
+                                  {
+                                    "type": "solid",
+                                    "color": "#D0D0D5"
+                                  }
+                                ]
+                              },
+                              "cornerRadius": 6,
+                              "children": [
+                                {
+                                  "id": "t-1181",
+                                  "type": "text",
+                                  "content": "✎",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 600,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "plain-1189",
+                          "type": "frame",
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "layout": "horizontal",
+                          "gap": 8,
+                          "padding": [
+                            10,
+                            0
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "t-1183",
+                              "type": "text",
+                              "content": "Помощь другим",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 280
+                            },
+                            {
+                              "id": "t-1184",
+                              "type": "text",
+                              "content": "Начисление",
+                              "fontFamily": "Roboto",
+                              "fontSize": 12,
+                              "fontWeight": 600,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 100
+                            },
+                            {
+                              "id": "t-1185",
+                              "type": "text",
+                              "content": "+10",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 700,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 130
+                            },
+                            {
+                              "id": "t-1186",
+                              "type": "text",
+                              "content": "☑",
+                              "fontFamily": "Roboto",
+                              "fontSize": 14,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 80
+                            },
+                            {
+                              "id": "btn-1187",
+                              "type": "frame",
+                              "role": "button",
+                              "width": "fit_content",
+                              "height": 28,
+                              "padding": [
+                                8,
+                                16
+                              ],
+                              "layout": "horizontal",
+                              "alignItems": "center",
+                              "justifyContent": "center",
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": [
+                                  {
+                                    "type": "solid",
+                                    "color": "#D0D0D5"
+                                  }
+                                ]
+                              },
+                              "cornerRadius": 6,
+                              "children": [
+                                {
+                                  "id": "t-1188",
+                                  "type": "text",
+                                  "content": "✎",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 600,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "plain-1196",
+                          "type": "frame",
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "layout": "horizontal",
+                          "gap": 8,
+                          "padding": [
+                            10,
+                            0
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "t-1190",
+                              "type": "text",
+                              "content": "Пунктуальность",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 280
+                            },
+                            {
+                              "id": "t-1191",
+                              "type": "text",
+                              "content": "Начисление",
+                              "fontFamily": "Roboto",
+                              "fontSize": 12,
+                              "fontWeight": 600,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 100
+                            },
+                            {
+                              "id": "t-1192",
+                              "type": "text",
+                              "content": "+10",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 700,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 130
+                            },
+                            {
+                              "id": "t-1193",
+                              "type": "text",
+                              "content": "☑",
+                              "fontFamily": "Roboto",
+                              "fontSize": 14,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 80
+                            },
+                            {
+                              "id": "btn-1194",
+                              "type": "frame",
+                              "role": "button",
+                              "width": "fit_content",
+                              "height": 28,
+                              "padding": [
+                                8,
+                                16
+                              ],
+                              "layout": "horizontal",
+                              "alignItems": "center",
+                              "justifyContent": "center",
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": [
+                                  {
+                                    "type": "solid",
+                                    "color": "#D0D0D5"
+                                  }
+                                ]
+                              },
+                              "cornerRadius": 6,
+                              "children": [
+                                {
+                                  "id": "t-1195",
+                                  "type": "text",
+                                  "content": "✎",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 600,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "plain-1203",
+                          "type": "frame",
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "layout": "horizontal",
+                          "gap": 8,
+                          "padding": [
+                            10,
+                            0
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "t-1197",
+                              "type": "text",
+                              "content": "Лучшая работа дня",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 280
+                            },
+                            {
+                              "id": "t-1198",
+                              "type": "text",
+                              "content": "Начисление",
+                              "fontFamily": "Roboto",
+                              "fontSize": 12,
+                              "fontWeight": 600,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 100
+                            },
+                            {
+                              "id": "t-1199",
+                              "type": "text",
+                              "content": "+50",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 700,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 130
+                            },
+                            {
+                              "id": "t-1200",
+                              "type": "text",
+                              "content": "☑",
+                              "fontFamily": "Roboto",
+                              "fontSize": 14,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 80
+                            },
+                            {
+                              "id": "btn-1201",
+                              "type": "frame",
+                              "role": "button",
+                              "width": "fit_content",
+                              "height": 28,
+                              "padding": [
+                                8,
+                                16
+                              ],
+                              "layout": "horizontal",
+                              "alignItems": "center",
+                              "justifyContent": "center",
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": [
+                                  {
+                                    "type": "solid",
+                                    "color": "#D0D0D5"
+                                  }
+                                ]
+                              },
+                              "cornerRadius": 6,
+                              "children": [
+                                {
+                                  "id": "t-1202",
+                                  "type": "text",
+                                  "content": "✎",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 600,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "plain-1210",
+                          "type": "frame",
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "layout": "horizontal",
+                          "gap": 8,
+                          "padding": [
+                            10,
+                            0
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "t-1204",
+                              "type": "text",
+                              "content": "Опоздание",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 280
+                            },
+                            {
+                              "id": "t-1205",
+                              "type": "text",
+                              "content": "Штраф",
+                              "fontFamily": "Roboto",
+                              "fontSize": 12,
+                              "fontWeight": 600,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#B0362C"
+                                }
+                              ],
+                              "width": 100
+                            },
+                            {
+                              "id": "t-1206",
+                              "type": "text",
+                              "content": "−10",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 700,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#B0362C"
+                                }
+                              ],
+                              "width": 130
+                            },
+                            {
+                              "id": "t-1207",
+                              "type": "text",
+                              "content": "☑",
+                              "fontFamily": "Roboto",
+                              "fontSize": 14,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 80
+                            },
+                            {
+                              "id": "btn-1208",
+                              "type": "frame",
+                              "role": "button",
+                              "width": "fit_content",
+                              "height": 28,
+                              "padding": [
+                                8,
+                                16
+                              ],
+                              "layout": "horizontal",
+                              "alignItems": "center",
+                              "justifyContent": "center",
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": [
+                                  {
+                                    "type": "solid",
+                                    "color": "#D0D0D5"
+                                  }
+                                ]
+                              },
+                              "cornerRadius": 6,
+                              "children": [
+                                {
+                                  "id": "t-1209",
+                                  "type": "text",
+                                  "content": "✎",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 600,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "plain-1217",
+                          "type": "frame",
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "layout": "horizontal",
+                          "gap": 8,
+                          "padding": [
+                            10,
+                            0
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "t-1211",
+                              "type": "text",
+                              "content": "Нарушение правил",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 280
+                            },
+                            {
+                              "id": "t-1212",
+                              "type": "text",
+                              "content": "Штраф",
+                              "fontFamily": "Roboto",
+                              "fontSize": 12,
+                              "fontWeight": 600,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#B0362C"
+                                }
+                              ],
+                              "width": 100
+                            },
+                            {
+                              "id": "t-1213",
+                              "type": "text",
+                              "content": "−15",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 700,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#B0362C"
+                                }
+                              ],
+                              "width": 130
+                            },
+                            {
+                              "id": "t-1214",
+                              "type": "text",
+                              "content": "☑",
+                              "fontFamily": "Roboto",
+                              "fontSize": 14,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 80
+                            },
+                            {
+                              "id": "btn-1215",
+                              "type": "frame",
+                              "role": "button",
+                              "width": "fit_content",
+                              "height": 28,
+                              "padding": [
+                                8,
+                                16
+                              ],
+                              "layout": "horizontal",
+                              "alignItems": "center",
+                              "justifyContent": "center",
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": [
+                                  {
+                                    "type": "solid",
+                                    "color": "#D0D0D5"
+                                  }
+                                ]
+                              },
+                              "cornerRadius": 6,
+                              "children": [
+                                {
+                                  "id": "t-1216",
+                                  "type": "text",
+                                  "content": "✎",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 600,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "plain-1224",
+                          "type": "frame",
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "layout": "horizontal",
+                          "gap": 8,
+                          "padding": [
+                            10,
+                            0
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "t-1218",
+                              "type": "text",
+                              "content": "Пропуск активности",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 280
+                            },
+                            {
+                              "id": "t-1219",
+                              "type": "text",
+                              "content": "Штраф",
+                              "fontFamily": "Roboto",
+                              "fontSize": 12,
+                              "fontWeight": 600,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#B0362C"
+                                }
+                              ],
+                              "width": 100
+                            },
+                            {
+                              "id": "t-1220",
+                              "type": "text",
+                              "content": "−20",
+                              "fontFamily": "Roboto",
+                              "fontSize": 13,
+                              "fontWeight": 700,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#B0362C"
+                                }
+                              ],
+                              "width": 130
+                            },
+                            {
+                              "id": "t-1221",
+                              "type": "text",
+                              "content": "☑",
+                              "fontFamily": "Roboto",
+                              "fontSize": 14,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#2C2C2E"
+                                }
+                              ],
+                              "width": 80
+                            },
+                            {
+                              "id": "btn-1222",
+                              "type": "frame",
+                              "role": "button",
+                              "width": "fit_content",
+                              "height": 28,
+                              "padding": [
+                                8,
+                                16
+                              ],
+                              "layout": "horizontal",
+                              "alignItems": "center",
+                              "justifyContent": "center",
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": [
+                                  {
+                                    "type": "solid",
+                                    "color": "#D0D0D5"
+                                  }
+                                ]
+                              },
+                              "cornerRadius": 6,
+                              "children": [
+                                {
+                                  "id": "t-1223",
+                                  "type": "text",
+                                  "content": "✎",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 600,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "div-1225",
+                          "type": "rectangle",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": [
+                            {
+                              "type": "solid",
+                              "color": "#D0D0D5"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "plain-1232",
                           "type": "frame",
                           "width": "fill_container",
                           "height": "fit_content",
@@ -2408,7 +3197,53 @@
                           "padding": 0,
                           "children": [
                             {
-                              "id": "btn-1166",
+                              "id": "btn-1226",
+                              "type": "frame",
+                              "role": "button",
+                              "width": "fill_container",
+                              "height": 36,
+                              "padding": [
+                                8,
+                                16
+                              ],
+                              "layout": "horizontal",
+                              "alignItems": "center",
+                              "justifyContent": "center",
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": [
+                                  {
+                                    "type": "solid",
+                                    "color": "#D0D0D5"
+                                  }
+                                ]
+                              },
+                              "cornerRadius": 6,
+                              "children": [
+                                {
+                                  "id": "t-1227",
+                                  "type": "text",
+                                  "content": "+ Добавить причину",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 600,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "btn-1228",
                               "type": "frame",
                               "role": "button",
                               "width": "fit_content",
@@ -2438,7 +3273,633 @@
                               "cornerRadius": 6,
                               "children": [
                                 {
-                                  "id": "t-1167",
+                                  "id": "t-1229",
+                                  "type": "text",
+                                  "content": "Импорт из шаблона",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 600,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "btn-1230",
+                              "type": "frame",
+                              "role": "button",
+                              "width": "fit_content",
+                              "height": 36,
+                              "padding": [
+                                8,
+                                16
+                              ],
+                              "layout": "horizontal",
+                              "alignItems": "center",
+                              "justifyContent": "center",
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": [
+                                  {
+                                    "type": "solid",
+                                    "color": "#D0D0D5"
+                                  }
+                                ]
+                              },
+                              "cornerRadius": 6,
+                              "children": [
+                                {
+                                  "id": "t-1231",
+                                  "type": "text",
+                                  "content": "Сохранить порядок",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 600,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "box-1257",
+                      "type": "frame",
+                      "width": "fill_container",
+                      "height": "fit_content",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 20,
+                      "fill": [
+                        {
+                          "type": "solid",
+                          "color": "#FFFFFF"
+                        }
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": [
+                          {
+                            "type": "solid",
+                            "color": "#D0D0D5"
+                          }
+                        ]
+                      },
+                      "cornerRadius": 6,
+                      "children": [
+                        {
+                          "id": "t-1234",
+                          "type": "text",
+                          "content": "Настройки рейтинга",
+                          "fontFamily": "Roboto",
+                          "fontSize": 15,
+                          "fontWeight": 700,
+                          "fill": [
+                            {
+                              "type": "solid",
+                              "color": "#2C2C2E"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "plain-1238",
+                          "type": "frame",
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "layout": "vertical",
+                          "gap": 6,
+                          "padding": 0,
+                          "children": [
+                            {
+                              "id": "t-1235",
+                              "type": "text",
+                              "content": "ВИДНО УЧАСТНИКОВ В ТОПЕ",
+                              "fontFamily": "Roboto",
+                              "fontSize": 11,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#6C6C72"
+                                }
+                              ]
+                            },
+                            {
+                              "id": "inp-1236",
+                              "type": "frame",
+                              "role": "form-input",
+                              "width": "fill_container",
+                              "height": 36,
+                              "padding": [
+                                8,
+                                12
+                              ],
+                              "layout": "horizontal",
+                              "alignItems": "center",
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": [
+                                  {
+                                    "type": "solid",
+                                    "color": "#D0D0D5"
+                                  }
+                                ]
+                              },
+                              "cornerRadius": 6,
+                              "children": [
+                                {
+                                  "id": "t-1237",
+                                  "type": "text",
+                                  "content": "10",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 400,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#B0B0B5"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "plain-1248",
+                          "type": "frame",
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": 0,
+                          "children": [
+                            {
+                              "id": "plain-1241",
+                              "type": "frame",
+                              "width": "fill_container",
+                              "height": "fit_content",
+                              "layout": "horizontal",
+                              "gap": 8,
+                              "padding": 0,
+                              "children": [
+                                {
+                                  "id": "t-1239",
+                                  "type": "text",
+                                  "content": "○",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 14,
+                                  "fontWeight": 400,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "t-1240",
+                                  "type": "text",
+                                  "content": "10 (по умолчанию)",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 400,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "plain-1244",
+                              "type": "frame",
+                              "width": "fill_container",
+                              "height": "fit_content",
+                              "layout": "horizontal",
+                              "gap": 8,
+                              "padding": 0,
+                              "children": [
+                                {
+                                  "id": "t-1242",
+                                  "type": "text",
+                                  "content": "◉",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 14,
+                                  "fontWeight": 400,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "t-1243",
+                                  "type": "text",
+                                  "content": "20",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 400,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "plain-1247",
+                              "type": "frame",
+                              "width": "fill_container",
+                              "height": "fit_content",
+                              "layout": "horizontal",
+                              "gap": 8,
+                              "padding": 0,
+                              "children": [
+                                {
+                                  "id": "t-1245",
+                                  "type": "text",
+                                  "content": "○",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 14,
+                                  "fontWeight": 400,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "t-1246",
+                                  "type": "text",
+                                  "content": "Все (без скрытия)",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 400,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "t-1249",
+                          "type": "text",
+                          "content": "Ниже топа — только место самого пользователя",
+                          "fontFamily": "Roboto",
+                          "fontSize": 11,
+                          "fontWeight": 400,
+                          "fill": [
+                            {
+                              "type": "solid",
+                              "color": "#6C6C72"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "plain-1256",
+                          "type": "frame",
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": 0,
+                          "children": [
+                            {
+                              "id": "plain-1252",
+                              "type": "frame",
+                              "width": "fill_container",
+                              "height": "fit_content",
+                              "layout": "horizontal",
+                              "gap": 8,
+                              "padding": 0,
+                              "children": [
+                                {
+                                  "id": "t-1250",
+                                  "type": "text",
+                                  "content": "☑",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 14,
+                                  "fontWeight": 400,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "t-1251",
+                                  "type": "text",
+                                  "content": "Анонимизировать вне топа («Белочка»/эмодзи)",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 400,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "plain-1255",
+                              "type": "frame",
+                              "width": "fill_container",
+                              "height": "fit_content",
+                              "layout": "horizontal",
+                              "gap": 8,
+                              "padding": 0,
+                              "children": [
+                                {
+                                  "id": "t-1253",
+                                  "type": "text",
+                                  "content": "☐",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 14,
+                                  "fontWeight": 400,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "t-1254",
+                                  "type": "text",
+                                  "content": "Показывать полные имена всех",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 400,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#2C2C2E"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "box-1273",
+                      "type": "frame",
+                      "width": "fill_container",
+                      "height": "fit_content",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 20,
+                      "fill": [
+                        {
+                          "type": "solid",
+                          "color": "#FFFFFF"
+                        }
+                      ],
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": [
+                          {
+                            "type": "solid",
+                            "color": "#D0D0D5"
+                          }
+                        ]
+                      },
+                      "cornerRadius": 6,
+                      "children": [
+                        {
+                          "id": "t-1258",
+                          "type": "text",
+                          "content": "Экспорт в Google Sheets",
+                          "fontFamily": "Roboto",
+                          "fontSize": 15,
+                          "fontWeight": 700,
+                          "fill": [
+                            {
+                              "type": "solid",
+                              "color": "#2C2C2E"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "plain-1262",
+                          "type": "frame",
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "layout": "vertical",
+                          "gap": 6,
+                          "padding": 0,
+                          "children": [
+                            {
+                              "id": "t-1259",
+                              "type": "text",
+                              "content": "ID ТАБЛИЦЫ",
+                              "fontFamily": "Roboto",
+                              "fontSize": 11,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#6C6C72"
+                                }
+                              ]
+                            },
+                            {
+                              "id": "inp-1260",
+                              "type": "frame",
+                              "role": "form-input",
+                              "width": "fill_container",
+                              "height": 36,
+                              "padding": [
+                                8,
+                                12
+                              ],
+                              "layout": "horizontal",
+                              "alignItems": "center",
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": [
+                                  {
+                                    "type": "solid",
+                                    "color": "#D0D0D5"
+                                  }
+                                ]
+                              },
+                              "cornerRadius": 6,
+                              "children": [
+                                {
+                                  "id": "t-1261",
+                                  "type": "text",
+                                  "content": "1AbC...xyz",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 400,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#B0B0B5"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "plain-1266",
+                          "type": "frame",
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "layout": "vertical",
+                          "gap": 6,
+                          "padding": 0,
+                          "children": [
+                            {
+                              "id": "t-1263",
+                              "type": "text",
+                              "content": "ЛИСТ",
+                              "fontFamily": "Roboto",
+                              "fontSize": 11,
+                              "fontWeight": 400,
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#6C6C72"
+                                }
+                              ]
+                            },
+                            {
+                              "id": "inp-1264",
+                              "type": "frame",
+                              "role": "form-input",
+                              "width": "fill_container",
+                              "height": 36,
+                              "padding": [
+                                8,
+                                12
+                              ],
+                              "layout": "horizontal",
+                              "alignItems": "center",
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": [
+                                  {
+                                    "type": "solid",
+                                    "color": "#D0D0D5"
+                                  }
+                                ]
+                              },
+                              "cornerRadius": 6,
+                              "children": [
+                                {
+                                  "id": "t-1265",
+                                  "type": "text",
+                                  "content": "Участники_2026",
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12,
+                                  "fontWeight": 400,
+                                  "fill": [
+                                    {
+                                      "type": "solid",
+                                      "color": "#B0B0B5"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "plain-1271",
+                          "type": "frame",
+                          "width": "fill_container",
+                          "height": "fit_content",
+                          "layout": "horizontal",
+                          "gap": 8,
+                          "padding": 0,
+                          "children": [
+                            {
+                              "id": "btn-1267",
+                              "type": "frame",
+                              "role": "button",
+                              "width": "fit_content",
+                              "height": 36,
+                              "padding": [
+                                8,
+                                16
+                              ],
+                              "layout": "horizontal",
+                              "alignItems": "center",
+                              "justifyContent": "center",
+                              "fill": [
+                                {
+                                  "type": "solid",
+                                  "color": "#FFFFFF"
+                                }
+                              ],
+                              "stroke": {
+                                "thickness": 1,
+                                "fill": [
+                                  {
+                                    "type": "solid",
+                                    "color": "#D0D0D5"
+                                  }
+                                ]
+                              },
+                              "cornerRadius": 6,
+                              "children": [
+                                {
+                                  "id": "t-1268",
                                   "type": "text",
                                   "content": "Проверить связь",
                                   "fontFamily": "Roboto",
@@ -2454,7 +3915,7 @@
                               ]
                             },
                             {
-                              "id": "btn-1168",
+                              "id": "btn-1269",
                               "type": "frame",
                               "role": "button",
                               "width": "fit_content",
@@ -2484,7 +3945,7 @@
                               "cornerRadius": 6,
                               "children": [
                                 {
-                                  "id": "t-1169",
+                                  "id": "t-1270",
                                   "type": "text",
                                   "content": "Выгрузить сейчас",
                                   "fontFamily": "Roboto",
@@ -2502,7 +3963,7 @@
                           ]
                         },
                         {
-                          "id": "t-1171",
+                          "id": "t-1272",
                           "type": "text",
                           "content": "Последняя выгрузка: 14.06 09:30",
                           "fontFamily": "Roboto",

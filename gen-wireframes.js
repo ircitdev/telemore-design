@@ -448,14 +448,23 @@ const A2 = () => screen('A2. Сканер QR', 1, [
             ]})
           ]})
         ]}),
+        sub('ЗА ЧТО'),
+        plain({ layout: 'horizontal', gap: 8, children: [
+          input('▾  Мастер-класс: Монтаж'),
+          btn('Редактировать причины')
+        ]}),
+        sub('БЫСТРЫЕ ПРИЧИНЫ'),
+        plain({ layout: 'horizontal', gap: 8, children: [
+          btn('Участие (+20)'), btn('Активность (+15)'), btn('Задание (+25)'), btn('Лучший (+50)')
+        ]}),
         sub('БЫСТРОЕ НАЧИСЛЕНИЕ'),
         plain({ layout: 'horizontal', gap: 8, children: [
           btn('+10'), btn('+15'), btn('+20'), btn('+25')
         ]}),
-        sub('СВОБОДНАЯ СУММА'),
+        sub('СВОБОДНЫЙ ВВОД (если причины не хватило)'),
         plain({ layout: 'horizontal', gap: 8, children: [
           input('Введите сумму'),
-          input('Причина начисления')
+          input('Своя причина')
         ]}),
         divider(),
         sub('ДЕЙСТВИЕ'),
@@ -583,9 +592,14 @@ const A4 = () => screen('A4. Карточка участника', 2, [
         ]}),
         box({ padding: 20, children: [
           hdg('История транзакций', 15),
-          ...[['+20', '14 июня 14:32', 'Мастер-класс: Монтаж', 'Иван П.', false], ['+15', '14 июня 13:00', 'Чек-ин: Обед', 'Мария С.', false], ['+10', '13 июня 19:05', 'Чек-ин: Ужин', 'Алексей Б.', false], ['-10', '13 июня 13:15', 'Опоздание', 'Иван П.', true], ['+100', '12 июня 18:00', 'Регистрация', 'Система', false]]
-            .map(([s, d, r, a, canRevert]) => plain({ layout: 'horizontal', padding: [8, 0], gap: 12, alignItems: 'center', children: [
-              text(s, { size: 13, weight: 700, width: 50, color: s.startsWith('-') ? COLORS.danger : COLORS.text }),
+          ...[
+          ['+20', '14 июня 14:32', 'Участие в мастер-классе', 'Иван П.', false],
+          ['+15', '14 июня 13:00', 'Пунктуальность', 'Мария С.', false],
+          ['+10', '13 июня 19:05', 'Чек-ин: Ужин (авто)', 'Алексей Б.', false],
+          ['−10', '13 июня 13:15', 'Опоздание', 'Иван П.', true],
+          ['+100', '12 июня 18:00', 'Регистрация', 'Система', false]
+        ].map(([s, d, r, a, canRevert]) => plain({ layout: 'horizontal', padding: [8, 0], gap: 12, alignItems: 'center', children: [
+              text(s, { size: 13, weight: 700, width: 50, color: s.startsWith('−') || s.startsWith('-') ? COLORS.danger : COLORS.text }),
               sub(d, 11), text('', { width: 16 }),
               text(r, { size: 12, width: 'fill_container' }),
               sub(a, 11),
@@ -859,6 +873,41 @@ const A10 = () => screenSuper('A10. Роли и Ачивки', 1, [
             ]})),
           divider(),
           btn('+ Добавить ачивку', { w: 'fill_container' })
+        ]}),
+        box({ padding: 20, children: [
+          hdg('Причины начислений (каталог)', 15),
+          sub('Продюсер выбирает из dropdown при сканировании QR. Начисления не обезличенные.'),
+          plain({ layout: 'horizontal', padding: [8, 0], children: [
+            sub('НАЗВАНИЕ', 11), text('', { width: 280 }),
+            sub('ТИП', 11), text('', { width: 100 }),
+            sub('XP ПО УМОЛЧАНИЮ', 11), text('', { width: 130 }),
+            sub('АКТИВНА', 11), text('', { width: 80 }),
+            sub('', 11)
+          ]}),
+          divider(),
+          ...[
+            ['Участие в мастер-классе', 'Начисление', '+20'],
+            ['Активность на обсуждении', 'Начисление', '+15'],
+            ['Выполнение задания',      'Начисление', '+25'],
+            ['Помощь другим',           'Начисление', '+10'],
+            ['Пунктуальность',          'Начисление', '+10'],
+            ['Лучшая работа дня',       'Начисление', '+50'],
+            ['Опоздание',               'Штраф',      '−10'],
+            ['Нарушение правил',        'Штраф',      '−15'],
+            ['Пропуск активности',      'Штраф',      '−20']
+          ].map(([name, type, xp]) => plain({ layout: 'horizontal', padding: [10, 0], alignItems: 'center', children: [
+            text(name, { size: 13, width: 280 }),
+            text(type, { size: 12, weight: 600, width: 100, color: type === 'Штраф' ? COLORS.danger : COLORS.text }),
+            text(xp, { size: 13, weight: 700, width: 130, color: xp.startsWith('−') ? COLORS.danger : COLORS.text }),
+            text('☑', { size: 14, width: 80 }),
+            btn('✎', { h: 28 })
+          ]})),
+          divider(),
+          plain({ layout: 'horizontal', gap: 8, children: [
+            btn('+ Добавить причину', { w: 'fill_container' }),
+            btn('Импорт из шаблона'),
+            btn('Сохранить порядок')
+          ]})
         ]}),
         box({ padding: 20, children: [
           hdg('Настройки рейтинга', 15),
