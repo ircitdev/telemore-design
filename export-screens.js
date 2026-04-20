@@ -145,7 +145,7 @@ function renderNode(node, isRoot = false, parentLayout = 'none') {
 
   if (type === 'text') {
     const ts = {};
-    if (node.fontFamily) ts['font-family'] = `"${node.fontFamily}", Roboto, sans-serif`;
+    if (node.fontFamily) ts['font-family'] = `'${node.fontFamily}', Roboto, sans-serif`;
     if (node.fontSize) ts['font-size'] = node.fontSize + 'px';
     if (node.fontWeight) ts['font-weight'] = node.fontWeight;
     if (node.fontStyle) ts['font-style'] = node.fontStyle;
@@ -212,11 +212,17 @@ function renderNode(node, isRoot = false, parentLayout = 'none') {
 /** Обернуть в целую HTML-страницу */
 function wrapHtml(rootNode, width, height) {
   const content = renderNode(rootNode, true, 'none');
+  // Fallback stacks: если Pricedown не установлен, берётся Impact/Oswald
   return `<!DOCTYPE html><html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  html,body{width:${width}px;height:${height}px;overflow:hidden;background:#000;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#fff;}
+  html,body{width:${width}px;height:${height}px;overflow:hidden;background:#000;font-family:Roboto,-apple-system,BlinkMacSystemFont,sans-serif;color:#fff;}
   body > div{width:${width}px;height:${height}px;}
+  /* Fallback для Pricedown — Impact с небольшой растяжкой */
+  div[style*="Pricedown"]{font-family:Impact,Oswald,'Arial Black',sans-serif !important;font-stretch:condensed;letter-spacing:2px !important;}
 </style>
 </head><body>${content}</body></html>`;
 }
@@ -250,7 +256,9 @@ async function main() {
       deviceScaleFactor: SCALE
     });
     await pg.setContent(wrapHtml(root, W, H), { waitUntil: 'domcontentloaded', timeout: 15000 });
-    await new Promise(r => setTimeout(r, 200));
+    // Ждём загрузку шрифтов (Google Fonts / сеть)
+    await pg.evaluate(() => document.fonts.ready);
+    await new Promise(r => setTimeout(r, 400));
 
     // Безопасное имя файла
     const safeName = page.name
