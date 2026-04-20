@@ -346,6 +346,16 @@
             },
             {"id":"sme","type":"text","role":"label","content":"150","fontFamily":"Pricedown","fontSize":24,"fill":[{"type":"solid","color":"#FF00AA"}]}
           ]
+        },
+        {
+          "id": "rate-deep-hint",
+          "type": "text",
+          "role": "caption",
+          "content": "Если ты ниже половины списка — показываем только баллы без места. При равных баллах выше тот, у кого была самая свежая активность.",
+          "fontSize": 10,
+          "fill": [{"type":"solid","color":"rgba(255,255,255,0.5)"}],
+          "textAlign": "center",
+          "textGrowth": "fixed-width"
         }
       ]
     }

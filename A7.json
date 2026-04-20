@@ -1,5 +1,5 @@
 {
-  "id": "root-768",
+  "id": "root-784",
   "type": "frame",
   "name": "A7. Уведомления",
   "width": 1280,
@@ -16,7 +16,7 @@
   "clipContent": true,
   "children": [
     {
-      "id": "sb-769",
+      "id": "sb-785",
       "type": "frame",
       "name": "Sidebar",
       "width": 220,
@@ -41,7 +41,7 @@
       },
       "children": [
         {
-          "id": "plain-773",
+          "id": "plain-789",
           "type": "frame",
           "width": "fill_container",
           "height": "fit_content",
@@ -54,7 +54,7 @@
           "alignItems": "center",
           "children": [
             {
-              "id": "ph-770",
+              "id": "ph-786",
               "type": "frame",
               "width": 28,
               "height": 28,
@@ -79,7 +79,7 @@
               "cornerRadius": 6,
               "children": [
                 {
-                  "id": "t-771",
+                  "id": "t-787",
                   "type": "text",
                   "content": "LOGO",
                   "fontFamily": "Roboto",
@@ -95,7 +95,7 @@
               ]
             },
             {
-              "id": "t-772",
+              "id": "t-788",
               "type": "text",
               "content": "ТЕЛЕМОРЕ",
               "fontFamily": "Roboto",
@@ -111,7 +111,7 @@
           ]
         },
         {
-          "id": "div-774",
+          "id": "div-790",
           "type": "rectangle",
           "width": "fill_container",
           "height": 1,
@@ -123,7 +123,7 @@
           ]
         },
         {
-          "id": "t-775",
+          "id": "t-791",
           "type": "text",
           "content": "МЕНЮ",
           "fontFamily": "Roboto",
@@ -133,277 +133,6 @@
             {
               "type": "solid",
               "color": "#6C6C72"
-            }
-          ]
-        },
-        {
-          "id": "nav-776",
-          "type": "frame",
-          "width": "fill_container",
-          "height": 36,
-          "padding": [
-            8,
-            12
-          ],
-          "layout": "horizontal",
-          "alignItems": "center",
-          "fill": [
-            {
-              "type": "solid",
-              "color": "#00000000"
-            }
-          ],
-          "cornerRadius": 6,
-          "children": [
-            {
-              "id": "t-777",
-              "type": "text",
-              "content": "Dashboard",
-              "fontFamily": "Roboto",
-              "fontSize": 13,
-              "fontWeight": 400,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#6C6C72"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "nav-778",
-          "type": "frame",
-          "width": "fill_container",
-          "height": 36,
-          "padding": [
-            8,
-            12
-          ],
-          "layout": "horizontal",
-          "alignItems": "center",
-          "fill": [
-            {
-              "type": "solid",
-              "color": "#00000000"
-            }
-          ],
-          "cornerRadius": 6,
-          "children": [
-            {
-              "id": "t-779",
-              "type": "text",
-              "content": "Сканер QR",
-              "fontFamily": "Roboto",
-              "fontSize": 13,
-              "fontWeight": 400,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#6C6C72"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "nav-780",
-          "type": "frame",
-          "width": "fill_container",
-          "height": 36,
-          "padding": [
-            8,
-            12
-          ],
-          "layout": "horizontal",
-          "alignItems": "center",
-          "fill": [
-            {
-              "type": "solid",
-              "color": "#00000000"
-            }
-          ],
-          "cornerRadius": 6,
-          "children": [
-            {
-              "id": "t-781",
-              "type": "text",
-              "content": "Участники",
-              "fontFamily": "Roboto",
-              "fontSize": 13,
-              "fontWeight": 400,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#6C6C72"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "nav-782",
-          "type": "frame",
-          "width": "fill_container",
-          "height": 36,
-          "padding": [
-            8,
-            12
-          ],
-          "layout": "horizontal",
-          "alignItems": "center",
-          "fill": [
-            {
-              "type": "solid",
-              "color": "#00000000"
-            }
-          ],
-          "cornerRadius": 6,
-          "children": [
-            {
-              "id": "t-783",
-              "type": "text",
-              "content": "События",
-              "fontFamily": "Roboto",
-              "fontSize": 13,
-              "fontWeight": 400,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#6C6C72"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "nav-784",
-          "type": "frame",
-          "width": "fill_container",
-          "height": 36,
-          "padding": [
-            8,
-            12
-          ],
-          "layout": "horizontal",
-          "alignItems": "center",
-          "fill": [
-            {
-              "type": "solid",
-              "color": "#EAEAEE"
-            }
-          ],
-          "cornerRadius": 6,
-          "children": [
-            {
-              "id": "t-785",
-              "type": "text",
-              "content": "Уведомления",
-              "fontFamily": "Roboto",
-              "fontSize": 13,
-              "fontWeight": 600,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#2C2C2E"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "nav-786",
-          "type": "frame",
-          "width": "fill_container",
-          "height": 36,
-          "padding": [
-            8,
-            12
-          ],
-          "layout": "horizontal",
-          "alignItems": "center",
-          "fill": [
-            {
-              "type": "solid",
-              "color": "#00000000"
-            }
-          ],
-          "cornerRadius": 6,
-          "children": [
-            {
-              "id": "t-787",
-              "type": "text",
-              "content": "План дня",
-              "fontFamily": "Roboto",
-              "fontSize": 13,
-              "fontWeight": 400,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#6C6C72"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "div-788",
-          "type": "rectangle",
-          "width": "fill_container",
-          "height": 1,
-          "fill": [
-            {
-              "type": "solid",
-              "color": "#D0D0D5"
-            }
-          ]
-        },
-        {
-          "id": "t-789",
-          "type": "text",
-          "content": "АККАУНТ",
-          "fontFamily": "Roboto",
-          "fontSize": 11,
-          "fontWeight": 400,
-          "fill": [
-            {
-              "type": "solid",
-              "color": "#6C6C72"
-            }
-          ]
-        },
-        {
-          "id": "nav-790",
-          "type": "frame",
-          "width": "fill_container",
-          "height": 36,
-          "padding": [
-            8,
-            12
-          ],
-          "layout": "horizontal",
-          "alignItems": "center",
-          "fill": [
-            {
-              "type": "solid",
-              "color": "#00000000"
-            }
-          ],
-          "cornerRadius": 6,
-          "children": [
-            {
-              "id": "t-791",
-              "type": "text",
-              "content": "Профиль",
-              "fontFamily": "Roboto",
-              "fontSize": 13,
-              "fontWeight": 400,
-              "fill": [
-                {
-                  "type": "solid",
-                  "color": "#6C6C72"
-                }
-              ]
             }
           ]
         },
@@ -429,6 +158,277 @@
             {
               "id": "t-793",
               "type": "text",
+              "content": "Dashboard",
+              "fontFamily": "Roboto",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#6C6C72"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nav-794",
+          "type": "frame",
+          "width": "fill_container",
+          "height": 36,
+          "padding": [
+            8,
+            12
+          ],
+          "layout": "horizontal",
+          "alignItems": "center",
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#00000000"
+            }
+          ],
+          "cornerRadius": 6,
+          "children": [
+            {
+              "id": "t-795",
+              "type": "text",
+              "content": "Сканер QR",
+              "fontFamily": "Roboto",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#6C6C72"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nav-796",
+          "type": "frame",
+          "width": "fill_container",
+          "height": 36,
+          "padding": [
+            8,
+            12
+          ],
+          "layout": "horizontal",
+          "alignItems": "center",
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#00000000"
+            }
+          ],
+          "cornerRadius": 6,
+          "children": [
+            {
+              "id": "t-797",
+              "type": "text",
+              "content": "Участники",
+              "fontFamily": "Roboto",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#6C6C72"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nav-798",
+          "type": "frame",
+          "width": "fill_container",
+          "height": 36,
+          "padding": [
+            8,
+            12
+          ],
+          "layout": "horizontal",
+          "alignItems": "center",
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#00000000"
+            }
+          ],
+          "cornerRadius": 6,
+          "children": [
+            {
+              "id": "t-799",
+              "type": "text",
+              "content": "События",
+              "fontFamily": "Roboto",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#6C6C72"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nav-800",
+          "type": "frame",
+          "width": "fill_container",
+          "height": 36,
+          "padding": [
+            8,
+            12
+          ],
+          "layout": "horizontal",
+          "alignItems": "center",
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#EAEAEE"
+            }
+          ],
+          "cornerRadius": 6,
+          "children": [
+            {
+              "id": "t-801",
+              "type": "text",
+              "content": "Уведомления",
+              "fontFamily": "Roboto",
+              "fontSize": 13,
+              "fontWeight": 600,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#2C2C2E"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nav-802",
+          "type": "frame",
+          "width": "fill_container",
+          "height": 36,
+          "padding": [
+            8,
+            12
+          ],
+          "layout": "horizontal",
+          "alignItems": "center",
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#00000000"
+            }
+          ],
+          "cornerRadius": 6,
+          "children": [
+            {
+              "id": "t-803",
+              "type": "text",
+              "content": "План дня",
+              "fontFamily": "Roboto",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#6C6C72"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "div-804",
+          "type": "rectangle",
+          "width": "fill_container",
+          "height": 1,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#D0D0D5"
+            }
+          ]
+        },
+        {
+          "id": "t-805",
+          "type": "text",
+          "content": "АККАУНТ",
+          "fontFamily": "Roboto",
+          "fontSize": 11,
+          "fontWeight": 400,
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#6C6C72"
+            }
+          ]
+        },
+        {
+          "id": "nav-806",
+          "type": "frame",
+          "width": "fill_container",
+          "height": 36,
+          "padding": [
+            8,
+            12
+          ],
+          "layout": "horizontal",
+          "alignItems": "center",
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#00000000"
+            }
+          ],
+          "cornerRadius": 6,
+          "children": [
+            {
+              "id": "t-807",
+              "type": "text",
+              "content": "Профиль",
+              "fontFamily": "Roboto",
+              "fontSize": 13,
+              "fontWeight": 400,
+              "fill": [
+                {
+                  "type": "solid",
+                  "color": "#6C6C72"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nav-808",
+          "type": "frame",
+          "width": "fill_container",
+          "height": 36,
+          "padding": [
+            8,
+            12
+          ],
+          "layout": "horizontal",
+          "alignItems": "center",
+          "fill": [
+            {
+              "type": "solid",
+              "color": "#00000000"
+            }
+          ],
+          "cornerRadius": 6,
+          "children": [
+            {
+              "id": "t-809",
+              "type": "text",
               "content": "Выход",
               "fontFamily": "Roboto",
               "fontSize": 13,
@@ -445,7 +445,7 @@
       ]
     },
     {
-      "id": "plain-794",
+      "id": "plain-810",
       "type": "frame",
       "width": "fill_container",
       "height": "fill_container",
@@ -454,7 +454,7 @@
       "padding": 0,
       "children": [
         {
-          "id": "plain-710",
+          "id": "plain-726",
           "type": "frame",
           "width": "fill_container",
           "height": 60,
@@ -468,7 +468,7 @@
           "justifyContent": "space_between",
           "children": [
             {
-              "id": "plain-705",
+              "id": "plain-721",
               "type": "frame",
               "width": "fit_content",
               "height": "fit_content",
@@ -478,7 +478,7 @@
               "alignItems": "center",
               "children": [
                 {
-                  "id": "t-702",
+                  "id": "t-718",
                   "type": "text",
                   "content": "Главная",
                   "fontFamily": "Roboto",
@@ -492,7 +492,7 @@
                   ]
                 },
                 {
-                  "id": "t-703",
+                  "id": "t-719",
                   "type": "text",
                   "content": "›",
                   "fontFamily": "Roboto",
@@ -506,7 +506,7 @@
                   ]
                 },
                 {
-                  "id": "t-704",
+                  "id": "t-720",
                   "type": "text",
                   "content": "Уведомления",
                   "fontFamily": "Roboto",
@@ -522,7 +522,7 @@
               ]
             },
             {
-              "id": "plain-709",
+              "id": "plain-725",
               "type": "frame",
               "width": "fit_content",
               "height": "fit_content",
@@ -532,7 +532,7 @@
               "alignItems": "center",
               "children": [
                 {
-                  "id": "t-706",
+                  "id": "t-722",
                   "type": "text",
                   "content": "Иван П. • Продюсер",
                   "fontFamily": "Roboto",
@@ -546,7 +546,7 @@
                   ]
                 },
                 {
-                  "id": "ph-707",
+                  "id": "ph-723",
                   "type": "frame",
                   "width": 32,
                   "height": 32,
@@ -571,7 +571,7 @@
                   "cornerRadius": 6,
                   "children": [
                     {
-                      "id": "t-708",
+                      "id": "t-724",
                       "type": "text",
                       "content": "AV",
                       "fontFamily": "Roboto",
@@ -591,7 +591,7 @@
           ]
         },
         {
-          "id": "plain-767",
+          "id": "plain-783",
           "type": "frame",
           "width": "fill_container",
           "height": "fit_content",
@@ -600,7 +600,7 @@
           "padding": 24,
           "children": [
             {
-              "id": "t-711",
+              "id": "t-727",
               "type": "text",
               "content": "Уведомления",
               "fontFamily": "Roboto",
@@ -614,7 +614,7 @@
               ]
             },
             {
-              "id": "plain-766",
+              "id": "plain-782",
               "type": "frame",
               "width": "fill_container",
               "height": "fit_content",
@@ -623,7 +623,7 @@
               "padding": 0,
               "children": [
                 {
-                  "id": "box-739",
+                  "id": "box-755",
                   "type": "frame",
                   "width": 540,
                   "height": "fit_content",
@@ -648,7 +648,7 @@
                   "cornerRadius": 6,
                   "children": [
                     {
-                      "id": "t-712",
+                      "id": "t-728",
                       "type": "text",
                       "content": "Новое уведомление",
                       "fontFamily": "Roboto",
@@ -662,7 +662,7 @@
                       ]
                     },
                     {
-                      "id": "plain-727",
+                      "id": "plain-743",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -671,7 +671,7 @@
                       "padding": 0,
                       "children": [
                         {
-                          "id": "t-713",
+                          "id": "t-729",
                           "type": "text",
                           "content": "АУДИТОРИЯ",
                           "fontFamily": "Roboto",
@@ -685,7 +685,7 @@
                           ]
                         },
                         {
-                          "id": "plain-726",
+                          "id": "plain-742",
                           "type": "frame",
                           "width": "fill_container",
                           "height": "fit_content",
@@ -694,7 +694,7 @@
                           "padding": 0,
                           "children": [
                             {
-                              "id": "plain-716",
+                              "id": "plain-732",
                               "type": "frame",
                               "width": "fill_container",
                               "height": "fit_content",
@@ -703,7 +703,7 @@
                               "padding": 0,
                               "children": [
                                 {
-                                  "id": "t-714",
+                                  "id": "t-730",
                                   "type": "text",
                                   "content": "◉",
                                   "fontFamily": "Roboto",
@@ -717,7 +717,7 @@
                                   ]
                                 },
                                 {
-                                  "id": "t-715",
+                                  "id": "t-731",
                                   "type": "text",
                                   "content": "Всему отряду (Кобры)",
                                   "fontFamily": "Roboto",
@@ -733,7 +733,7 @@
                               ]
                             },
                             {
-                              "id": "plain-719",
+                              "id": "plain-735",
                               "type": "frame",
                               "width": "fill_container",
                               "height": "fit_content",
@@ -742,7 +742,7 @@
                               "padding": 0,
                               "children": [
                                 {
-                                  "id": "t-717",
+                                  "id": "t-733",
                                   "type": "text",
                                   "content": "○",
                                   "fontFamily": "Roboto",
@@ -756,7 +756,7 @@
                                   ]
                                 },
                                 {
-                                  "id": "t-718",
+                                  "id": "t-734",
                                   "type": "text",
                                   "content": "Другому отряду (Акулы)",
                                   "fontFamily": "Roboto",
@@ -772,7 +772,7 @@
                               ]
                             },
                             {
-                              "id": "plain-722",
+                              "id": "plain-738",
                               "type": "frame",
                               "width": "fill_container",
                               "height": "fit_content",
@@ -781,7 +781,7 @@
                               "padding": 0,
                               "children": [
                                 {
-                                  "id": "t-720",
+                                  "id": "t-736",
                                   "type": "text",
                                   "content": "○",
                                   "fontFamily": "Roboto",
@@ -795,7 +795,7 @@
                                   ]
                                 },
                                 {
-                                  "id": "t-721",
+                                  "id": "t-737",
                                   "type": "text",
                                   "content": "Всем участникам смены (60 чел)",
                                   "fontFamily": "Roboto",
@@ -811,7 +811,7 @@
                               ]
                             },
                             {
-                              "id": "plain-725",
+                              "id": "plain-741",
                               "type": "frame",
                               "width": "fill_container",
                               "height": "fit_content",
@@ -820,7 +820,7 @@
                               "padding": 0,
                               "children": [
                                 {
-                                  "id": "t-723",
+                                  "id": "t-739",
                                   "type": "text",
                                   "content": "○",
                                   "fontFamily": "Roboto",
@@ -834,7 +834,7 @@
                                   ]
                                 },
                                 {
-                                  "id": "t-724",
+                                  "id": "t-740",
                                   "type": "text",
                                   "content": "Конкретному участнику",
                                   "fontFamily": "Roboto",
@@ -854,7 +854,7 @@
                       ]
                     },
                     {
-                      "id": "plain-731",
+                      "id": "plain-747",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -863,7 +863,7 @@
                       "padding": 0,
                       "children": [
                         {
-                          "id": "t-728",
+                          "id": "t-744",
                           "type": "text",
                           "content": "ТЕКСТ СООБЩЕНИЯ",
                           "fontFamily": "Roboto",
@@ -877,7 +877,7 @@
                           ]
                         },
                         {
-                          "id": "box-730",
+                          "id": "box-746",
                           "type": "frame",
                           "width": "fill_container",
                           "height": 140,
@@ -902,7 +902,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-729",
+                              "id": "t-745",
                               "type": "text",
                               "content": "Текст отправится в Telegram всем адресатам...",
                               "fontFamily": "Roboto",
@@ -920,7 +920,7 @@
                       ]
                     },
                     {
-                      "id": "plain-738",
+                      "id": "plain-754",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -930,7 +930,7 @@
                       "alignItems": "center",
                       "children": [
                         {
-                          "id": "t-732",
+                          "id": "t-748",
                           "type": "text",
                           "content": "0 / 4096 символов",
                           "fontFamily": "Roboto",
@@ -944,7 +944,7 @@
                           ]
                         },
                         {
-                          "id": "plain-733",
+                          "id": "plain-749",
                           "type": "frame",
                           "width": "fill_container",
                           "height": "fit_content",
@@ -954,7 +954,7 @@
                           "children": []
                         },
                         {
-                          "id": "btn-734",
+                          "id": "btn-750",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -984,7 +984,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-735",
+                              "id": "t-751",
                               "type": "text",
                               "content": "Предпросмотр",
                               "fontFamily": "Roboto",
@@ -1000,7 +1000,7 @@
                           ]
                         },
                         {
-                          "id": "btn-736",
+                          "id": "btn-752",
                           "type": "frame",
                           "role": "button",
                           "width": "fit_content",
@@ -1030,7 +1030,7 @@
                           "cornerRadius": 6,
                           "children": [
                             {
-                              "id": "t-737",
+                              "id": "t-753",
                               "type": "text",
                               "content": "Отправить",
                               "fontFamily": "Roboto",
@@ -1050,7 +1050,7 @@
                   ]
                 },
                 {
-                  "id": "box-765",
+                  "id": "box-781",
                   "type": "frame",
                   "width": "fill_container",
                   "height": "fit_content",
@@ -1075,7 +1075,7 @@
                   "cornerRadius": 6,
                   "children": [
                     {
-                      "id": "t-740",
+                      "id": "t-756",
                       "type": "text",
                       "content": "Лог уведомлений",
                       "fontFamily": "Roboto",
@@ -1089,7 +1089,7 @@
                       ]
                     },
                     {
-                      "id": "plain-748",
+                      "id": "plain-764",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -1101,7 +1101,7 @@
                       ],
                       "children": [
                         {
-                          "id": "t-741",
+                          "id": "t-757",
                           "type": "text",
                           "content": "ВРЕМЯ",
                           "fontFamily": "Roboto",
@@ -1115,7 +1115,7 @@
                           ]
                         },
                         {
-                          "id": "t-742",
+                          "id": "t-758",
                           "type": "text",
                           "content": "",
                           "fontFamily": "Roboto",
@@ -1130,7 +1130,7 @@
                           "width": 130
                         },
                         {
-                          "id": "t-743",
+                          "id": "t-759",
                           "type": "text",
                           "content": "АУДИТОРИЯ",
                           "fontFamily": "Roboto",
@@ -1144,7 +1144,7 @@
                           ]
                         },
                         {
-                          "id": "t-744",
+                          "id": "t-760",
                           "type": "text",
                           "content": "",
                           "fontFamily": "Roboto",
@@ -1159,7 +1159,7 @@
                           "width": 150
                         },
                         {
-                          "id": "t-745",
+                          "id": "t-761",
                           "type": "text",
                           "content": "ТЕКСТ",
                           "fontFamily": "Roboto",
@@ -1173,7 +1173,7 @@
                           ]
                         },
                         {
-                          "id": "t-746",
+                          "id": "t-762",
                           "type": "text",
                           "content": "",
                           "fontFamily": "Roboto",
@@ -1188,7 +1188,7 @@
                           "width": "fill_container"
                         },
                         {
-                          "id": "t-747",
+                          "id": "t-763",
                           "type": "text",
                           "content": "АВТОР",
                           "fontFamily": "Roboto",
@@ -1204,7 +1204,7 @@
                       ]
                     },
                     {
-                      "id": "div-749",
+                      "id": "div-765",
                       "type": "rectangle",
                       "width": "fill_container",
                       "height": 1,
@@ -1216,7 +1216,7 @@
                       ]
                     },
                     {
-                      "id": "plain-754",
+                      "id": "plain-770",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -1228,7 +1228,7 @@
                       ],
                       "children": [
                         {
-                          "id": "t-750",
+                          "id": "t-766",
                           "type": "text",
                           "content": "14.06 09:00",
                           "fontFamily": "Roboto",
@@ -1243,7 +1243,7 @@
                           "width": 130
                         },
                         {
-                          "id": "t-751",
+                          "id": "t-767",
                           "type": "text",
                           "content": "Все",
                           "fontFamily": "Roboto",
@@ -1258,7 +1258,7 @@
                           "width": 150
                         },
                         {
-                          "id": "t-752",
+                          "id": "t-768",
                           "type": "text",
                           "content": "Доброе утро! План дня...",
                           "fontFamily": "Roboto",
@@ -1273,7 +1273,7 @@
                           "width": "fill_container"
                         },
                         {
-                          "id": "t-753",
+                          "id": "t-769",
                           "type": "text",
                           "content": "Бот",
                           "fontFamily": "Roboto",
@@ -1289,7 +1289,7 @@
                       ]
                     },
                     {
-                      "id": "plain-759",
+                      "id": "plain-775",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -1301,7 +1301,7 @@
                       ],
                       "children": [
                         {
-                          "id": "t-755",
+                          "id": "t-771",
                           "type": "text",
                           "content": "13.06 21:30",
                           "fontFamily": "Roboto",
@@ -1316,7 +1316,7 @@
                           "width": 130
                         },
                         {
-                          "id": "t-756",
+                          "id": "t-772",
                           "type": "text",
                           "content": "Кобры",
                           "fontFamily": "Roboto",
@@ -1331,7 +1331,7 @@
                           "width": 150
                         },
                         {
-                          "id": "t-757",
+                          "id": "t-773",
                           "type": "text",
                           "content": "Встречаемся в лобби в 08:00",
                           "fontFamily": "Roboto",
@@ -1346,7 +1346,7 @@
                           "width": "fill_container"
                         },
                         {
-                          "id": "t-758",
+                          "id": "t-774",
                           "type": "text",
                           "content": "Иван П.",
                           "fontFamily": "Roboto",
@@ -1362,7 +1362,7 @@
                       ]
                     },
                     {
-                      "id": "plain-764",
+                      "id": "plain-780",
                       "type": "frame",
                       "width": "fill_container",
                       "height": "fit_content",
@@ -1374,7 +1374,7 @@
                       ],
                       "children": [
                         {
-                          "id": "t-760",
+                          "id": "t-776",
                           "type": "text",
                           "content": "13.06 18:00",
                           "fontFamily": "Roboto",
@@ -1389,7 +1389,7 @@
                           "width": 130
                         },
                         {
-                          "id": "t-761",
+                          "id": "t-777",
                           "type": "text",
                           "content": "Конкретный",
                           "fontFamily": "Roboto",
@@ -1404,7 +1404,7 @@
                           "width": 150
                         },
                         {
-                          "id": "t-762",
+                          "id": "t-778",
                           "type": "text",
                           "content": "Отличная работа сегодня!",
                           "fontFamily": "Roboto",
@@ -1419,7 +1419,7 @@
                           "width": "fill_container"
                         },
                         {
-                          "id": "t-763",
+                          "id": "t-779",
                           "type": "text",
                           "content": "Иван П.",
                           "fontFamily": "Roboto",

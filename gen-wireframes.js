@@ -518,11 +518,12 @@ const A4 = () => screen('A4. Карточка участника', 2, [
         plain({ alignItems: 'center', gap: 12, children: [
           placeholder('PHOTO', 120, 120),
           hdg('ИВАН ПЕТРОВ', 18),
-          sub('@ivan_petrov  •  Отряд Кобры')
+          sub('Псевдоним: NEON_IVAN  •  Отряд Кобры'),
+          sub('@ivan_petrov')
         ]}),
         divider(),
         hdg('Анкета', 14),
-        ...[['Имя', 'Иван'], ['Фамилия', 'Петров'], ['Телефон', '+7 (985) 123-45-67'], ['Дата рождения', '12.08.2006'], ['Instagram', '@ivan_petrov'], ['TikTok', '—'], ['Likee', '—']]
+        ...[['Имя', 'Иван'], ['Фамилия', 'Петров'], ['Псевдоним (для бейджа)', 'NEON_IVAN  ✎'], ['Телефон', '+7 (985) 123-45-67'], ['Дата рождения', '12.08.2006'], ['Instagram', '@ivan_petrov'], ['TikTok', '—'], ['Likee', '—']]
           .map(([k, v]) => plain({ layout: 'horizontal', justifyContent: 'space_between', padding: [6, 0], children: [
             sub(k, 12), text(v, { size: 12, weight: 500 })
           ]})),
@@ -539,15 +540,25 @@ const A4 = () => screen('A4. Карточка участника', 2, [
         box({ padding: 20, children: [
           hdg('Фото для бейджа', 15),
           plain({ layout: 'horizontal', gap: 16, alignItems: 'center', children: [
-            placeholder('[ PHOTO 300×300 ]', 120, 120),
+            placeholder('[ PHOTO\n   300×300\n   ручной кроп ]', 120, 120),
             plain({ w: 'fill_container', gap: 8, children: [
-              sub('Фото лицом крупно. Используется на бейдже 10×15.'),
+              sub('Необязательно. Используется на бейдже 10×15. До 8 MB, ручной кроп после загрузки.'),
               plain({ layout: 'horizontal', gap: 8, children: [
                 btn('Загрузить / Заменить', { primary: true }),
+                btn('Перекропать'),
                 btn('Удалить')
               ]}),
               sub('Последнее обновление: 13 июня 18:22 • Иван П.')
             ]})
+          ]})
+        ]}),
+        box({ padding: 20, children: [
+          hdg('Имя на бейдже (display name)', 15),
+          sub('По умолчанию — «Имя Фамилия». Можно заменить на псевдоним/кличку по просьбе участника.'),
+          plain({ layout: 'horizontal', gap: 8, alignItems: 'center', children: [
+            input('NEON_IVAN'),
+            btn('Сохранить', { primary: true }),
+            btn('Сбросить к «Иван Петров»')
           ]})
         ]}),
         box({ padding: 20, children: [
