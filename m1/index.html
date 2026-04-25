@@ -165,6 +165,36 @@ ol.steps li code{
 }
 .callout b{color:var(--gold);}
 
+/* Превью-скриншот рядом с пунктом списка */
+.thumbs{
+  display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;
+}
+.thumb{
+  width:50px;aspect-ratio:9/19.5;border-radius:6px;cursor:pointer;
+  background:#0F0020;border:1px solid var(--border);
+  overflow:hidden;flex-shrink:0;transition:all .2s;
+}
+.thumb:hover{border-color:var(--cyan);transform:scale(1.08);}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+
+/* Inline-блок скриншотов в шагах "Как тестировать" */
+.step-shots{
+  display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;
+}
+.step-shot{
+  width:90px;aspect-ratio:9/19.5;border-radius:8px;cursor:pointer;
+  border:1px solid var(--border);overflow:hidden;background:#0F0020;
+  transition:all .2s;flex-shrink:0;
+}
+.step-shot:hover{border-color:var(--cyan);transform:translateY(-2px);}
+.step-shot img{width:100%;height:100%;object-fit:cover;display:block;}
+
+/* Логотип-картинка вместо textового */
+.logo-img{
+  max-width:min(420px,80vw);width:100%;height:auto;display:block;margin:0 auto;
+  filter:drop-shadow(0 0 24px rgba(255,0,170,0.5));
+}
+
 .shots{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:18px;margin-top:8px;
@@ -229,9 +259,24 @@ ol.steps li code{
 <body>
 
 <header>
-  <div class="logo">TELEMORE</div>
+  <img class="logo-img" src="https://storage.googleapis.com/uspeshnyy-projects/telemore/logo-variants/logo-text.png" alt="TELEMORE">
   <div class="subtitle">Миссия Сочи · Отчёт о ходе работ</div>
   <div class="h1">Веха 1 · Этапы 1 + 2 готовы · Этап 3 в работе</div>
+
+  <!-- Progress bar -->
+  <div style="max-width:680px;margin:24px auto 0;padding:0 24px;">
+    <div style="display:flex;justify-content:space-between;font-size:11px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,0.55);text-transform:uppercase;margin-bottom:6px;">
+      <span>Этап 1</span><span>Этап 2</span><span style="color:var(--gold);">Этап 3</span><span>Этап 4</span><span>Этап 5</span>
+    </div>
+    <div style="position:relative;height:14px;background:rgba(255,255,255,0.08);border:1px solid var(--border);border-radius:99px;overflow:hidden;">
+      <div style="position:absolute;inset:0;width:50%;background:linear-gradient(90deg,var(--pink),var(--cyan));border-radius:99px;box-shadow:0 0 16px rgba(255,0,170,0.55);"></div>
+      <div style="position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--gold);box-shadow:0 0 10px var(--gold);"></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:13px;color:var(--text-dim);">
+      <span><b style="color:var(--green);">2 из 5</b> этапов готовы</span>
+      <span><b style="color:var(--gold);">Прогресс: 50%</b> (3-й в работе)</span>
+    </div>
+  </div>
   <p class="intro">
     Mini-app внутри Telegram, бот <b>@telemore_bot</b>, бэкенд + база.
     Регистрация, начисления Телекоинов, причины, ачивки, рейтинг, история, Telegram-уведомления — работают.
@@ -298,16 +343,20 @@ ol.steps li code{
   <ul class="feats done">
     <li><span class="ico">●</span><div>
       <b>Авторизация через Telegram</b> — без логинов и паролей. JWT-токен на 7 дней.
+      <div class="thumbs" data-shots="splash"></div>
     </div></li>
     <li><span class="ico">●</span><div>
       <b>Регистрация</b> — имя / фамилия / телефон с маской / дата рождения / отряд.
       <span class="meta">Маска +7 (XXX) XXX-XX-XX, валидация на клиенте.</span>
+      <div class="thumbs" data-shots="registration"></div>
     </div></li>
     <li><span class="ico">●</span><div>
       <b>Главный экран</b> — баланс Телекоинов крупно, отряд, имя.
+      <div class="thumbs" data-shots="home"></div>
     </div></li>
     <li><span class="ico">●</span><div>
       <b>Личный QR</b> — для чек-ина у продюсера. Кешируется, работает офлайн.
+      <div class="thumbs" data-shots="my-qr"></div>
     </div></li>
     <li><span class="ico">●</span><div>
       <b>Анкета</b> — все данные участника одним экраном.
@@ -315,13 +364,16 @@ ol.steps li code{
     <li><span class="ico">●</span><div>
       <b>Рейтинг</b> — топ-10, твоё место (если ниже), битва отрядов «Кобры» vs «Акулы».
       <span class="meta">Сортировка: баланс DESC → свежесть транзакции DESC. Авто-обновление 30 сек.</span>
+      <div class="thumbs" data-shots="leaderboard"></div>
     </div></li>
     <li><span class="ico">●</span><div>
       <b>6 ачивок</b> — Крид (100) → Карнавал (200) → Токсис (300) → Джига (400) → Морген (500) → Мистер Бист (600).
       <span class="meta">Прогресс-бары, разблокированные подсвечены золотом.</span>
+      <div class="thumbs" data-shots="achievements"></div>
     </div></li>
     <li><span class="ico">●</span><div>
       <b>Личное Telegram-уведомление</b> при начислении: кто, за что, сколько, текущий баланс, новая ачивка.
+      <div class="thumbs" data-shots="notification"></div>
     </div></li>
   </ul>
 
@@ -329,12 +381,15 @@ ol.steps li code{
   <ul class="feats done">
     <li><span class="ico">●</span><div>
       <b>Сканер QR</b> — задняя камера по умолчанию, защита от дублей 2 сек.
+      <div class="thumbs" data-shots="scanner"></div>
     </div></li>
     <li><span class="ico">●</span><div>
       <b>Карточка участника</b> — имя, отряд, текущий баланс. Тап → история начислений этого участника от всех продюсеров.
+      <div class="thumbs" data-shots="award-card"></div>
     </div></li>
     <li><span class="ico">●</span><div>
       <b>Начисление / штраф</b> — 9 типовых причин в dropdown с автозаполнением суммы или своя причина текстом.
+      <div class="thumbs" data-shots="award-form"></div>
     </div></li>
     <li><span class="ico">●</span><div>
       <b>Авто-выдача ачивок</b> — атомарно в одной транзакции. Все пороги между старым и новым балансом автоматически открываются.
@@ -344,9 +399,11 @@ ol.steps li code{
     </div></li>
     <li><span class="ico">●</span><div>
       <b>История смены</b> — лента всех начислений всех продюсеров. Цвет: золото / красный / перечёркнутый (откат).
+      <div class="thumbs" data-shots="history-tour"></div>
     </div></li>
     <li><span class="ico">●</span><div>
       <b>Раздельный интерфейс</b> — продюсер / суперадмин не видят участникского экрана, сразу попадают в свой раздел.
+      <div class="thumbs" data-shots="producer-home"></div>
     </div></li>
   </ul>
 
@@ -374,22 +431,27 @@ ol.steps li code{
     <li><span class="ico">★</span><div>
       <b>Полноценный chrome-логотип</b> в стилистике GTA Vice City — на splash, главной и регистрации.
       Сгенерирован под бренд, оптимизирован, отдаётся через CDN.
+      <div class="thumbs" data-shots="splash,home"></div>
     </div></li>
     <li><span class="ico">★</span><div>
       <b>Брендирование самого бота</b> — name, short / long description обновлены через Telegram Bot API.
       Description-картинка для шапки бота тоже сгенерирована.
+      <div class="thumbs" data-shots="bot-start"></div>
     </div></li>
     <li><span class="ico">★</span><div>
       <b>Анимированная кнопка «Начислить»</b> — pink↔cyan градиент течёт + неоновое свечение пульсирует.
+      <div class="thumbs" data-shots="award-form"></div>
     </div></li>
     <li><span class="ico">★</span><div>
       <b>Personal-история по тапу на карточку участника</b> — bottom-sheet модалка с последними 100 начислениями.
+      <div class="thumbs" data-shots="history-participant"></div>
     </div></li>
     <li><span class="ico">★</span><div>
       <b>Диагностический error-boundary</b> — вместо «Application error» приложение показывает реальное сообщение, имя ошибки и stack для быстрой диагностики.
     </div></li>
     <li><span class="ico">★</span><div>
       <b>Откат прямо из истории</b> — кнопка «Откат» рядом с записью, если ещё в окне 24ч и ты автор / суперадмин.
+      <div class="thumbs" data-shots="history-tour"></div>
     </div></li>
     <li><span class="ico">★</span><div>
       <b>Конвейер CI/CD с нуля</b> — GitHub Actions, автодеплой, healthcheck. Любой push → продакшн через 2 мин.
@@ -413,30 +475,35 @@ ol.steps li code{
       <div>
         <div class="t">Открой бота</div>
         <div class="d">В Telegram найди <code>@telemore_bot</code> → жми <b>Старт</b> → жми синюю кнопку «Открыть миссию».</div>
+        <div class="step-shots" data-shots="bot-start"></div>
       </div>
     </li>
     <li>
       <div>
         <div class="t">Зарегистрируйся</div>
         <div class="d">Имя / Фамилия / Телефон (вводи цифры — маска применится сама) / Дата рождения / выбери отряд: <b>Кобры</b> или <b>Акулы</b>.</div>
+        <div class="step-shots" data-shots="registration"></div>
       </div>
     </li>
     <li>
       <div>
         <div class="t">Изучи главный экран</div>
         <div class="d">Баланс «0 Телекоинов», кнопка «Мой QR» — покажи продюсеру для начисления.</div>
+        <div class="step-shots" data-shots="home,my-qr"></div>
       </div>
     </li>
     <li>
       <div>
         <div class="t">Получи Телекоины</div>
         <div class="d">Когда продюсер начислит — придёт уведомление в Telegram с разбивкой: сумма, причина, новый баланс, ачивка (если открылась).</div>
+        <div class="step-shots" data-shots="notification"></div>
       </div>
     </li>
     <li>
       <div>
         <div class="t">Проверь рейтинг и ачивки</div>
         <div class="d">Кнопки <b>Рейтинг</b> и <b>Ачивки</b> внизу. Ачивки разблокируются автоматически при пересечении порога (100, 200, 300, 400, 500, 600 ТК).</div>
+        <div class="step-shots" data-shots="leaderboard,achievements"></div>
       </div>
     </li>
   </ol>
@@ -451,30 +518,35 @@ ol.steps li code{
       <div>
         <div class="t">Войди как продюсер</div>
         <div class="d">Открой того же бота с аккаунта продюсера — попадёшь сразу на дашборд продюсера (без участникского экрана).</div>
+        <div class="step-shots" data-shots="producer-home"></div>
       </div>
     </li>
     <li>
       <div>
         <div class="t">Сканер QR</div>
         <div class="d">Жми <b>«Сканер QR»</b>. Разреши камеру → наведи на QR участника. Откроется карточка.</div>
+        <div class="step-shots" data-shots="scan-tile,scanner"></div>
       </div>
     </li>
     <li>
       <div>
         <div class="t">Начисли Телекоины</div>
         <div class="d">Выбери причину из списка (сумма подставится) или введи свою. Можно подкрутить сумму вручную или штрафнуть. Жми <b>«Начислить»</b>.</div>
+        <div class="step-shots" data-shots="award-card,award-form"></div>
       </div>
     </li>
     <li>
       <div>
         <div class="t">История</div>
         <div class="d">Вернись в меню → <b>«История»</b>. Лента всех начислений всех продюсеров. Кнопка «Откат» — если запись твоя и не старше 24ч.</div>
+        <div class="step-shots" data-shots="history-tour"></div>
       </div>
     </li>
     <li>
       <div>
         <div class="t">История участника</div>
         <div class="d">Тапни на карточку участника после сканирования — выедет лист со всеми его транзакциями.</div>
+        <div class="step-shots" data-shots="history-participant"></div>
       </div>
     </li>
   </ol>
@@ -489,7 +561,7 @@ ol.steps li code{
 <section>
   <div class="section-head"><h2><span class="num">→</span> Что планируется дальше</h2></div>
 
-  <h3>Этап 3 (продолжение, ~3–5 дней)</h3>
+  <h3>Этап 3 (продолжение, ~6–10 дней)</h3>
   <ul class="feats next">
     <li><span class="ico">→</span><div>
       <b>События / план дня</b> — список активностей смены, время старта, чек-ин участников.
@@ -505,7 +577,7 @@ ol.steps li code{
     </div></li>
   </ul>
 
-  <h3>Этап 4 — Полная админка (A1–A11) (~7–10 дней)</h3>
+  <h3>Этап 4 — Полная админка (A1–A11) (~14–20 дней)</h3>
   <ul class="feats next">
     <li><span class="ico">→</span><div>
       <b>A1 Dashboard продюсера</b> — KPI (всего участников / средний баланс / чек-инов сегодня), график активности, топ-5, лента.
@@ -557,30 +629,27 @@ ol.steps li code{
 
 <script>
 const SHOTS_BASE = 'https://storage.googleapis.com/uspeshnyy-projects/telemore/stage1';
+// slug → human caption (для бейджей и lightbox)
 const CAPTIONS = {
-  1: 'Старт бота',
-  2: 'Splash — авторизация',
-  3: 'Регистрация',
-  4: 'Главный экран',
-  5: 'Мой QR',
-  6: 'Сканер продюсера',
-  7: 'Карточка + начисление',
-  8: 'История участника',
-  9: 'История смены',
-  10: 'Рейтинг',
-  11: 'Ачивки',
-  12: 'Уведомление в Telegram',
+  'bot-start': 'Старт бота',
+  'splash': 'Splash — авторизация',
+  'registration': 'Регистрация',
+  'home': 'Главный экран',
+  'my-qr': 'Мой QR',
+  'producer-home': 'Меню продюсера',
+  'scan-tile': 'Кнопка «Сканер»',
+  'scanner': 'Сканер QR',
+  'award-card': 'Карточка участника',
+  'award-form': 'Начисление / штраф',
+  'history-participant': 'История участника',
+  'history-tour': 'История смены',
+  'leaderboard': 'Рейтинг',
+  'achievements': 'Ачивки',
+  'notification': 'Уведомление в Telegram',
 };
-const grid = document.getElementById('shots-grid');
-for (let i = 1; i <= 12; i++) {
-  const url = `${SHOTS_BASE}/${i}.jpg`;
-  const cap = CAPTIONS[i] || `#${i}`;
-  const card = document.createElement('div');
-  card.className = 'shot';
-  card.innerHTML = `<img src="${url}" alt="${cap}" loading="lazy"><div class="cap">${cap}</div>`;
-  card.onclick = () => openModal(url, cap);
-  grid.appendChild(card);
-}
+const ORDER = ['bot-start','splash','registration','home','my-qr','producer-home','scan-tile','scanner','award-card','award-form','history-participant','history-tour','leaderboard','achievements','notification'];
+
+// Open lightbox
 function openModal(url, alt) {
   const m = document.getElementById('modal');
   document.getElementById('modal-img').src = url;
@@ -589,6 +658,38 @@ function openModal(url, alt) {
 }
 function closeModal() { document.getElementById('modal').classList.remove('open'); }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// Helper: build single thumb
+function makeThumb(slug, klass='thumb') {
+  const url = `${SHOTS_BASE}/${slug}.jpg`;
+  const cap = CAPTIONS[slug] || slug;
+  const el = document.createElement('div');
+  el.className = klass;
+  el.title = cap;
+  el.innerHTML = `<img src="${url}" alt="${cap}" loading="lazy">`;
+  el.onclick = () => openModal(url, cap);
+  return el;
+}
+
+// Inject inline thumbs into all .thumbs / .step-shots blocks (data-shots="slug,slug,...")
+document.querySelectorAll('.thumbs[data-shots], .step-shots[data-shots]').forEach(box => {
+  const slugs = box.getAttribute('data-shots').split(',').map(s => s.trim()).filter(Boolean);
+  const isStep = box.classList.contains('step-shots');
+  slugs.forEach(slug => box.appendChild(makeThumb(slug, isStep ? 'step-shot' : 'thumb')));
+});
+
+// Bottom gallery
+const grid = document.getElementById('shots-grid');
+ORDER.forEach(slug => {
+  const url = `${SHOTS_BASE}/${slug}.jpg`;
+  const cap = CAPTIONS[slug] || slug;
+  const card = document.createElement('div');
+  card.className = 'shot';
+  card.innerHTML = `<img src="${url}" alt="${cap}" loading="lazy"><div class="cap">${cap}</div>`;
+  card.onclick = () => openModal(url, cap);
+  grid.appendChild(card);
+});
+
 document.getElementById('ts').textContent = new Date().toLocaleString('ru-RU', {
   day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit'
 });
