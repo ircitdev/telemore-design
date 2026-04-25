@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0F0020">
+<title>ТЕЛЕМОРЕ — Этап 1 · Отчёт о ходе работ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#FF00AA;--cyan:#00F0FF;--gold:#FFD700;--green:#34d399;--red:#ef4444;
+  --bg1:#0F0020;--bg2:#1A0033;--bg3:#2D004D;
+  --text:#fff;--text-dim:rgba(255,255,255,0.7);--text-muted:rgba(255,255,255,0.45);
+  --border:rgba(255,255,255,0.1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Roboto',-apple-system,sans-serif;color:var(--text);
+  background:linear-gradient(180deg,var(--bg1) 0%,var(--bg2) 50%,var(--bg1) 100%);
+  min-height:100vh;line-height:1.55;
+}
+body::before{content:"";position:fixed;inset:0;z-index:-1;
+  background:
+    radial-gradient(ellipse at 15% 10%,rgba(255,0,170,0.12),transparent 50%),
+    radial-gradient(ellipse at 85% 90%,rgba(0,240,255,0.1),transparent 50%);
+}
+a{color:var(--cyan);}
+header{padding:48px 24px 28px;text-align:center;}
+.logo{
+  font-size:clamp(40px,8vw,72px);font-weight:900;letter-spacing:3px;line-height:1;
+  background:linear-gradient(180deg,var(--pink),var(--cyan));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 20px rgba(255,0,170,0.6));
+}
+.subtitle{
+  margin-top:10px;font-size:14px;font-weight:700;letter-spacing:3px;
+  color:var(--cyan);text-transform:uppercase;
+}
+.h1{
+  margin-top:14px;font-size:clamp(22px,4vw,30px);font-weight:900;letter-spacing:1px;
+  color:var(--gold);
+}
+.intro{
+  max-width:760px;margin:24px auto 0;padding:0 20px;
+  font-size:16px;color:var(--text-dim);text-align:center;
+}
+.intro b{color:var(--gold);}
+
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+section{margin:48px 0;}
+.section-head{
+  display:flex;align-items:baseline;gap:14px;margin-bottom:18px;
+  border-bottom:1px solid var(--border);padding-bottom:10px;
+}
+h2{
+  font-size:clamp(20px,3vw,26px);font-weight:900;letter-spacing:1px;color:#fff;
+  text-transform:uppercase;
+}
+h2 .num{
+  display:inline-block;color:var(--pink);margin-right:8px;
+  filter:drop-shadow(0 0 8px rgba(255,0,170,0.6));
+}
+h3{
+  font-size:18px;font-weight:700;color:var(--cyan);
+  text-transform:uppercase;letter-spacing:1.5px;margin:22px 0 10px;
+}
+
+ul.feats{list-style:none;display:grid;gap:8px;}
+ul.feats li{
+  display:flex;align-items:flex-start;gap:10px;
+  background:rgba(255,255,255,0.03);border:1px solid var(--border);
+  border-radius:10px;padding:10px 14px;
+  font-size:15px;color:var(--text);
+}
+ul.feats li .ico{flex-shrink:0;font-size:16px;line-height:1.5;}
+ul.feats.done li .ico{color:var(--green);}
+ul.feats.extra li .ico{color:var(--gold);}
+ul.feats.next li .ico{color:var(--cyan);}
+ul.feats li b{color:var(--gold);font-weight:700;}
+ul.feats li .meta{display:block;margin-top:4px;color:var(--text-muted);font-size:13px;}
+
+.kpis{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:8px;
+}
+.kpi{
+  background:rgba(255,255,255,0.04);border:1px solid var(--border);
+  border-radius:14px;padding:18px;text-align:center;
+}
+.kpi .v{
+  font-size:32px;font-weight:900;color:var(--gold);
+  filter:drop-shadow(0 0 10px rgba(255,215,0,0.5));
+}
+.kpi .l{
+  font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--text-dim);
+  text-transform:uppercase;margin-top:4px;
+}
+
+ol.steps{list-style:none;counter-reset:step;display:grid;gap:14px;}
+ol.steps li{
+  counter-increment:step;
+  display:grid;grid-template-columns:48px 1fr;gap:14px;
+  background:rgba(255,255,255,0.03);border:1px solid var(--border);
+  border-radius:14px;padding:16px;align-items:start;
+}
+ol.steps li::before{
+  content:counter(step);
+  display:flex;align-items:center;justify-content:center;
+  width:40px;height:40px;border-radius:10px;
+  background:linear-gradient(135deg,var(--pink),var(--cyan));
+  font-size:18px;font-weight:900;color:#fff;
+  filter:drop-shadow(0 0 8px rgba(255,0,170,0.5));
+}
+ol.steps li .t{font-weight:700;color:#fff;font-size:16px;margin-bottom:4px;}
+ol.steps li .d{color:var(--text-dim);font-size:14px;}
+ol.steps li code{
+  background:rgba(0,240,255,0.1);color:var(--cyan);
+  padding:2px 8px;border-radius:6px;font-size:13px;
+  border:1px solid rgba(0,240,255,0.2);
+}
+
+.cta-row{
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:18px 0 0;
+}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 22px;border-radius:12px;font-weight:800;font-size:14px;
+  letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;text-align:center;
+  border:1px solid var(--border);background:rgba(255,255,255,0.04);
+  color:var(--text);cursor:pointer;transition:all .2s;
+}
+.btn:hover{background:rgba(255,255,255,0.08);transform:translateY(-1px);}
+.btn.primary{
+  background:linear-gradient(90deg,var(--pink),var(--cyan));color:#fff;
+  border-color:transparent;box-shadow:0 0 18px rgba(255,0,170,0.45);
+}
+.btn.primary:hover{box-shadow:0 0 28px rgba(0,240,255,0.55);}
+
+.callout{
+  background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.3);
+  border-radius:12px;padding:14px 18px;color:var(--text-dim);font-size:14px;
+  margin-top:14px;
+}
+.callout b{color:var(--gold);}
+
+.shots{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;margin-top:8px;
+}
+.shot{
+  background:rgba(255,255,255,0.03);border:1px solid var(--border);
+  border-radius:14px;overflow:hidden;cursor:pointer;
+  transition:all .25s;position:relative;
+}
+.shot:hover{border-color:rgba(0,240,255,0.4);transform:translateY(-3px);}
+.shot img{
+  width:100%;display:block;aspect-ratio:9/19.5;object-fit:cover;
+  background:#0F0020;
+}
+.shot .cap{
+  padding:10px 12px;font-size:12px;color:var(--text-dim);text-align:center;
+  border-top:1px solid var(--border);
+}
+
+.modal{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);
+  z-index:100;align-items:center;justify-content:center;padding:24px;
+  backdrop-filter:blur(8px);
+}
+.modal.open{display:flex;}
+.modal img{max-width:96vw;max-height:92vh;border-radius:12px;box-shadow:0 20px 60px rgba(255,0,170,0.3);}
+.modal-close{
+  position:absolute;top:14px;right:18px;
+  background:none;border:none;color:#fff;font-size:36px;cursor:pointer;line-height:1;
+}
+
+.timeline{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;
+}
+.tl-card{
+  background:rgba(255,255,255,0.04);border:1px solid var(--border);
+  border-radius:14px;padding:16px;
+  position:relative;
+}
+.tl-card.done{border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);}
+.tl-card.now{border-color:var(--gold);background:rgba(255,215,0,0.06);
+  box-shadow:0 0 20px rgba(255,215,0,0.15);}
+.tl-card.next{border-color:rgba(0,240,255,0.3);background:rgba(0,240,255,0.04);}
+.tl-card .badge{
+  display:inline-block;font-size:10px;font-weight:800;letter-spacing:1.5px;
+  padding:3px 8px;border-radius:99px;margin-bottom:8px;
+  text-transform:uppercase;
+}
+.tl-card.done .badge{background:rgba(52,211,153,0.2);color:var(--green);}
+.tl-card.now .badge{background:rgba(255,215,0,0.2);color:var(--gold);}
+.tl-card.next .badge{background:rgba(0,240,255,0.15);color:var(--cyan);}
+.tl-card .t{font-size:16px;font-weight:800;color:#fff;margin-bottom:4px;}
+.tl-card .d{font-size:13px;color:var(--text-dim);}
+
+.footer{
+  padding:50px 24px 70px;text-align:center;color:var(--text-muted);font-size:13px;
+  border-top:1px solid var(--border);margin-top:30px;
+}
+.footer .mono{font-family:'SF Mono','Monaco',monospace;color:var(--cyan);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">TELEMORE</div>
+  <div class="subtitle">Миссия Сочи · Отчёт о ходе работ</div>
+  <div class="h1">Этап 1 · Готов к тестированию</div>
+  <p class="intro">
+    Mini-app внутри Telegram, бот <b>@telemore_bot</b>, бэкенд + база.
+    Базовая логика начислений Телекоинов, ачивки, рейтинг, история, уведомления — работают.
+    Готово к тесту на iOS / Android.
+  </p>
+  <div class="cta-row">
+    <a class="btn primary" href="https://t.me/telemore_bot" target="_blank">🎮 Открыть @telemore_bot</a>
+    <a class="btn" href="#test">📋 Как тестировать</a>
+    <a class="btn" href="#shots">📱 Скриншоты</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="kpis">
+  <div class="kpis">
+    <div class="kpi"><div class="v">7/7</div><div class="l">Экранов мобилки</div></div>
+    <div class="kpi"><div class="v">12</div><div class="l">API endpoints</div></div>
+    <div class="kpi"><div class="v">10</div><div class="l">Таблиц БД</div></div>
+    <div class="kpi"><div class="v">60</div><div class="l">Тестовых юзеров</div></div>
+    <div class="kpi"><div class="v">6</div><div class="l">Ачивок</div></div>
+    <div class="kpi"><div class="v">9</div><div class="l">Причин начислений</div></div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section>
+  <div class="section-head"><h2><span class="num">→</span> Где мы по ТЗ</h2></div>
+  <div class="timeline">
+    <div class="tl-card done">
+      <div class="badge">✓ Готово</div>
+      <div class="t">Этап 1 — База</div>
+      <div class="d">Авторизация Telegram, регистрация, профиль, QR, баланс</div>
+    </div>
+    <div class="tl-card done">
+      <div class="badge">✓ Готово</div>
+      <div class="t">Этап 2 — Начисления</div>
+      <div class="d">Сканер QR продюсера, начисления / штрафы, причины, авто-ачивки, откат 24ч</div>
+    </div>
+    <div class="tl-card now">
+      <div class="badge">⚡ Сейчас</div>
+      <div class="t">Этап 3 — Геймплей</div>
+      <div class="d">Рейтинг + битва отрядов, история, Telegram-уведомления — частично</div>
+    </div>
+    <div class="tl-card next">
+      <div class="badge">→ Дальше</div>
+      <div class="t">Этап 4 — Продюсер UI</div>
+      <div class="d">11 экранов админки (A1–A11): Dashboard, События, Bulk-режим, План дня, Бейджи</div>
+    </div>
+    <div class="tl-card next">
+      <div class="badge">→ Дальше</div>
+      <div class="t">Этап 5 — Полировка</div>
+      <div class="d">События / расписание, ДР-уведомления, Push-каналы, генератор PDF-бейджей</div>
+    </div>
+  </div>
+</section>
+
+<!-- DONE -->
+<section>
+  <div class="section-head"><h2><span class="num">✓</span> Что уже работает</h2></div>
+
+  <h3>Для участника</h3>
+  <ul class="feats done">
+    <li><span class="ico">●</span><div>
+      <b>Авторизация через Telegram</b> — без логинов и паролей. JWT-токен на 7 дней.
+    </div></li>
+    <li><span class="ico">●</span><div>
+      <b>Регистрация</b> — имя / фамилия / телефон с маской / дата рождения / отряд.
+      <span class="meta">Маска +7 (XXX) XXX-XX-XX, валидация на клиенте.</span>
+    </div></li>
+    <li><span class="ico">●</span><div>
+      <b>Главный экран</b> — баланс Телекоинов крупно, отряд, имя.
+    </div></li>
+    <li><span class="ico">●</span><div>
+      <b>Личный QR</b> — для чек-ина у продюсера. Кешируется, работает офлайн.
+    </div></li>
+    <li><span class="ico">●</span><div>
+      <b>Анкета</b> — все данные участника одним экраном.
+    </div></li>
+    <li><span class="ico">●</span><div>
+      <b>Рейтинг</b> — топ-10, твоё место (если ниже), битва отрядов «Кобры» vs «Акулы».
+      <span class="meta">Сортировка: баланс DESC → свежесть транзакции DESC. Авто-обновление 30 сек.</span>
+    </div></li>
+    <li><span class="ico">●</span><div>
+      <b>6 ачивок</b> — Крид (100) → Карнавал (200) → Токсис (300) → Джига (400) → Морген (500) → Мистер Бист (600).
+      <span class="meta">Прогресс-бары, разблокированные подсвечены золотом.</span>
+    </div></li>
+    <li><span class="ico">●</span><div>
+      <b>Личное Telegram-уведомление</b> при начислении: кто, за что, сколько, текущий баланс, новая ачивка.
+    </div></li>
+  </ul>
+
+  <h3>Для продюсера / суперадмина</h3>
+  <ul class="feats done">
+    <li><span class="ico">●</span><div>
+      <b>Сканер QR</b> — задняя камера по умолчанию, защита от дублей 2 сек.
+    </div></li>
+    <li><span class="ico">●</span><div>
+      <b>Карточка участника</b> — имя, отряд, текущий баланс. Тап → история начислений этого участника от всех продюсеров.
+    </div></li>
+    <li><span class="ico">●</span><div>
+      <b>Начисление / штраф</b> — 9 типовых причин в dropdown с автозаполнением суммы или своя причина текстом.
+    </div></li>
+    <li><span class="ico">●</span><div>
+      <b>Авто-выдача ачивок</b> — атомарно в одной транзакции. Все пороги между старым и новым балансом автоматически открываются.
+    </div></li>
+    <li><span class="ico">●</span><div>
+      <b>Откат 24ч</b> — автор транзакции или суперадмин, в течение суток.
+    </div></li>
+    <li><span class="ico">●</span><div>
+      <b>История смены</b> — лента всех начислений всех продюсеров. Цвет: золото / красный / перечёркнутый (откат).
+    </div></li>
+    <li><span class="ico">●</span><div>
+      <b>Раздельный интерфейс</b> — продюсер / суперадмин не видят участникского экрана, сразу попадают в свой раздел.
+    </div></li>
+  </ul>
+
+  <h3>Под капотом</h3>
+  <ul class="feats done">
+    <li><span class="ico">●</span><div>
+      Backend Fastify 5 + Prisma 6 + PostgreSQL 16, бот через webhook (grammy), JWT-auth (jose), HMAC-валидация Telegram initData.
+    </div></li>
+    <li><span class="ico">●</span><div>
+      Frontend Next.js 15 (App Router), TanStack Query, Zustand, Tailwind, html5-qrcode.
+    </div></li>
+    <li><span class="ico">●</span><div>
+      Деплой: GitHub Actions → SSH → docker compose. Push в <code>main</code> = ~2 минуты до прода.
+    </div></li>
+    <li><span class="ico">●</span><div>
+      Все картинки (лого, фоны, ачивки) через CDN — Google Cloud Storage.
+    </div></li>
+  </ul>
+</section>
+
+<!-- EXTRA -->
+<section>
+  <div class="section-head"><h2><span class="num">+</span> Что добавлено сверх ТЗ</h2></div>
+  <ul class="feats extra">
+    <li><span class="ico">★</span><div>
+      <b>Полноценный chrome-логотип</b> в стилистике GTA Vice City — на splash, главной и регистрации.
+      Сгенерирован под бренд, оптимизирован, отдаётся через CDN.
+    </div></li>
+    <li><span class="ico">★</span><div>
+      <b>Брендирование самого бота</b> — name, short / long description обновлены через Telegram Bot API.
+      Description-картинка для шапки бота тоже сгенерирована.
+    </div></li>
+    <li><span class="ico">★</span><div>
+      <b>Анимированная кнопка «Начислить»</b> — pink↔cyan градиент течёт + неоновое свечение пульсирует.
+    </div></li>
+    <li><span class="ico">★</span><div>
+      <b>Personal-история по тапу на карточку участника</b> — bottom-sheet модалка с последними 100 начислениями.
+    </div></li>
+    <li><span class="ico">★</span><div>
+      <b>Диагностический error-boundary</b> — вместо «Application error» приложение показывает реальное сообщение, имя ошибки и stack для быстрой диагностики.
+    </div></li>
+    <li><span class="ico">★</span><div>
+      <b>Откат прямо из истории</b> — кнопка «Откат» рядом с записью, если ещё в окне 24ч и ты автор / суперадмин.
+    </div></li>
+    <li><span class="ico">★</span><div>
+      <b>Конвейер CI/CD с нуля</b> — GitHub Actions, автодеплой, healthcheck. Любой push → продакшн через 2 мин.
+    </div></li>
+  </ul>
+</section>
+
+<!-- HOW TO TEST -->
+<section id="test">
+  <div class="section-head"><h2><span class="num">▶</span> Как тестировать</h2></div>
+
+  <p style="color:var(--text-dim);font-size:15px;margin-bottom:16px;">
+    Тест в две роли: <b style="color:var(--gold);">участник</b> (получает Телекоины) и
+    <b style="color:var(--gold);">продюсер</b> (начисляет).
+    Можно тестировать одному с двух устройств / разных аккаунтов.
+  </p>
+
+  <h3>1 — Участник</h3>
+  <ol class="steps">
+    <li>
+      <div>
+        <div class="t">Открой бота</div>
+        <div class="d">В Telegram найди <code>@telemore_bot</code> → жми <b>Старт</b> → жми синюю кнопку «Открыть миссию».</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="t">Зарегистрируйся</div>
+        <div class="d">Имя / Фамилия / Телефон (вводи цифры — маска применится сама) / Дата рождения / выбери отряд: <b>Кобры</b> или <b>Акулы</b>.</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="t">Изучи главный экран</div>
+        <div class="d">Баланс «0 Телекоинов», кнопка «Мой QR» — покажи продюсеру для начисления.</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="t">Получи Телекоины</div>
+        <div class="d">Когда продюсер начислит — придёт уведомление в Telegram с разбивкой: сумма, причина, новый баланс, ачивка (если открылась).</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="t">Проверь рейтинг и ачивки</div>
+        <div class="d">Кнопки <b>Рейтинг</b> и <b>Ачивки</b> внизу. Ачивки разблокируются автоматически при пересечении порога (100, 200, 300, 400, 500, 600 ТК).</div>
+      </div>
+    </li>
+  </ol>
+
+  <h3>2 — Продюсер</h3>
+  <div class="callout">
+    Чтобы стать продюсером, твой Telegram-ID должен быть прописан в БД с ролью <b>PRODUCER</b> или <b>SUPERADMIN</b>.
+    Скинь свой <code>@username</code> — добавим. Сейчас доступ есть у заказчика и тимлида.
+  </div>
+  <ol class="steps" style="margin-top:14px;">
+    <li>
+      <div>
+        <div class="t">Войди как продюсер</div>
+        <div class="d">Открой того же бота с аккаунта продюсера — попадёшь сразу на дашборд продюсера (без участникского экрана).</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="t">Сканер QR</div>
+        <div class="d">Жми <b>«Сканер QR»</b>. Разреши камеру → наведи на QR участника. Откроется карточка.</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="t">Начисли Телекоины</div>
+        <div class="d">Выбери причину из списка (сумма подставится) или введи свою. Можно подкрутить сумму вручную или штрафнуть. Жми <b>«Начислить»</b>.</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="t">История</div>
+        <div class="d">Вернись в меню → <b>«История»</b>. Лента всех начислений всех продюсеров. Кнопка «Откат» — если запись твоя и не старше 24ч.</div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="t">История участника</div>
+        <div class="d">Тапни на карточку участника после сканирования — выедет лист со всеми его транзакциями.</div>
+      </div>
+    </li>
+  </ol>
+
+  <div class="callout">
+    <b>Что-то не работает?</b> На главной если упало — приложение покажет ошибку с диагностикой.
+    Скинь скриншот в чат — пофикшу за итерацию (~5 мин).
+  </div>
+</section>
+
+<!-- NEXT -->
+<section>
+  <div class="section-head"><h2><span class="num">→</span> Что планируется дальше</h2></div>
+
+  <h3>Этап 3 (продолжение, ~3–5 дней)</h3>
+  <ul class="feats next">
+    <li><span class="ico">→</span><div>
+      <b>События / план дня</b> — список активностей смены, время старта, чек-ин участников.
+    </div></li>
+    <li><span class="ico">→</span><div>
+      <b>ДР-крон</b> — авто-поздравление участников утром (отключаемо).
+    </div></li>
+    <li><span class="ico">→</span><div>
+      <b>Уведомления продюсера</b> — массовая рассылка отряду / всем / индивидуально.
+    </div></li>
+    <li><span class="ico">→</span><div>
+      <b>Bulk-сканирование</b> — режим «отсканил всех на завтраке, всем +15 ТК».
+    </div></li>
+  </ul>
+
+  <h3>Этап 4 — Полная админка (A1–A11) (~7–10 дней)</h3>
+  <ul class="feats next">
+    <li><span class="ico">→</span><div>
+      <b>A1 Dashboard продюсера</b> — KPI (всего участников / средний баланс / чек-инов сегодня), график активности, топ-5, лента.
+    </div></li>
+    <li><span class="ico">→</span><div>
+      <b>A3 Участники / A4 Карточка</b> — поиск, фильтр по отряду, смена отряда, ручное редактирование баланса.
+    </div></li>
+    <li><span class="ico">→</span><div>
+      <b>A5–A8 События</b> — CRUD событий, шаблоны, привязка ачивок, расписание дня.
+    </div></li>
+    <li><span class="ico">→</span><div>
+      <b>A9–A10 Суперадмин</b> — управление сменами, ролями, настройки рейтинга и анонимизации.
+    </div></li>
+    <li><span class="ico">→</span><div>
+      <b>A11 Генератор бейджей</b> — печатные PDF 10×15 с фотографиями участников и QR.
+    </div></li>
+  </ul>
+</section>
+
+<!-- SCREENSHOTS -->
+<section id="shots">
+  <div class="section-head"><h2><span class="num">📱</span> Скриншоты</h2></div>
+  <p style="color:var(--text-dim);font-size:14px;margin-bottom:12px;">
+    Кликни на любой — откроется в полном размере.
+  </p>
+  <div class="shots" id="shots-grid"></div>
+</section>
+
+<div class="modal" id="modal" onclick="closeModal()">
+  <button class="modal-close" onclick="closeModal()">×</button>
+  <img id="modal-img" alt="">
+</div>
+
+</main>
+
+<footer class="footer">
+  <p>
+    Mini-app: <a href="https://app.telemore.org" target="_blank">app.telemore.org</a> ·
+    API: <a href="https://api.telemore.org/health" target="_blank">api.telemore.org</a> ·
+    Бот: <a href="https://t.me/telemore_bot" target="_blank">@telemore_bot</a>
+  </p>
+  <p style="margin-top:8px;">
+    Этап 1 · Готов к приёмке · <span class="mono" id="ts"></span>
+  </p>
+</footer>
+
+<script>
+const SHOTS_BASE = 'https://storage.googleapis.com/uspeshnyy-projects/telemore/stage1';
+const CAPTIONS = {
+  1: 'Старт бота',
+  2: 'Splash — авторизация',
+  3: 'Регистрация',
+  4: 'Главный экран',
+  5: 'Мой QR',
+  6: 'Сканер продюсера',
+  7: 'Карточка + начисление',
+  8: 'История участника',
+  9: 'История смены',
+  10: 'Рейтинг',
+  11: 'Ачивки',
+  12: 'Уведомление в Telegram',
+};
+const grid = document.getElementById('shots-grid');
+for (let i = 1; i <= 12; i++) {
+  const url = `${SHOTS_BASE}/${i}.jpg`;
+  const cap = CAPTIONS[i] || `#${i}`;
+  const card = document.createElement('div');
+  card.className = 'shot';
+  card.innerHTML = `<img src="${url}" alt="${cap}" loading="lazy"><div class="cap">${cap}</div>`;
+  card.onclick = () => openModal(url, cap);
+  grid.appendChild(card);
+}
+function openModal(url, alt) {
+  const m = document.getElementById('modal');
+  document.getElementById('modal-img').src = url;
+  document.getElementById('modal-img').alt = alt;
+  m.classList.add('open');
+}
+function closeModal() { document.getElementById('modal').classList.remove('open'); }
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+document.getElementById('ts').textContent = new Date().toLocaleString('ru-RU', {
+  day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit'
+});
+</script>
+</body>
+</html>
