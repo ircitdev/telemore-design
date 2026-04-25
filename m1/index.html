@@ -24,6 +24,10 @@
 <meta name="twitter:description" content="Игровое Telegram Mini App для медиа-тура. Этапы 1 и 2 готовы.">
 <meta name="twitter:image" content="https://storage.googleapis.com/uspeshnyy-projects/telemore/stage1.jpg">
 
+<!-- Favicon (inline SVG — мгновенная загрузка, без сетевых запросов) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23FF00AA'/%3E%3Cstop offset='1' stop-color='%2300F0FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%231A0033'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='38' font-weight='900' text-anchor='middle' fill='url(%23g)'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="https://storage.googleapis.com/uspeshnyy-projects/telemore/logo.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -88,18 +92,24 @@ body::after{
 }
 
 /* Декор по бокам — только на десктопе.
-   Две версии (v1/v2) лежат друг на друге, переключаются по скроллу:
-   при scrollProgress > 0.5 → body.past-half делает v1 невидимым и v2 видимым. */
+   Три набора (v1/v2/v3) с переключением по скроллу:
+   - body без классов (scroll < 30%) → видна v1
+   - body.zone-2 (30%–70%)          → видна v2
+   - body.zone-3 (>70%)             → видна v3 */
 .bg-decor{
   position:fixed;bottom:0;z-index:-1;pointer-events:none;
   width:min(28vw,420px);height:auto;
   filter:drop-shadow(0 0 30px rgba(255,0,170,0.35));
+  opacity:0;transform:translateY(20px);
   transition:opacity .9s ease, transform .9s cubic-bezier(.2,.8,.2,1);
 }
-.bg-decor.v1{opacity:0.92;}
-.bg-decor.v2{opacity:0;transform:translateY(20px);}
-body.past-half .bg-decor.v1{opacity:0;transform:translateY(20px);}
-body.past-half .bg-decor.v2{opacity:0.92;transform:translateY(0);}
+/* Default: показываем v1 */
+.bg-decor.v1{opacity:0.92;transform:translateY(0);}
+body.zone-2 .bg-decor.v1{opacity:0;transform:translateY(20px);}
+body.zone-2 .bg-decor.v2{opacity:0.92;transform:translateY(0);}
+body.zone-3 .bg-decor.v1,
+body.zone-3 .bg-decor.v2{opacity:0;transform:translateY(20px);}
+body.zone-3 .bg-decor.v3{opacity:0.92;transform:translateY(0);}
 
 .bg-decor.left{left:0;}
 .bg-decor.right{right:0;}
@@ -108,7 +118,8 @@ body.past-half .bg-decor.v2{opacity:0.92;transform:translateY(0);}
 }
 @media (max-width: 1400px){
   .bg-decor.v1{opacity:0.6;}
-  body.past-half .bg-decor.v2{opacity:0.6;}
+  body.zone-2 .bg-decor.v2{opacity:0.6;}
+  body.zone-3 .bg-decor.v3{opacity:0.6;}
   .bg-decor{width:min(22vw,300px);}
 }
 /* На больших экранах двигаем основной контент чтобы не накладывался на декор */
@@ -271,12 +282,44 @@ ul.feats li .thumbs{
   text-transform:uppercase;margin-top:4px;
 }
 
-ol.steps{list-style:none;counter-reset:step;display:grid;gap:14px;}
+ol.steps{
+  list-style:none;counter-reset:step;
+  display:grid;gap:14px;
+  grid-template-columns:1fr;
+}
+@media (min-width: 700px){
+  ol.steps{grid-template-columns:repeat(2,1fr);}
+}
+@media (min-width: 1000px){
+  ol.steps{grid-template-columns:repeat(3,1fr);}
+}
 ol.steps li{
   counter-increment:step;
+  position:relative;overflow:hidden;
   display:grid;grid-template-columns:48px 1fr;gap:14px;
-  background:rgba(255,255,255,0.03);border:1px solid var(--border);
-  border-radius:14px;padding:16px;align-items:start;
+  padding:18px;border-radius:18px;align-items:start;
+  background:linear-gradient(135deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.025) 60%);
+  border:1px solid rgba(255,255,255,0.14);
+  backdrop-filter:blur(18px) saturate(160%);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.18),
+    inset 0 -1px 0 rgba(0,0,0,0.25),
+    0 10px 30px rgba(0,0,0,0.3);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1), border-color .3s, box-shadow .35s;
+}
+ol.steps li::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(115deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0) 35%, rgba(255,255,255,0) 65%, rgba(255,255,255,0.10) 100%);
+  opacity:0.7;mix-blend-mode:overlay;
+}
+ol.steps li > *{position:relative;z-index:1;}
+ol.steps li:hover{
+  transform:translateY(-4px);
+  border-color:rgba(0,240,255,0.45);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.25),
+    0 14px 40px -10px rgba(0,240,255,0.45);
 }
 ol.steps li::before{
   content:counter(step);
@@ -368,16 +411,30 @@ ol.steps li code{
 }
 
 .modal{
-  display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);
-  z-index:100;align-items:center;justify-content:center;padding:24px;
-  backdrop-filter:blur(8px);
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);
+  z-index:200;align-items:center;justify-content:center;padding:16px;
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  touch-action:manipulation;
 }
 .modal.open{display:flex;}
-.modal img{max-width:96vw;max-height:92vh;border-radius:12px;box-shadow:0 20px 60px rgba(255,0,170,0.3);}
-.modal-close{
-  position:absolute;top:14px;right:18px;
-  background:none;border:none;color:#fff;font-size:36px;cursor:pointer;line-height:1;
+.modal img{
+  max-width:96vw;max-height:90vh;
+  width:auto;height:auto;object-fit:contain;
+  border-radius:12px;box-shadow:0 20px 60px rgba(255,0,170,0.3);
+  -webkit-user-select:none;user-select:none;
 }
+.modal-close{
+  position:absolute;top:max(14px,env(safe-area-inset-top));right:max(14px,env(safe-area-inset-right));
+  width:48px;height:48px;display:flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.2);border-radius:50%;
+  color:#fff;font-size:28px;cursor:pointer;line-height:1;
+  -webkit-tap-highlight-color:transparent;
+}
+/* Скриншот-карточки на мобиле — нормализуем тач */
+.shot{touch-action:manipulation;-webkit-tap-highlight-color:rgba(0,240,255,0.2);}
+.shot img{pointer-events:none;}
+.thumb,.step-shot{touch-action:manipulation;-webkit-tap-highlight-color:rgba(0,240,255,0.3);}
+.thumb img,.step-shot img{pointer-events:none;}
 
 .timeline{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;
@@ -423,6 +480,53 @@ ol.steps li code{
   border-top:1px solid var(--border);margin-top:30px;
 }
 .footer .mono{font-family:'SF Mono','Monaco',monospace;color:var(--cyan);}
+
+/* ===== Progress bar — анимация и свечение ===== */
+.pbar-track{
+  position:relative;height:14px;
+  background:rgba(255,255,255,0.08);border:1px solid var(--border);
+  border-radius:99px;overflow:hidden;
+}
+.pbar-fill{
+  position:absolute;inset:0;width:50%;
+  background:linear-gradient(90deg,#FF00AA 0%,#FF2EA0 35%,#00E0FF 70%,#FF2EA0 100%);
+  background-size:300% 100%;
+  border-radius:99px;
+  animation:pbarFlow 4s linear infinite, pbarPulse 2.4s ease-in-out infinite;
+}
+.pbar-fill::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.6) 50%, transparent 100%);
+  transform:translateX(-100%);
+  animation:pbarShimmer 3s ease-in-out infinite;
+  border-radius:99px;
+}
+.pbar-marker{
+  position:absolute;top:-3px;bottom:-3px;left:50%;width:3px;
+  background:var(--gold);border-radius:2px;
+  box-shadow:0 0 12px var(--gold), 0 0 24px rgba(255,215,0,0.6);
+  animation:pbarMarkerPulse 1.6s ease-in-out infinite;
+}
+@keyframes pbarFlow{
+  from{background-position:0% 50%;}
+  to  {background-position:300% 50%;}
+}
+@keyframes pbarPulse{
+  0%,100%{box-shadow:0 0 14px rgba(255,0,170,0.4), 0 0 28px rgba(0,224,255,0.2);}
+  50%   {box-shadow:0 0 22px rgba(255,0,170,0.7), 0 0 50px rgba(0,224,255,0.45);}
+}
+@keyframes pbarShimmer{
+  0%  {transform:translateX(-100%);}
+  60% {transform:translateX(160%);}
+  100%{transform:translateX(160%);}
+}
+@keyframes pbarMarkerPulse{
+  0%,100%{box-shadow:0 0 8px var(--gold), 0 0 16px rgba(255,215,0,0.5);transform:scaleY(1);}
+  50%   {box-shadow:0 0 18px var(--gold), 0 0 36px rgba(255,215,0,0.85);transform:scaleY(1.08);}
+}
+@media (prefers-reduced-motion: reduce){
+  .pbar-fill,.pbar-fill::after,.pbar-marker{animation:none;}
+}
 
 /* ===== Мобильное меню — sticky bottom navbar ===== */
 .mob-nav{
@@ -482,6 +586,14 @@ ol.steps li code{
   <source srcset="https://storage.googleapis.com/uspeshnyy-projects/telemore/decor/girls1.webp" type="image/webp">
   <img class="bg-decor right v2" src="https://storage.googleapis.com/uspeshnyy-projects/telemore/decor/girls1.png" alt="" aria-hidden="true" loading="lazy">
 </picture>
+<picture>
+  <source srcset="https://storage.googleapis.com/uspeshnyy-projects/telemore/decor/manwithcoin2.webp" type="image/webp">
+  <img class="bg-decor left v3" src="https://storage.googleapis.com/uspeshnyy-projects/telemore/decor/manwithcoin2.png" alt="" aria-hidden="true" loading="lazy">
+</picture>
+<picture>
+  <source srcset="https://storage.googleapis.com/uspeshnyy-projects/telemore/decor/girls2.webp" type="image/webp">
+  <img class="bg-decor right v3" src="https://storage.googleapis.com/uspeshnyy-projects/telemore/decor/girls2.png" alt="" aria-hidden="true" loading="lazy">
+</picture>
 
 <!-- Мобильное меню — sticky bottom navbar -->
 <nav class="mob-nav" aria-label="Быстрая навигация">
@@ -504,9 +616,9 @@ ol.steps li code{
     <div style="display:flex;justify-content:space-between;font-size:11px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,0.55);text-transform:uppercase;margin-bottom:6px;">
       <span>Этап 1</span><span>Этап 2</span><span style="color:var(--gold);">Этап 3</span><span>Этап 4</span><span>Этап 5</span>
     </div>
-    <div style="position:relative;height:14px;background:rgba(255,255,255,0.08);border:1px solid var(--border);border-radius:99px;overflow:hidden;">
-      <div style="position:absolute;inset:0;width:50%;background:linear-gradient(90deg,var(--pink),var(--cyan));border-radius:99px;box-shadow:0 0 16px rgba(255,0,170,0.55);"></div>
-      <div style="position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--gold);box-shadow:0 0 10px var(--gold);"></div>
+    <div class="pbar-track">
+      <div class="pbar-fill"></div>
+      <div class="pbar-marker"></div>
     </div>
     <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:13px;color:var(--text-dim);">
       <span><b style="color:var(--green);">2 из 5</b> этапов готовы</span>
@@ -963,15 +1075,21 @@ function setupReveal(){
 }
 setupReveal();
 
-// === Декор v1↔v2: переключение по скроллу ===
-// Когда пользователь прокрутил больше 50% доступной длины страницы —
-// добавляем body.past-half. CSS делает плавный crossfade.
+// === Декор v1 → v2 → v3: 3 зоны по скроллу ===
+//   < 30%        : v1 (default)
+//   30%–70%      : v2 (body.zone-2)
+//   > 70%        : v3 (body.zone-3)
+// Старый класс past-half оставлен для обратной совместимости (= zone-2 ∪ zone-3).
 (function setupDecorSwap(){
   let ticking = false;
   function update(){
     const scrolled = window.scrollY || document.documentElement.scrollTop;
     const max = (document.documentElement.scrollHeight - window.innerHeight) || 1;
     const ratio = scrolled / max;
+    const zone2 = ratio >= 0.30 && ratio < 0.70;
+    const zone3 = ratio >= 0.70;
+    document.body.classList.toggle('zone-2', zone2);
+    document.body.classList.toggle('zone-3', zone3);
     document.body.classList.toggle('past-half', ratio > 0.5);
     ticking = false;
   }
