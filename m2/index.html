@@ -617,12 +617,12 @@ ol.steps li code{
       <span>Этап 1</span><span>Этап 2</span><span>Этап 3</span><span style="color:var(--gold);">Этап 4</span><span>Этап 5</span>
     </div>
     <div class="pbar-track">
-      <div class="pbar-fill" style="width:65%;"></div>
-      <div class="pbar-marker" style="left:65%;"></div>
+      <div class="pbar-fill" style="width:75%;"></div>
+      <div class="pbar-marker" style="left:75%;"></div>
     </div>
     <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:13px;color:var(--text-dim);">
-      <span><b style="color:var(--green);">≈3 из 5</b> этапов готовы</span>
-      <span><b style="color:var(--gold);">Прогресс: 65%</b> (Админка следующая)</span>
+      <span><b style="color:var(--green);">3 из 5</b> этапов готовы</span>
+      <span><b style="color:var(--gold);">Прогресс: 75%</b> (Админка — следующая)</span>
     </div>
   </div>
   <p class="intro">
@@ -668,16 +668,13 @@ ol.steps li code{
       <div class="t">Этап 2 — Начисления</div>
       <div class="d">Сканер QR продюсера, начисления / штрафы, причины, авто-ачивки, откат 24ч</div>
     </div>
-    <div class="tl-card now">
-      <div class="badge">⚡ Этап 3 — почти готов</div>
+    <div class="tl-card done">
+      <div class="badge">✓ Готово</div>
       <div class="t">Этап 3 — Геймплей</div>
-      <div class="d">
-        ✅ Рейтинг + битва отрядов · 4-вкладочная история · Telegram-уведомления · ДР-крон · Рассылки · Bulk · Архив · Редактор анкет<br>
-        ⚠️ <b style="color:var(--gold);">События / план дня — ещё не сделано</b>
-      </div>
+      <div class="d">Рейтинг · 4-вкладочная история · Уведомления · ДР-крон · Рассылки · Bulk · Архив · Редактор анкет · <b>События / план дня + чек-ин по QR</b></div>
     </div>
-    <div class="tl-card next">
-      <div class="badge">→ Затем</div>
+    <div class="tl-card now">
+      <div class="badge">⚡ Сейчас</div>
       <div class="t">Этап 4 — Админка Superadmin (Express)</div>
       <div class="d">Сменами / роли продюсеров / per-producer история / каталог причин / tour-config (birthday_chat_id, время крона). 3-5 дней.</div>
     </div>
@@ -734,9 +731,49 @@ ol.steps li code{
     </div></li>
 
     <li><span class="ico">★</span><div>
+      <b>📅 События / план дня</b> — продюсер создаёт расписание смены (завтрак, мастер-класс, экскурсия, съёмка...). Каждое событие: тип, время начала/конца, описание, авто-XP за чек-ин, время напоминания. Cron шлёт push всем участникам за N минут до старта. Чек-ин по QR на событии: участник получает +autoXp моментально, продюсер видит лайв-список.
+      <div class="thumbs" data-shots-m2="m2-events-tile,m2-events-list,m2-events-create,m2-events-detail,m2-events-checkin,m2-events-participant-tile,m2-events-participant-list"></div>
+    </div></li>
+
+    <li><span class="ico">★</span><div>
       <b>📦 Мульти-сменный архив</b> — после конца смены ребёнок может открыть Mini App и увидеть свой итог. Backend модель уже multi-tour, на главной появляется золотой баннер «АРХИВ СМЕНЫ» с финальным балансом и итоговым местом. Один бот растит аудиторию из сезона в сезон.
     </div></li>
   </ul>
+
+  <!-- USE CASE — Day in the life -->
+  <div style="margin-top:32px;padding:24px;border-radius:18px;border:1px solid rgba(0,240,255,0.25);background:linear-gradient(135deg,rgba(0,240,255,0.06),rgba(255,0,170,0.04));">
+    <div style="font-family:'Pricedown',sans-serif;font-size:22px;color:var(--cyan);letter-spacing:2px;margin-bottom:14px;">▶ USE CASE: ДЕНЬ В ТУРЕ</div>
+    <div style="display:flex;flex-direction:column;gap:14px;font-size:14.5px;color:var(--text);line-height:1.55;">
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <span style="flex-shrink:0;font-family:'Pricedown',sans-serif;color:var(--gold);font-size:18px;letter-spacing:2px;min-width:54px;">08:15</span>
+        <div>📲 За 15 мин до завтрака всем 60 участникам приходит push: <i>«🍽️ Скоро событие: Завтрак · 🕐 Начало в 08:30 · 🪙 Чек-ин даст +15 ТК»</i></div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <span style="flex-shrink:0;font-family:'Pricedown',sans-serif;color:var(--gold);font-size:18px;letter-spacing:2px;min-width:54px;">08:30</span>
+        <div>В столовой продюсер открывает событие «Завтрак» → <b>📷 ЧЕК-ИН ПО QR</b> → сканит каждого подходящего ребёнка → каждому моментально <b style="color:var(--gold);">+15 ТК</b> + личное сообщение от бота с балансом</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <span style="flex-shrink:0;font-family:'Pricedown',sans-serif;color:var(--gold);font-size:18px;letter-spacing:2px;min-width:54px;">11:00</span>
+        <div>Мастер-класс по монтажу. Продюсер за лучшие работы дополнительно начисляет +25 ТК через сканер с причиной «Лучшая работа дня». Балансы обновляются, рейтинг отрядов сдвигается в реальном времени</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <span style="flex-shrink:0;font-family:'Pricedown',sans-serif;color:var(--gold);font-size:18px;letter-spacing:2px;min-width:54px;">15:00</span>
+        <div>🎂 У одного из участников ДР — в чат отряда автоматом ушло поздравление с упоминанием. В рейтинге у него <b style="color:var(--pink);">розовая пульсирующая рамка</b></div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <span style="flex-shrink:0;font-family:'Pricedown',sans-serif;color:var(--gold);font-size:18px;letter-spacing:2px;min-width:54px;">19:30</span>
+        <div>Перед ужином продюсер запускает <b>⚡ Bulk</b>: «Опоздание -10 ТК», сканит 4 опоздавших → 4 push'а с минусом и причиной</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <span style="flex-shrink:0;font-family:'Pricedown',sans-serif;color:var(--gold);font-size:18px;letter-spacing:2px;min-width:54px;">20:30</span>
+        <div>Вечерний разбор. Продюсер шлёт <b>📢 Рассылку отряду «Кобры»</b>: <i>«Завтра в 7:00 — съёмка восхода. Берите ветровки»</i>. 31 участник получает в личку</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <span style="flex-shrink:0;font-family:'Pricedown',sans-serif;color:var(--gold);font-size:18px;letter-spacing:2px;min-width:54px;">22:00</span>
+        <div>Любой продюсер открывает <b>ИСТОРИЯ → 4 вкладки</b> (Начисления / Рассылки / Bulk / Анкеты), фильтрует «только мои» — видит, что сделал именно он за день. Спорные начисления откатывает в один тап (24-ч окно)</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- DONE -->
@@ -965,13 +1002,6 @@ ol.steps li code{
 <section>
   <div class="section-head"><h2><span class="num">→</span> Что планируется дальше</h2></div>
 
-  <h3>📅 Этап 3 — закрыть пропущенное (1–2 дня)</h3>
-  <ul class="feats next">
-    <li><span class="ico">→</span><div>
-      <b>События / план дня</b> — CRUD событий смены (завтрак / мастер-класс / экскурсия / съёмка...). Время старта/конца, тип, авто-XP за чек-ин. Привязка bulk-сессии к событию (event-aware bulk). Чек-ин участника через QR на событии (UNIQUE event+participant). Рассылка-напоминалка за 15 мин до старта.
-    </div></li>
-  </ul>
-
   <h3>⚡ Этап 4 — Superadmin Express (3–5 дней) — следующий</h3>
   <ul class="feats next">
     <li><span class="ico">→</span><div>
@@ -1099,12 +1129,20 @@ const CAPTIONS_M2 = {
   'prod-history-modal': 'История участника',
   'bday-calendar': 'ДР — календарь',
   'bday-day': 'ДР — день',
+  'events-tile': 'События — кнопка',
+  'events-list': 'События — список',
+  'events-create': 'Создание события',
+  'events-detail': 'Событие — детали',
+  'events-checkin': 'Чек-ин по QR',
+  'events-participant-tile': 'Участник — План дня',
+  'events-participant-list': 'Участник — расписание',
 };
 
 const ORDER = ['bot-start','splash','registration','home','my-qr','producer-home','scan-tile','scanner','award-card','award-form','history-participant','history-tour','leaderboard','achievements','notification'];
 
 // Полный порядок для m2-галереи (новые группы по фичам)
 const ORDER_M2 = [
+  'events-tile','events-list','events-create','events-detail','events-checkin','events-participant-tile','events-participant-list',
   'bulk-tile','bulk-config','bulk-reason','bulk-scanning','bulk-done',
   'bcast-tile','bcast-target','bcast-search','bcast-confirm','bcast-result',
   'history-awards','history-broadcasts','history-bulk','history-profile',
