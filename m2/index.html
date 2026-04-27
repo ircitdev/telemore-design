@@ -668,13 +668,16 @@ ol.steps li code{
       <div class="t">Этап 2 — Начисления</div>
       <div class="d">Сканер QR продюсера, начисления / штрафы, причины, авто-ачивки, откат 24ч</div>
     </div>
-    <div class="tl-card done">
-      <div class="badge">✓ Готово</div>
-      <div class="t">Этап 3 — Геймплей</div>
-      <div class="d">Рейтинг + битва отрядов, 4-вкладочная история, Telegram-уведомления, ДР-крон, рассылки, Bulk-сканирование, мульти-сменный архив, редактор анкет</div>
-    </div>
     <div class="tl-card now">
-      <div class="badge">⚡ Сейчас</div>
+      <div class="badge">⚡ Этап 3 — почти готов</div>
+      <div class="t">Этап 3 — Геймплей</div>
+      <div class="d">
+        ✅ Рейтинг + битва отрядов · 4-вкладочная история · Telegram-уведомления · ДР-крон · Рассылки · Bulk · Архив · Редактор анкет<br>
+        ⚠️ <b style="color:var(--gold);">События / план дня — ещё не сделано</b>
+      </div>
+    </div>
+    <div class="tl-card next">
+      <div class="badge">→ Затем</div>
       <div class="t">Этап 4 — Админка Superadmin (Express)</div>
       <div class="d">Сменами / роли продюсеров / per-producer история / каталог причин / tour-config (birthday_chat_id, время крона). 3-5 дней.</div>
     </div>
@@ -961,6 +964,13 @@ ol.steps li code{
 <!-- NEXT -->
 <section>
   <div class="section-head"><h2><span class="num">→</span> Что планируется дальше</h2></div>
+
+  <h3>📅 Этап 3 — закрыть пропущенное (1–2 дня)</h3>
+  <ul class="feats next">
+    <li><span class="ico">→</span><div>
+      <b>События / план дня</b> — CRUD событий смены (завтрак / мастер-класс / экскурсия / съёмка...). Время старта/конца, тип, авто-XP за чек-ин. Привязка bulk-сессии к событию (event-aware bulk). Чек-ин участника через QR на событии (UNIQUE event+participant). Рассылка-напоминалка за 15 мин до старта.
+    </div></li>
+  </ul>
 
   <h3>⚡ Этап 4 — Superadmin Express (3–5 дней) — следующий</h3>
   <ul class="feats next">
