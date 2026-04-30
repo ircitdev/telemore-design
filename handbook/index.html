@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0F0020">
+<title>ТЕЛЕМОРЕ — Инструкция продюсеру</title>
+<meta name="description" content="ТЕЛЕМОРЕ — Миссия Сочи. Короткая инструкция для нового продюсера: как начислить Телекоины, откатить ошибку, создать событие, сделать чек-ин по QR, отправить рассылку, напечатать бейджи. 8 шагов с реальными скринами Mini App.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="ТЕЛЕМОРЕ — Инструкция продюсеру">
+<meta property="og:description" content="8 шагов: как стать продюсером и начать работать на смене за 10 минут. Сценарии типового дня.">
+<meta property="og:image" content="https://storage.googleapis.com/uspeshnyy-projects/telemore/og3.jpg">
+<meta property="og:url" content="https://workflow.telemore.org/handbook/">
+<meta property="og:site_name" content="ТЕЛЕМОРЕ">
+<meta property="og:locale" content="ru_RU">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23FF00AA'/%3E%3Cstop offset='1' stop-color='%2300F0FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%231A0033'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='38' font-weight='900' text-anchor='middle' fill='url(%23g)'%3ET%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#FF00AA;--cyan:#00F0FF;--gold:#FFD700;--green:#34d399;
+  --bg1:#0F0020;--bg2:#1A0033;--bg3:#2D004D;
+  --text:#fff;--text-dim:rgba(255,255,255,0.7);--text-muted:rgba(255,255,255,0.45);
+  --border:rgba(255,255,255,0.1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:74px;}
+body{
+  font-family:'Roboto',-apple-system,sans-serif;color:var(--text);
+  background:linear-gradient(180deg,var(--bg1) 0%,var(--bg2) 50%,var(--bg1) 100%);
+  min-height:100vh;line-height:1.55;
+}
+body::before{content:"";position:fixed;inset:0;z-index:-1;
+  background:
+    radial-gradient(ellipse at 15% 10%,rgba(255,0,170,0.12),transparent 50%),
+    radial-gradient(ellipse at 85% 90%,rgba(0,240,255,0.1),transparent 50%);
+}
+
+/* === Header === */
+header{padding:54px 24px 28px;text-align:center;}
+.logo-img{max-height:64px;display:block;margin:0 auto;}
+.subtitle{margin-top:14px;font-size:12.5px;font-weight:700;letter-spacing:3px;color:var(--cyan);text-transform:uppercase;}
+.h1{
+  margin-top:18px;font-family:'Pricedown',sans-serif;font-weight:900;
+  font-size:clamp(28px,5vw,44px);letter-spacing:2px;line-height:1.05;
+  background:linear-gradient(180deg,#fff,#fff,#FF00AA);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 24px rgba(255,0,170,0.35));
+}
+.intro{
+  max-width:760px;margin:18px auto 0;padding:0 8px;
+  font-size:15px;color:var(--text-dim);line-height:1.6;
+}
+.intro b{color:var(--gold);}
+
+/* === Sticky TOC === */
+.toc-wrap{
+  position:sticky;top:0;z-index:10;
+  background:rgba(15,0,32,0.92);backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(0,240,255,0.18);
+  padding:11px 18px;margin:0;
+}
+.toc{
+  max-width:1200px;margin:0 auto;display:flex;gap:6px;
+  overflow-x:auto;scrollbar-width:none;
+}
+.toc::-webkit-scrollbar{display:none;}
+.toc a{
+  flex-shrink:0;font-size:12.5px;font-weight:700;letter-spacing:0.5px;
+  color:var(--text-dim);text-decoration:none;padding:6px 11px;border-radius:7px;
+  border:1px solid transparent;white-space:nowrap;transition:all .18s;
+}
+.toc a:hover{color:#fff;background:rgba(255,255,255,0.05);}
+.toc a .num{
+  color:var(--pink);font-family:'Pricedown',sans-serif;font-size:14px;
+  margin-right:5px;letter-spacing:0.5px;
+}
+
+/* === Steps === */
+.wrap{max-width:1080px;margin:0 auto;padding:34px 22px 50px;}
+
+.step{
+  display:grid;grid-template-columns:1.15fr 1fr;gap:28px;
+  margin-bottom:46px;align-items:center;
+}
+.step:nth-child(even){grid-template-columns:1fr 1.15fr;}
+.step:nth-child(even) .step-content{order:2;}
+.step:nth-child(even) .step-shot{order:1;}
+
+.step-content{padding:8px 4px;}
+.step-num-row{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+.step-num{
+  font-family:'Pricedown',sans-serif;font-size:48px;letter-spacing:1px;line-height:1;
+  background:linear-gradient(180deg,var(--pink),var(--cyan));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 12px rgba(255,0,170,0.45));
+}
+.step-tag{
+  font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  padding:3px 9px;border-radius:6px;
+  background:rgba(0,240,255,0.13);color:var(--cyan);
+  border:1px solid rgba(0,240,255,0.3);
+}
+.step-tag.gold{background:rgba(255,215,0,0.13);color:var(--gold);border-color:rgba(255,215,0,0.32);}
+.step-tag.pink{background:rgba(255,0,170,0.13);color:var(--pink);border-color:rgba(255,0,170,0.32);}
+.step h2{
+  font-family:'Pricedown',sans-serif;font-weight:900;
+  font-size:clamp(22px,3.5vw,30px);letter-spacing:1.5px;
+  color:#fff;margin-bottom:10px;line-height:1.15;
+}
+.step p{margin-bottom:10px;color:var(--text);font-size:15px;line-height:1.65;}
+.step p b{color:var(--gold);}
+.step .hint{
+  margin-top:14px;padding:11px 14px;border-radius:11px;
+  background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.2);
+  font-size:13.5px;color:var(--text-dim);line-height:1.55;
+}
+.step .hint b{color:var(--gold);}
+.step ol, .step ul{margin:10px 0 10px 22px;}
+.step ol li, .step ul li{margin-bottom:6px;font-size:14.5px;line-height:1.55;}
+.step code{
+  background:rgba(255,255,255,0.08);padding:1px 6px;border-radius:4px;
+  font-family:'SF Mono',Consolas,monospace;font-size:0.9em;color:var(--cyan);
+}
+
+.step-shot{
+  position:relative;display:flex;justify-content:center;
+}
+.step-shot img{
+  width:100%;max-width:280px;border-radius:18px;
+  box-shadow:0 10px 36px rgba(0,0,0,0.55),0 0 28px rgba(255,0,170,0.12);
+  border:1px solid rgba(255,255,255,0.06);
+}
+
+@media (max-width:780px){
+  .step{grid-template-columns:1fr;gap:18px;margin-bottom:38px;}
+  .step:nth-child(even){grid-template-columns:1fr;}
+  .step:nth-child(even) .step-content{order:initial;}
+  .step:nth-child(even) .step-shot{order:initial;}
+  .step-shot img{max-width:240px;}
+  .step-num{font-size:40px;}
+}
+
+/* === Cheat sheet === */
+.cheat{
+  margin:60px 0 40px;padding:24px;border-radius:18px;
+  background:linear-gradient(135deg,rgba(0,240,255,0.06),rgba(255,0,170,0.04));
+  border:1px solid rgba(0,240,255,0.28);
+}
+.cheat h3{
+  font-family:'Pricedown',sans-serif;font-size:22px;letter-spacing:2px;
+  color:var(--cyan);margin-bottom:14px;
+}
+.cheat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;}
+.cheat-item{
+  padding:13px 15px;border-radius:11px;
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);
+  font-size:13.5px;line-height:1.55;
+}
+.cheat-item b{color:var(--gold);display:block;margin-bottom:4px;font-size:14px;letter-spacing:0.5px;}
+.cheat-item span{color:var(--text-dim);}
+.cheat-item code{
+  background:rgba(0,240,255,0.1);color:var(--cyan);padding:1px 6px;border-radius:4px;
+  font-family:'SF Mono',Consolas,monospace;font-size:0.92em;
+}
+
+/* === Trouble block === */
+.trouble{
+  margin-top:32px;padding:22px;border-radius:18px;
+  background:rgba(239,68,68,0.04);border:1px solid rgba(239,68,68,0.25);
+}
+.trouble h3{
+  font-family:'Pricedown',sans-serif;font-size:20px;letter-spacing:2px;
+  color:#ef4444;margin-bottom:10px;
+}
+.trouble p{font-size:14px;color:var(--text);margin-bottom:8px;line-height:1.6;}
+.trouble code{background:rgba(255,255,255,0.06);padding:1px 6px;border-radius:4px;color:var(--cyan);}
+
+/* === Footer === */
+.footer{
+  padding:36px 22px 50px;text-align:center;color:var(--text-muted);font-size:13px;
+  border-top:1px solid var(--border);margin-top:32px;
+}
+.footer a{color:var(--cyan);text-decoration:none;}
+.footer a:hover{text-decoration:underline;}
+.footer-links{margin-top:14px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+/* === CTA bar (top) === */
+.cta-row{
+  max-width:760px;margin:22px auto 0;padding:0 16px;
+  display:flex;gap:9px;justify-content:center;flex-wrap:wrap;
+}
+.btn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:9px 16px;border-radius:10px;font-weight:700;font-size:13px;
+  text-decoration:none;text-align:center;
+  border:1px solid var(--border);background:rgba(255,255,255,0.04);
+  color:var(--text-dim);transition:all .18s;
+}
+.btn:hover{background:rgba(255,255,255,0.08);color:#fff;}
+.btn.primary{
+  background:linear-gradient(90deg,var(--pink),var(--cyan));color:#fff;
+  border-color:transparent;box-shadow:0 0 14px rgba(255,0,170,0.4);
+}
+.btn.primary:hover{box-shadow:0 0 22px rgba(0,240,255,0.5);}
+
+</style>
+</head>
+<body>
+
+<header>
+  <img class="logo-img" src="https://storage.googleapis.com/uspeshnyy-projects/telemore/logo-variants/logo-text.png" alt="TELEMORE">
+  <div class="subtitle">Миссия Сочи · Инструкция продюсеру</div>
+  <h1 class="h1">8 шагов от первого захода до конца смены</h1>
+  <p class="intro">
+    Привет! Ты один из <b>3-6 продюсеров</b> на смене и видишь эту инструкцию, потому что
+    тебе дали роль <b>PRODUCER</b> в системе Телеморе. Ниже — короткий разбор всего, что
+    тебе понадобится: как начислять Телекоины, делать чек-ины событий, отправлять
+    рассылки и печатать бейджи. На прохождение — <b>10 минут</b>. Открой бот рядом
+    и проверяй каждый шаг.
+  </p>
+  <div class="cta-row">
+    <a class="btn primary" href="https://t.me/telemore_bot" target="_blank" rel="noopener">🎮 Открыть @telemore_bot</a>
+    <a class="btn" href="#cheat">⚡ Шпаргалка</a>
+    <a class="btn" href="#trouble">🆘 Что-то не работает?</a>
+  </div>
+</header>
+
+<nav class="toc-wrap" aria-label="Содержание">
+  <div class="toc">
+    <a href="#step-1"><span class="num">01</span>Войти как продюсер</a>
+    <a href="#step-2"><span class="num">02</span>Дашборд</a>
+    <a href="#step-3"><span class="num">03</span>Начислить ТК</a>
+    <a href="#step-4"><span class="num">04</span>Откатить ошибку</a>
+    <a href="#step-5"><span class="num">05</span>Создать событие</a>
+    <a href="#step-6"><span class="num">06</span>Чек-ин на событии</a>
+    <a href="#step-7"><span class="num">07</span>Рассылка</a>
+    <a href="#step-8"><span class="num">08</span>Бейджи</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ========== STEP 1 ========== -->
+<section class="step" id="step-1">
+  <div class="step-content">
+    <div class="step-num-row">
+      <div class="step-num">01</div>
+      <div class="step-tag">2 минуты</div>
+    </div>
+    <h2>Войти как продюсер</h2>
+    <p>
+      Открой <b>@telemore_bot</b> в Telegram. Если ты не получишь главный экран продюсера
+      сразу — твой Telegram-аккаунт ещё не повышен до роли PRODUCER. Тогда напиши тимлиду
+      твой <code>@username</code>, тебе выдадут роль за минуту.
+    </p>
+    <p>
+      После того как роль выдана — открой бот заново, нажми <b>«Старт»</b> → синяя кнопка
+      <b>«🎮 Открыть миссию»</b>. У продюсера дашборд открывается сразу,
+      без участникского экрана.
+    </p>
+    <div class="hint">
+      <b>💡 Подсказка.</b> Если ты ещё и участник смены (продюсер-вожатый из той же смены) —
+      твой собственный баланс участника никуда не делся, просто как продюсер ты по умолчанию
+      видишь админскую панель. На свой профиль участника попадёшь по ссылке
+      «Mini App» в левом меню.
+    </div>
+  </div>
+  <div class="step-shot">
+    <img src="https://storage.googleapis.com/uspeshnyy-projects/telemore/m3/dashboard-top.jpg" alt="Дашборд продюсера" loading="lazy">
+  </div>
+</section>
+
+<!-- ========== STEP 2 ========== -->
+<section class="step" id="step-2">
+  <div class="step-content">
+    <div class="step-num-row">
+      <div class="step-num">02</div>
+      <div class="step-tag">1 минута</div>
+    </div>
+    <h2>Что показывает дашборд</h2>
+    <p>
+      Главный экран — твой пульт управления сменой. Он сам обновляется каждые 30 секунд.
+      Сверху <b>4 KPI-плитки</b>: всего участников, средний баланс, чек-инов за день,
+      событий сегодня. Ниже — <b>битва отрядов</b> и кнопки действий.
+    </p>
+    <p>
+      В самом низу две живые ленты: <b>«События сегодня»</b> с LIVE-бейджем у текущего
+      события и <b>«Последние начисления»</b> от всех продюсеров — видишь, что только что
+      сделали коллеги.
+    </p>
+    <div class="hint">
+      <b>📊 Открывай дашборд первым делом утром.</b> Из лент видно весь предыдущий день
+      без лишних кликов. Если что-то идёт не по плану — рядом кнопка <b>ИСТОРИЯ</b>
+      с 4 вкладками: Начисления / Рассылки / Bulk / Анкеты.
+    </div>
+  </div>
+  <div class="step-shot">
+    <img src="https://storage.googleapis.com/uspeshnyy-projects/telemore/m3/dashboard-recent.jpg" alt="Дашборд: топ-5 и лента" loading="lazy">
+  </div>
+</section>
+
+<!-- ========== STEP 3 ========== -->
+<section class="step" id="step-3">
+  <div class="step-content">
+    <div class="step-num-row">
+      <div class="step-num">03</div>
+      <div class="step-tag pink">самое частое</div>
+    </div>
+    <h2>Начислить Телекоины</h2>
+    <p>
+      Это твоё основное действие на смене. Вариантов два:
+    </p>
+    <ol>
+      <li><b>Через QR.</b> На дашборде → <b>СКАНЕР</b>. Разреши камеру → наведи на QR
+        участника. Появится его карточка с балансом.</li>
+      <li><b>Через список.</b> На дашборде → <b>УЧАСТНИКИ</b> → найди по имени → тап
+        на карточку → <b>+ НАЧИСЛИТЬ</b>.</li>
+    </ol>
+    <p>
+      Дальше — <b>выбери причину</b> из dropdown (сумма подставится автоматически) или
+      введи свою. Можно подкрутить сумму вручную или нажать пресет +10/+15/+20/+25.
+      Жми <b>«НАЧИСЛИТЬ»</b> — баланс на карточке плавно перекатится, участник
+      получит DM-уведомление.
+    </p>
+    <div class="hint">
+      <b>⚡ Bulk-режим</b> — для массовых начислений (например, всем +15 за чек-ин на
+      завтраке). На дашборде кнопка <b>BULK</b>: задай причину и сумму один раз →
+      сканируй всех подряд → тап «Завершить». Дубли в рамках одной сессии игнорируются.
+    </div>
+  </div>
+  <div class="step-shot">
+    <img src="https://storage.googleapis.com/uspeshnyy-projects/telemore/m3/card.jpg" alt="Карточка участника" loading="lazy">
+  </div>
+</section>
+
+<!-- ========== STEP 4 ========== -->
+<section class="step" id="step-4">
+  <div class="step-content">
+    <div class="step-num-row">
+      <div class="step-num">04</div>
+      <div class="step-tag gold">важно</div>
+    </div>
+    <h2>Откатить ошибочное начисление</h2>
+    <p>
+      Любое начисление можно <b>откатить в течение 24 часов</b> — после этого окно
+      закрывается, обратная транзакция уже невозможна (это защита от спорных моментов
+      позже на разборах).
+    </p>
+    <p>
+      Где: на дашборде → <b>ИСТОРИЯ</b> → вкладка <b>Начисления</b>. У каждой строки
+      твоей транзакции (моложе 24 часов) появляется кнопка <b>«Откат»</b>. Тап →
+      подтверждение → готово. Запись зачёркивается, баланс участника возвращается,
+      участник получает DM с диффом.
+    </p>
+    <div class="hint">
+      <b>🔐 Кто может откатить.</b> Только <b>автор транзакции</b> (то есть ты, если
+      это начислил ты) или <b>суперадмин смены</b>. Чужие транзакции твоему «Откату»
+      недоступны — увидишь их без кнопки в режиме «Все продюсеры».
+    </div>
+  </div>
+  <div class="step-shot">
+    <img src="https://storage.googleapis.com/uspeshnyy-projects/telemore/m3/dashboard-recent.jpg" alt="Лента начислений с откатом" loading="lazy">
+  </div>
+</section>
+
+<!-- ========== STEP 5 ========== -->
+<section class="step" id="step-5">
+  <div class="step-content">
+    <div class="step-num-row">
+      <div class="step-num">05</div>
+      <div class="step-tag">по необходимости</div>
+    </div>
+    <h2>Создать событие</h2>
+    <p>
+      События — это пункты расписания смены: завтрак, мастер-класс, экскурсия, съёмка.
+      Каждое событие можно сделать с <b>авто-XP за чек-ин</b> (например +15 ТК) и с
+      <b>напоминанием</b> в чат за N минут до старта.
+    </p>
+    <p>
+      Где: дашборд → <b>СОБЫТИЯ</b> → <b>+ СОЗДАТЬ СОБЫТИЕ</b>. Заполни:
+    </p>
+    <ul>
+      <li><b>Название</b> и <b>тип</b> (питание / активность / экскурсия / прочее)</li>
+      <li><b>Начало</b> и <b>конец</b></li>
+      <li><b>Авто-XP</b> — сколько ТК даём за чек-ин</li>
+      <li><b>Напомнить за N минут</b> — пуш всем участникам</li>
+    </ul>
+    <p>
+      Жми <b>«Создать»</b>. Событие появится в дашборде, в плане дня участников и
+      в списке событий продюсера.
+    </p>
+  </div>
+  <div class="step-shot">
+    <img src="https://storage.googleapis.com/uspeshnyy-projects/telemore/m3/event-edit.jpg" alt="Редактор события" loading="lazy">
+  </div>
+</section>
+
+<!-- ========== STEP 6 ========== -->
+<section class="step" id="step-6">
+  <div class="step-content">
+    <div class="step-num-row">
+      <div class="step-num">06</div>
+      <div class="step-tag pink">в момент события</div>
+    </div>
+    <h2>Чек-ин на событии</h2>
+    <p>
+      Когда событие началось, открой его карточку. Внутри — три кнопки:
+    </p>
+    <ul>
+      <li><b>📷 ЧЕК-ИН ПО QR</b> — основной способ. Сканируй каждого подходящего
+        участника, ему моментально начисляется auto-XP и приходит DM</li>
+      <li><b>+ ЧЕК-ИН</b> — резервный способ через список. Нужен когда у участника
+        разрядился телефон или нет с собой бейджа</li>
+      <li><b>✏ РЕДАКТ.</b> — поправить событие на лету (например, перенести время)</li>
+    </ul>
+    <p>
+      Если ошибся — у каждой строки чек-ина есть <b>×</b>. Тап → подтверждение →
+      запись удаляется, auto-XP откатывается обратно автоматически.
+    </p>
+    <div class="hint">
+      <b>🔁 Идемпотентность.</b> Один участник не может «зачек-иниться» дважды на
+      одно событие — если случайно сканируешь второй раз, увидишь сообщение «уже
+      отмечен», ничего лишнего не начислится.
+    </div>
+  </div>
+  <div class="step-shot">
+    <img src="https://storage.googleapis.com/uspeshnyy-projects/telemore/m3/event-checkin.jpg" alt="Событие с чек-инами" loading="lazy">
+  </div>
+</section>
+
+<!-- ========== STEP 7 ========== -->
+<section class="step" id="step-7">
+  <div class="step-content">
+    <div class="step-num-row">
+      <div class="step-num">07</div>
+      <div class="step-tag">когда нужно сообщить</div>
+    </div>
+    <h2>Сделать рассылку</h2>
+    <p>
+      Когда хочется отправить участникам важное сообщение в личку — без чата отряда,
+      без админа: дашборд → <b>РАССЫЛКА</b>. Выбери <b>кому</b>:
+    </p>
+    <ul>
+      <li><b>ВСЕМ</b> — всем 60 участникам смены</li>
+      <li><b>ОТРЯДУ</b> — только участникам выбранного отряда</li>
+      <li><b>ОДНОМУ</b> — поиск по имени или @username, тап → один получатель</li>
+    </ul>
+    <p>
+      Текст до 3500 символов с поддержкой <b>Markdown</b>: <b>*жирный*</b>,
+      <i>_курсив_</i>, ссылки. Подпись «Сообщение от &lt;твоё имя&gt;» добавляется
+      автоматически. Все рассылки логируются и видны всем продюсерам в
+      <b>ИСТОРИЯ → Рассылки</b>.
+    </p>
+    <div class="hint">
+      <b>⚠️ Будь аккуратен с «ВСЕМ».</b> Это +60 пушей за раз. Используй для реальных
+      изменений в расписании или экстренных вещей. Для бытового («встаём через
+      15 минут») лучше чат отряда в Telegram.
+    </div>
+  </div>
+  <div class="step-shot">
+    <img src="https://storage.googleapis.com/uspeshnyy-projects/telemore/m3/broadcast.jpg" alt="Рассылка участнику" loading="lazy">
+  </div>
+</section>
+
+<!-- ========== STEP 8 ========== -->
+<section class="step" id="step-8">
+  <div class="step-content">
+    <div class="step-num-row">
+      <div class="step-num">08</div>
+      <div class="step-tag gold">в начале смены</div>
+    </div>
+    <h2>Напечатать бейджи</h2>
+    <p>
+      Делается один раз, обычно в день заезда. Каждому участнику — свой пропуск
+      <b>10×15&nbsp;см</b> с QR-кодом, именем, отрядом и фоном Vice City.
+    </p>
+    <p>
+      Дашборд → <b>ГЕНЕРАТОР БЕЙДЖЕЙ</b> → увидишь сетку всех 60 бейджей. Выбери
+      фильтр по отряду если нужно, нажми <b>🖨 ПЕЧАТЬ / СОХРАНИТЬ В PDF</b>.
+    </p>
+    <p>
+      <b>Важно:</b> Telegram блокирует печать внутри Mini App, поэтому страница откроется
+      в системном браузере (Safari на iPhone). Через ~1 секунду после загрузки
+      автоматически появится диалог принтера. Выбери:
+    </p>
+    <ul>
+      <li><b>Принтер</b> — печать сразу на A6, каждый бейдж на своей странице</li>
+      <li><b>Сохранить как PDF</b> — все 60 страниц в один файл, можно отдать в
+        копи-центр</li>
+    </ul>
+    <div class="hint">
+      <b>🪪 На каждом бейдже QR — это вход в систему</b>. Участник теряет бейдж →
+      теряет возможность сканироваться. Запасные бейджи имеет смысл напечатать
+      заранее (фильтр по отряду + Print of one).
+    </div>
+  </div>
+  <div class="step-shot">
+    <img src="https://storage.googleapis.com/uspeshnyy-projects/telemore/m3/badges-grid.jpg" alt="Сетка бейджей" loading="lazy">
+  </div>
+</section>
+
+<!-- ========== CHEAT SHEET ========== -->
+<section class="cheat" id="cheat">
+  <h3>⚡ Шпаргалка: «как сделать N»</h3>
+  <div class="cheat-grid">
+    <div class="cheat-item">
+      <b>Начислить +25 ТК</b>
+      <span>Сканер → QR → причина «Лучшая работа дня» → Начислить</span>
+    </div>
+    <div class="cheat-item">
+      <b>Найти участника без QR</b>
+      <span>Дашборд → Участники → ввести имя → тап на карточку</span>
+    </div>
+    <div class="cheat-item">
+      <b>Откатить ошибку</b>
+      <span>Дашборд → История → Начисления → у своей записи «Откат»</span>
+    </div>
+    <div class="cheat-item">
+      <b>Сменить отряд участнику</b>
+      <span>Карточка → Анкета → Отряд → новый → Сохранить</span>
+    </div>
+    <div class="cheat-item">
+      <b>Чек-ин участника без QR</b>
+      <span>Событие → + ЧЕК-ИН → найти в списке → тап</span>
+    </div>
+    <div class="cheat-item">
+      <b>Снять чек-ин (откатить)</b>
+      <span>Событие → у строки чек-ина × → подтвердить</span>
+    </div>
+    <div class="cheat-item">
+      <b>Рассылка отряду</b>
+      <span>Дашборд → Рассылка → ОТРЯДУ → выбрать → текст → Отправить</span>
+    </div>
+    <div class="cheat-item">
+      <b>Кому начислил коллега +50</b>
+      <span>Дашборд → лента «Последние начисления»</span>
+    </div>
+    <div class="cheat-item">
+      <b>Запас бейджей</b>
+      <span>Генератор → фильтр по отряду → Print → выбрать страницы в диалоге</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TROUBLESHOOTING ========== -->
+<section class="trouble" id="trouble">
+  <h3>🆘 Что-то не работает?</h3>
+  <p>
+    <b>«Доступ только для продюсеров»</b> — твой аккаунт ещё участник. Напиши тимлиду
+    свой <code>@username</code>, попроси повысить до PRODUCER, открой бот заново.
+  </p>
+  <p>
+    <b>«Ошибка авторизации» / SDK status: no-init-data</b> — открыл Mini App не из
+    Telegram. Закрой вкладку, открой бот в Telegram, нажми «Старт» → синюю кнопку
+    «Открыть миссию».
+  </p>
+  <p>
+    <b>Камера не запускается на сканере</b> — Telegram запросил разрешение, ты случайно
+    отказал. Закрой и открой Mini App заново — спросит ещё раз. Если нет —
+    в настройках iPhone: <code>Telegram → Камера → Разрешить</code>.
+  </p>
+  <p>
+    <b>Печать бейджей открыла «Ошибка авторизации» в Safari</b> — обнови страницу
+    (pull to refresh). Если не помогло — открой Mini App в Telegram заново и
+    повтори через «Печать / PDF».
+  </p>
+  <p>
+    <b>Любая другая ошибка</b> — сделай скрин и напиши в чат тимлида с тегом #telemore.
+    Большинство фиксов едет за <b>5-10 минут</b> от момента, как увидим проблему.
+  </p>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>
+    Mini-app: <a href="https://app.telemore.org" target="_blank" rel="noopener">app.telemore.org</a> ·
+    Бот: <a href="https://t.me/telemore_bot" target="_blank" rel="noopener">@telemore_bot</a>
+  </p>
+  <div class="footer-links">
+    <a href="https://workflow.telemore.org/m3/">📋 Отчёт m3 для клиента</a>
+    <a href="https://workflow.telemore.org/m3/#qa">✅ QA-чеклист</a>
+    <a href="https://design.telemore.org/screens-preview/">🎨 Дизайн-макеты</a>
+  </div>
+  <p style="margin-top:18px;font-size:12.5px;">
+    Develop by <a href="https://t.me/uspeshnyy" target="_blank" rel="noopener" style="color:var(--gold);font-weight:700;">@uspeshnyy</a>
+  </p>
+</footer>
+
+</body>
+</html>
