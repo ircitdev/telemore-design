@@ -562,6 +562,94 @@ ol.steps li code{
   body{padding-bottom:80px;}
   .footer{padding-bottom:90px;}
 }
+
+/* === QA-чеклист === */
+.qa-progress{
+  position:sticky;top:8px;z-index:5;
+  display:flex;align-items:center;gap:14px;
+  margin:0 0 22px;padding:14px 18px;border-radius:14px;
+  background:rgba(15,0,32,0.85);backdrop-filter:blur(12px);
+  border:1px solid rgba(0,240,255,0.35);
+  box-shadow:0 8px 28px rgba(0,0,0,0.45);
+}
+.qa-progress-bar{
+  flex:1;height:8px;border-radius:999px;
+  background:rgba(255,255,255,0.08);overflow:hidden;
+}
+.qa-progress-fill{
+  height:100%;background:linear-gradient(90deg,var(--pink),var(--cyan));
+  width:0%;transition:width .35s ease;border-radius:999px;
+  box-shadow:0 0 12px rgba(255,0,170,0.6);
+}
+.qa-progress-counter{
+  font-family:'Pricedown',sans-serif;font-size:18px;letter-spacing:1.5px;
+  color:var(--gold);min-width:62px;text-align:right;
+}
+.qa-progress-reset{
+  background:none;border:1px solid rgba(255,255,255,0.18);
+  color:var(--text-dim);font-size:11px;letter-spacing:1.5px;
+  text-transform:uppercase;padding:4px 10px;border-radius:6px;
+  cursor:pointer;transition:all .2s;
+}
+.qa-progress-reset:hover{color:var(--pink);border-color:var(--pink);}
+
+.qa-group{
+  margin-bottom:22px;padding:16px 18px;border-radius:14px;
+  background:rgba(255,255,255,0.025);border:1px solid var(--border);
+}
+.qa-group-title{
+  font-family:'Pricedown',sans-serif;font-size:18px;letter-spacing:2px;
+  color:var(--cyan);margin-bottom:6px;display:flex;align-items:center;gap:10px;
+}
+.qa-group-title .qa-group-pct{
+  font-size:13px;color:var(--text-muted);letter-spacing:1px;margin-left:auto;
+}
+.qa-group-meta{
+  font-size:12.5px;color:var(--text-muted);margin-bottom:12px;
+}
+.qa-group ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;}
+.qa-group li{
+  padding:9px 12px;border-radius:9px;
+  background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);
+  transition:all .2s;
+}
+.qa-group li:hover{background:rgba(255,255,255,0.04);border-color:rgba(0,240,255,0.25);}
+.qa-group label{
+  display:flex;align-items:flex-start;gap:11px;cursor:pointer;line-height:1.5;
+  font-size:14px;color:var(--text);
+}
+.qa-group input[type=checkbox]{
+  appearance:none;-webkit-appearance:none;
+  width:20px;height:20px;flex-shrink:0;margin-top:2px;
+  border:2px solid rgba(0,240,255,0.45);border-radius:5px;
+  background:rgba(0,240,255,0.06);cursor:pointer;
+  transition:all .2s;position:relative;
+}
+.qa-group input[type=checkbox]:hover{
+  border-color:var(--pink);background:rgba(255,0,170,0.1);
+}
+.qa-group input[type=checkbox]:checked{
+  background:linear-gradient(135deg,var(--pink),var(--cyan));
+  border-color:transparent;
+  box-shadow:0 0 10px rgba(255,0,170,0.5);
+}
+.qa-group input[type=checkbox]:checked::after{
+  content:"✓";position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:13px;font-weight:900;
+}
+.qa-group label:has(input:checked){
+  text-decoration:line-through;color:var(--text-muted);
+}
+.qa-area-tag{
+  display:inline-block;font-size:9.5px;letter-spacing:1.5px;
+  text-transform:uppercase;font-weight:700;
+  padding:1px 6px;border-radius:4px;margin-right:7px;
+  vertical-align:1px;
+}
+.qa-area-A{background:rgba(255,215,0,0.13);color:var(--gold);border:1px solid rgba(255,215,0,0.3);}
+.qa-area-B{background:rgba(255,0,170,0.13);color:var(--pink);border:1px solid rgba(255,0,170,0.3);}
+.qa-area-C{background:rgba(0,240,255,0.12);color:var(--cyan);border:1px solid rgba(0,240,255,0.3);}
 </style>
 </head>
 <body>
@@ -600,8 +688,8 @@ ol.steps li code{
   <div class="mob-nav-grid">
     <a class="primary" href="https://t.me/telemore_bot" target="_blank" rel="noopener"><span class="ico">🎮</span><span>Бот</span></a>
     <a href="#test"><span class="ico">📋</span><span>Тест</span></a>
+    <a href="#qa"><span class="ico">✅</span><span>QA</span></a>
     <a href="#shots"><span class="ico">📱</span><span>Скрины</span></a>
-    <a href="https://docs.google.com/document/d/1HcO-haUdsHn1EsuhWCdg_D9ugou3o2wAcgWoI4PT2Ok/edit?usp=sharing" target="_blank" rel="noopener"><span class="ico">📄</span><span>ТЗ</span></a>
     <a href="https://design.telemore.org/screens-preview/" target="_blank" rel="noopener"><span class="ico">🎨</span><span>Дизайн</span></a>
   </div>
 </nav>
@@ -635,6 +723,7 @@ ol.steps li code{
   <div class="cta-row">
     <a class="btn primary" href="https://t.me/telemore_bot" target="_blank">🎮 Открыть @telemore_bot</a>
     <a class="btn" href="#test">📋 Как тестировать</a>
+    <a class="btn" href="#qa">✅ QA-чеклист</a>
     <a class="btn" href="#shots">📱 Скриншоты</a>
     <a class="btn" href="https://docs.google.com/document/d/1HcO-haUdsHn1EsuhWCdg_D9ugou3o2wAcgWoI4PT2Ok/edit?usp=sharing" target="_blank" rel="noopener">📄 Согласованное ТЗ</a>
     <a class="btn" href="https://design.telemore.org/screens-preview/" target="_blank" rel="noopener">🎨 Дизайн-макеты</a>
@@ -1002,6 +1091,176 @@ ol.steps li code{
   </div>
 </section>
 
+<!-- QA CHECKLIST -->
+<section id="qa">
+  <div class="section-head"><h2><span class="num">✅</span> QA-чеклист по Use Case</h2></div>
+  <p style="color:var(--text-dim);font-size:14px;margin-bottom:14px;max-width:820px;line-height:1.55;">
+    Сухой пройдённый список: что должно работать перед приёмкой Этапа 5. Каждый пункт — одно
+    короткое действие в Mini App или браузере + ожидаемый результат. Прогресс сохраняется
+    локально (LocalStorage), можно проходить за несколько подходов с разных устройств.
+  </p>
+
+  <div class="qa-progress">
+    <div class="qa-progress-bar"><div class="qa-progress-fill" id="qa-fill"></div></div>
+    <div class="qa-progress-counter" id="qa-counter">0 / 0</div>
+    <button class="qa-progress-reset" id="qa-reset">Сбросить</button>
+  </div>
+
+  <div id="qa-checklist">
+
+    <div class="qa-group" data-qa-group="auth">
+      <div class="qa-group-title">🔐 Авторизация и регистрация <span class="qa-group-pct"></span></div>
+      <div class="qa-group-meta">Mini App + бот · сценарий первого запуска</div>
+      <ul>
+        <li><label><input type="checkbox" data-qa="auth-1"><span><span class="qa-area-tag qa-area-A">A</span><b>/start</b> в @telemore_bot выдаёт описание и кнопку «Старт»</span></label></li>
+        <li><label><input type="checkbox" data-qa="auth-2"><span><span class="qa-area-tag qa-area-A">A</span>Mini App открывается после нажатия «Старт» — splash с лого TELEMORE</span></label></li>
+        <li><label><input type="checkbox" data-qa="auth-3"><span><span class="qa-area-tag qa-area-A">A</span>Новый пользователь видит экран регистрации (имя/фамилия/телефон с маской/ДР/отряд)</span></label></li>
+        <li><label><input type="checkbox" data-qa="auth-4"><span><span class="qa-area-tag qa-area-A">A</span>Маска телефона <code>+7 (XXX) XXX-XX-XX</code> заполняется автоматически по цифрам</span></label></li>
+        <li><label><input type="checkbox" data-qa="auth-5"><span><span class="qa-area-tag qa-area-A">A</span>После регистрации появляется главный экран с балансом 0 ТК и кнопкой «Мой QR»</span></label></li>
+      </ul>
+    </div>
+
+    <div class="qa-group" data-qa-group="participant-home">
+      <div class="qa-group-title">📱 Главный экран участника <span class="qa-group-pct"></span></div>
+      <div class="qa-group-meta">CountUp анимация, навигация, ачивки, рейтинг</div>
+      <ul>
+        <li><label><input type="checkbox" data-qa="ph-1"><span><span class="qa-area-tag qa-area-B">B</span>Большой gold-баланс отсчитывается <b>0 → текущее</b> при открытии (CountUp)</span></label></li>
+        <li><label><input type="checkbox" data-qa="ph-2"><span><span class="qa-area-tag qa-area-A">A</span>Кнопка «Мой QR» открывает QR-код, читается продюсерским сканером</span></label></li>
+        <li><label><input type="checkbox" data-qa="ph-3"><span><span class="qa-area-tag qa-area-A">A</span>Анкета / Рейтинг / Ачивки / План дня — все 4 кнопки работают</span></label></li>
+        <li><label><input type="checkbox" data-qa="ph-4"><span><span class="qa-area-tag qa-area-A">A</span>В рейтинге свой ряд подсвечен <b>розовой пульсирующей рамкой</b>, свой отряд — <b>золотой</b></span></label></li>
+        <li><label><input type="checkbox" data-qa="ph-5"><span><span class="qa-area-tag qa-area-A">A</span>На странице ачивок прогресс-бары, разблокированные подсвечены золотом со shine-эффектом</span></label></li>
+      </ul>
+    </div>
+
+    <div class="qa-group" data-qa-group="dashboard">
+      <div class="qa-group-title">📊 A1 — Dashboard продюсера <span class="qa-group-pct"></span></div>
+      <div class="qa-group-meta">Mini App · продюсер летит сюда сразу при входе</div>
+      <ul>
+        <li><label><input type="checkbox" data-qa="dash-1"><span><span class="qa-area-tag qa-area-A">A</span>PRODUCER/SUPERADMIN при заходе попадает <b>сразу на /producer</b>, минуя экран участника</span></label></li>
+        <li><label><input type="checkbox" data-qa="dash-2"><span><span class="qa-area-tag qa-area-A">A</span>4 KPI-плитки заполнены актуальными данными (УЧАСТНИКИ / СРЕДНИЙ БАЛАНС / ЧЕК-ИНОВ / СОБЫТИЯ)</span></label></li>
+        <li><label><input type="checkbox" data-qa="dash-3"><span><span class="qa-area-tag qa-area-B">B</span>На каждой KPI-плитке при тапе виден <b>радиальный прожектор</b> (Spotlight)</span></label></li>
+        <li><label><input type="checkbox" data-qa="dash-4"><span><span class="qa-area-tag qa-area-B">B</span>Action-кнопки (СКАНЕР / BULK / ИСТОРИЯ / РАССЫЛКА / СОБЫТИЯ / УЧАСТНИКИ / БЕЙДЖИ) — то же свечение в свой цвет</span></label></li>
+        <li><label><input type="checkbox" data-qa="dash-5"><span><span class="qa-area-tag qa-area-A">A</span>Битва отрядов показывает суммарный баланс по «Кобры» / «Акулы», лидер — золотая рамка</span></label></li>
+        <li><label><input type="checkbox" data-qa="dash-6"><span><span class="qa-area-tag qa-area-B">B</span>Лента «События сегодня» и «Последние начисления» появляется со <b>staggered scale-in</b> (AnimatedFeed)</span></label></li>
+        <li><label><input type="checkbox" data-qa="dash-7"><span><span class="qa-area-tag qa-area-A">A</span>Авто-обновление 30 сек: после начисления цифры в KPI обновляются без перезагрузки</span></label></li>
+      </ul>
+    </div>
+
+    <div class="qa-group" data-qa-group="list">
+      <div class="qa-group-title">👥 A3 — Список участников <span class="qa-group-pct"></span></div>
+      <div class="qa-group-meta">Поиск, фильтры, сортировка, переход на A4</div>
+      <ul>
+        <li><label><input type="checkbox" data-qa="list-1"><span><span class="qa-area-tag qa-area-A">A</span>Open <b>👥 УЧАСТНИКИ</b> — видны 60 участников с балансом и иконкой ачивок</span></label></li>
+        <li><label><input type="checkbox" data-qa="list-2"><span><span class="qa-area-tag qa-area-A">A</span>Введи 2-3 буквы имени или username — список фильтруется live</span></label></li>
+        <li><label><input type="checkbox" data-qa="list-3"><span><span class="qa-area-tag qa-area-A">A</span>Чипы «Кобры» / «Акулы» фильтруют по отряду, счётчик «Все 64» обновляется</span></label></li>
+        <li><label><input type="checkbox" data-qa="list-4"><span><span class="qa-area-tag qa-area-A">A</span>Сортировка <b>Имя / Баланс / Активность</b> переключается в один тап</span></label></li>
+        <li><label><input type="checkbox" data-qa="list-5"><span><span class="qa-area-tag qa-area-A">A</span>Тап на карточку открывает A4 (полный профиль с балансом)</span></label></li>
+      </ul>
+    </div>
+
+    <div class="qa-group" data-qa-group="card">
+      <div class="qa-group-title">🪪 A4 — Карточка участника <span class="qa-group-pct"></span></div>
+      <div class="qa-group-meta">Профиль, редактор анкеты, история, начисления</div>
+      <ul>
+        <li><label><input type="checkbox" data-qa="card-1"><span><span class="qa-area-tag qa-area-A">A</span>Шапка показывает аватар-инициалы, имя, отряд, @username, ачивки, баланс</span></label></li>
+        <li><label><input type="checkbox" data-qa="card-2"><span><span class="qa-area-tag qa-area-A">A</span>Кнопка <b>+ НАЧИСЛИТЬ</b> ведёт на /producer/award с QR этого участника</span></label></li>
+        <li><label><input type="checkbox" data-qa="card-3"><span><span class="qa-area-tag qa-area-A">A</span>Кнопка <b>✉ СООБЩЕНИЕ</b> открывает рассылку one-to-one с предзаполненным получателем</span></label></li>
+        <li><label><input type="checkbox" data-qa="card-4"><span><span class="qa-area-tag qa-area-A">A</span>Раскрытие «Анкета» позволяет менять имя/фамилию/телефон/ДР/отряд → <b>Сохранить</b></span></label></li>
+        <li><label><input type="checkbox" data-qa="card-5"><span><span class="qa-area-tag qa-area-A">A</span>После сохранения участнику приходит DM с diff изменений</span></label></li>
+        <li><label><input type="checkbox" data-qa="card-6"><span><span class="qa-area-tag qa-area-A">A</span>При смене отряда — рассылка участникам нового отряда «Пополнение в отряде»</span></label></li>
+        <li><label><input type="checkbox" data-qa="card-7"><span><span class="qa-area-tag qa-area-A">A</span>История начислений показывает 50 последних с цветами (gold/red) и зачёркнутыми откатами</span></label></li>
+      </ul>
+    </div>
+
+    <div class="qa-group" data-qa-group="award">
+      <div class="qa-group-title">🪙 Начисление + откат <span class="qa-group-pct"></span></div>
+      <div class="qa-group-meta">/producer/scan → /producer/award → история</div>
+      <ul>
+        <li><label><input type="checkbox" data-qa="aw-1"><span><span class="qa-area-tag qa-area-A">A</span>Сканер запрашивает разрешение на камеру, читает QR за &lt; 2 сек</span></label></li>
+        <li><label><input type="checkbox" data-qa="aw-2"><span><span class="qa-area-tag qa-area-A">A</span>На карточке появляется участник, причина выбирается из dropdown с auto-XP</span></label></li>
+        <li><label><input type="checkbox" data-qa="aw-3"><span><span class="qa-area-tag qa-area-B">B</span>После «Начислить» баланс на карточке <b>плавно перекатывается</b> с старого на новое (Counter)</span></label></li>
+        <li><label><input type="checkbox" data-qa="aw-4"><span><span class="qa-area-tag qa-area-A">A</span>Участник получает в личку DM от бота с разбивкой: сумма / причина / новый баланс / ачивка (если открылась)</span></label></li>
+        <li><label><input type="checkbox" data-qa="aw-5"><span><span class="qa-area-tag qa-area-A">A</span>Через 2 сек редирект на /producer/scan для следующего участника</span></label></li>
+        <li><label><input type="checkbox" data-qa="aw-6"><span><span class="qa-area-tag qa-area-A">A</span>В <b>ИСТОРИЯ</b> своя транзакция показывается с кнопкой «Откат», у чужих в режиме «Все продюсеры» — без неё</span></label></li>
+        <li><label><input type="checkbox" data-qa="aw-7"><span><span class="qa-area-tag qa-area-A">A</span>Откат за окно 24 часа — баланс участника возвращается, в ленте запись зачёркнута</span></label></li>
+      </ul>
+    </div>
+
+    <div class="qa-group" data-qa-group="events">
+      <div class="qa-group-title">📅 A5/A6 — События <span class="qa-group-pct"></span></div>
+      <div class="qa-group-meta">CRUD событий, чек-ины QR + ручной + удаление</div>
+      <ul>
+        <li><label><input type="checkbox" data-qa="ev-1"><span><span class="qa-area-tag qa-area-A">A</span>Создаётся новое событие («Завтрак, 8:30, +15 ТК, напомнить за 15 мин»)</span></label></li>
+        <li><label><input type="checkbox" data-qa="ev-2"><span><span class="qa-area-tag qa-area-A">A</span>За N мин до начала события всем участникам приходит push-напоминание</span></label></li>
+        <li><label><input type="checkbox" data-qa="ev-3"><span><span class="qa-area-tag qa-area-A">A</span>На странице события <b>📷 ЧЕК-ИН ПО QR</b> работает — считывает, начисляет +autoXp</span></label></li>
+        <li><label><input type="checkbox" data-qa="ev-4"><span><span class="qa-area-tag qa-area-A">A</span><b>+ ЧЕК-ИН</b> открывает список участников, тап → manual чек-ин (без QR)</span></label></li>
+        <li><label><input type="checkbox" data-qa="ev-5"><span><span class="qa-area-tag qa-area-A">A</span><b>✏ РЕДАКТ.</b> позволяет менять тип / время / описание / autoXp / напоминание</span></label></li>
+        <li><label><input type="checkbox" data-qa="ev-6"><span><span class="qa-area-tag qa-area-A">A</span>× у каждого чек-ина — удаление с откатом auto-XP, баланс участника компенсируется</span></label></li>
+        <li><label><input type="checkbox" data-qa="ev-7"><span><span class="qa-area-tag qa-area-A">A</span>На главной у участника <b>📅 ПЛАН ДНЯ</b> показывает расписание + статус чек-ина</span></label></li>
+      </ul>
+    </div>
+
+    <div class="qa-group" data-qa-group="badges">
+      <div class="qa-group-title">🪪 A11 — Генератор бейджей <span class="qa-group-pct"></span></div>
+      <div class="qa-group-meta">Vice City Full layout · печать на A6 / PDF</div>
+      <ul>
+        <li><label><input type="checkbox" data-qa="bg-1"><span><span class="qa-area-tag qa-area-A">A</span>Сетка показывает все 60 бейджей с фоном, wordmark TELEMORE, именем + отрядом + QR</span></label></li>
+        <li><label><input type="checkbox" data-qa="bg-2"><span><span class="qa-area-tag qa-area-A">A</span>Фильтры по отрядам со счётчиками работают (Все / Кобры / Акулы)</span></label></li>
+        <li><label><input type="checkbox" data-qa="bg-3"><span><span class="qa-area-tag qa-area-A">A</span>Кнопка <b>🖨 ПЕЧАТЬ / PDF</b> в Mini App открывает страницу в системном Safari (через tg.openLink)</span></label></li>
+        <li><label><input type="checkbox" data-qa="bg-4"><span><span class="qa-area-tag qa-area-A">A</span>Через ~1 сек после загрузки в Safari автоматически открывается диалог принтера</span></label></li>
+        <li><label><input type="checkbox" data-qa="bg-5"><span><span class="qa-area-tag qa-area-A">A</span>«Сохранить как PDF» создаёт файл из 60 страниц A6 portrait — каждый участник на своей</span></label></li>
+        <li><label><input type="checkbox" data-qa="bg-6"><span><span class="qa-area-tag qa-area-C">C</span>QR с бейджа сканируется обратно — проверь что /producer/scan находит участника</span></label></li>
+      </ul>
+    </div>
+
+    <div class="qa-group" data-qa-group="broadcast-bday">
+      <div class="qa-group-title">📢 Рассылки и ДР-крон <span class="qa-group-pct"></span></div>
+      <div class="qa-group-meta">A7 broadcast, ДР-поздравления, история рассылок</div>
+      <ul>
+        <li><label><input type="checkbox" data-qa="br-1"><span><span class="qa-area-tag qa-area-A">A</span>Рассылка <b>ВСЕМ</b> доходит до всех 60 участников в личку от бота</span></label></li>
+        <li><label><input type="checkbox" data-qa="br-2"><span><span class="qa-area-tag qa-area-A">A</span>Рассылка <b>ОТРЯДУ</b> доходит только участникам выбранного отряда</span></label></li>
+        <li><label><input type="checkbox" data-qa="br-3"><span><span class="qa-area-tag qa-area-A">A</span>Рассылка <b>ОДНОМУ</b> с поиском по @username — DM приходит только выбранному</span></label></li>
+        <li><label><input type="checkbox" data-qa="br-4"><span><span class="qa-area-tag qa-area-A">A</span>Markdown работает — <b>жирный</b>, <i>курсив</i>, ссылки</span></label></li>
+        <li><label><input type="checkbox" data-qa="br-5"><span><span class="qa-area-tag qa-area-A">A</span>В <b>ИСТОРИЯ → Рассылки</b> видны все отправленные с тематикой и числом получателей</span></label></li>
+        <li><label><input type="checkbox" data-qa="br-6"><span><span class="qa-area-tag qa-area-A">A</span>Кнопка ДР-календарь (на дашборде) показывает дни ДР текущего месяца, тап → именинники</span></label></li>
+        <li><label><input type="checkbox" data-qa="br-7"><span><span class="qa-area-tag qa-area-C">C</span>Если на сегодня есть именинник — в 09:00 МСК ему приходит личное поздравление от бота</span></label></li>
+      </ul>
+    </div>
+
+    <div class="qa-group" data-qa-group="desktop">
+      <div class="qa-group-title">🖥️ Desktop админка /admin <span class="qa-group-pct"></span></div>
+      <div class="qa-group-meta">Параллельный UI на ≥1024px · те же endpoints</div>
+      <ul>
+        <li><label><input type="checkbox" data-qa="dt-1"><span><span class="qa-area-tag qa-area-B">B</span>На десктопе по ссылке <code>app.telemore.org/admin</code> с токеном открывается sidebar + Dashboard</span></label></li>
+        <li><label><input type="checkbox" data-qa="dt-2"><span><span class="qa-area-tag qa-area-B">B</span>4 KPI-плитки в ряд + 2-колоночный layout (Топ-10 + События сегодня) + лента на всю ширину</span></label></li>
+        <li><label><input type="checkbox" data-qa="dt-3"><span><span class="qa-area-tag qa-area-B">B</span>/admin/participants — настоящая <b>таблица</b> с колонками; кнопка <b>⬇ CSV</b> экспортирует фильтр</span></label></li>
+        <li><label><input type="checkbox" data-qa="dt-4"><span><span class="qa-area-tag qa-area-B">B</span>/admin/badges — печать через native window.print() без хака с openLink</span></label></li>
+        <li><label><input type="checkbox" data-qa="dt-5"><span><span class="qa-area-tag qa-area-B">B</span>На мобильном открытие /admin показывает hint и предлагает /producer</span></label></li>
+      </ul>
+    </div>
+
+    <div class="qa-group" data-qa-group="errors">
+      <div class="qa-group-title">⚠️ Ошибки и устойчивость <span class="qa-group-pct"></span></div>
+      <div class="qa-group-meta">Edge cases, диагностика, recovery</div>
+      <ul>
+        <li><label><input type="checkbox" data-qa="er-1"><span><span class="qa-area-tag qa-area-C">C</span>Открытие Mini App вне Telegram → диагностический экран «no-init-data» (не белая страница)</span></label></li>
+        <li><label><input type="checkbox" data-qa="er-2"><span><span class="qa-area-tag qa-area-C">C</span>Скан несуществующего QR → сообщение «участник не найден», без краша</span></label></li>
+        <li><label><input type="checkbox" data-qa="er-3"><span><span class="qa-area-tag qa-area-C">C</span>Откат старше 24ч → ответ 403 «window expired», UI показывает читаемую ошибку</span></label></li>
+        <li><label><input type="checkbox" data-qa="er-4"><span><span class="qa-area-tag qa-area-C">C</span>Двойной чек-ин одного участника → сообщение «уже отмечен», без двойного начисления</span></label></li>
+        <li><label><input type="checkbox" data-qa="er-5"><span><span class="qa-area-tag qa-area-C">C</span>Если бэкенд недоступен — фронт показывает понятное сообщение, не вечный спиннер</span></label></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <p style="color:var(--text-muted);font-size:12px;margin-top:14px;line-height:1.55;">
+    Легенда: <span class="qa-area-tag qa-area-A">A</span> ключевой пользовательский путь ·
+    <span class="qa-area-tag qa-area-B">B</span> UX / визуал / анимации ·
+    <span class="qa-area-tag qa-area-C">C</span> устойчивость к ошибкам и edge cases.
+    Если что-то из <b>A</b> не работает — это блокер для приёмки.
+  </p>
+</section>
+
 <!-- NEXT -->
 <section>
   <div class="section-head"><h2><span class="num">→</span> Что планируется дальше</h2></div>
@@ -1304,6 +1563,67 @@ function setupReveal(){
   targets.forEach(el => io.observe(el));
 }
 setupReveal();
+
+// === QA-чеклист: localStorage + прогресс-бар + per-group % ===
+(function setupQA(){
+  const KEY = 'telemore.qa.m3.v1';
+  const root = document.getElementById('qa-checklist');
+  if (!root) return;
+  const checks = root.querySelectorAll('input[type=checkbox][data-qa]');
+  const fill = document.getElementById('qa-fill');
+  const counter = document.getElementById('qa-counter');
+  const reset = document.getElementById('qa-reset');
+
+  // Восстановим состояние
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch {}
+  checks.forEach(cb => {
+    const id = cb.getAttribute('data-qa');
+    if (saved[id]) cb.checked = true;
+  });
+
+  function update() {
+    const total = checks.length;
+    let done = 0;
+    checks.forEach(cb => { if (cb.checked) done++; });
+    const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+    fill.style.width = pct + '%';
+    counter.textContent = `${done} / ${total}`;
+    counter.style.color = pct === 100 ? 'var(--green)' : 'var(--gold)';
+
+    // По группам
+    document.querySelectorAll('.qa-group[data-qa-group]').forEach(g => {
+      const inputs = g.querySelectorAll('input[type=checkbox][data-qa]');
+      let gDone = 0;
+      inputs.forEach(cb => { if (cb.checked) gDone++; });
+      const gPct = inputs.length > 0 ? Math.round((gDone / inputs.length) * 100) : 0;
+      const span = g.querySelector('.qa-group-pct');
+      if (span) {
+        span.textContent = `${gDone}/${inputs.length} · ${gPct}%`;
+        span.style.color = gPct === 100 ? 'var(--green)' : 'var(--text-muted)';
+      }
+    });
+  }
+
+  checks.forEach(cb => {
+    cb.addEventListener('change', () => {
+      const id = cb.getAttribute('data-qa');
+      saved[id] = cb.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch {}
+      update();
+    });
+  });
+
+  reset.addEventListener('click', () => {
+    if (!confirm('Сбросить весь прогресс QA-чеклиста?')) return;
+    saved = {};
+    try { localStorage.removeItem(KEY); } catch {}
+    checks.forEach(cb => { cb.checked = false; });
+    update();
+  });
+
+  update();
+})();
 
 // === Декор v1 → v2 → v3: 3 зоны по скроллу ===
 //   < 30%        : v1 (default)
