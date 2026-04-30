@@ -715,7 +715,7 @@ ol.steps li code{
 
     <li><span class="ico">★</span><div>
       <b>🪪 A4 — Карточка участника</b> — полный профиль с аватаром, балансом (rolling Counter), ачивками. Quick-actions: <b>+ НАЧИСЛИТЬ</b> (ведёт на /award с QR) и <b>✉ СООБЩЕНИЕ</b> (one-to-one рассылка). Раскрывающаяся «Анкета» — продюсер меняет имя/фамилию/телефон с маской/ДР/отряд через PATCH; изменения логируются, участник получает DM с diff, при смене отряда — рассылка новому отряду. Полная история начислений (50 последних) с цветовой кодировкой и зачёркнутыми откатами.
-      <div class="thumbs" data-shots-m3="m3-card,m3-card-edit,m3-card-history"></div>
+      <div class="thumbs" data-shots-m3="m3-card,m3-card-edit,m3-broadcast"></div>
     </div></li>
 
     <li><span class="ico">★</span><div>
@@ -729,8 +729,7 @@ ol.steps li code{
     </div></li>
 
     <li><span class="ico">★</span><div>
-      <b>✨ Эффекты в стиле Vice City</b> — <b>SpotlightCard</b>: радиальный «прожектор» в точке курсора/тапа на KPI и action-плитках (pink/cyan/gold по тону карточки). <b>AnimatedFeed</b>: staggered scale-in 0.85→1 для лент «События сегодня» и «Последние начисления» + лёгкие edge-fade. <b>Counter</b>: rolling-odometer для баланса участника — после начисления цифра катится с старого значения на новое прямо в карточке (на /producer/award и /producer/participants/[id]).
-      <div class="thumbs" data-shots-m3="m3-spotlight,m3-counter"></div>
+      <b>✨ Эффекты в стиле Vice City</b> — <b>SpotlightCard</b>: радиальный «прожектор» в точке курсора/тапа на KPI и action-плитках (pink/cyan/gold по тону карточки). <b>AnimatedFeed</b>: staggered scale-in 0.85→1 для лент «События сегодня» и «Последние начисления» + лёгкие edge-fade. <b>Counter</b> и <b>CountUp</b>: rolling-odometer и плавный счёт 0→баланс при первом открытии Mini App. <i>Анимации видны вживую — на статичном кадре не передаются, открой бот и убедись.</i>
     </div></li>
 
     <li><span class="ico">★</span><div>
@@ -1044,8 +1043,8 @@ ol.steps li code{
 <section id="shots">
   <div class="section-head"><h2><span class="num">📱</span> Скриншоты</h2></div>
   <p style="color:var(--text-dim);font-size:14px;margin-bottom:12px;">
-    Скриншоты <b style="color:var(--gold);">Вехи 3</b> (новые экраны: A1 / A3 / A4 / A6 / A11) собираются и появятся
-    в галерее автоматически. Ниже — архив скриншотов прошлых вех (m2 + m1) для полноты.
+    Скриншоты <b style="color:var(--gold);">Вехи 3</b> (A1 / A3 / A4 / A6 / A7 / A11) — реальные iPhone-кадры
+    из Mini App. Ниже — архив скриншотов прошлых вех (m2 + m1) для полноты картины.
   </p>
   <div class="shots" id="shots-grid"></div>
 </section>
@@ -1186,26 +1185,24 @@ document.querySelectorAll('.thumbs[data-shots-m2], .step-shots[data-shots-m2]').
 });
 
 // === m3 thumbs (data-shots-m3="...") ===
-// Скриншоты Вехи 3 ещё не выложены на GCS. Если картинка не загрузилась —
-// показываем неоновую заглушку «скоро». Когда файлы появятся в bucket'е
-// telemore/m3/<slug>.jpg — заглушки автоматически заменятся на реальные.
+// Скриншоты Вехи 3 — реальные iPhone-кадры из Mini App. Лежат в
+// gs://uspeshnyy-projects/telemore/m3/<slug>.jpg. Если файл по какой-то
+// причине отсутствует — показываем неоновую заглушку «скоро».
 const CAPTIONS_M3 = {
-  'm3-dashboard-top':  'A1 — KPI продюсера',
-  'm3-dashboard-events': 'A1 — События сегодня',
+  'm3-dashboard-top':  'A1 — KPI + действия',
+  'm3-dashboard-events': 'A1 — События + Топ-5',
   'm3-dashboard-recent': 'A1 — Лента начислений',
   'm3-list':           'A3 — Список участников',
   'm3-list-search':    'A3 — Live-поиск',
   'm3-list-filter':    'A3 — Фильтр по отряду',
-  'm3-card':           'A4 — Карточка участника',
+  'm3-card':           'A4 — Карточка с анкетой',
   'm3-card-edit':      'A4 — Редактор анкеты',
-  'm3-card-history':   'A4 — История участника',
+  'm3-broadcast':      'A7 — Рассылка одному',
   'm3-event-edit':     'A6 — Редактор события',
-  'm3-event-checkin':  'A6 — Ручной чек-ин',
+  'm3-event-checkin':  'A6 — Событие + чек-ины',
   'm3-event-remove':   'A6 — Удаление чек-ина',
   'm3-badges-grid':    'A11 — Сетка бейджей',
-  'm3-badges-print':   'A11 — Печать / PDF',
-  'm3-spotlight':      'Spotlight на плитках',
-  'm3-counter':        'Counter на балансе',
+  'm3-badges-print':   'A11 — Печать / PDF (iOS)',
 };
 
 function makeM3Thumb(slug, klass='thumb') {
@@ -1249,7 +1246,9 @@ document.querySelectorAll('.thumbs[data-shots-m3], .step-shots[data-shots-m3]').
 // Bottom gallery — m2 first (новинки), потом m1 для контекста
 const grid = document.getElementById('shots-grid');
 function appendCard(slug, base, captions) {
-  const fileSlug = slug.startsWith('m2-') ? slug.slice(3) : slug;
+  const fileSlug = slug.startsWith('m2-') ? slug.slice(3)
+                  : slug.startsWith('m3-') ? slug.slice(3)
+                  : slug;
   const url = `${base}/${fileSlug}.jpg`;
   const cap = captions[fileSlug] || captions[slug] || slug;
   const card = document.createElement('div');
@@ -1258,6 +1257,15 @@ function appendCard(slug, base, captions) {
   card.onclick = () => openModal(url, cap);
   grid.appendChild(card);
 }
+// Веха 3 — новые скриншоты идут сверху галереи
+const ORDER_M3 = [
+  'm3-dashboard-top','m3-dashboard-events','m3-dashboard-recent',
+  'm3-list','m3-list-search','m3-list-filter',
+  'm3-card','m3-card-edit','m3-broadcast',
+  'm3-event-edit','m3-event-checkin','m3-event-remove',
+  'm3-badges-grid','m3-badges-print',
+];
+ORDER_M3.forEach(slug => appendCard(slug, SHOTS_BASE_M3, CAPTIONS_M3));
 ORDER_M2.forEach(slug => appendCard(slug, SHOTS_BASE_M2, CAPTIONS_M2));
 ORDER.forEach(slug => appendCard(slug, SHOTS_BASE_M1, CAPTIONS));
 
